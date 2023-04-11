@@ -9,6 +9,8 @@ import sys
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import music
+from mutagen.mp3 import MP3
+
 
 def home(request):
     client_ip_address = request.META.get('REMOTE_ADDR')
@@ -69,4 +71,3 @@ def test(request):
     print(musics)
     return render(request, 'test/test.html', {'musics': musics})
 
-# test with
