@@ -37,6 +37,3 @@ urlpatterns = [
     path('login/', login_views.login, name='login'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
-# test
-#test2
