@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+   .fixed-bottom {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	
+	}
+	#songTitle a,
+	#artistName a {
+	text-decoration:none;
+	color: black;
+	}
+  </style>
+</head>
+<body>
+	<div id="music-player" class="fixed-bottom bg-light py-3 shadow">
+		<div class="container">
+		  <div class="row align-items-center">
+			<div class="col-md-3 col-3">
+			  <img src="http://www.jplayer.org/audio/poster/Miaow_640x360.png" style="width: 70px;" class="img-fluid" alt="Album Cover" id="albumCover">
+			</div>
+			<div class="col-md-6 col-6">
+			  <div class="title" id="songTitle">
+				<a href="#" class="hover-link">Song Title</a>
+			  </div>
+			  <div class="artist" id="artistName">
+				<a href="#" class="hover-link">Artist Name</a>
+			  </div>
+			  <audio id="myaudio" preload="auto" tabindex="0">
+				<source id="audio-source" src="">
+			  </audio> 
+			</div>
+			<div class="col-md-3 col-3">
+			  <div class="btn-group btn-group-justified h-100" role="group" aria-label="Basic example">
+				<div class="btn-group btn-group-justified h-100" role="group" aria-label="Basic example">
+					<div class="btn-group align-self-center" role="group">
+						<button type="button" class="btn btn-default playPauseButton"><i class="fa fa-play"></i></button>
+						<!-- 放大 -->
+						<button type="button" class="btn btn-default switchPlayer"><i class="fa fa-arrows-alt"></i></button>
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</body>
+</html>
+

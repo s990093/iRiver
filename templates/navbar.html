@@ -1,0 +1,69 @@
+{% load static %}
+<style>
+    .navbar-brand:hover {
+      transform: scale(1.2);
+      transition: all 0.3s ease-in-out;
+    }
+    .navbar-nav li:hover {
+      transform: scale(1.1);
+      transition: all 0.2s ease-in-out;
+    }
+    .main-content {
+  margin-top: 70px; /* 将主体元素下移70像素 */
+}
+
+</style>
+<div class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home/">
+                <img src="{% static 'img/favicon.png' %}" alt="img" width="30px" class="d-inline-block align-text-top">
+                iRiver
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home/">首頁 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/play/">播放音樂</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/music_list/">歌單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">最新歌曲</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">排行榜</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">專輯</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">登錄</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/test/">test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/">admin</a>
+                    </li>
+                </ul>
+                <form action="" class="d-flex" onsubmit="submitForm(); return false;">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="查詢" name="query" id="query">
+                        <button class="btn btn-outline-primary" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+
+

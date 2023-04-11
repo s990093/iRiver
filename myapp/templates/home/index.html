@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'title.html' %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="main-content ">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center">
+                <div id="loading" style="display: none">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <p>Loading...</p>
+                </div> 
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <div>
+                        <h3 id="table_title" style="display: none;"><strong>歌曲</strong></h3>
+                    </div>
+                    <tbody id="table-body">
+                        <!-- dynamic table rows will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <!-- src --> 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/home/index.js' %}"></script>
+</body>
+</html>
