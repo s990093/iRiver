@@ -69,3 +69,4 @@ def test(request):
     print(musics)
     return render(request, 'test/test.html', {'musics': musics})
 
+# test with
