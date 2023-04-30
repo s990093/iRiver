@@ -6,7 +6,7 @@ import requests
 
 
 def iRiver(request):
-    url = 'http://127.0.0.1:8000/login/test/'
+    url = 'http://127.0.0.1:8000/user/test/'
     response = requests.get(url)
     print(response)
     return render(request, 'index.html')

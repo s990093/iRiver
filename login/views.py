@@ -14,9 +14,9 @@ def hello(request):
 
 def testuser(request):
     if request.user.is_authenticated:
-        return True
+        return HttpResponse(True)
     else:
-        return False
+        return HttpResponse(False)
     
 
 #首頁
