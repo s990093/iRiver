@@ -42,9 +42,39 @@ def discover(request):
 
 #     return render(request, './music_list.html', context={'artist': artist, 'index': index})
 
-
-def query_song(request):
+# 資料庫資料
+def query_db_song(request):
     query = request.GET.get('query', '')
+
+    # 資料庫
+    try:
+        mysql  =  SQL(music.lib.sql.config.DB_CONFIG)
+        res = mysql.query(query=query)
+        if res is None:
+            print("the res is empty")
+            return 
+    except Exception as e:
+        print(f'the res is {e}')
+        return 
+    music_list = []
+    for row in res:
+        result_dict = {'artist': row[1], 
+                        'title': row[2], 
+                        'music_ID': row[3],
+                        'artist_url': row[4],
+                        'keywords': row[5],
+                        'views' : row[6],
+                        'publish_time' :row[7]}
+        music_list.append(result_dict)
+
+    return JsonResponse(music_list , safe=False)
+
+    
+# 網路資料
+def query_web_song(request):
+    query = request.GET.get('query', '')
+
+    # 網路
     if test:
         print('='*50)
         print(f'get  {query} !!')
@@ -57,6 +87,3 @@ def query_song(request):
         print(e)
 
     return JsonResponse(music_list , safe=False)
-
-    
-    
