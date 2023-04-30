@@ -3,7 +3,6 @@ export class Eq {
         this.isTest = isTest;
         this.audioElement = audioElement;
         this.context = new AudioContext();
-
         this.sourceNode = this.context.createMediaElementSource(this.audioElement);
         this.filterNode = this.context.createBiquadFilter();
         this.pannerNode = this.context.createPanner();

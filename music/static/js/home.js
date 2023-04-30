@@ -1,13 +1,9 @@
-import { initial } from '../../../static/js/music_list/drive.js';
 import { Control } from "../../../static/js/music_list/control.js";
-
-let db_data
-// let music_list
-const isBigPlayerDisplayed = true;
-var isClickEventRegistered = false;
 
 const audio = document.getElementById('myaudio');
 
+var isClickEventRegistered_web = false
+var isClickEventRegistered_db = false
 
 if (query) {
   loading(true);
@@ -21,6 +17,7 @@ if (query) {
     .then(response => response.json())
     .then(music_list => {
       console.log('search data', music_list)
+
       paush_web_data(music_list);
     });
   query = null
@@ -69,22 +66,25 @@ function table_template(song, i, isWeb) {
     `
   return row
 }
+
 function paush_web_data(music_list) {
-  loading(false)
+  const control_web = new Control(audio, music_list, true, false, true);
   for (var i = 0; i < music_list.length; i++) {
     $('#table-body').append(table_template(music_list[i], i, true));
   }
-  // $('#table-body').on('click', 'tr', function () {
-  //   var clickedRowIndex = $(this).index();
-  //   if (!isClickEventRegistered) {
-  //     control.register();
-  //     isClickEventRegistered = true;
-  //   }
-  //   control.insert(clickedRowIndex);
-  // });
+  $('#table-body').on('click', 'tr', function () {
+    var clickedRowIndex = $(this).index();
+    if (!isClickEventRegistered_web) {
+      control_web.register();
+      isClickEventRegistered_web = true;
+    }
+    control_web.insert(clickedRowIndex);
+  });
+  loading(false);
 }
+
 function paush_db_data(music_list) {
-  const control = new Control(audio, music_list, true, false, true);
+  const control_db = new Control(audio, music_list, true, false, true);
   for (var i = 0; i < music_list.length; i++) {
     music_list[i].img_url = '/media/' + music_list[i]['artist'] + '/img/' + music_list[i]['music_ID'] + '.jpg';
     music_list[i].artist_img_url = '/media/' + music_list[i]['artist'] + '/img/artist.jpg';
@@ -92,12 +92,13 @@ function paush_db_data(music_list) {
   }
   $('#table-body').on('click', 'tr', function () {
     var clickedRowIndex = $(this).index();
-    if (!isClickEventRegistered) {
-      control.register();
-      isClickEventRegistered = true;
+    if (!isClickEventRegistered_db) {
+      control_db.register();
+      isClickEventRegistered_db = true;
     }
-    control.insert(clickedRowIndex);
+    control_db.insert(clickedRowIndex - 1);
   });
+  loading(false);
 }
 
 const spinners = document.querySelectorAll('.spinner-grow');

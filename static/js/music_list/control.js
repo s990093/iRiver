@@ -48,9 +48,6 @@ export class Control {
   register() {
     if ('mediaSession' in navigator)
       navigator.mediaSession.metadata = null;
-
-
-
     this.eqController = new EqController(this.audio, this.test);
 
     this.webAudio.changePlayer(this.isPlayerShow);
