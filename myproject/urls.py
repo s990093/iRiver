@@ -24,38 +24,10 @@ from django.conf import settings
 
 # rule 放app url 到app再轉要得 function
 urlpatterns = [
-
     path('', iRiver_views.iRiver, name='home'),
-
-    path('iRiver/',iRiver_views.iRiver, name='iRiver'),
-
-
-    # music
-    # path('home/', music_views.home, name='home'),
-    path('discover/', music_views.discover, name='discover'),
-    path('search/', music_views.search, name='search'),
-    # fun
-    # path('crawl/', music_views.crawl, name='crawl'),
-    path('query_web_song/', music_views.query_web_song, name='query_web_song'),
-    path('query_db_song/', music_views.query_db_song, name='query_db_song/'),
-    # path('music_list/', music_views.music_list, name='music_list'),
-    # path('admin/', admin.site.urls),
-
-    # # 下載
-    # path('download/', music_views.download, name='download'),
-    # path('download_songs/', music_views.download_songs, name='download_songs'),
-    # path('get-music-list/', music_views.get_music_list, name='get_music_list'),
-    # path('download_songs/', music_views.download_songs, name='download_songs'),
-
-    # # test
-    # path('test/', music_views.test, name='test'),
-
-    # # iRiver
-    path('iRiver/', iRiver_views.iRiver, name='iRiver'),
-    path('setting/', iRiver_views.setting, name='setting'),
-    path('problem/', iRiver_views.problem, name='problem'),
-    path('plan/', iRiver_views.plan, name='plan'),
-
+    path('iRiver/', include('iRiver.urls')),
+    path('music/', include('music.urls')),
+    
     # login
     path('user/', include('login.urls')),
     path('auth/', include('social_django.urls')),

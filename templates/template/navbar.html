@@ -1,7 +1,7 @@
 {% load static %}
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/iRiver/">
+    <a class="navbar-brand" href="/iRiver/iRiver/">
       <img
         src="{% static 'img/favicon.png' %}"
         alt="Logo"
@@ -39,7 +39,7 @@
         <!-- 發現 -->
 
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/discover/"
+          <a class="nav-link" aria-current="page" href="/music/discover/"
             ><font style="vertical-align: inherit"
               ><font style="vertical-align: inherit">
                 <svg
@@ -81,7 +81,7 @@
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle disabled"
-            href="/music_db/"
+            href="/music/music_db/"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -135,7 +135,7 @@
         <!-- 設定 -->
 
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/setting/"
+          <a class="nav-link" aria-current="page" href="/iRiver/setting/"
             ><font style="vertical-align: inherit"
               ><font style="vertical-align: inherit"
                 ><span class="material-symbols-outlined">
@@ -149,7 +149,7 @@
         <!-- 方案 -->
 
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/plan/"
+          <a class="nav-link" aria-current="page" href="/iRiver/plan/"
             ><font style="vertical-align: inherit"
               ><font style="vertical-align: inherit"
                 ><span>方案</span>
@@ -161,7 +161,7 @@
 
       <!-- 搜尋 -->
 
-      <form action="/search/" class="d-flex">
+      <form action="/music/search/" class="d-flex">
         <div class="input-group">
           <input
             class="form-control"

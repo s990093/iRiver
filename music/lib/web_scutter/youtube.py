@@ -65,19 +65,12 @@ def query_youtube(query : str) ->json:
     for video in music_list:
         if not video["artist_img_url"]:
             artist = video["artist"]
-            print(artist)
             for video_change in music_list:
                 if  video_change['artist'] == artist:
                     video["artist_img_url"] = video_change['artist_img_url']
-                    # print(video["artist_img_url"])
+                    break
     
-    for video in music_list:
-        # if not video["artist_img_url"]:  
-            print('error')
-            break
-
-            
-    
+ 
     
     statistics = {
     'most_common_artist': most_common_artist,

@@ -11,7 +11,7 @@ from .models import music
 from collections import Counter
 import threading
 import re
-import asyncio
+from urllib.parse import unquote
 # 自製
 import music.lib.sql.config
 from music.lib.sql.sql import SQL
@@ -89,4 +89,13 @@ def query_web_song(request):
 
     return JsonResponse(music_list , safe=False)
 
-def  download_song(request):
+
+def download_song(request):
+    song_str = request.GET.get('song_info')
+    song_info = json.loads(unquote(song_str))
+
+    # if test:
+        # print(type(song_info))
+        # print(song_info)
+
+    return JsonResponse({"success": False})

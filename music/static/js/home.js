@@ -4,21 +4,21 @@ const audio = document.getElementById('myaudio');
 
 var isClickEventRegistered_web = false
 var isClickEventRegistered_db = false
-
+var length
 if (query) {
   loading(true);
-  fetch(`/query_db_song?query=${query}`)
-    .then(response => response.json())
-    .then(music_list => {
-      console.log('db_data', music_list)
-      paush_db_data(music_list)
-    });
-  fetch(`/query_web_song?query=${query}`)
+  fetch(`/music/query_web_song?query=${query}`)
     .then(response => response.json())
     .then(music_list => {
       console.log('search data', music_list)
-
       paush_web_data(music_list);
+    });
+  fetch(`/music/query_db_song?query=${query}`)
+    .then(response => response.json())
+    .then(music_list => {
+      length = music_list.length
+      console.log('db_data', music_list)
+      paush_db_data(music_list)
     });
   query = null
 }
@@ -68,25 +68,32 @@ function table_template(song, i, isWeb) {
 }
 
 function paush_web_data(music_list) {
-  const control_web = new Control(audio, music_list, true, false, true);
+  // const control_web = new Control(audio, music_list, true, false, true);
   for (var i = 0; i < music_list.length; i++) {
     $('#table-body').append(table_template(music_list[i], i, true));
   }
   $('#table-body').on('click', 'tr', function () {
     var clickedRowIndex = $(this).index();
-    if (!isClickEventRegistered_db) {
-      control_db.register();
-      isClickEventRegistered_db = true;
-    }
-    control_db.insert(clickedRowIndex);
-    fetch(`/download?selection=${clickedRowIndex + 1}`)
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          control_web.insert(clickedRowIndex)
-        } 
-      });
+    // if (!isClickEventRegistered_db) {
+    //   control_web.register();
+    //   isClickEventRegistered_db = true;
+    // 
+    if (clickedRowIndex > length)
+      fetch(`/music/download?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            // control_web.insert(clickedRowIndex - length)
+          }
+        });
   });
+
+
   loading(false);
 }
 
@@ -103,8 +110,10 @@ function paush_db_data(music_list) {
       control_db.register();
       isClickEventRegistered_db = true;
     }
-    control_db.insert(clickedRowIndex);
+    if (clickedRowIndex < length)
+      control_db.insert(clickedRowIndex);
   });
+
   loading(false);
 }
 
