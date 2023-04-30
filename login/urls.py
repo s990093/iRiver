@@ -9,5 +9,5 @@ urlpatterns = [
     path('logout/', views.log_out, name = 'logout'),
     #path('accounts/', include('social_django.urls', namespace='social')),
     path('auth/', include('social_django.urls', namespace='social')),
-
+    path('test/', views.testuser, name = 'testuser'),
 ]
