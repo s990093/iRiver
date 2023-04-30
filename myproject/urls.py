@@ -28,6 +28,8 @@ urlpatterns = [
     path('iRiver/', include('iRiver.urls',namespace='iRiver')),
     path('music/', include('music.urls',namespace='music')),
     path('user/', include('login.urls',namespace='login')),
-    path('auth/', include('social_django.urls', namespace='social')),
+    path('auth/', include('social_django.urls', namespace='auth')),
+    path('auth/complete/google-oauth2/user/data/', login_views.social1),
+    path('admin/', admin.site.urls),        
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -6,8 +6,22 @@ from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from .forms import LoginForm, RegisterForm
+from social_django import models as social_models
 
 #測試
+def social1(request):
+    name = request.user.username
+    email = request.user.email
+    now = timezone.now()
+    context = {
+        'title': '123',
+        'heading': name ,
+        'content': email,
+        'now': now
+    }
+    return render(request, 'home123.html', context)
+
+
 def hello(request):
     return HttpResponse("world")
 
