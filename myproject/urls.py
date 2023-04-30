@@ -22,7 +22,6 @@ from music  import views as music_views
 from django.conf.urls.static import static
 from django.conf import settings
 
-
 # rule 放app url 到app再轉要得 function
 urlpatterns = [
 
@@ -59,5 +58,7 @@ urlpatterns = [
 
     # login
     path('user/', include('login.urls')),
+    path('auth/', include('social_django.urls')),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
