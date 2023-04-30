@@ -13,8 +13,8 @@ def hello(request):
 
 
 def testuser(request):
-        print('#'*20)
-        print(request.user.is_authenticated)
+        # print('#'*20)
+        # print(request.user.is_authenticated)
         return JsonResponse({'isLogin':request.user.is_authenticated})
 
 #首頁
