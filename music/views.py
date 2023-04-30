@@ -88,3 +88,5 @@ def query_web_song(request):
         print(e)
 
     return JsonResponse(music_list , safe=False)
+
+def  download_song(request):

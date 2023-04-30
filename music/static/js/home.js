@@ -74,11 +74,18 @@ function paush_web_data(music_list) {
   }
   $('#table-body').on('click', 'tr', function () {
     var clickedRowIndex = $(this).index();
-    if (!isClickEventRegistered_web) {
-      control_web.register();
-      isClickEventRegistered_web = true;
+    if (!isClickEventRegistered_db) {
+      control_db.register();
+      isClickEventRegistered_db = true;
     }
-    control_web.insert(clickedRowIndex);
+    control_db.insert(clickedRowIndex);
+    fetch(`/download?selection=${clickedRowIndex + 1}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          control_web.insert(clickedRowIndex)
+        } 
+      });
   });
   loading(false);
 }
@@ -96,7 +103,7 @@ function paush_db_data(music_list) {
       control_db.register();
       isClickEventRegistered_db = true;
     }
-    control_db.insert(clickedRowIndex - 1);
+    control_db.insert(clickedRowIndex);
   });
   loading(false);
 }

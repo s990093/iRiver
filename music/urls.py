@@ -13,12 +13,11 @@ urlpatterns = [
     path('iRiver/',iRiver_views.iRiver, name='iRiver'),
 
     # music
-    # path('home/', music_views.home, name='home'),
     path('discover/', music_views.discover, name='discover'),
     path('search/', music_views.search, name='search'),
     # fun
-    # path('crawl/', music_views.crawl, name='crawl'),
     path('query_song/', music_views.query_song, name='query_song'),
+    path('download/', music_views.download_song, name='download'),
     # path('music_list/', music_views.music_list, name='music_list'),
     # path('admin/', admin.site.urls),
     
