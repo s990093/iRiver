@@ -178,8 +178,4 @@ AUTHENTICATION_BACKENDS = [
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '60738528554-o9lnntflac84aa0giq9kq9uajsku2pgt.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
-<<<<<<< Updated upstream
 SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = 'http://127.0.0.1:8000/auth/login/google-oauth2/'
-=======
-SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = 'http://127.0.0.1:8000/auth/complete/google-oauth2/'
->>>>>>> Stashed changes
