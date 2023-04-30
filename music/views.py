@@ -57,7 +57,7 @@ def query_db_song(request):
     except Exception as e:
         print(f'the res is {e}')
         return 
-    music_lt = []
+    music_list = []
     for row in res:
         result_dict = {'artist': row[1], 
                         'title': row[2], 

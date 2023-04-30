@@ -4,8 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
-
-
+from django.http import JsonResponse
 from .forms import LoginForm, RegisterForm
 
 #測試
@@ -14,10 +13,9 @@ def hello(request):
 
 def testuser(request):
     if request.user.is_authenticated:
-        return HttpResponse(True)
+        return JsonResponse({'isLogin': True})
     else:
-        return HttpResponse(False)
-    
+        return JsonResponse({'isLogin': False})
 
 #首頁
 def data(request):
@@ -72,7 +70,7 @@ def sign_in(request):
     context = {
         'form': form
     }
-    print("登入")
+    # print("登入")
     return render(request, 'registration/login.html', context)
 
 #登出
