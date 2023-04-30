@@ -11,7 +11,7 @@ import json
 import time
 import re
 # 自製
-from options import get_chrome_options
+from .options import get_chrome_options
 
 
 def query_music_list(url :str) ->json:

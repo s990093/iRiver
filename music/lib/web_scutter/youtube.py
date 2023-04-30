@@ -11,7 +11,7 @@ import json
 import re
 from collections import Counter
 # 自製
-from lib.web_scutter.options import get_chrome_options
+from .options import get_chrome_options
 
 def query_youtube(query : str) ->json:
     service = Service('chromedriver.exe')
@@ -41,26 +41,44 @@ def query_youtube(query : str) ->json:
                 ID = match.group(0)[-11:]
             else:
                 ID = re.search(r"shorts\/(\w{11})", url.get_attribute('href')).group(1)
-            music_list = {}
-            music_list["title"] = title=title.text
-            music_list["music_ID"] = ID
-            music_list["url"] = url.get_attribute("href")
-            music_list["img_url"] = f'https://i.ytimg.com/vi/{ID}/hqdefault.jpg?'
-            music_list["artist"] = artist.text.replace('/', '').replace(' ', '')
-            music_list["artist_url"] = artist.get_attribute("href")
+            video = {}
+            video["title"] = title=title.text
+            video["music_ID"] = ID
+            video["url"] = url.get_attribute("href")
+            video["img_url"] = f'https://i.ytimg.com/vi/{ID}/hqdefault.jpg?'
+            video["artist"] = artist.text.replace('/', '').replace(' ', '')
+            video["artist_url"] = artist.get_attribute("href")
             # video["artist_img_url"] = artist_img_url.get_attribute("src")
-            music_list["artist_img_url"] =  artist_img_url
-            music_list.append(music_list)
+            video["artist_img_url"] =  artist_img_url
+            music_list.append(video)
         except NoSuchElementException as e:
             print(e)
             pass
 
     # 统计所有艺术家的出现次数
-    artists = [music_list["artist"] for video in music_list]
+    artists = [ video["artist"] for video in music_list]
     most_common_artist = Counter(artists).most_common(1)[0][0]
-    most_common_artist_url = next((music_list["artist_url"] for video in music_list if video["artist"] == most_common_artist and video["artist_img_url"]), "")
-    most_common_artist_img_url = next((music_list["artist_img_url"] for video in music_list if video["artist"] == most_common_artist and video["artist_img_url"]), "")
+    most_common_artist_url = next(( video["artist_url"] for video in music_list if video["artist"] == most_common_artist and video["artist_img_url"]), "")
+    most_common_artist_img_url = next(( video["artist_img_url"] for video in music_list if video["artist"] == most_common_artist and video["artist_img_url"]), "")
+     
+    # 改變圖片
+    for video in music_list:
+        if not video["artist_img_url"]:
+            artist = video["artist"]
+            print(artist)
+            for video_change in music_list:
+                if  video_change['artist'] == artist:
+                    video["artist_img_url"] = video_change['artist_img_url']
+                    # print(video["artist_img_url"])
+    
+    for video in music_list:
+        # if not video["artist_img_url"]:  
+            print('error')
+            break
 
+            
+    
+    
     statistics = {
     'most_common_artist': most_common_artist,
     'most_common_artist_url': most_common_artist_url,

@@ -3,7 +3,6 @@ import os
 from django.conf import settings
 from django.http import JsonResponse
 import requests
-from music.lib import download_audio, search_audio
 import json
 import sys
 from django.http import JsonResponse
@@ -37,20 +36,21 @@ def search(request):
 def discover(request):
     return render(request, './discover.html' )
 
-def music_list(request):
-    artist = request.GET.get('artist', '')
-    index = request.GET.get('index', '')
+# def music_list(request):
+#     artist = request.GET.get('artist', '')
+#     index = request.GET.get('index', '')
 
-    return render(request, './music_list.html', context={'artist': artist, 'index': index})
+#     return render(request, './music_list.html', context={'artist': artist, 'index': index})
 
 
-def crawl(request):
+def query_song(request):
     query = request.GET.get('query', '')
     if test:
-        print('*'*50)
+        print('='*50)
         print(f'get  {query} !!')
     try:
         result = json.loads(query_youtube(query=query))
+        print('='*50)
         music_list =  result['music_list']
         statistics =  result['statistics']
     except Exception as e:

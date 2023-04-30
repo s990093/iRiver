@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import re
 # 自製
-from lib.web_scutter.options import get_chrome_options
+from .options import get_chrome_options
 
 
 def query_summary(query: str) -> str:
