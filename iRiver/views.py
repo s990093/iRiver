@@ -12,6 +12,7 @@ def iRiver(request):
     response = requests.get(url) 
     if response.status_code == 200:
         result = response.json()
+        print(result['isLogin'])
         if result['isLogin']:
             return render(request, 'index.html')
         else:
