@@ -32,9 +32,6 @@ def discover(request):
     return render(request, './discover.html' )
 
 def search(request):
-    url = 'http://127.0.0.1:8000/login/test/'
-    response = requests.get(url)
-    print(response)
     query = request.GET.get('query', '')
     context = {'query': query}
     return render(request, './serach_reault.html' , context)
