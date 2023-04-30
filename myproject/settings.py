@@ -69,9 +69,10 @@ TEMPLATES = [
         'DIRS': [
             BASE_DIR / 'templates',
             os.path.join(BASE_DIR, 'templates'),
-            BASE_DIR / 'iRiver' / 'templates',
-            BASE_DIR / 'muisic' / 'templates',
-            # BASE_DIR / 'myapp' / 'templates' / 'home',
+            # BASE_DIR / 'iRiver' / 'templates',
+            # BASE_DIR / 'login' / 'templates',
+            # BASE_DIR / 'muisic' / 'templates',
+            BASE_DIR / 'myapp' / 'templates' / 'home',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
