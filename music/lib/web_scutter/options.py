@@ -1,10 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-
-def get_chrome_options():
+def get_chrome_options(port=9222):
     options = Options()
     options.add_argument("--headless")  # run Chrome in headless mode
+    options.add_argument("--detach")
     options.add_argument("--disable-gpu")  # disable GPU
     options.add_argument("--no-sandbox")  # disable sandbox mode
     options.add_argument("--disable-dev-shm-usage")  # disable /dev/shm usage
@@ -40,7 +40,7 @@ def get_chrome_options():
     # disable safe browsing auto-update
     options.add_argument('--safebrowsing-disable-auto-update')
     options.add_argument('--start-maximized')  # start browser maximized
-    # set remote debugging port to 9222
-    options.add_argument("--remote-debugging-port=9222")
+    # set remote debugging port
+    options.add_argument(f"--remote-debugging-port={port}")
 
     return options

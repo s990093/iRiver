@@ -18,5 +18,5 @@ def clear_title(title, artist):
     title = re.sub(r'\【動態\】', '', title)
     title = re.sub(r'\b\d{4}\b|\b\d{1,2}/\d{1,2}\b', '', title).strip() # 刪除年份和日期
     title = re.sub(r'\d{5,}', '', title) #配5個或更多的連續數字
-    title = title.strip()  # 刪除前後空格 
+    title = title.strip()  # 刪除前後空格
     return title
