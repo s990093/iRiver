@@ -25,12 +25,9 @@ from django.conf import settings
 # rule 放app url 到app再轉要得 function
 urlpatterns = [
     path('', iRiver_views.iRiver, name='home'),
-    path('iRiver/', include('iRiver.urls')),
-    path('music/', include('music.urls')),
-    
-    # login
-    path('user/', include('login.urls')),
-    path('auth/', include('social_django.urls')),
-
+    path('iRiver/', include('iRiver.urls',namespace='iRiver')),
+    path('music/', include('music.urls',namespace='music')),
+    path('user/', include('login.urls',namespace='login')),
+    path('auth/', include('social_django.urls', namespace='social')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

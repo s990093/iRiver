@@ -1,6 +1,7 @@
 from django.urls import path ,include
 from . import views 
 
+app_name = 'music'
 urlpatterns = [
     path('discover/', views.discover, name='discover'),
     path('search/', views.search, name='search'),
