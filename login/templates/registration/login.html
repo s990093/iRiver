@@ -6,7 +6,7 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">登入</button>
-<a href="{% url 'social:begin' 'google-oauth2' %}">Sign in with Google</a>
+    <a href="{% url 'social:begin' 'google-oauth2' %}">Sign in with Google</a>
     <p>還沒有帳號嗎? <a href="{% url 'login:register'%}">註冊</a></p>
   </form>
 
