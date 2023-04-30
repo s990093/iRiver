@@ -12,7 +12,13 @@ from .forms import LoginForm, RegisterForm
 def hello(request):
     return HttpResponse("world")
 
-
+def testuser(request)
+    if request.user.is_authenticated:
+        return True
+    else:
+        return False
+    
+    
 #首頁
 def data(request):
 
