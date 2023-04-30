@@ -1,0 +1,10 @@
+{% extends 'template.html' %}
+
+{% block body %}
+  <h2>註冊456</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">註冊</button>
+  </form>
+{% endblock %}

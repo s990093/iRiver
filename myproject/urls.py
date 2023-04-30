@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from login import views as login_views
 from iRiver import views as iRiver_views
 from music  import views as music_views
@@ -58,6 +58,6 @@ urlpatterns = [
     path('plan/', iRiver_views.plan, name='plan'),
 
     # login
-    # path('login/', login_views.login, name='login'),
+    path('user/', include('login.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
