@@ -32,7 +32,7 @@ def data(request):
         'content': email,
         'now': now
     }
-    return render(request, 'home.html', context)
+    return render(request, 'home123.html', context)
 
 
 #註冊
@@ -66,6 +66,7 @@ def sign_in(request):
     context = {
         'form': form
     }
+    print("登入")
     return render(request, 'registration/login.html', context)
 
 #登出
