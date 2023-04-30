@@ -22,8 +22,9 @@ from music  import views as music_views
 from django.conf.urls.static import static
 from django.conf import settings
 
-
+# rule 放app url 到app再轉要得 function
 urlpatterns = [
+
     path('', iRiver_views.iRiver, name='home'),
 
     path('iRiver/',iRiver_views.iRiver, name='iRiver'),
@@ -37,7 +38,7 @@ urlpatterns = [
     path('query_song/', music_views.query_song, name='query_song'),
     # path('music_list/', music_views.music_list, name='music_list'),
     # path('admin/', admin.site.urls),
-    
+    # dasdasd
 
     # # 下載
     # path('download/', music_views.download, name='download'),
