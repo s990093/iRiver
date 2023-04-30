@@ -1,0 +1,78 @@
+.row-scrollable {
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; /* 在iOS上啟用平滑滾動 */
+}
+
+.card-deck {
+  display: inline-flex;
+}
+
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.2s ease-in-out;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.card-deck .card {
+  flex: 1 0 33%;
+  margin: 15px;
+}
+
+.card-deck .card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-deck .card .card-title {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.card-deck .card .card-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* .progress-bar-none {
+  display: none;
+} */
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #eee;
+}
+
+/* 適用於 Chromium 瀏覽器 */
+.row::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.row::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+.row::-webkit-scrollbar-thumb {
+  background-color: #888;
+}

@@ -1,0 +1,33 @@
+{% extends 'template.html' %}
+
+<!-- body -->
+{% block body %}
+<div class="container">
+  <h1>回報問題</h1>
+
+  <!-- 顯示設定 -->
+
+  <br />
+  <h2>網站意見反映</h2>
+  <div class="text-success">
+    <hr />
+  </div>
+  <dl class="row">
+    <dt class="col-md-12">
+      <p>
+        如果您在我們的網站上尋找資訊時遇到問題或有任何意見，請使用以下表格與我們聯絡。我們會仔細閱讀所有回應，但請了解我們無法回覆您提出的意見。
+      </p>
+    </dt>
+  </dl>
+  <dd class="col-md-12">
+    <select class="form-select" aria-label="Default select example">
+      <option selected>反映類型</option>
+      <option value="1">網站問題</option>
+      <option value="2">使用問題</option>
+    </select>
+  </dd>
+  <!-- form -->
+  <dt class="col-md-12">表單</dt>
+  <dd class="col-md-12">{% include './template/feedback_form.html' %}</dd>
+</div>
+{% endblock body %}

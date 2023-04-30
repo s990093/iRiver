@@ -1,0 +1,37 @@
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+.nav-link .text {
+  margin-left: 5px; /* 设置图标和文本之间的距离 */
+}
+.navbar {
+  font-size: 12px;
+}
+.navbar a {
+  font-size: 18px;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.brand-text {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.main-body {
+  margin: 69px;
+}
+body {
+  background-color: rgb(219, 217, 217);
+}

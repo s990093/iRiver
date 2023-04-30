@@ -1,0 +1,40 @@
+{% extends 'template.html' %}
+
+<!-- load -->
+{% load static %}
+
+<!-- import_css -->
+{% block import_css %}
+<link rel="stylesheet" href="{% static './css/index.css' %}" />
+{% endblock import_css %}
+
+<!-- body -->
+{% block body %}
+<div>
+  <!-- 輪番 -->
+  <div class="container-fluid">{% include './template/carousel.html' %}</div>
+  <br />
+
+  <!-- card -->
+  <div class="container-fluid" style="margin-top: 10px">
+    {% include './template/index_card.html' %}
+  </div>
+
+  <!-- show all device -->
+  <div class="container-fluid" style="margin-top: 10px">
+    {% include './template/show_all_device.html' %}
+  </div>
+  <!-- accordion -->
+  <div class="container-fluid" style="margin-top: 10px">
+    {% include './template/index_accordion.html' %}
+  </div>
+</div>
+{% endblock body %}
+
+<!-- js變數 -->
+{% block js %}
+<script src="{% static './js/index.js' %}"></script>
+{% endblock js %}
+
+<!-- import_js -->
+{% block import_js %} {% endblock import_js %}

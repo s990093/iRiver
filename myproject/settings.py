@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',
+    'iRiver',
+    'Podcast',
+    'music',
 ]
 
 MIDDLEWARE = [
@@ -61,9 +63,10 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / 'templates',
-            BASE_DIR / 'myapp' / 'templates',
+            os.path.join(BASE_DIR, 'templates'),
+            BASE_DIR / 'iRiver' / 'templates',
+            BASE_DIR / 'muisic' / 'templates',
             # BASE_DIR / 'myapp' / 'templates' / 'home',
-            BASE_DIR / 'app2' / 'templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {

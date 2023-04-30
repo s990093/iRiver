@@ -16,24 +16,45 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp import views as myapp_views
 from login import views as login_views
+from iRiver import views as iRiver_views
+from music  import views as music_views
 from django.conf.urls.static import static
 from django.conf import settings
 
 
 urlpatterns = [
-    path('', myapp_views.home, name='home'),
-    path('home/', myapp_views.home, name='home'),
+    path('', iRiver_views.iRiver, name='home'),
+
+    path('iRiver/',iRiver_views.iRiver, name='iRiver'),
+
+    # music
+    # path('home/', music_views.home, name='home'),
+    path('discover/', music_views.discover, name='discover'),
+    path('search/', music_views.search, name='search'),
+    # fun
+    path('music_list/', music_views.music_list, name='music_list'),
+    path('crawl/', music_views.crawl, name='crawl'),
+    path('query_song/', music_views.query_song, name='query_song'),
     path('admin/', admin.site.urls),
-    path('play/', myapp_views.play, name='play'),
-    path('music_list/', myapp_views.music_list, name='music_list'),
-    path('crawl/', myapp_views.crawl, name='crawl'),
-    path('download/', myapp_views.download, name='download'),
-    path('get-music-list/', myapp_views.get_music_list, name='get_music_list'),
+    
+
+    # 下載
+    path('download/', music_views.download, name='download'),
+    path('download_songs/', music_views.download_songs, name='download_songs'),
+    path('get-music-list/', music_views.get_music_list, name='get_music_list'),
+    path('download_songs/', music_views.download_songs, name='download_songs'),
+
     # test
-    path('test/', myapp_views.test, name='test'),
+    path('test/', music_views.test, name='test'),
+
+    # iRiver
+    path('iRiver/', iRiver_views.iRiver, name='iRiver'),
+    path('setting/', iRiver_views.setting, name='setting'),
+    path('problem/', iRiver_views.problem, name='problem'),
+    path('plan/', iRiver_views.plan, name='plan'),
+
     # login
-    path('login/', login_views.login, name='login'),
+    # path('login/', login_views.login, name='login'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

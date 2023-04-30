@@ -1,0 +1,84 @@
+{% extends 'template.html' %}
+<!-- load -->
+{% load static %}
+
+<!-- import_css -->
+
+{% block import_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+<!-- database -->
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0"
+/>
+
+<!-- net -->
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0"
+/>
+
+{% endblock import_css %}
+
+<!-- improt_js-->
+
+{% block import_js %}
+<script type="module" src="{% static './js/home.js' %}"></script>
+{% endblock import_js %}
+
+<!-- body -->
+
+{% block body %}
+<div class="main-content">
+  <div class="music-list">
+    <!-- loading -->
+
+    <div class="container-fluid text-center">
+      <div id="loading" style="display: none">
+        <div class="spinner-container">
+          <div class="spinner-grow text-secondary" role="status"></div>
+          <div class="spinner-grow text-secondary" role="status"></div>
+          <div class="spinner-grow text-secondary" role="status"></div>
+          <div class="spinner-grow text-secondary" role="status"></div>
+          <div class="spinner-grow text-secondary" role="status"></div>
+          <div class="spinner-grow text-secondary" role="status"></div>
+          <div class="spinner-grow text-secondary" role="status"></div>
+          <div class="spinner-grow text-secondary" role="status"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- table -->
+
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <div>
+          <h2 id="table_title" style="display: none">
+            <strong>歌曲</strong>
+          </h2>
+        </div>
+        <tbody id="table-body">
+          <!-- dynamic table rows will be added here -->
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- music -->
+
+<div class="music-player">{% include 'music_player.html' %}</div>
+{% endblock body %}
+
+<!-- js -->
+
+{% block js %}
+<script>
+  let query = "{{query}}";
+</script>
+{% endblock js %}

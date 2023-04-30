@@ -1,0 +1,163 @@
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.player {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* #albumCover {
+  margin-bottom: 20px;
+  max-width: 100%;
+} */
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.artist {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.player {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.artist {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #333;
+}
+
+/* New Bootstrap 5 classes */
+.btn-group-justified {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-group {
+  flex-basis: 0;
+  flex-grow: 1;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.progress {
+  height: 5px;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+}
+.slider {
+  width: 100px;
+}
+.btn-group button:hover {
+  background-color: #f1f1f1;
+}
+
+.hover-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.hover-link {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#continueButton {
+  margin-left: -1px;
+}
+s .progress {
+  width: 500px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  width: 620px;
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+#songTitle,
+#artistName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.overflow-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: initial;
+  animation: marquee 18s linear infinite;
+  position: absolute;
+  left: 0;
+  animation-play-state: running;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+img {
+  background-color: #777;
+  border-radius: 20px;
+}
+.player {
+  border-radius: 20px;
+  /* 其他樣式設定 */
+}
+.btn:active {
+  box-shadow: none;
+  outline: none;
+  transform: translateY(1px);
+}
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+

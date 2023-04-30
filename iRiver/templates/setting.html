@@ -1,0 +1,177 @@
+{% extends 'template.html' %}
+
+<!-- load static -->
+
+{% load static %}
+
+<!-- import_icon -->
+
+{% block icon %}{% endblock icon %}
+
+<!-- import_css -->
+
+{% block import_css %}
+<link rel="stylesheet" href="{% static './css/setting.css' %}" />
+{% endblock import_css%}
+
+<!-- body -->
+
+{% block body %}
+
+<!-- account -->
+<div class="setting-body">
+  <h1>設定</h1>
+  <br />
+
+  <!-- 顯示設定 -->
+
+  <br />
+  <h2>顯示設定</h2>
+  <div class="text-secondary-emphasis">
+    <hr />
+  </div>
+  <dl class="row">
+    <!-- 語言 -->
+
+    <dt class="col-md-9">語言</dt>
+    <dd class="col-md-3">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>繁體中文</option>
+        <option value="1">英文</option>
+        <option value="2">日文</option>
+      </select>
+    </dd>
+
+    <!-- 顏色外觀 -->
+
+    <dt class="col-md-9">顏色外觀</dt>
+    <dd class="col-md-3 d-flex justify-content-between mr-2">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+        />
+        <label class="form-check-label" for="flexRadioDefault1"> 自動 </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> 淺色 </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault3"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault3"> 深色 </label>
+      </div>
+    </dd>
+  </dl>
+
+  <!-- 播放設定 -->
+
+  <br />
+  <h2>播放設定</h2>
+  <div class="text-secondary-emphasis">
+    <hr />
+  </div>
+
+  <dl class="row">
+    <dt class="col-md-9">音質</dt>
+    <dd class="col-md-3">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>320k</option>
+        <option value="1">192k</option>
+        <option value="2">160k</option>
+        <option value="3">32bit</option>
+      </select>
+    </dd>
+
+    <!-- 自動延伸播放-->
+    <dt class="col-md-9">自動延伸播放</dt>
+    <dd class="col-md-3 d-flex justify-content-end">
+      <figure class="text-end">
+        <blockquote class="blockquote d-flex justify-content-end">
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckCheckedDisabled"
+              checked
+            />
+          </div>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          在不循環模式下，當歌曲播放完畢後，將接著播放相似的推薦歌曲，讓音樂不間斷。
+        </figcaption>
+      </figure>
+    </dd>
+  </dl>
+
+  <!-- 數據設定 -->
+
+  <br />
+  <h2>數據設定</h2>
+  <div class="text-secondary-emphasis">
+    <hr />
+  </div>
+
+  <dl class="row">
+    <dt class="col-md-9">數據模式</dt>
+    <dd class="col-md-3 d-flex justify-content-center">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>自動</option>
+        <option value="1">離線</option>
+        <option value="2">上網</option>
+      </select>
+    </dd>
+  </dl>
+
+  <!-- 回報問題 -->
+  <br />
+  <h2>回報問題</h2>
+  <div class="text-success">
+    <hr />
+  </div>
+
+  <dl class="row">
+    <dt class="col-md-12">
+      <a href="/problem/">回報問題</a>
+    </dt>
+  </dl>
+
+  <!-- 協助與支援 -->
+  <br />
+  <h2>協助與支援</h2>
+  <div class="text-secondary-emphasis">
+    <hr />
+  </div>
+
+  <dl class="row">
+    <dt class="col-md-12">常見問題</dt>
+    <dt class="col-md-12"><br /></dt>
+
+    <dt class="col-md-12">聯絡客服</dt>
+    <dt class="col-md-12"><br /></dt>
+
+    <dt class="col-md-12">隱私權政策</dt>
+    <dt class="col-md-12"><br /></dt>
+
+    <dt class="col-md-12">會員使用條款</dt>
+    <dt class="col-md-12"><br /></dt>
+
+    <dt class="col-md-12">版權資訊</dt>
+  </dl>
+</div>
+{% endblock body %}

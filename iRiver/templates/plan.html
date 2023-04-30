@@ -1,0 +1,69 @@
+{% extends 'template.html' %} {% load static %}
+
+<!-- load -->
+
+{% load static %}
+
+<!-- import_css -->
+
+{% block import_css %}
+<link rel="stylesheet" href="{% static 'css/plan.css' %}" />
+{% endblock import_css %}
+
+<!-- body -->
+
+{% block body %}
+<div class="container">
+  <h1>訂閱方案</h1>
+  <div class="text-secondary-emphasis">
+    <hr />
+  </div>
+
+  <!-- card -->
+  <div class="row">
+    <!-- quality -->
+    <div class="col-md-3">
+      <div class="card mb-3 quality" style="max-width: 18rem">
+        <div class="card-header">PREMIUM</div>
+        <div class="card-body">
+          <h5 class="card-title">高音質</h5>
+          <p class="card-text">享有最高的音質，沉浸式的享受</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- quality -->
+    <div class="col-md-3">
+      <div class="card mb-3 blue-gradient-bg" style="max-width: 18rem">
+        <div class="card-header">PREMIUM</div>
+        <div class="card-body">
+          <h5 class="card-title">尊貴頭貼</h5>
+          <p class="card-text">享有最高的音質，沉浸式的享受</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- quality -->
+    <div class="col-md-3">
+      <div class="card mb-3 yellow-gradient-bg" style="max-width: 18rem">
+        <div class="card-header">PREMIUM</div>
+        <div class="card-body">
+          <h5 class="card-title">無限撥放</h5>
+          <p class="card-text">享有最高的音質，沉浸式的享受</p>
+        </div>
+      </div>
+    </div>
+    <!-- quality -->
+    <div class="col-md-3">
+      <div class="card mb-3 green-gradient-bg" style="max-width: 18rem">
+        <div class="card-header">PREMIUM</div>
+        <div class="card-body">
+          <h5 class="card-title">最新消息</h5>
+          <p class="card-text">隨時收到你最新的歌曲訊息</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>免費版本上述功能都有</p>
+</div>
+{% endblock body %}

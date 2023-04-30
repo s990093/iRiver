@@ -1,0 +1,117 @@
+{% extends 'template.html' %}
+<!-- load -->
+{% load static %}
+<!-- import_css -->
+{% block import_css %}
+<link rel="stylesheet" href="{% static './css/music_list.css' %}" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+{% endblock import_css %}
+
+<!-- body -->
+{% block body %}
+<!-- table -->
+
+<!-- back img -->
+
+<div class="bg-img">
+  <div class="bg-color"></div>
+</div>
+
+<!-- body -->
+
+<div class="">
+  <div class="main-content">
+    <!-- summary -->
+
+    <div class="d-flex justify-content-center">
+      <h1 class="display-4">{{artist}}</h1>
+    </div>
+
+    <!-- card -->
+
+    <div class="d-flex justify-content-center">
+      <div class="card-wrapper mb-3" style="max-width: 1000px">
+        <div class="card mb-3 rounded-card">
+          <img
+            src="https://icrvb3jy.xinmedia.com/solomo/article/181686/8F151751-5DBA-4064-2DE5-0B6438CB597A.jpeg"
+            class="card-img-top img-fluid"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{artist}}</h5>
+            <p class="card-text">
+              康士坦的變化球（英語：KST），成立於2013年，團名來自希臘哲學家赫拉克利特（Heraclitus）的名言
+              「Change is the only constant in
+              life.」「唯一不變的就是永遠在變化」，也是佛說「無常」。
+              曲風融合後搖滾、情緒搖滾、硬核搖滾及全員主唱的元素，複雜鼓點加上吉他、貝斯音牆，VJ與合成器的編制，也以影像與音樂結合。歌曲擅長刻畫現實生活，引起廣大共鳴，被歌迷喻為「厭世樂團」代表之一。
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- alter -->
+    <div class="alert alert-primary" role="alert">
+      A simple primary alert—check it out!
+    </div>
+
+    <!-- table -->
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+    <!-- 分頁 -->
+
+    <div class="p-3 mb-3 border-0 bd-example d-flex justify-content-center">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- music -->
+
+<div class="music_player">{% include 'music_player.html' %}</div>
+{% endblock body %}
+
+<!-- js -->
+
+{% block js %}
+<script>
+  let artist = "{{artist}}";
+  let index = "{{index}}";
+  // console.log(index);
+</script>
+{% endblock js %}
+
+<!-- import_js -->
+
+{% block import_js %}
+<script type="module" src="{% static '/js/music_list.js' %}"></script>
+{% endblock import_js %}

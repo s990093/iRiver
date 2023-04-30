@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="  {% static '/css/music_list/music_player_buttom.css' %} "
+    />
+  </head>
+  <body>
+    <div id="music-player" class="fixed-bottom bg-light py-3 shadow">
+      <div class="">
+        <div class="row align-items-center">
+          <div class="col-md-3 col-3 d-flex align-items-center">
+            <img
+              src=""
+              style="width: 100px"
+              alt="Album Cover"
+              class="albumCover"
+            />
+          </div>
+
+          <div class="col-md-6 col-6">
+            <div class="overflow-text">
+              <div class="songTitle marquee" id="songTitle">
+                Song Title That Is Too Long to Display
+              </div>
+            </div>
+
+            <!-- artistName -->
+            <div class="artist" id="artistName">
+              <a href="#">
+                <img src="" alt="artist_img" width="40px" class="artist-img" />
+                <span class="hover-link">Artist Name</span>
+              </a>
+            </div>
+            <!-- <audio id="myaudio" preload="auto" tabindex="0">
+              <source id="audio-source" src="" />
+            </audio> -->
+          </div>
+          <div class="col-md-3 col-3">
+            <div
+              class="btn-group btn-group-justified h-100"
+              role="group"
+              aria-label="Basic example"
+            >
+              <div
+                class="btn-group btn-group-justified h-100"
+                role="group"
+                aria-label="Basic example"
+              >
+                <div class="btn-group align-self-center" role="group">
+                  <button type="button" class="btn btn-default playPauseButton">
+                    <i class="fa fa-pause"></i>
+                  </button>
+                  <!-- 放大 -->
+                  <button type="button" class="btn btn-default switchPlayer">
+                    <i class="fa fa-arrows-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="{% static 'js/music_list/music_player_buttom.js' %}"></script> -->
+  </body>
+</html>

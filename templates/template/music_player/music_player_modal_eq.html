@@ -1,0 +1,66 @@
+<!-- 第二層 -->
+
+<div
+  class="modal fade"
+  id="exampleModalToggle"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">EQ</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">{% include 'template/eq_element.html' %}</div>
+      <div class="modal-footer">
+        <button
+          class="btn btn-primary"
+          data-bs-target="#exampleModalToggle2"
+          data-bs-toggle="modal"
+        >
+          進階設定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 第二層 -->
+<div
+  class="modal fade"
+  id="exampleModalToggle2"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">進階設定</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">{% include 'template/eq_advance.html' %}</div>
+      <div class="modal-footer">
+        <button
+          class="btn btn-primary"
+          data-bs-target="#exampleModalToggle"
+          data-bs-toggle="modal"
+        >
+          返回
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

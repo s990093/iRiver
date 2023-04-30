@@ -1,0 +1,29 @@
+{% extends 'template.html' %}
+
+<!-- load -->
+{% load static %}
+
+<!-- imprt_css -->
+{% block import_css %}
+<link rel="stylesheet" href="{% static './css/discover.css' %}" />
+{% endblock import_css %}
+
+<!-- body -->
+{% block body %}
+<!-- card -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">{% include './template/music/forYou.html' %}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">{% include './template/music/recently.html' %}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">{% include './template/music/recommend.html' %}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">{% include './template/music/radio.html' %}</div>
+  </div>
+</div>
+
+{% endblock body %}

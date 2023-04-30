@@ -1,0 +1,180 @@
+{% load static %}
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/iRiver/">
+      <img
+        src="{% static 'img/favicon.png' %}"
+        alt="Logo"
+        width="40px"
+        class="d-inline-block align-text-top"
+      />
+      iRiver
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02"
+      aria-expanded="false"
+      aria-label="切換導航"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- 首頁 -->
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/home/"
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                ><i class="fa fa-house"></i>
+                <span class="text">首頁</span></font
+              ></font
+            >
+          </a>
+        </li> -->
+
+        <!-- 發現 -->
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/discover/"
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-compass"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                  />
+                  <path
+                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"
+                  />
+                </svg>
+                <span class="text">發現</span></font
+              ></font
+            ></a
+          >
+        </li>
+
+        <!-- Podcast -->
+
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-current="page" href="/Podcast/"
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                ><i class="fa-solid fa-podcast"></i>
+                <span class="text">Podcast</span></font
+              ></font
+            ></a
+          >
+        </li> -->
+
+        <!-- 音樂庫 -->
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle disabled"
+            href="/music_db/"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit">
+                <i class="fa fa-book"></i>
+                <span class="text">音樂庫</span></font
+              ></font
+            ></a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/user/"
+                ><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">
+                    <span class="text">音樂</span></font
+                  ></font
+                ></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit"></font></font
+              ></a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#"
+                ><font style="vertical-align: inherit"
+                  ><font style="vertical-align: inherit">介紹</font></font
+                ><i class="fas-regular fa-user"></i
+              ></a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- 登錄 -->
+
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-current="page" href="/user/"
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                ><i class="fa-regular fa-user"></i>
+                <span class="text">登錄</span></font
+              ></font
+            ></a
+          >
+        </li>
+
+        <!-- 設定 -->
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/setting/"
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                ><span class="material-symbols-outlined">
+                  settings_account_box
+                </span>
+              </font></font
+            ></a
+          >
+        </li>
+
+        <!-- 方案 -->
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/plan/"
+            ><font style="vertical-align: inherit"
+              ><font style="vertical-align: inherit"
+                ><span>方案</span>
+              </font></font
+            ></a
+          >
+        </li>
+      </ul>
+
+      <!-- 搜尋 -->
+
+      <form action="/search/" class="d-flex">
+        <div class="input-group">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="查詢"
+            name="query"
+            id="query"
+          />
+          <button class="btn btn-outline-primary" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
