@@ -28,13 +28,17 @@ from music.lib.web_scutter.music_list import query_music_list
 test =  True
 
 
+def discover(request):
+    return render(request, './discover.html' )
+
 def search(request):
+    url = 'http://127.0.0.1:8000/login/test/'
+    response = requests.get(url)
+    print(response)
     query = request.GET.get('query', '')
     context = {'query': query}
     return render(request, './serach_reault.html' , context)
 
-def discover(request):
-    return render(request, './discover.html' )
 
 # def music_list(request):
 #     artist = request.GET.get('artist', '')
@@ -56,7 +60,7 @@ def query_db_song(request):
     except Exception as e:
         print(f'the res is {e}')
         return 
-    music_list = []
+    music_lt = []
     for row in res:
         result_dict = {'artist': row[1], 
                         'title': row[2], 
