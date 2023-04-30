@@ -10,10 +10,11 @@ var isClickEventRegistered = false;
 
 
 $(document).ready(function () {
-  fetch(`/get-music-list/?query=${artist}&index=${index}`)
+  fetch(`/music/get_music_list/?query=${artist}&index=${index}`)
     .then(response => response.json())
     .then(data => {
       const audio = document.getElementById('myaudio');
+      console.log('music list', data)
       control = new Control(audio, data.musicList, true, false, true);
       push_music_list(data);
     });

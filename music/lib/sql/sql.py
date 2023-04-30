@@ -17,7 +17,8 @@ class SQL:
         sql = '''
             CREATE TABLE IF NOT EXISTS artists (
                 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                artist VARCHAR(255) NOT NULL
+                artist VARCHAR(255) NOT NULL,
+                summary VARCHAR(255)
             )
         '''
         self.cursor.execute(sql)
@@ -39,8 +40,6 @@ class SQL:
         
     def save_data(self, song_infos):
         song_infos_lsit =  json.loads(song_infos) 
-        # print(type(song_infos_lsit))
-        # print(song_infos_lsit[0]['artist'])
         for i in range(len(song_infos_lsit)):
             if not song_infos_lsit[i]:  # 如果song_infos_lsit[i]是空的，則跳過當前迭代
              continue     
@@ -79,8 +78,15 @@ class SQL:
         self.db.commit()
         print('='*30)
         print('save data')
-    
-   
+        
+    def save_summary(self, artist: str, summary: str):
+        update_sql = 'UPDATE artists SET summary = %s WHERE artist = %s'
+        update_values = (summary, artist)
+        self.cursor.execute(update_sql, update_values)
+        self.db.commit()
+
+        
+
     def get_all_song(self, field='*'):
         sql = f'SELECT {field} FROM songs ORDER BY publish_time ASC'
         self.cursor.execute(sql)

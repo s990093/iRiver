@@ -9,8 +9,8 @@ urlpatterns = [
     path('query_db_song/', views.query_db_song, name='query_db_song'),
     path('query_web_song/', views.query_web_song, name='query_web_song'),
     path('download/', views.download_song, name='download'),
- 
-   # path('music_list/', views.music_list, name='music_list'),
+    path('get_music_list/', views.music_list, name='get_music_list'),
+    path('music_list/', views.music_list, name='music_list'),
     # # 下載
     # path('download/', views.download, name='download'),
     # path('download_songs/', views.download_songs, name='download_songs'),

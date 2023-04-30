@@ -12,13 +12,22 @@ from collections import Counter
 import threading
 import re
 from urllib.parse import unquote
+from multiprocessing import Process, Queue
+import concurrent.futures
 # 自製
 import music.lib.sql.config
 from music.lib.sql.sql import SQL
+
+from music.lib.clear_str import clear_str
+
 from music.lib.web_scutter.youtube import query_youtube
 from music.lib.web_scutter.iocn import query_artist_iocn_src
 from music.lib.web_scutter.summary import query_summary
 from music.lib.web_scutter.music_list import query_music_list
+
+from music.lib.download.audio import download_audio
+from music.lib.download.img import download_img , download_img_base64
+
 
 
 
@@ -37,11 +46,11 @@ def search(request):
     return render(request, './serach_reault.html' , context)
 
 
-# def music_list(request):
-#     artist = request.GET.get('artist', '')
-#     index = request.GET.get('index', '')
+def music_list(request):
+    artist = request.GET.get('artist', '')
+    index = request.GET.get('index', '')
 
-#     return render(request, './music_list.html', context={'artist': artist, 'index': index})
+    return render(request, './music_list.html', context={'artist': artist, 'index': index})
 
 # 資料庫資料
 def query_db_song(request):
@@ -74,16 +83,16 @@ def query_db_song(request):
 # 網路資料
 def query_web_song(request):
     query = request.GET.get('query', '')
-
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        future_youtube = executor.submit(query_youtube, query) 
     # 網路
     if test:
         print('='*50)
         print(f'get  {query} !!')
     try:
-        result = json.loads(query_youtube(query=query))
-        print('='*50)
-        music_list =  result['music_list']
-        statistics =  result['statistics']
+        youtube_result = json.loads(future_youtube.result())
+        music_list =  youtube_result['music_list']
+        statistics =  youtube_result['statistics']
     except Exception as e:
         print(e)
 
@@ -94,8 +103,100 @@ def download_song(request):
     song_str = request.GET.get('song_info')
     song_info = json.loads(unquote(song_str))
 
-    # if test:
-        # print(type(song_info))
-        # print(song_info)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        src = executor.submit(query_artist_iocn_src, song_info['artist'])
+        summary = executor.submit(query_summary , song_info['artist'])
+    
+    mysql = SQL(music.lib.sql.config.DB_CONFIG)
+    mysql.create_tables()
+    params = {
+        'output_path': f"media/{song_info['artist']}/music/",
+        'url': song_info['url'],
+        'ID': song_info['music_ID'],
+        'title': song_info['title'],
+        'artist_url': song_info['artist_url'],
+        'original_artist': song_info['artist'],
+        'max_retry': 2,
+    }
+    
+    # song
+    song_info_str = download_audio(params=params)
+    download_img(url=song_info['img_url'] ,file_name='artist.jpg' ,file_dir= f"media/{song_info['artist']}/img/")
 
-    return JsonResponse({"success": False})
+    # cover
+    download_img_base64(url=src ,file_name='cover.jpg' ,file_dir= f"media/{song_info['artist']}/img/" )
+    
+    # artist
+    download_img(url=song_info['artist_img_url'] ,file_name='artist.jpg' ,file_dir= f"media/{song_info['artist']}/img/")
+
+    print(song_info_str)
+    if song_info_str is not None:
+        mysql.save_data(song_infos=json.dumps(song_info_str))
+        mysql.save_summary(artist=song_info['artist'] , summary=summary)
+        mysql.close()
+        return JsonResponse({"success": True})
+    else: 
+        return JsonResponse({"success": False})
+
+def download_songs(request):
+    song_str = request.GET.get('song_info')
+    song_info = json.loads(unquote(song_str))
+    
+    ID_list = query_music_list(url=song_info['url'])
+  
+
+    threads = []
+    results = []
+    
+    for i in range(0, len(ID_list), 2):
+        id, title = ID_list[i:i+2]
+        title = clear_str(title=title , artist=song_info['artist'])
+        params = {
+        'output_path': f"media/{song_info['artist']}/music/",
+        'url': song_info['url'],
+        'ID': id,
+        'title': title,
+        'artist_url': song_info['artist_url'],
+        'original_artist': song_info['artist'],
+        'max_retry': 2,
+        }
+        res = download_audio(params=params)
+        download_img(url=f'https://i.ytimg.com/vi/{id}/hqdefault.jpg', 
+                    file_name=f'{id}.jpg' ,
+                    file_dir= f"media/{song_info['artist']}/img/" )
+        if res is not None:
+            results.append(json.loads(res))
+           
+    # 输出结果
+    print(f'總共有{len(results)}首歌')
+      # 删除结果列表中为None的元素
+    results = [r for r in results if r is not None]
+
+    # 寫入資料庫
+    mysql = SQL(music.lib.sql.config.DB_CONFIG)
+    mysql.create_tables()
+    mysql.save_data(song_infos=json.dumps(results , indent=4))
+    
+    r = mysql.get_all_artist_song(artist=song_info['artist'])
+    r = [' '.join(map(str, i)) + '\n' for i in r]
+    print(f'{len(r)}首歌')
+    print(''.join(r))
+    mysql.close()
+    
+    return JsonResponse({'success': True, 'message': 'ok'})
+
+
+def get_music_list(request):
+    artist = request.GET.get('artist')
+    mysql = SQL(music.lib.sql.config.DB_CONFIG)
+    mysql.create_tables()
+    r = mysql.get_all_artist_song(artist=artist)
+    result_list = []
+    for row in r:
+        result_dict = { 'artist': row[1]
+                    , 'title': row[2], 'music_ID': row[3]
+                    , 'artist_url': row[4], 'keywords': row[5]
+                    , 'views' : row[6], 'publish_time': row[7]}
+        result_list.append(result_dict)
+    print(result_dict)
+    return JsonResponse({'musicList': result_list})

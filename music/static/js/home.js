@@ -56,7 +56,7 @@ function table_template(song, i, isWeb) {
       ></span>
     </td>
     <td style="text-align: right">
-      <a href="/music_list/?artist=${song.artist}&index=${i}" style="margin-right: 20px"
+      <a href="/music/music_list/?artist=${song.artist}&index=${i}" style="margin-right: 20px"
         ><span class="artist-text" style="margin-left: 20px; margin-right: 20px"
           >${song.artist}</span
         ><img src="${song.artist_img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}" alt="none" width="30" /></a
