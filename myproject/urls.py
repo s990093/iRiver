@@ -49,10 +49,10 @@ urlpatterns = [
     # path('test/', music_views.test, name='test'),
 
     # # iRiver
-    # path('iRiver/', iRiver_views.iRiver, name='iRiver'),
-    # path('setting/', iRiver_views.setting, name='setting'),
-    # path('problem/', iRiver_views.problem, name='problem'),
-    # path('plan/', iRiver_views.plan, name='plan'),
+    path('iRiver/', iRiver_views.iRiver, name='iRiver'),
+    path('setting/', iRiver_views.setting, name='setting'),
+    path('problem/', iRiver_views.problem, name='problem'),
+    path('plan/', iRiver_views.plan, name='plan'),
 
     # login
     # path('login/', login_views.login, name='login'),
