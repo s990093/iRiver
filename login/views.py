@@ -15,7 +15,9 @@ def hello(request):
 def testuser(request):
         # print('#'*20)
         # print(request.user.is_authenticated)
-        return JsonResponse({'isLogin':request.user.is_authenticated})
+        # return JsonResponse({'isLogin':request.user.is_authenticated})
+        return JsonResponse({'isLogin':True})
+
 
 #首頁
 def data(request):
