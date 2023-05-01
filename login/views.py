@@ -9,19 +9,6 @@ from .forms import LoginForm, RegisterForm
 from social_django import models as social_models
 
 #測試
-def social1(request):
-    name = request.user.username
-    email = request.user.email
-    now = timezone.now()
-    context = {
-        'title': '123',
-        'heading': name ,
-        'content': email,
-        'now': now
-    }
-    return render(request, 'home123.html', context)
-
-
 def hello(request):
     return HttpResponse("world")
 
@@ -38,6 +25,7 @@ def data(request):
 
     if request.user.is_authenticated:
         print("已登入")
+        print(request.user.username)
         name = request.user.username
         email = request.user.email
     else:
@@ -47,7 +35,6 @@ def data(request):
         
     now = timezone.now()
     context = {
-        'title': '456',
         'heading': name ,
         'content': email,
         'now': now

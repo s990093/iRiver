@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ title }}</title>
-  </head>
-  <body>
-    <h1>{{ heading }}</h1>
-    <p>{{ content }}</p>
-    <p>{{ now }}</p>
-  </body>
-</html>
+{% extends 'template.html' %}
+
+{% block body %}
+  <h1>{{ heading }}</h1>
+  <p>{{ content }}</p>
+  <p>{{ now }}</p>
+    <p> <a href="{% url 'login:logout'%}">登出
+    
+{% endblock %}
