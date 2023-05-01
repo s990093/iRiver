@@ -79,6 +79,7 @@
   filter: blur(20px);
 }
 
+/* style */
 .card-color-1 .frontSide,
 .card-color-1 .frontSide::before {
   background: linear-gradient(
@@ -98,28 +99,28 @@
 .card-color-2 .frontSide::before {
   background: linear-gradient(
     43deg,
-    rgb(201, 66, 66) 0%,
-    rgb(238, 163, 32) 46%,
-    rgb(35, 192, 211) 100%
+    rgb(62, 184, 119) 0%,
+    rgb(52, 170, 220) 46%,
+    rgb(121, 59, 196) 100%
   );
 }
 
 .card-color-2 .backSide,
 .card-color-2 .backSide::before {
-  background-image: linear-gradient(160deg, #5d5d5d 0%, #ff0084 100%);
+  background-image: linear-gradient(160deg, #1e9600 0%, #fff200 100%);
 }
 
 .card-color-3 .frontSide,
 .card-color-3 .frontSide::before {
   background: linear-gradient(
     43deg,
-    rgb(252, 176, 69) 0%,
-    rgb(224, 97, 142) 46%,
-    rgb(118, 76, 162) 100%
+    rgb(245, 181, 44) 0%,
+    rgb(243, 114, 44) 46%,
+    rgb(243, 44, 160) 100%
   );
 }
 
 .card-color-3 .backSide,
 .card-color-3 .backSide::before {
-  background-image: linear-gradient(160deg, #89c7d6 0%, #6cd8b0 100%);
+  background-image: linear-gradient(160deg, #70a1ff 0%, #ff6b81 100%);
 }
