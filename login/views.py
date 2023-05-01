@@ -47,7 +47,7 @@ def data(request):
         
     now = timezone.now()
     context = {
-        'title': '123',
+        'title': '456',
         'heading': name ,
         'content': email,
         'now': now
