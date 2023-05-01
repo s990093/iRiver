@@ -12,6 +12,7 @@ import re
 from collections import Counter
 # 自製
 from .options import get_chrome_options
+from music.lib.clear_str import clear_str
 
 def query_youtube(query : str) ->json:
     service = Service('chromedriver.exe')
@@ -69,8 +70,9 @@ def query_youtube(query : str) ->json:
                 if  video_change['artist'] == artist:
                     video["artist_img_url"] = video_change['artist_img_url']
                     break
-    
- 
+    # clear
+    for video in music_list:
+        video['title'] = clear_str(title=video['title'] , artist=video['artist'])
     
     statistics = {
     'most_common_artist': most_common_artist,

@@ -10,15 +10,24 @@ if (query) {
   fetch(`/music/query_web_song?query=${query}`)
     .then(response => response.json())
     .then(music_list => {
-      console.log('search data', music_list)
-      paush_web_data(music_list);
+      try {
+        console.log('search data', music_list)
+        paush_web_data(music_list);
+      } catch (error) {
+        console.log(error)
+      }
     });
   fetch(`/music/query_db_song?query=${query}`)
     .then(response => response.json())
-    .then(music_list => {
-      length = music_list.length
-      console.log('db_data', music_list)
-      paush_db_data(music_list)
+    .then(data => {
+      if (data.success) {
+        console.log('db_data', music_list)
+        paush_db_data(data.music_list)
+        length = music_list.length;
+      } else {
+        length = 0;
+      }
+
     });
   query = null
 }
@@ -41,7 +50,7 @@ function table_template(song, i, isWeb) {
   var row = `
   <tr>
     <td>
-      <a href="#"
+      <a href="#" class="play"
         ><img
           src="${song.img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}"
           alt="none"
@@ -72,13 +81,14 @@ function paush_web_data(music_list) {
   for (var i = 0; i < music_list.length; i++) {
     $('#table-body').append(table_template(music_list[i], i, true));
   }
-  $('#table-body').on('click', 'tr', function () {
+  $('#table-body').on('click', 'tr a.play', function () {
+    loading(true);
     var clickedRowIndex = $(this).index();
     // if (!isClickEventRegistered_db) {
     //   control_web.register();
     //   isClickEventRegistered_db = true;
     // 
-    if (clickedRowIndex > length)
+    if (clickedRowIndex > length) {
       fetch(`/music/download?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
         method: 'GET',
         headers: {
@@ -90,10 +100,25 @@ function paush_web_data(music_list) {
           if (data.success) {
             // control_web.insert(clickedRowIndex - length)
           }
+          loading(false);
+
         });
+
+      fetch(`/music/download_songs?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            // control_web.insert(clickedRowIndex - length)
+          }
+          loading(false);
+        });
+    }
   });
-
-
   loading(false);
 }
 
@@ -104,14 +129,17 @@ function paush_db_data(music_list) {
     music_list[i].artist_img_url = '/media/' + music_list[i]['artist'] + '/img/artist.jpg';
     $('#table-body').append(table_template(music_list[i], false));
   }
-  $('#table-body').on('click', 'tr', function () {
+  $('#table-body').on('click', 'tr a.play', function () {
+    loading(true);
     var clickedRowIndex = $(this).index();
     if (!isClickEventRegistered_db) {
       control_db.register();
       isClickEventRegistered_db = true;
     }
-    if (clickedRowIndex < length)
+    if (clickedRowIndex < length) {
       control_db.insert(clickedRowIndex);
+      loading(false);
+    }
   });
 
   loading(false);
@@ -124,3 +152,16 @@ spinners.forEach((spinner, index) => {
     spinner.style.display = 'block';
   }, index * 100);
 });
+
+
+$('#table-body').on('click', '.love-icon a', function () {
+  $(this).find('i').toggleClass('far fas');
+  fetch(`/user/test/`)
+    .then(response => response.json())
+    .then(data => {
+      if (!data.isLogin) {
+        location.replace('/user/');
+      }
+    });
+});
+
