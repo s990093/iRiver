@@ -164,3 +164,12 @@
   color: #8b8e98;
   text-decoration: underline;
 }
+.sign-in_ggl span i {
+  background-image: url("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
