@@ -81,7 +81,7 @@ def sign_in(request):
         if user is not None:
             login(request, user)
             print("成功登入")
-            return redirect('/user/test/')  #重新導向到首頁
+            return redirect('/user/data/')  #重新導向到首頁
         print("登入錯誤")
     context = {
         'form': form
