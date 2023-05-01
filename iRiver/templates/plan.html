@@ -8,8 +8,8 @@
 
 {% block import_css %}
 <link rel="stylesheet" href="{% static 'css/plan.css' %}" />
+<link rel="stylesheet" href="{% static 'css/card.css' %}" />
 {% endblock import_css %}
-
 <!-- body -->
 
 {% block body %}
@@ -18,8 +18,24 @@
   <div class="text-secondary-emphasis">
     <hr />
   </div>
-
   <!-- card -->
+  <div class="row">
+    <div class="col-md-3">
+      <div class="myCard">
+        <div class="innerCard">
+          <div class="frontSide">
+            <p class="title">FRONT SIDE</p>
+            <p>Hover Me</p>
+          </div>
+          <div class="backSide">
+            <p class="title">BACK SIDE</p>
+            <p>Leave Me</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="row">
     <!-- quality -->
     <div class="col-md-3">
@@ -66,4 +82,49 @@
   </div>
   <p>免費版本上述功能都有</p>
 </div>
+
+<div class="card-container">
+  <div class="myCard card-color-1">
+    <div class="innerCard">
+      <div class="frontSide">
+        <h2 class="title">Card 1</h2>
+        <p class="content">Front content</p>
+      </div>
+      <div class="backSide">
+        <h2 class="title">Card 1</h2>
+        <p class="content">Back content</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myCard card-color-2">
+    <div class="innerCard">
+      <div class="frontSide">
+        <h2 class="title">Card 2</h2>
+        <p class="content">Front content</p>
+      </div>
+      <div class="backSide">
+        <h2 class="title">Card 2</h2>
+        <p class="content">Back content</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="myCard card-color-3">
+    <div class="innerCard">
+      <div class="frontSide">
+        <h2 class="title">Card 3</h2>
+        <p class="content">Front content</p>
+      </div>
+      <div class="backSide">
+        <h2 class="title">Card 3</h2>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock body %}
+
+<!-- import_js -->
+{% block import_js %}
+<script src="{% static 'js/card.js' %}"></script>
+{% endblock import_js %}
