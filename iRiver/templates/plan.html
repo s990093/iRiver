@@ -8,28 +8,36 @@
 
 {% block import_css %}
 <link rel="stylesheet" href="{% static 'css/plan.css' %}" />
+<link rel="stylesheet" href="{% static 'css/plan-chooser.css' %}" />
 <link rel="stylesheet" href="{% static 'css/card.css' %}" />
+<style>
+  .card-container {
+    padding: 10px 0;
+  }
+</style>
 {% endblock import_css %}
 <!-- body -->
 
 {% block body %}
-<div class="container d-flex justify-content-center">
+<div class="">
   <h1>訂閱方案</h1>
   <div class="text-secondary-emphasis">
     <hr />
   </div>
-  <!-- card -->
-  <div class="row">
-    <div class="col-md-4">
+  <div class="clearfix"></div>
+  <!-- 加入 clearfix -->
+  <!-- paln- card -->
+  <div class="row-card row">
+    <div class="col-md-4 d-flex justify-content-center">
       <div class="card-container">
         <div class="myCard card-color-1">
           <div class="innerCard">
             <div class="frontSide">
               <h2 class="title">BASE</h2>
-              <p class="content">隨時收到你最新的歌曲訊息</p>
+              <p class="content">收聽訊息</p>
             </div>
             <div class="backSide">
-              <h2 class="title">BASE</h2>
+              <h2 class="title">PREMIUM</h2>
               <p class="content">隨時收到你最新的歌曲訊息</p>
             </div>
           </div>
@@ -37,12 +45,12 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card-container">
+      <div class="card-container d-flex justify-content-center">
         <div class="myCard card-color-2">
           <div class="innerCard">
             <div class="frontSide">
               <h2 class="title">BASE</h2>
-              <p class="content">享有最高的音質，沉浸式的享受</p>
+              <p class="content">普通品質，普通享受</p>
             </div>
             <div class="backSide">
               <h2 class="title">PREMIUM</h2>
@@ -52,23 +60,33 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 d-flex justify-content-center">
       <div class="card-container">
         <div class="myCard card-color-3">
           <div class="innerCard">
             <div class="frontSide">
               <h2 class="title">BASE</h2>
-              <p class="content">Front content</p>
+              <p class="content">普通服務</p>
             </div>
             <div class="backSide">
               <h2 class="title">PREMIUM</h2>
+              <p class="content">尊貴服務</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- plan-chooser -->
+  <br />
+  <div class="row">
+    <div class="col-md-12 d-flex justify-content-center">
+      {% include './template/plan-chooser.html' %}
+    </div>
+  </div>
 </div>
+
 {% endblock body %}
 
 <!-- import_js -->
