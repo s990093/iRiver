@@ -22,7 +22,6 @@ def testuser(request):
 
 #首頁
 def data(request):
-
     if request.user.is_authenticated:
         print("已登入")
         print(request.user.username)
