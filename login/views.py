@@ -13,21 +13,22 @@ def hello(request):
     return HttpResponse("world")
 
 
-def testuser(request):
-        # print('#'*20)
-        # print(request.user.is_authenticated)
-        # return JsonResponse({'isLogin':request.user.is_authenticated})
-        return JsonResponse({'isLogin':True})
+def check_login(request):
+    print("@"*20)
+    if 'isLogin' in request.session:
+        return JsonResponse({'isLogin': request.session['isLogin']})
+    else:
+        return JsonResponse({'isLogin': False})
 
-
-#首頁
+# 首頁
 def data(request):
     if request.user.is_authenticated:
         print("已登入")
-        print(request.user.username)
+        request.session['isLogin'] = True
         name = request.user.username
         email = request.user.email
     else:
+        request.session['isLogin'] = False
         print("未登入")
         name = None
         email = None
@@ -38,8 +39,10 @@ def data(request):
         'content': email,
         'now': now
     }
+    request.session.save() 
+    print("================22222")
+    print(request.session['isLogin'])
     return render(request, 'home123.html', context)
-
 
 #註冊
 def sign_up(request):
@@ -78,5 +81,8 @@ def sign_in(request):
 #登出
 def log_out(request):
     logout(request)
+    request.session['isLogin'] = False
+    request.session.save() 
+    print(request.session.get('isLogin'))
     print("已登出")
     return redirect('/user/login') #重新導向到登入畫面
