@@ -2,15 +2,30 @@
 
 <div class="row flex-nowrap overflow-auto">
   {% for i in '0123456789'|make_list %}
-  <div class="card col-md-3">
-    <img
-      src="https://th.bing.com/th/id/OIP.chuLCU6vX8rYwfa9X_CD3AHaHa?w=140&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">歌曲名稱</h5>
-      <p class="card-text">歌手</p>
+  <div class="">
+    <div class="card">
+      <div class="infos">
+        <div class="image"></div>
+        <div class="info">
+          <div>
+            <p class="name">John Doe</p>
+            <p class="function">Front-end dev</p>
+          </div>
+          <div class="stats">
+            <p class="flex flex-col">
+              Articles
+              <span class="state-value"> 34 </span>
+            </p>
+            <p class="flex">
+              Followers
+              <span class="state-value"> 455 </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="request" type="button">
+        <i class="fa-solid fa-play"></i>
+      </button>
     </div>
   </div>
   {% endfor %}

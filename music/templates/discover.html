@@ -6,24 +6,16 @@
 <!-- imprt_css -->
 {% block import_css %}
 <link rel="stylesheet" href="{% static './css/discover.css' %}" />
+<link rel="stylesheet" href="{% static './css/music/card.css' %}" />
+<link rel="stylesheet" href="{% static './css/music/card_artist.css' %}" />
+<link rel="stylesheet" href="{% static './css/music/card_song.css' %}" />
 {% endblock import_css %}
 
 <!-- body -->
 {% block body %}
-<!-- card -->
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">{% include './template/music/forYou.html' %}</div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">{% include './template/music/recently.html' %}</div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">{% include './template/music/recommend.html' %}</div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">{% include './template/music/radio.html' %}</div>
-  </div>
+  <div>{% include './template/music/foryou.html' %}</div>
+  <div>{% include './template/music/recently.html' %}</div>
+  <div>{% include './template/music/recommend.html' %}</div>
 </div>
-
 {% endblock body %}

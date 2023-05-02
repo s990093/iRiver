@@ -1,0 +1,28 @@
+.foryoucard {
+  width: 100%;
+  max-width: 290px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-image: url("https://akstatic.streetvoice.com/venue_activity_image/2020/09/02/f7f9876eb1794357b828afb6bfca593b.jpg?x-oss-process=image/resize,m_fill,h_440,w_830,limit_0/interlace,1/quality,q_95/sharpen,80/format,jpg");
+  background-size: cover; /* 自動縮放圖片 */
+  background-repeat: no-repeat; /* 避免重複顯示 */
+}
+.textBox {
+  width: calc(100% - 70px);
+  margin-left: 10px;
+  color: white;
+  font-family: "Poppins" sans-serif;
+}
