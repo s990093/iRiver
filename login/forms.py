@@ -40,8 +40,4 @@ class LoginForm(forms.Form):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ['phone', 'address']
-        labels = {
-            'phone': '電話',
-            'address': '地址'
-        }
+        fields = ['user', 'mail', 'phone', 'country']

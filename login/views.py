@@ -8,6 +8,7 @@ from django.http import JsonResponse
 from .forms import LoginForm, RegisterForm,UserProfileForm
 from social_django import models as social_models
 from .models import UserProfile
+from django.contrib.auth.models import User
 
 #測試
 def hello(request):
@@ -87,11 +88,12 @@ def log_out(request):
     return redirect('/user/login') #重新導向到登入畫面
 
 def profile(request):
-    # 顯示使用者的個人資料
-    name = request.user.username
-    email = request.user.email
-
-    request.user.username
-    profile = user.userprofile
-    form = UserProfileForm(instance=profile)
-    return render(request, 'profile.html', {'form': form})
+    user_profile, created = UserProfile.objects.get_or_create(mail=request.user.email)
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=user_profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+    else:
+        form = UserProfileForm(instance=user_profile)
+    return render(request, 'test456.html', {'form': form})
