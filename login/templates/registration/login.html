@@ -3,9 +3,6 @@
 <!-- load -->
 {% load static %}
 
-<!-- crf -->
-{% csrf_token %}
-
 <!-- import_css -->
 {% block import_css %}
 <link rel="stylesheet" href="{% static 'css/login.css' %}" />
@@ -14,7 +11,9 @@
 <!-- body -->
 {% block body %}
 <div class="container d-flex justify-content-center">
-  <form type="post" class="form_container">
+  <form method="post" class="form_container">
+    <!-- csrf -->
+    {% csrf_token %}
     <div class="logo_container"></div>
     <div class="title_container">
       <p class="title">Login to your Account</p>
@@ -49,12 +48,12 @@
         ></path>
       </svg>
       <input
+        type="text"
         placeholder="name@mail.com"
         title="Inpit title"
-        name="input-name"
-        type="text"
-        class="input_field"
         id="email_field"
+        class="form-control input_field"
+        name="{{ form.username.name }}"
       />
     </div>
     <div class="input_container">
@@ -86,14 +85,15 @@
         ></path>
       </svg>
       <input
-        placeholder="Password"
         title="Inpit title"
-        name="input-name"
-        type="password"
-        class="input_field"
         id="password_field"
+        type="password"
+        class="form-control input_field"
+        name="{{ form.password.name }}"
+        value="{{ form.password.value }}"
       />
     </div>
+
     <button title="Sign In" type="submit" class="sign-in_btn">
       <span>Sign In</span>
     </button>
