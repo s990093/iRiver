@@ -5,8 +5,9 @@ from django.shortcuts import redirect, render
 from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
-from .forms import LoginForm, RegisterForm
+from .forms import LoginForm, RegisterForm,UserProfileForm
 from social_django import models as social_models
+from .models import UserProfile
 
 #測試
 def hello(request):
@@ -86,3 +87,26 @@ def log_out(request):
     print(request.session.get('isLogin'))
     print("已登出")
     return redirect('/user/login') #重新導向到登入畫面
+
+def profile(request):
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST)
+        if form.is_valid():
+            # 取得目前登入的使用者資訊
+            user = request.user
+            # 建立 UserProfile 物件，並將表單資料儲存至該物件
+            profile = form.save(commit=False)
+            profile.user = user
+            profile.save()
+
+            return redirect('profile')
+    else:
+        # 顯示使用者的個人資料
+        user = request.user
+        try:
+            profile = user.userprofile
+        except UserProfile.DoesNotExist:
+            profile = None
+        form = UserProfileForm(instance=profile)
+
+    return render(request, 'profile.html', {'form': form})
