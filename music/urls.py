@@ -4,7 +4,8 @@ from . import views
 app_name = 'music'
 urlpatterns = [
     path('discover/', views.discover, name='discover'),
-    path('search/', views.search, name='search'),
+    path('my_album/', views.my_album, name='my_album'),
+    
     # fun
     path('query_db_song/', views.query_db_song, name='query_db_song'),
     path('query_web_song/', views.query_web_song, name='query_web_song'),

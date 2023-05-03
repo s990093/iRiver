@@ -3,15 +3,13 @@
   height: 265px;
   background: white;
   border-radius: 30px;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
   transition: 0.2s ease-in-out;
-  margin-left: 10px;
-  margin-right: 10px;
+  
 }
 
 .card_artist .artist-img {
-  top: 0;
   left: 0;
+  top: 0;
   right: 0;
   bottom: 50%;
   width: 100%;
