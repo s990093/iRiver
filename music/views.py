@@ -50,9 +50,9 @@ def music_list(request):
 
     return render(request, './music_list.html', context={'artist': artist, 'index': index})
 
-def my_album(request):
+def my_music_list(request):
     album = request.GET.get('album', '')
-    return render(request, './my_album.html')
+    return render(request, './my_music_list.html')
 
 
 def get_music_list(request):
