@@ -6,7 +6,7 @@ from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from .forms import LoginForm, RegisterForm,UserProfileForm
-from social_django import models as social_models
+# from social_django import models as social_models
 from .models import UserProfile
 from django.contrib.auth.models import User
 
@@ -16,7 +16,6 @@ def hello(request):
 
 
 def check_login(request):
-    print("@"*20)
     if 'isLogin' in request.session:
         return JsonResponse({'isLogin': request.session['isLogin']})
     else:
@@ -57,7 +56,7 @@ def sign_up(request):
     context = {
         'form': form
     }
-    return render(request, 'registration/register.html', context)
+    return render(request, 'registration/reg.html', context)
 
 
 #登入

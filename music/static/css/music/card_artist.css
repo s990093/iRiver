@@ -5,8 +5,8 @@
   border-radius: 30px;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
   transition: 0.2s ease-in-out;
-  margin-left: 10px; /* 加入这行 */
-  margin-right: 10px; /* 加入这行 */
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .card_artist .artist-img {
@@ -38,7 +38,7 @@
   justify-content: center;
 }
 
-.text {
+.card_artist .text {
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -51,7 +51,7 @@
   height: 15px;
 }
 
-.icon-box {
+.card_artist .icon-box {
   margin-top: 15px;
   width: 70%;
   padding: 10px;
@@ -62,11 +62,11 @@
   justify-content: left;
 }
 
-.icon-box svg {
+.card_artist .icon-box svg {
   width: 17px;
 }
 
-.text .h3 {
+.card_artist .text .h3 {
   font-family: "Lucida Sans" sans-serif;
   font-size: 15px;
   font-weight: 600;

@@ -32,3 +32,8 @@
 .main-body {
   margin: 69px;
 }
+
+body {
+  margin-top: env(safe-area-inset-top);
+  margin-bottom: env(safe-area-inset-bottom);
+}

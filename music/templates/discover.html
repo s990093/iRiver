@@ -7,8 +7,8 @@
 {% block import_css %}
 <link rel="stylesheet" href="{% static './css/discover.css' %}" />
 <link rel="stylesheet" href="{% static './css/music/card.css' %}" />
-<link rel="stylesheet" href="{% static './css/music/card_artist.css' %}" />
 <link rel="stylesheet" href="{% static './css/music/card_song.css' %}" />
+<link rel="stylesheet" href="{% static './css/music/card_artist.css' %}" />
 {% endblock import_css %}
 
 <!-- body -->
@@ -19,3 +19,8 @@
   <div>{% include './template/music/recommend.html' %}</div>
 </div>
 {% endblock body %}
+
+<!-- js -->
+{% block import_js %}
+<script src="{% static './js/navbar.js' %}"></script>
+{% endblock import_js %}

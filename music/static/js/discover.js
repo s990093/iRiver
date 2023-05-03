@@ -1,14 +1,11 @@
-$('.login').on('click', function () {
-    console.log($('.login'))
-
+$(document).ready(function () {
     fetch('/user/isLogin')
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             if (data.isLogin) {
                 console.log(data);
             } else {
-                location.href = '/user/login/';
+                location.href = '/iRiver/iRiver/';
             }
         });
 });
