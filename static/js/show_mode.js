@@ -18,9 +18,15 @@ $(document).ready(function () {
     });
 });
 
+
 function applyThemePreference(preference) {
     if (preference === 'auto') {
-        $('body').removeClass('dark-mode');
+        const currentTime = new Date().getHours(); // Get the current hour
+        if (currentTime >= 6 && currentTime < 18) {
+            $('body').removeClass('dark-mode');
+        } else {
+            $('body').addClass('dark-mode');
+        }
     } else if (preference === 'light') {
         $('body').removeClass('dark-mode');
     } else if (preference === 'dark') {
