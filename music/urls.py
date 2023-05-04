@@ -5,7 +5,6 @@ app_name = 'music'
 urlpatterns = [
     path('discover/', views.discover, name='discover'),
     path('my_music_list/', views.my_music_list, name='my_music_list'),
-    
     # fun
     path('query_db_song/', views.query_db_song, name='query_db_song'),
     path('query_web_song/', views.query_web_song, name='query_web_song'),
