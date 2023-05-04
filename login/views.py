@@ -70,7 +70,8 @@ def sign_in(request):
             login(request, user)
             print("成功登入")
             return redirect('/user/data/')  #重新導向到首頁
-        print("登入錯誤")
+        else:
+            print("登入錯誤")
     context = {
         'form': form
     }
