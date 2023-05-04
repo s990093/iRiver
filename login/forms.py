@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import UserProfile
+from django.core.validators import RegexValidator
 
 class RegisterForm(UserCreationForm):
     username = forms.CharField(
@@ -38,6 +39,16 @@ class LoginForm(forms.Form):
 
 
 class UserProfileForm(forms.ModelForm):
+    phone_regex = RegexValidator(
+        regex=r'^\+?\d{9,15}$',
+        message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
+    )
+    phone = forms.CharField(validators=[phone_regex])
+    def clean(self):
+        cleaned_data = super().clean()
+        phone = cleaned_data.get('phone')
+        if not phone:
+            raise forms.ValidationError("Phone number is required.")
     class Meta:
         model = UserProfile
         fields = ['user', 'mail', 'phone', 'country']

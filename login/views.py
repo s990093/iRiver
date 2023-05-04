@@ -86,6 +86,7 @@ def log_out(request):
     print("已登出")
     return redirect('/user/login') #重新導向到登入畫面
 
+#個人資料
 def profile(request):
     user_profile, created = UserProfile.objects.get_or_create(mail=request.user.email)
     if request.method == 'POST':

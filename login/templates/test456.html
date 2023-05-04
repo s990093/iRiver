@@ -1,6 +1,15 @@
 <h1>個人資料</h1>
 <form method="POST">
   {% csrf_token %}
+
+  {% if form.phone.errors %}
+  <ul class="errorlist">
+      {% for error in form.phone.errors %}
+          <li>{{ error }}</li>
+      {% endfor %}
+  </ul>
+{% endif %}
+
   姓名
   <input type="text" name="user" value="{{form.user.value}}">
   電郵
@@ -8,6 +17,14 @@
   電話
   <input type="text" name="phone" value="{{form.phone.value}}">
   國家
-  <input type="text" name="country" value="{{form.country.value}}">
+  <select name="country">
+    {% for choice in form.country.field.choices %}
+        {% if form.country.value == choice.0 %}
+            <option value="{{ choice.0 }}" selected>{{ choice.1 }}</option>
+        {% else %}
+            <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+        {% endif %}
+    {% endfor %}
+    </select>
   <button type="submit">保存</button>
 </form>
