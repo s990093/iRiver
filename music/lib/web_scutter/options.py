@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+
 def get_chrome_options(port=9222):
     options = Options()
     options.add_argument("--headless")  # run Chrome in headless mode
@@ -39,7 +40,6 @@ def get_chrome_options(port=9222):
     options.add_argument('--no-first-run')  # don't perform first run setup
     # disable safe browsing auto-update
     options.add_argument('--safebrowsing-disable-auto-update')
-    options.add_argument('--start-maximized')  # start browser maximized
     # set remote debugging port
     options.add_argument(f"--remote-debugging-port={port}")
 
