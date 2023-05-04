@@ -92,7 +92,7 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
-            return redirect('profile')
+            return redirect('/user/data')
     else:
         form = UserProfileForm(instance=user_profile)
     return render(request, 'test456.html', {'form': form})

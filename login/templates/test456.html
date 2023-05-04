@@ -1,14 +1,13 @@
-<h1>用户资料</h1>
+<h1>個人資料</h1>
 <form method="POST">
   {% csrf_token %}
-  <!-- {{ form.as_p }} -->
   姓名
-  <input type="text" name="user">
+  <input type="text" name="user" value="{{form.user.value}}">
   電郵
   <input type="email" name="mail" value="{{ form.mail.value }}" readonly>
   電話
-  <input type="text" name="phone">
+  <input type="text" name="phone" value="{{form.phone.value}}">
   國家
-  <input type="text" name="country">
+  <input type="text" name="country" value="{{form.country.value}}">
   <button type="submit">保存</button>
 </form>
