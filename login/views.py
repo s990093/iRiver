@@ -52,11 +52,12 @@ def sign_up(request):
             form.save()
             print("註冊成功")
             return redirect('/user/login/')  #重新導向到登入畫面
-        print("註冊錯誤")
+        else:
+            print("註冊錯誤")
     context = {
         'form': form
     }
-    return render(request, 'registration/reg.html', context)
+    return render(request, 'registration/register.html', context)
 
 
 #登入
@@ -75,7 +76,6 @@ def sign_in(request):
     context = {
         'form': form
     }
-    # print("登入")
     return render(request, 'registration/login.html', context)
 
 #登出
