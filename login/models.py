@@ -31,8 +31,8 @@ def validate_birthday(value):
     max_date = datetime.date.today()
     if not (min_date <= value <= max_date):
         raise ValidationError(
-            _('Invalid birthday - must be between %(min_date)s and today'),
-            params={'value': value, 'min_date': min_date},
+            _('日期錯誤，應在 %(min_date)s 到 %(max_date)s 之間'),
+            params={'min_date': min_date,'max_date': max_date},
         )
     
 class UserProfile(models.Model):
