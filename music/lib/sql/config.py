@@ -6,3 +6,4 @@ DB_CONFIG = {
     'db': 'music_db',
     'charset': 'utf8mb4',
 }
+

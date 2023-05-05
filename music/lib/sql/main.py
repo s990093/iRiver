@@ -9,14 +9,20 @@ if __name__ == '__main__':
 
 
     r = sql.get_artists(artist='RADWIMPS')
-    print(type(r[0]))
-    # print (r[0][2])
-    result_list = []
-    for row in r:
-        result_dict = {'id': row[0], 'artist': row[1], 'title': row[2], 'video_id': row[3], 'channel_url': row[4], 'tags': row[5]}
-        result_list.append(result_dict)
 
-    print(result_list[0])
+    print(r)
+
+    # print(type(r[0]))
+
+
+
+    # print (r[0][2])
+    # result_list = []
+    # for row in r:
+    #     result_dict = {'id': row[0], 'artist': row[1], 'title': row[2], 'video_id': row[3], 'channel_url': row[4], 'tags': row[5]}
+    #     result_list.append(result_dict)
+
+    # print(result_list[0])
 
     # r = [' '.join(map(str, i)) + '\n' for i in r]
     # print(r[0])
