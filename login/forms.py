@@ -51,4 +51,4 @@ class UserProfileForm(forms.ModelForm):
             raise forms.ValidationError("Phone number is required.")
     class Meta:
         model = UserProfile
-        fields = ['user', 'mail', 'phone', 'country']
+        fields = ['user', 'mail', 'phone', 'country', 'birthday']
