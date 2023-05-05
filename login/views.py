@@ -94,7 +94,9 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
+            print("成功修改")
             return redirect('/user/data')
     else:
+        print("修改錯誤")
         form = UserProfileForm(instance=user_profile)
     return render(request, 'test456.html', {'form': form})

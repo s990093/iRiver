@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from django.core.validators import MaxLengthValidator
 
-# Create your models here.
+#國家清單
 COUNTRY_CHOICES = (
     ('US', 'United States'),
     ('CA', 'Canada'),
@@ -15,12 +15,12 @@ COUNTRY_CHOICES = (
     ('CN', 'China'),
     ('TW', 'Taiwan'),
 )
-
 #電話格式檢查
 phone_test = RegexValidator(
     regex=r'^\+?\d{9,15}$',
     message="電話號碼錯誤、應在9～15個數字之間 ＋號可有可無"
 )
+#使用者名稱格式檢查
 user_test = RegexValidator(
     regex=r'^.{1,10}$',
     message="使用者名稱錯誤、應在1～10個字之間"
@@ -34,7 +34,7 @@ def validate_birthday(value):
             _('日期錯誤，應在 %(min_date)s 到 %(max_date)s 之間'),
             params={'min_date': min_date,'max_date': max_date},
         )
-    
+#使用者資料表    
 class UserProfile(models.Model):
     user = models.CharField(max_length=100, validators=[user_test])
     mail = models.EmailField(max_length=100, primary_key=True)
