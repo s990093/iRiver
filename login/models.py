@@ -25,8 +25,7 @@ def validate_birthday(value):
         )
 class UserProfile(models.Model):
     user = models.CharField(max_length=100)
-    mail = models.EmailField(max_length=100)
+    mail = models.EmailField(max_length=100, primary_key=True)
     phone = models.CharField(max_length=20)
     country = models.CharField(max_length=2, choices=COUNTRY_CHOICES)
     birthday = models.DateField(null=True, blank=True, validators=[validate_birthday])
-
