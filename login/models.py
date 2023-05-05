@@ -16,12 +16,13 @@ COUNTRY_CHOICES = (
 )
 
 def validate_birthday(value):
-    if value < datetime.date(1900, 1, 1):
+    min_date = datetime.date(1900, 1, 1)
+    max_date = datetime.date.today()
+    if not (min_date <= value <= max_date):
         raise ValidationError(
-            _('Invalid birthday - must be after 1900-01-01'),
-            params={'value': value},
+            _('Invalid birthday - must be between %(min_date)s and today'),
+            params={'value': value, 'min_date': min_date},
         )
-    
 class UserProfile(models.Model):
     user = models.CharField(max_length=100)
     mail = models.EmailField(max_length=100)

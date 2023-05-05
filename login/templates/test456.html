@@ -2,14 +2,17 @@
 <form method="POST">
   {% csrf_token %}
 
-  {% if form.phone.errors %}
-  <ul class="errorlist">
-      {% for error in form.phone.errors %}
+  {% if form.errors %}
+  <div class="alert alert-danger">
+      <ul>
+          {% for field_errors in form.errors.values %}
+          {% for error in field_errors %}
           <li>{{ error }}</li>
-      {% endfor %}
-  </ul>
-{% endif %}
-
+          {% endfor %}
+          {% endfor %}
+      </ul>
+  </div>
+  {% endif %}
   姓名
   <input type="text" name="user" value="{{form.user.value}}">
   電郵
@@ -26,7 +29,7 @@
         {% endif %}
     {% endfor %}
     </select>
-    電話
+    生日
     <input type="date" name="birthday" value="{{form.birthday.value}}">
   <button type="submit">保存</button>
 </form>
