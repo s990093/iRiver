@@ -85,7 +85,7 @@ def log_out(request):
     request.session.save() 
     print(request.session.get('isLogin'))
     print("已登出")
-    return redirect('/user/login') #重新導向到登入畫面
+    return redirect('/user/login') 
 
 #個人資料
 def profile(request):
