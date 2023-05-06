@@ -147,9 +147,17 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
-
-            print("成功修改")
-            
+            user = form.cleaned_data
+            email = user['mail']
+            username = user['user']
+            phone = user['phone']
+            country = user['country']
+            birthday = user['birthday']
+            sql = SQL_user(login.lib.sql.config.DB_CONFIG_user)
+            table_name = (request.session['email']).split("@")[0]
+            sql.create_tables(table_name)
+            sql.save_user_data(table_name, email, username, phone, country, birthday)
+            print("成功修改")      
             return redirect('/user/data')
     else:
         print("修改錯誤")
