@@ -23,15 +23,15 @@ def get_user_music_list(request):
     if request.method != 'POST':
         return HttpResponse('error')
     # 解析 JSON 数据
+    
     data = json.loads(request.body)
     method = data.get('method')
-    print(method)
+    # print('%'*20)
+    # print(method)
     if method == 'insert':
         return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
     elif method == 'get':
-        music_ID_list = sql_user_music_list.get_music_list()
-        print(music_ID_list)
-        return json.dumps(music_ID_list, indent=4)
+        return JsonResponse(list(sql_user_music_list.get_music_list()), safe=False)
 
 
     

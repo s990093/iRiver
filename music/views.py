@@ -14,6 +14,8 @@ import re
 from urllib.parse import unquote
 from multiprocessing import Process, Queue
 import concurrent.futures
+from django.urls import reverse
+from django.shortcuts import redirect
 # 自製
 import music.lib.sql.config
 from music.lib.sql.sql import SQL
@@ -49,17 +51,19 @@ def music_list(request):
     return render(request, './music_list.html', context={'artist': artist, 'index': index})
 
 def my_music_list(request):
-    url = 'http://127.0.0.1:8000/user/get_user_music_list'
+    url = 'http://127.0.0.1:8000/user/get_user_music_list/'
     csrftoken = request.COOKIES.get('csrftoken')
     session_id = request.COOKIES.get('sessionid')
     headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
     data = {'method': 'get'}
+    headers['X-CSRFToken'] = csrftoken
     response = requests.post(url, headers=headers, data=json.dumps(data))
 
-    data = response.content
-    print(data)
-
+    if response.status_code == 200:
+        data = response.content
+        print(data)
     return render(request, './my_music_list.html')
+
 
 
 def get_music_list(request):
