@@ -91,8 +91,9 @@ class SQL:
     def setfavorite(self, music_ID_list):
         music_ID_list = json.loads(music_ID_list)
         for music_ID in music_ID_list:
-            if self.cheak_ID_in_1(music_ID):
+            if self.cheak_ID_in_1(music_ID) == False:
                 self.save_data(music_ID, 1)
+                self.set_all_favorite(music_ID,True)
             current_favorite = self.get_music_info(music_ID)['favorite']
             current_favorite = not current_favorite  # 把 current_favorite 取反
             sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
