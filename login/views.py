@@ -33,8 +33,8 @@ def get_user_music_list(request):
         return JsonResponse(list(sql_user_music_list.get_music_list()), safe=False)
     elif method == 'delete':
         return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
-    # elif method == 'favorite':
-        
+    elif method == 'favorite':
+        return JsonResponse(json.dumps({'success': sql_user_music_list.setfavorite(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
 
 def hello(request):
     #temp = request.user.email

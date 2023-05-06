@@ -82,6 +82,34 @@ class SQL:
         self.cursor.execute(sql , (music_list, ))
         return self.cursor.fetchall()
         
+    def setfavorite(self, music_ID_list):
+        music_ID_list = json.loads(music_ID_list)
+        for music_ID in music_ID_list:
+            current_favorite = self.get_music_info(music_ID)['favorite']
+            if current_favorite == 1:
+                value = 0
+            else:
+                value = 1
+            sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
+        try:
+            self.cursor.execute(sql, (value, music_ID))
+            self.db.commit()
+            return True
+        except:
+            return False
+
+    def get_music_info(self, music_ID):
+        sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s'
+        self.cursor.execute(sql, (music_ID,))
+        result = self.cursor.fetchone()
+        if result:
+            music_info = {
+                'favorite': result[2]
+            }
+            return music_info
+        else:
+            print('No such music_ID')
+            return None
 
     def close(self):
         self.db.close()

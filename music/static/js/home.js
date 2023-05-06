@@ -180,7 +180,7 @@ $('#table-body').on('click', '.love-icon a', function () {
           },
           body: JSON.stringify({
             music_ID: music_ID,
-            method: 'insert'
+            method: 'favorite'
           })
         }).then(response => {
           if (response.ok) {
