@@ -157,8 +157,13 @@ function getCookie(name) {
   }
   return cookieValue;
 }
-
-
+// function getSessionkey() {
+//   const sessionid = document.cookie.split('; ')
+//     .find(row => row.startsWith('sessionid='))
+//     .split('=')[1];
+//   console.log(sessionid);
+//   return sessionid;
+// }
 $('#table-body').on('click', '.love-icon a', function () {
   $(this).find('i').toggleClass('far fas');
   fetch(`/user/isLogin/`)
@@ -186,11 +191,11 @@ $('#table-body').on('click', '.love-icon a', function () {
             console.log('保存失败');
           }
         });
-          // .then(response => response.json())
-          // .then(data => {
-          //   alert(data)
-          // })
-          // .catch(error => console.error(error));
+        // .then(response => response.json())
+        // .then(data => {
+        //   alert(data)
+        // })
+        // .catch(error => console.error(error));
       } else {
         location.href = "/user/login/";
       }

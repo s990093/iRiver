@@ -48,10 +48,10 @@ class SQL:
                     self.cursor.execute(insert_sql, insert_values)
             # 提交事务
             self.db.commit()
-            return {'success': True}
+            return True
         except Exception as e:
             print(e)
-            return {'success': False}
+            return False
 
 
     

@@ -49,14 +49,15 @@ def music_list(request):
     return render(request, './music_list.html', context={'artist': artist, 'index': index})
 
 def my_music_list(request):
-    url = '/user/get_user_music_list'
+    url = 'http://127.0.0.1:8000/user/get_user_music_list'
     csrftoken = request.COOKIES.get('csrftoken')
     session_id = request.COOKIES.get('sessionid')
     headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
-    data = {'method': 'get_music_list'}
+    data = {'method': 'get'}
     response = requests.post(url, headers=headers, data=json.dumps(data))
 
-    print(response.content)
+    data = response.content
+    print(data)
 
     return render(request, './my_music_list.html')
 

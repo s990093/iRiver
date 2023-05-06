@@ -18,31 +18,26 @@ from login.lib.sql.sql_music_list import SQL as SQL_music_list
 # def get_user_data(request):
 
 def get_user_music_list(request):
-    temp = request.session['email']
-    mail = temp.split("@")[0]
-
-    key = mail
-    
-    sql_user_music_list = SQL_music_list(login.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
+    sql_user_music_list = SQL_music_list(login.lib.sql.config.DB_CONFIG_user_music_list,table_name= (request.session['email']).split("@")[0])
     sql_user_music_list.create_tables()
-
     if request.method != 'POST':
         return HttpResponse('error')
     # 解析 JSON 数据
     data = json.loads(request.body)
     method = data.get('method')
-    
+    print(method)
     if method == 'insert':
-        try:
-            music_ID = data.get('music_ID')
-            music_ID_list = [music_ID]
-            sql_user_music_list.save_data(music_ID_list= json.dumps( music_ID_list , indent=4))
-            return {'success': True}
-        except:
-            return {'success': False}
-    elif method == 'get_music_list':
+        return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
+    elif method == 'get':
         music_ID_list = sql_user_music_list.get_music_list()
+        print(music_ID_list)
         return json.dumps(music_ID_list, indent=4)
+
+
+    
+    # elif method == 'favorite':
+    # elif method == 'delete':
+    
     
         
 
