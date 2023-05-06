@@ -43,3 +43,6 @@
 2023-05-06 17:38:22,164 - root - INFO - Downloaded music 'grhmRInuUOc' by '康士坦的變化球KST' successfully.
 2023-05-06 17:42:53,963 - root - INFO - Downloaded music 'xEVSuD4lu4s' by '康士坦的變化球KST' successfully.
 2023-05-06 17:46:25,165 - root - WARNING - Already exists 'xEVSuD4lu4s' by '康士坦的變化球KST'.
+2023-05-06 17:47:36,565 - django.request - WARNING - Not Found: /media/康士坦的變化球KST/songs/uK4ExmTDxPM.mp3
+2023-05-06 17:47:36,568 - django.request - WARNING - Not Found: /media/康士坦的變化球KST/img/uK4ExmTDxPM.jpg
+2023-05-06 17:47:43,948 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\login\views.py changed, reloading.

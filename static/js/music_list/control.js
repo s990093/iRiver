@@ -6,7 +6,7 @@ import { EqController } from "./eq_control.js";
 
 /**
  * @param {HTMLAudioElement} audio - the audio element
- * @param {JSON} current_info - 呼呼information about the currently selected music
+ * @param {JSON} current_info - information about the currently selected music
  * 
  */
 
@@ -46,10 +46,11 @@ export class Control {
     this.webAudio = new WebAudio(this.music_list);
     this.bgAudio = new bgAudio(this.music_list, this.currentIndex);
     this.mediaPlayer = new MediaPlayer(this.audio);
-    if ('mediaSession' in navigator)
-      navigator.mediaSession.metadata = null;
     this.eqController = new EqController(this.audio, this.test);
     this.mediaPlayer = new MediaPlayer(this.audio);
+
+    if ('mediaSession' in navigator)
+      navigator.mediaSession.metadata = null;
     this.webAudio.changePlayer(this.isPlayerShow);
     // this.insert();
 
@@ -75,7 +76,6 @@ export class Control {
     let timeoutId;
 
     $('#progressBar').on('input', () => {
-
       const currentTime = this.audio.duration * $('#progressBar').val() / 100;
       this.audio.currentTime = currentTime;
 
@@ -119,8 +119,8 @@ export class Control {
       } else {
         this.pause();
       }
+      this.webAudio.changButtonIcon(this.isPlaying);
       this.isPlaying = !this.isPlaying;
-
     });
 
     this.$stopBtn.on('click', this.stop.bind(this));

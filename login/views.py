@@ -131,6 +131,7 @@ def profile(request):
             form.save()
 
             print("成功修改")
+            
             return redirect('/user/data')
     else:
         print("修改錯誤")
