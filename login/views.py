@@ -34,7 +34,7 @@ def hello(request):
     sql_user_music_list.save_data(music_ID_list= json.dumps( music_ID_list , indent=4))
     #輸入測試end
 
-
+    #查詢結果
     music_ID_list = sql_user_music_list.get_music_list()
     #return json.dumps(music_ID_list, indent=4)
     
