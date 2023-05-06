@@ -64,7 +64,7 @@ def hello(request):
     music_ID_list = sql_user_music_list.get_music_list()
     #return json.dumps(music_ID_list, indent=4)
     
-    return HttpResponse("test")
+    return HttpResponse(music_ID_list)
 
 
 def check_login(request):

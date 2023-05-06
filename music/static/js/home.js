@@ -62,7 +62,7 @@ function table_template(song, i, isWeb) {
       </span>
     </td>
     <td>
-      <a href="#" class="add"><i class="bi bi-plus-lg"></i></a>
+      <a href="#" class="add" value=${song.music_ID}><i class="bi bi-plus-lg"></i></a>
     </td>
     <td style="text-align: right">
       <a href="/music/music_list/?artist=${song.artist}&index=${i}" style="margin-right: 20px">
@@ -180,7 +180,7 @@ $('#table-body').on('click', '.love-icon a', function () {
 
           body: JSON.stringify({
             music_ID: music_ID,
-            method: 'favorite'
+            method: 'insert'
           })
         }).then(response => {
           if (response.ok) {

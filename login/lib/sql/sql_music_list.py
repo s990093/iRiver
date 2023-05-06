@@ -31,15 +31,17 @@ class SQL:
         self.cursor.execute(sql, (value, music_id))
         self.db.commit()
 
-    def save_data(self, music_ID_list, music_list ):
+
+    def save_data(self, music_ID_list, music_list):
         """1  我的最愛"""
+        # print(music_ID_list)
         try:
             # 解析list
             music_ID_list = json.loads(music_ID_list)
             for music_ID in music_ID_list:
                 if music_list == 1:
                     favorite = True
-                    self.set_all_favorite(True)
+                    self.set_all_favorite(music_ID ,True)
                 else:
                     favorite = self.cheak_ID_in_1(music_ID)
 
@@ -69,7 +71,7 @@ class SQL:
             # 删除每个id
             for music_ID in music_ID_list:
                 if music_list == 1:
-                    self.set_all_favorite(False)
+                    self.set_all_favorite(music_ID , False)
                 music_list_sql = (f'DELETE FROM {self.table_name} '
                                 'WHERE music_list = %s AND music_ID = %s'
                                 )
@@ -84,7 +86,7 @@ class SQL:
 
 
     def get_music_list(self , music_list= 1):
-        sql = f'SELECT music_ID FROM {self.table_name} WHERE {music_list} = %s ORDER BY created_at  DESC'
+        sql = f'SELECT music_ID FROM {self.table_name} WHERE music_list = %s ORDER BY created_at  DESC'
         self.cursor.execute(sql , (music_list, ))
         return self.cursor.fetchall()
         
@@ -94,7 +96,8 @@ class SQL:
             if self.cheak_ID_in_1(music_ID) == False:
                 self.save_data(music_ID, 1)
                 self.set_all_favorite(music_ID,True)
-            current_favorite = self.get_music_info(music_ID)['favorite']
+                continue
+            current_favorite = self.get_music_info(music_ID)
             current_favorite = not current_favorite  # 把 current_favorite 取反
             sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
             try:
@@ -113,6 +116,12 @@ class SQL:
             return True
         else:
             return False
+        
+    def get_music_info(self, music_ID):
+        sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s AND music_list = 1'
+        self.cursor.execute(sql, (music_ID,))
+        result = self.cursor.fetchone()
+        return result[2]
 
     def close(self):
         self.db.close()

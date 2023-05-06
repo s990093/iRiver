@@ -67,6 +67,7 @@ def my_music_list(request):
 
 
 
+
 def get_music_list(request):
     artist = request.GET.get('artist')
     mysql = SQL(music.lib.sql.config.DB_CONFIG)
