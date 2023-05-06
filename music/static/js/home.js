@@ -166,12 +166,12 @@ $('#table-body').on('click', '.love-icon a', function () {
     .then(data => {
       if (data.isLogin) {
         var music_ID = $(this).attr('value');
-        const csrftoken = getCookie('csrftoken'); 
+        const csrftoken = getCookie('csrftoken');
         fetch('/user/get_user_music_list/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'X-CSRFToken': csrftoken 
+            'X-CSRFToken': csrftoken
           },
           body: JSON.stringify({
             music_ID: music_ID,
