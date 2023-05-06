@@ -15,28 +15,13 @@ class SQL:
     def create_tables(self):
         # Create the artists table
         sql = '''
-            CREATE TABLE IF NOT EXISTS artists (
-                id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                artist VARCHAR(255) NOT NULL,
-                summary VARCHAR(255)
+            CREATE TABLE IF NOT EXISTS {table_name} (
+                albumID INT NOT NULL PRIMARY KEY,
+                musicID INT NOT NULL UNIQUE
             )
         '''
         self.cursor.execute(sql)
 
-        # Create the songs table
-        sql = '''
-            CREATE TABLE IF NOT EXISTS songs (
-                id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                artist VARCHAR(255) NOT NULL,
-                title VARCHAR(255) NOT NULL,
-                music_ID VARCHAR(255),
-                artist_url VARCHAR(255),
-                keywords VARCHAR(255),
-                views INT,
-                publish_time INT(10)
-            )
-        '''
-        self.cursor.execute(sql)
         
     def save_data(self, song_infos):
         # Load song_infos into a list

@@ -6,12 +6,21 @@ from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from .forms import LoginForm, RegisterForm,UserProfileForm
-# from social_django import models as social_models
 from .models import UserProfile
 from django.contrib.auth.models import User
+# 自製
+import login.lib.sql.config
+from login.lib.sql.sql import SQL
 
 #測試
 def hello(request):
+    def get_music_list(request):
+    artist = request.GET.get('artist')
+    mysql = SQL(music.lib.sql.config.DB_CONFIG)
+    mysql.create_tables()
+    r = mysql.get_all_artist_song(artist=artist)
+    print('#'*30)
+    print(r)
     return HttpResponse("world")
 
 
