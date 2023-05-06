@@ -183,8 +183,24 @@ class SQL:
                 break
         return result, score
     
-    #def get_music_list_info(self, muic_ID_list):
-        # def get_song_url(self , song_url):
-   
+    def get_music_list_infos(self, music_ID_list):
+        song_infos = []
+        for music_ID in music_ID_list:
+            sql = 'SELECT * FROM songs WHERE music_ID = %s'
+            self.cursor.execute(sql , (music_ID, ))
+            rows = self.cursor.fetchall()
+            for row in rows:
+                song_infos.append({
+                    'artist': row[1],
+                    'title': row[2],
+                    'music_ID': row[3],
+                    'artist_url': row[4],
+                    'keywords': row[5],
+                    'views': row[6],
+                    'publish_time': row[7]
+                })
+        return song_infos
+
+
     def close(self):
         self.db.close()
