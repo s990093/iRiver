@@ -13,11 +13,12 @@ class SQL:
         self.cursor = self.db.cursor()
 
     def create_tables(self, table_name):
+
         # Create the artists table
         sql = f'''
             CREATE TABLE IF NOT EXISTS {table_name} (
-                music_list INT NOT NULL PRIMARY KEY,
-                musicID INT NOT NULL UNIQUE
+                email VARCHAR(32) NOT NULL PRIMARY KEY,
+                phone VARCHAR(32) NOT NULL
             )
         '''
         self.cursor.execute(sql)

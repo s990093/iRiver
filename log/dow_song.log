@@ -37,3 +37,6 @@
 2023-05-06 13:47:13,255 - root - WARNING - Already exists '7HgJIAUtICU' by 'Vaundy'.
 2023-05-06 13:52:59,266 - root - WARNING - Already exists '7HgJIAUtICU' by 'Vaundy'.
 2023-05-06 14:52:32,911 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\орн▒\django\myproject\login\views.py changed, reloading.
+2023-05-06 16:07:51,963 - root - INFO - Downloaded music 'SIuF37EWaLU' by 'Vaundy' successfully.
+2023-05-06 16:08:33,397 - django.request - WARNING - Not Found: /music_list/
+2023-05-06 16:16:53,376 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\орн▒\django\myproject\login\views.py changed, reloading.

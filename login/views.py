@@ -8,17 +8,37 @@ from django.http import JsonResponse
 from .forms import LoginForm, RegisterForm,UserProfileForm
 from .models import UserProfile
 from django.contrib.auth.models import User
+import json
 # 自製
 import login.lib.sql.config
-from login.lib.sql.sql import SQL
+from login.lib.sql.sql_user import SQL as SQL_user
+from login.lib.sql.sql_music_lit import SQL as SQL_music_list
 
 #測試
 def hello(request):
-    artist = request.GET.get('artist')
-    mysql = SQL(login.lib.sql.config.DB_CONFIG)
-    mysql.create_tables(table_name='lai09150915@gmail.com')
+    
+    key = 'lai09150915'
+    # sql_user = SQL_user(login.lib.sql.config.DB_CONFIG_user)
+    # sql_user.create_tables(table_name= key)
 
-    return HttpResponse("world")
+    sql_user_music_list = SQL_music_list(login.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
+    sql_user_music_list.create_tables()
+
+    #輸入測試start
+    music_ID_dict = {
+        '213124124124',
+        '1412341241324',
+        '1234124124'
+    }
+    music_ID_list = [music for music in music_ID_dict]
+    sql_user_music_list.save_data(music_ID_list= json.dumps( music_ID_list , indent=4))
+    #輸入測試end
+
+
+    music_ID_list = sql_user_music_list.get_music_list()
+    #return json.dumps(music_ID_list, indent=4)
+    
+    return HttpResponse(music_ID_list)
 
 
 def check_login(request):
