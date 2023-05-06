@@ -14,8 +14,8 @@ class SQL:
         self.db = MySQLdb.connect(**self.config)
         self.cursor = self.db.cursor()
 
+
     def create_tables(self):
-        # Create the table
         sql = f'''
             CREATE TABLE IF NOT EXISTS {self.table_name} (
                 music_list INT NOT NULL,
@@ -27,8 +27,9 @@ class SQL:
 
 
     def save_data(self, music_ID_list,  music_list=1):
+        #解析list
         music_ID_list = json.loads(music_ID_list)
-
+        #把每個id都存進去
         for music_ID in music_ID_list:
             if not music_ID:
                 continue
@@ -38,15 +39,28 @@ class SQL:
                               )
             music_list_values = (music_list, music_ID)
             self.cursor.execute(music_list_sql, music_list_values)
-
+        #儲存
         self.db.commit()
-        print('=' * 30)
-        print('save data')
     
+    
+    def delete_data(self, music_ID_list, music_list=1):
+        # 解析list
+        music_ID_list = json.loads(music_ID_list)
+        # 删除每个id
+        for music_ID in music_ID_list:
+            if not music_ID:
+                continue
+            music_list_sql = (f'DELETE FROM {self.table_name} '
+                            'WHERE music_list = %s AND music_ID = %s'
+                            )
+            music_list_values = (music_list, music_ID)
+            self.cursor.execute(music_list_sql, music_list_values)
+        # 提交更改
+        self.db.commit()
+
     def get_music_list(self , music_list= 1):
         sql = f'SELECT music_ID FROM {self.table_name} WHERE {music_list} = %s ORDER BY created_at  DESC'
         self.cursor.execute(sql , (music_list, ))
-        
         return self.cursor.fetchall()
         
 

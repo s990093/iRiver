@@ -12,27 +12,25 @@ import json
 # 自製
 import login.lib.sql.config
 from login.lib.sql.sql_user import SQL as SQL_user
-from login.lib.sql.sql_music_lit import SQL as SQL_music_list
+from login.lib.sql.sql_music_list import SQL as SQL_music_list
 
 #測試
 def hello(request):
     
-    key = 'lai09150915'
+    key = 'popop'
     # sql_user = SQL_user(login.lib.sql.config.DB_CONFIG_user)
     # sql_user.create_tables(table_name= key)
 
     sql_user_music_list = SQL_music_list(login.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
     sql_user_music_list.create_tables()
 
-    #輸入測試start
     music_ID_dict = {
-        '213124124124',
-        '1412341241324',
-        '1234124124'
+        '111',
+        '222',
     }
     music_ID_list = [music for music in music_ID_dict]
-    sql_user_music_list.save_data(music_ID_list= json.dumps( music_ID_list , indent=4))
-    #輸入測試end
+    #sql_user_music_list.save_data(music_ID_list= json.dumps( music_ID_list , indent=4))
+    #sql_user_music_list.delete_data(music_ID_list= json.dumps( music_ID_list , indent=4))
 
     #查詢結果
     music_ID_list = sql_user_music_list.get_music_list()
