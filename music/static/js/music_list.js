@@ -55,7 +55,7 @@ function push_music_list(data) {
   }
 
   // Add click event listener to each row
-  $('#table-body').on('click', 'tr', function () {
+  $('#table-body').on('click', 'trs', function () {
     var clickedRowIndex = $(this).index();
     if (!isClickEventRegistered) {
       control.register();

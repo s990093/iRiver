@@ -6,39 +6,56 @@
 <!-- body -->
 {% block body %}
 <div class="container">
-  <h1>我的專輯</h1>
-  <table class="table table-hover">
-    <tbody>
-      {% for song in music_list_infos %}
-      <tr>
-        <td>
-          <a href="#" class="play">
-            <img
-              src="{{ '/media/'|add:song.artist|add:'/img/'|add:song.music_ID|add:'.jpg' }}"
-              alt="none"
-              width="70"
-              style="margin-right: 20px"
-            />
-            <span>{{ song.title }}</span>
-          </a>
-        </td>
-        <td>
-          <span class="love-icon" style="text-align: right">
-            <a href="#" value="{{ song.music_ID }}"
-              ><i class="far fa-heart"></i
-            ></a>
-          </span>
-        </td>
-        <td>
-          <a href="#" class="add"><i class="bi bi-plus-lg"></i></a>
-        </td>
-      </tr>
-      {% empty %}
-      <tr>
-        <td colspan="3">No music available</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <div class="main-content">
+    <h1>我的專輯</h1>
+    <table class="table table-hover">
+      <tbody>
+        {% for song in music_list_infos %}
+        <tr>
+          <td>
+            <a href="#" class="play">
+              <img
+                src="{{ '/media/'|add:song.artist|add:'/img/'|add:song.music_ID|add:'.jpg' }}"
+                alt="none"
+                width="70"
+                style="margin-right: 20px"
+              />
+              <span>{{ song.title }}</span>
+            </a>
+          </td>
+          <td>
+            <span class="love-icon" style="text-align: right">
+              <a href="#" value="{{ song.music_ID }}"
+                ><i class="far fa-heart"></i
+              ></a>
+            </span>
+          </td>
+          <td>
+            <a href="#" class="add"><i class="bi bi-plus-lg"></i></a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="3">No music available</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
+<!-- music -->
+<div class="music-player">{% include 'music_player.html' %}</div>
+
 {% endblock body %}
+
+<!-- js -->
+{% block js %}
+<script>
+  const music_list_infos = JSON.parse("{{ music_list_infos_json|escapejs }}");
+</script>
+{% endblock js %}
+
+<!-- import_js -->
+{% block import_js %}
+<script type="module" src="{% static 'js/my_music_list.js' %}"></script>
+{% endblock import_js %}
