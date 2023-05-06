@@ -62,8 +62,10 @@ def my_music_list(request):
     if response.status_code == 200:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         music_list_infos = mysql.get_music_list_infos(music_ID_list= [item[0] for item in json.loads(response.content)])
-        return render(request, './my_music_list.html', {'music_list_infos': music_list_infos})     
-    return render(request, './my_music_list.html')
+        music_list_infos_json = json.dumps(music_list_infos)
+        return render(request, './my_music_list.html', {'music_list_infos': music_list_infos, 
+                                                        'music_list_infos_json': music_list_infos_json})     
+   
 
 
 
