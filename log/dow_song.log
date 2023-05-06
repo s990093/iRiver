@@ -46,3 +46,17 @@
 2023-05-06 17:47:36,565 - django.request - WARNING - Not Found: /media/康士坦的變化球KST/songs/uK4ExmTDxPM.mp3
 2023-05-06 17:47:36,568 - django.request - WARNING - Not Found: /media/康士坦的變化球KST/img/uK4ExmTDxPM.jpg
 2023-05-06 17:47:43,948 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\login\views.py changed, reloading.
+2023-05-06 17:48:56,584 - root - INFO - Downloaded music 'uK4ExmTDxPM' by '康士坦的變化球KST' successfully.
+2023-05-06 17:50:22,775 - django.request - WARNING - Not Found: /music_list/
+2023-05-06 17:50:23,116 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-06 17:51:38,411 - root - INFO - Downloaded music 'n7xF4UYrkq8' by '康士坦的變化球KST' successfully.
+2023-05-06 17:55:35,392 - django.request - WARNING - Not Found: /user/test/
+2023-05-06 17:55:38,438 - django.request - WARNING - Not Found: /user/test/
+2023-05-06 17:55:40,982 - django.request - WARNING - Not Found: /user/test/
+2023-05-06 17:55:56,411 - root - WARNING - Already exists 'xEVSuD4lu4s' by '康士坦的變化球KST'.
+2023-05-06 17:58:10,773 - root - INFO - Downloaded music 'FGeYMR8hDF8' by '康士坦的變化球KST' successfully.
+2023-05-06 17:59:17,947 - django.request - WARNING - Not Found: /user/test/
+2023-05-06 17:59:19,534 - django.request - WARNING - Not Found: /user/test/
+2023-05-06 17:59:32,468 - root - INFO - Downloaded music 'gnL-bVDf7Tc' by '康士坦的變化球KST' successfully.
+2023-05-06 17:59:38,436 - django.request - WARNING - Not Found: /user/test/
+2023-05-06 17:59:42,937 - django.request - WARNING - Not Found: /user/test/
