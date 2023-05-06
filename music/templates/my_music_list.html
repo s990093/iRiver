@@ -7,5 +7,9 @@
 {% block body %}
 <div class="container">
   <h1>我的專輯</h1>
+  {% for music_id in music_list %}
+  <h2>{{ music_id }}</h2>
+  <br />
+  {% endfor %}
 </div>
 {% endblock body %}

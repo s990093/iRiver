@@ -60,8 +60,13 @@ def my_music_list(request):
     response = requests.post(url, headers=headers, data=json.dumps(data))
 
     if response.status_code == 200:
-        data = response.content
-        print(data)
+        data = json.loads(response.content)
+        data = [item[0] for item in data]
+        mysql = SQL(music.lib.sql.config.DB_CONFIG)
+        mysql.create_tables()
+        return render(request, './my_music_list.html', {'music_list': data})
+
+     
     return render(request, './my_music_list.html')
 
 

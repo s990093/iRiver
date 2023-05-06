@@ -31,10 +31,8 @@ def get_user_music_list(request):
     if method == 'insert':
         return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
     elif method == 'get':
-        return JsonResponse(list(sql_user_music_list.get_music_list()), safe=False)
+        return JsonResponse((sql_user_music_list.get_music_list()), safe=False)
 
-
-    
     # elif method == 'favorite':
     # elif method == 'delete':
     
