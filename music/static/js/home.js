@@ -61,8 +61,8 @@ function table_template(song, i, isWeb) {
       >
     </td>
     <td>
-      <span class="love-icon" style="text-align: right" value=${song.music_ID}
-        ><a href="#"><i class="far fa-heart"></i></a
+      <span class="love-icon" style="text-align: right" 
+        ><a href="#" value=${song.music_ID}><i class="far fa-heart"></i></a
       ></span>
     </td>
     <td style="text-align: right">
@@ -143,26 +143,44 @@ spinners.forEach((spinner, index) => {
   }, index * 100);
 });
 
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
 
 $('#table-body').on('click', '.love-icon a', function () {
   $(this).find('i').toggleClass('far fas');
   fetch(`/user/isLogin/`)
     .then(response => response.json())
     .then(data => {
-      var music_ID = $(this).attr('value');
       if (data.isLogin) {
-        fetch('/your-aget_user_music_list/', {
+        var music_ID = $(this).attr('value');
+        const csrftoken = getCookie('csrftoken'); 
+        fetch('/user/get_user_music_list/', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken 
           },
           body: JSON.stringify({
             music_ID: music_ID,
+            method: 'insert'
           })
         })
           .then(response => response.json())
           .then(data => {
-            alert('存到db')
+            alert(data)
           })
           .catch(error => console.error(error));
       } else {

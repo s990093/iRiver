@@ -18,14 +18,36 @@ from login.lib.sql.sql_music_list import SQL as SQL_music_list
 # def get_user_data(request):
 
 def get_user_music_list(request):
-    if request.method == 'POST':
-        # 解析 JSON 数据
-        data = json.loads(request.body)
-        music_ID = data.get('music_ID')
+    temp = request.session['email']
+    mail = temp.split("@")[0]
+
+    key = mail
+    
+    sql_user_music_list = SQL_music_list(login.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
+    sql_user_music_list.create_tables()
+
+    if request.method != 'POST':
+        return HttpResponse('error')
+    # 解析 JSON 数据
+    data = json.loads(request.body)
+    print(data)
+    music_ID = data.get('music_ID')
+    method = data.get('method')
+    music_ID_list = [music_ID]
+    
+    if method == 'insert':
+        try:
+            sql_user_music_list.save_data(music_ID_list= json.dumps( music_ID_list , indent=4))
+            return {'success': True}
+        except:
+            return {'success': False}
+    
+    
         
 
 def hello(request):
-    temp = request.user.email
+    #temp = request.user.email
+    temp = request.session['email']
     mail = temp.split("@")[0]
 
     key = mail
