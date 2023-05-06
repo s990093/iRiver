@@ -18,9 +18,11 @@ from login.lib.sql.sql_music_list import SQL as SQL_music_list
 # def get_user_data(request):
 
 def get_user_music_list(request):
-    method =  request.POST.get('method')
-    # if method == 'delete':
-
+    if request.method == 'POST':
+        # 解析 JSON 数据
+        data = json.loads(request.body)
+        music_ID = data.get('music_ID')
+        
 
 def hello(request):
     temp = request.user.email

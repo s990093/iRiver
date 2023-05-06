@@ -61,7 +61,7 @@ function table_template(song, i, isWeb) {
       >
     </td>
     <td>
-      <span class="love-icon" style="text-align: right"
+      <span class="love-icon" style="text-align: right" value=${song.music_ID}
         ><a href="#"><i class="far fa-heart"></i></a
       ></span>
     </td>
@@ -146,11 +146,27 @@ spinners.forEach((spinner, index) => {
 
 $('#table-body').on('click', '.love-icon a', function () {
   $(this).find('i').toggleClass('far fas');
-  fetch(`/user/test/`)
+  fetch(`/user/isLogin/`)
     .then(response => response.json())
     .then(data => {
-      if (!data.isLogin) {
-        console.log("asd")
+      var music_ID = $(this).attr('value');
+      if (data.isLogin) {
+        fetch('/your-aget_user_music_list/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            music_ID: music_ID,
+          })
+        })
+          .then(response => response.json())
+          .then(data => {
+            alert('存到db')
+          })
+          .catch(error => console.error(error));
+      } else {
+        location.href = "/user/login/";
       }
     });
 });
