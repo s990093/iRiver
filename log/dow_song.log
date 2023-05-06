@@ -2,3 +2,17 @@
 2023-05-06 12:40:40,371 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\орн▒\django\myproject\music\lib\dow.py changed, reloading.
 2023-05-06 12:41:04,123 - root - WARNING - Already exists '-_PKhPMXMDY' by 'Vaundy'.
 2023-05-06 12:42:42,621 - root - INFO - Downloaded music 'U8pJgoOhiDs' by 'SaucyDog' successfully.
+2023-05-06 12:49:06,548 - root - INFO - Downloaded music 'WObVzphoLTY' by 'SaucyDog' successfully.
+2023-05-06 12:49:32,340 - root - INFO - Downloaded music 'agQ23NdBROY' by 'SaucyDog' successfully.
+2023-05-06 12:49:32,818 - django.request - WARNING - Not Found: /media/SaucyDog/music/agQ23NdBROY.mp3
+2023-05-06 12:50:35,355 - django.request - WARNING - Not Found: /media/SaucyDog/img/IVbY5edMfCA.jpg
+2023-05-06 12:50:35,357 - django.request - WARNING - Not Found: /media/SaucyDog/music/IVbY5edMfCA.mp3
+2023-05-06 12:50:36,939 - django.request - WARNING - Not Found: /media/SaucyDog/music/agQ23NdBROY.mp3
+2023-05-06 12:55:12,911 - root - INFO - Downloaded music 'IVbY5edMfCA' by 'SaucyDog' successfully.
+2023-05-06 12:55:13,457 - django.request - WARNING - Not Found: /media/SaucyDog/music/IVbY5edMfCA.mp3
+2023-05-06 12:56:38,018 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-06 12:59:56,586 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\орн▒\django\myproject\music\views.py changed, reloading.
+2023-05-06 13:09:16,609 - root - INFO - Downloaded music '3Yq58d2rsRk' by 'SaucyDog' successfully.
+2023-05-06 13:09:17,063 - django.request - WARNING - Not Found: /media/SaucyDog/music/3Yq58d2rsRk.mp3
+2023-05-06 13:13:20,353 - django.request - WARNING - Not Found: /media/SaucyDog/music/U8pJgoOhiDs.mp3
+2023-05-06 13:13:27,380 - django.request - WARNING - Not Found: /media/SaucyDog/music/U8pJgoOhiDs.mp3

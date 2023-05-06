@@ -79,6 +79,9 @@ def get_music_list(request):
 def query_db_song(request):
     query = request.GET.get('query', '')
 
+    if test:
+            print('='*50)
+            print(f'get db {query} !!')
     # 資料庫
     try:
         mysql  =  SQL(music.lib.sql.config.DB_CONFIG)
@@ -100,8 +103,8 @@ def query_db_song(request):
                         'views' : row[6],
                         'publish_time' :row[7]}
         music_list.append(result_dict)
-
-    return JsonResponse({'isLogin':False , 'data' : music_list}, safe=False)
+        
+    return JsonResponse({'success': True , 'music_list' : music_list}, safe=False)
 
 
     
@@ -121,7 +124,8 @@ def query_web_song(request):
     except Exception as e:
         print(e)
 
-    return JsonResponse(music_list , safe=False)
+    return JsonResponse({'success': True , 'music_list' : music_list}, safe=False)
+
 
 
 def download_song(request):

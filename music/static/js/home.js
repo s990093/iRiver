@@ -9,23 +9,24 @@ if (query) {
   loading(true);
   fetch(`/music/query_web_song?query=${query}`)
     .then(response => response.json())
-    .then(music_list => {
-      try {
-        console.log('search data', music_list)
-        paush_web_data(music_list);
-      } catch (error) {
-        console.log(error)
+    .then(data => {
+      if (data.success) {
+        console.log('search data', data.music_list)
+        paush_web_data(data.music_list);
+      } else {
+        alert('web search error' , data.music_list);
       }
     });
   fetch(`/music/query_db_song?query=${query}`)
     .then(response => response.json())
     .then(data => {
       if (data.success) {
-        console.log('db_data', music_list)
+        console.log('db_data', data.music_list)
         paush_db_data(data.music_list)
-        length = music_list.length;
+        length = data.music_list.length;
       } else {
         length = 0;
+        alert("db search error" , data.music_list);
       }
 
     });
@@ -77,17 +78,17 @@ function table_template(song, i, isWeb) {
 }
 
 function paush_web_data(music_list) {
-  // const control_web = new Control(audio, music_list, true, false, true);
+  const control_web = new Control(audio, music_list, false, false, true);
   for (var i = 0; i < music_list.length; i++) {
     $('#table-body').append(table_template(music_list[i], i, true));
   }
   $('#table-body').on('click', 'tr', function () {
     loading(true);
     var clickedRowIndex = $(this).index();
-    // if (!isClickEventRegistered_db) {
-    //   control_web.register();
-    //   isClickEventRegistered_db = true;
-    // 
+    if (!isClickEventRegistered_db) {
+      control_web.register();
+      isClickEventRegistered_db = true;
+    }
 
     if (clickedRowIndex >= length) {
       fetch(`/music/download?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
@@ -99,8 +100,9 @@ function paush_web_data(music_list) {
         .then(response => response.json())
         .then(data => {
           if (data.success) {
-            // control_web.insert(clickedRowIndex - length)
-            console.log("ok")
+            control_web.insert(clickedRowIndex - length)
+          } else {
+            alert('Error');
           }
           loading(false);
         });
@@ -111,7 +113,7 @@ function paush_web_data(music_list) {
 }
 
 function paush_db_data(music_list) {
-  const control_db = new Control(audio, music_list, true, false, true);
+  const control_db = new Control(audio, music_list, false, false, true);
   for (var i = 0; i < music_list.length; i++) {
     music_list[i].img_url = '/media/' + music_list[i]['artist'] + '/img/' + music_list[i]['music_ID'] + '.jpg';
     music_list[i].artist_img_url = '/media/' + music_list[i]['artist'] + '/img/artist.jpg';

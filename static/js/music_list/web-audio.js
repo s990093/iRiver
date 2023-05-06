@@ -3,9 +3,15 @@ export class WebAudio {
         this.test = test = false;
         this.music_list = music_list;
 
+        this._register();
+
         if (this.test) {
             console.log(music_list);
         }
+    }
+
+    _register() {
+        $('.main-content').hide();
     }
 
     update_music(currentIndex) {
@@ -34,8 +40,6 @@ export class WebAudio {
             $('#shuffleButton').html('<i class="fa fa-random"></i>');
         else
             $('#shuffleButton').html('<i class="fas fa-redo-alt">');
-
-
     }
 
     changLoopButton(isLoop) {
