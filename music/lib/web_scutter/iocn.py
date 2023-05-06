@@ -28,5 +28,5 @@ def query_artist_iocn_src(query: str) -> str:
     img_tags = driver.find_elements(By.XPATH, '//img[@class="rg_i Q4LuWd"]')
     for img_tag in img_tags:
         image_urls.append(img_tag.get_attribute('src'))
-
+        
     return image_urls[0] 

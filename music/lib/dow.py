@@ -27,9 +27,10 @@ def download(music_ID_list: list ,
         def run(self):
             self.result = y2mate.download_audio(
                 music_ID=self.music_ID, artist=self.artist)
+            log(music_ID= music_ID, artist=self.artist , success= self.result)
             # img
             img.download_img(url= img_url ,
-                             file_name='artist.jpg' ,
+                             file_name= f"{music_ID}.jpg" ,
                              file_dir= f"media/{artsit}/img/")
 
             # cover
@@ -51,8 +52,7 @@ def download(music_ID_list: list ,
 
     for t in threads:
         t.join()
-    # for res in t.result:
-        
+    
     return True
 
 
@@ -60,11 +60,12 @@ def download(music_ID_list: list ,
 
 
 def log(music_ID, artist, success):
-    log_dir = './log/mdeia/dow'
+    log_dir = './log'
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
 
     log_file_path = os.path.join(log_dir, 'dow_song.log')
+    print(log_file_path)
     file_handler = logging.FileHandler(log_file_path)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     file_handler.setFormatter(formatter)

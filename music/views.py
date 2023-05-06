@@ -127,14 +127,16 @@ def query_web_song(request):
 def download_song(request):
     song_str = request.GET.get('song_info')
     song_info = json.loads(unquote(song_str))
-    
+    # 使用 ThreadPoolExecutor 讓下載封面圖片和維基百科摘要的工作可以同時進行
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        src = executor.submit(query_artist_iocn_src, song_info['artist'])
-        summary = executor.submit(query_summary , song_info['artist'])    
+        src = executor.submit(query_artist_iocn_src, song_info['artist'])  # 取得歌手圖片的來源 URL
+        summary = executor.submit(query_summary , song_info['artist'])  # 取得歌手維基百科摘要
+
     music_ID_list = [song_info['music_ID']]
+    # 呼叫 download 函式進行歌曲下載，將歌曲 ID、圖片 URL 和歌手圖片 URL 傳入
     success =  download(music_ID_list= music_ID_list ,
                         img_url= song_info['img_url'],
-                        cover_img_url= src.result,
+                        cover_img_url= src.result(),
                         artist_img_url= song_info['artist_img_url'],
                         artsit= song_info['artist'])
     params = [{
@@ -143,19 +145,20 @@ def download_song(request):
             'music_ID': song_info['music_ID'],
             'artist_url': song_info['artist_url'],
             # TODO remove this null parameter
-            'keywords' :  'null,',
-            'views': '0',
-            'publish_time': '0',
+            'keywords' :  'null',  # 關鍵字暫時設為 null
+            'views': '0',  # 歌曲觀看次數暫時設為 0
+            'publish_time': '0',  # 歌曲發佈時間暫時設為 0
         }]
     if success is not None:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
-        mysql.create_tables()
-        mysql.save_data(song_infos=json.dumps(params))
-        mysql.save_summary(artist=song_info['artist'] , summary=summary)
-        mysql.close()
+        mysql.create_tables()  # 建立資料庫表格
+        mysql.save_data(song_infos=json.dumps(params))  # 儲存歌曲資訊
+        mysql.save_summary(artist=song_info['artist'] , summary=summary.result())  # 儲存歌手摘要
+        mysql.close()  # 關閉資料庫連線
         return JsonResponse({"success": True})
     else: 
-        return JsonResponse({"success": False})
+        return JsonResponse({"success": False})  # 下載歌曲失敗，回傳 False
+
 
 def download_songs(request):
     return True

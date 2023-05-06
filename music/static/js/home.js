@@ -88,11 +88,8 @@ function paush_web_data(music_list) {
     //   control_web.register();
     //   isClickEventRegistered_db = true;
     // 
-    console.log(clickedRowIndex)
-    console.log(length)
 
     if (clickedRowIndex >= length) {
-      console.log('dasdasdasdasd')
       fetch(`/music/download?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
         method: 'GET',
         headers: {
@@ -103,6 +100,7 @@ function paush_web_data(music_list) {
         .then(data => {
           if (data.success) {
             // control_web.insert(clickedRowIndex - length)
+            console.log("ok")
           }
           loading(false);
         });
