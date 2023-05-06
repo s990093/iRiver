@@ -85,18 +85,7 @@ function paush_web_data(music_list) {
   $('#table-body').on('click', 'tr .play', function () {
     loading(true);
     var clickedRowIndex = $(this).index();
-<<<<<<< Updated upstream
-    // console.log(clickedRowIndex)
-    // console.log(length)
-=======
-    console.log(clickedRowIndex)
-    console.log(length)
->>>>>>> Stashed changes
     if (clickedRowIndex >= length) {
-      if (!isClickEventRegistered_db) {
-        control_web.register();
-        isClickEventRegistered_db = true;
-      }
       fetch(`/music/download?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
         method: 'GET',
         headers: {
@@ -161,7 +150,7 @@ $('#table-body').on('click', '.love-icon a', function () {
     .then(response => response.json())
     .then(data => {
       if (!data.isLogin) {
-        location.replace('/user/');
+        console.log("asd")
       }
     });
 });
