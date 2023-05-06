@@ -20,18 +20,24 @@ class SQL:
             CREATE TABLE IF NOT EXISTS {self.table_name} (
                 music_list INT NOT NULL,
                 music_ID VARCHAR(32) NOT NULL,
-                favorite VARCHAR(2) NOT NULL,
+                favorite BOOLEAN NOT NULL DEFAULT false,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         '''
         self.cursor.execute(sql)
 
 
-    def save_data(self, music_ID_list, music_list=1):
+    def save_data(self, music_ID_list, music_list ):
+        """1  我的最愛"""
         try:
             # 解析list
             music_ID_list = json.loads(music_ID_list)
             for music_ID in music_ID_list:
+                if music_list == 1:
+                    favorite = True
+                else:
+                    favorite = self.get_music_info(music_ID)['favorite']
+
                 if not music_ID:
                     continue
                 # 查询数据库中是否已存在相同的 music_ID
@@ -42,9 +48,9 @@ class SQL:
                 if result[0] == 0:
                     # 不存在则插入新数据
                     insert_sql = (f'INSERT INTO {self.table_name} '
-                                '(music_list, music_ID) '
-                                'VALUES (%s, %s)')
-                    insert_values = (music_list, music_ID)
+                                '(music_list, music_ID , favorite) '
+                                'VALUES (%s, %s , %s)')
+                    insert_values = (music_list, music_ID , favorite)
                     self.cursor.execute(insert_sql, insert_values)
             # 提交事务
             self.db.commit()
@@ -86,20 +92,19 @@ class SQL:
         music_ID_list = json.loads(music_ID_list)
         for music_ID in music_ID_list:
             current_favorite = self.get_music_info(music_ID)['favorite']
-            if current_favorite == 1:
-                value = 0
-            else:
-                value = 1
+            current_favorite = not current_favorite  # 把 current_favorite 取反
+
             sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
-        try:
-            self.cursor.execute(sql, (value, music_ID))
-            self.db.commit()
-            return True
-        except:
-            return False
+            try:
+                self.cursor.execute(sql, (current_favorite, music_ID))  # 把 value 改成 current_favorite
+                self.db.commit()
+            except:
+                return False
+        return True 
+
 
     def get_music_info(self, music_ID):
-        sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s'
+        sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s AND music_list = 1'
         self.cursor.execute(sql, (music_ID,))
         result = self.cursor.fetchone()
         if result:

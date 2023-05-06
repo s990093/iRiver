@@ -51,26 +51,25 @@ function table_template(song, i, isWeb) {
   var row = `
   <tr>
     <td>
-      <a href="#" class="play"
-        ><img
-          src="${song.img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}"
-          alt="none"
-          width="70"
-          style="margin-right: 20px"
-        /><span>${song.title}</span></a
-      >
+      <a href="#" class="play">
+        <img src="${song.img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}" alt="none" width="70" style="margin-right: 20px" />
+        <span>${song.title}</span>
+      </a>
     </td>
     <td>
-      <span class="love-icon" style="text-align: right" 
-        ><a href="#" value=${song.music_ID}><i class="far fa-heart"></i></a
-      ></span>
+      <span class="love-icon" style="text-align: right">
+        <a href="#" value=${song.music_ID}><i class="far fa-heart"></i></a>
+      </span>
+    </td>
+    <td>
+      <a href="#" class="add"><i class="bi bi-plus-lg"></i></a>
     </td>
     <td style="text-align: right">
-      <a href="/music/music_list/?artist=${song.artist}&index=${i}" style="margin-right: 20px"
-        ><span class="artist-text" style="margin-left: 20px; margin-right: 20px"
-          >${song.artist}</span
-        ><img src="${song.artist_img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}" alt="none" width="30" /></a
-      ><span class="material-symbols-outlined">${icon}</span>
+      <a href="/music/music_list/?artist=${song.artist}&index=${i}" style="margin-right: 20px">
+        <span class="artist-text" style="margin-left: 20px; margin-right: 20px">${song.artist}</span>
+        <img src="${song.artist_img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}" alt="none" width="30" />
+      </a>
+      <span class="material-symbols-outlined">${icon}</span>
     </td>
   </tr>
     `
@@ -178,9 +177,49 @@ $('#table-body').on('click', '.love-icon a', function () {
             'Content-Type': 'application/json',
             'X-CSRFToken': csrftoken
           },
+
           body: JSON.stringify({
             music_ID: music_ID,
             method: 'favorite'
+          })
+        }).then(response => {
+          if (response.ok) {
+            // 保存成功
+            console.log('保存成功');
+          } else {
+            // 保存失败
+            console.log('保存失败');
+          }
+        });
+        // .then(response => response.json())
+        // .then(data => {
+        //   alert(data)
+        // })
+        // .catch(error => console.error(error));
+      } else {
+        location.href = "/user/login/";
+      }
+    });
+});
+
+$('#table-body').on('click', '.add', function () {
+  $(this).find('i').toggleClass('far fas');
+  fetch(`/user/isLogin/`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.isLogin) {
+        var music_ID = $(this).attr('value');
+        const csrftoken = getCookie('csrftoken');
+        fetch('/user/get_user_music_list/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken
+          },
+          body: JSON.stringify({
+            music_ID: music_ID,
+            music_list: 2,
+            method: 'insert'
           })
         }).then(response => {
           if (response.ok) {
