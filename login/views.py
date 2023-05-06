@@ -14,13 +14,10 @@ from login.lib.sql.sql import SQL
 
 #測試
 def hello(request):
-    def get_music_list(request):
     artist = request.GET.get('artist')
-    mysql = SQL(music.lib.sql.config.DB_CONFIG)
-    mysql.create_tables()
-    r = mysql.get_all_artist_song(artist=artist)
-    print('#'*30)
-    print(r)
+    mysql = SQL(login.lib.sql.config.DB_CONFIG)
+    mysql.create_tables(table_name='lai09150915@gmail.com')
+
     return HttpResponse("world")
 
 

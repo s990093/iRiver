@@ -11,7 +11,8 @@ export class WebAudio {
     }
 
     _register() {
-        $('.main-content').hide();
+        $('#small-player').hide();
+        $('#big-player').hide();
     }
 
     update_music(currentIndex) {

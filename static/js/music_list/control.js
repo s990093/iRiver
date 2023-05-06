@@ -16,7 +16,6 @@ export class Control {
 
     if (this.test) {
       console.log('control ok');
-      console.log("music_list", music_list);
       // console.log(isPlayerShow);
     }
 
@@ -38,19 +37,20 @@ export class Control {
     this.$stopBtn = $('.stop-btn');
     this.$switchPlayer = $('.switchPlayer');
     this.$muteBtn = $('.muteButton');
+
+
   }
 
   register() {
+    //宣告物件
+    this.webAudio = new WebAudio(this.music_list);
+    this.bgAudio = new bgAudio(this.music_list, this.currentIndex);
+    this.mediaPlayer = new MediaPlayer(this.audio);
     if ('mediaSession' in navigator)
       navigator.mediaSession.metadata = null;
     this.eqController = new EqController(this.audio, this.test);
     this.mediaPlayer = new MediaPlayer(this.audio);
     this.webAudio.changePlayer(this.isPlayerShow);
-
-    //宣告物件
-    this.webAudio = new WebAudio(this.music_list);
-    this.bgAudio = new bgAudio(this.music_list, this.currentIndex);
-    this.mediaPlayer = new MediaPlayer(this.audio);
     // this.insert();
 
     //監聽
@@ -193,10 +193,6 @@ export class Control {
       console.log('play');
     this.audio.play();
     navigator.mediaSession.playbackState = 'playing';
-
-    //change information 
-    this.bgAudio.updateMediaSessionMetadata(this.currentIndex);
-    this.webAudio.changButtonIcon(this.isPlaying)
   }
 
   pause() {
@@ -204,33 +200,18 @@ export class Control {
       console.log('pause');
     this.audio.pause();
     navigator.mediaSession.playbackState = 'paused';
-
-    //change information 
-    this.bgAudio.updateMediaSessionMetadata(this.currentIndex);
-    this.webAudio.changButtonIcon(this.isPlaying)
   }
 
   stop() {
     if (this.test)
       console.log('stop');
     navigator.mediaSession.playbackState = 'none';
-
   }
 
   next() {
     this.currentIndex = (this.currentIndex + 1 + this.music_length) % this.music_length;
-    this.audio.pause();
-    this.audio.currentTime = 0; // 重置播放進度
-    this.audio.loop = false;
+    this.update_song();
 
-    var address = '/media/' + this.music_list[this.currentIndex].artist + "/songs/" + this.music_list[this.currentIndex].music_ID + '.mp3';
-    this.audio.src = address;
-    this.audio.load();
-    this.audio.play();
-
-    //change information 
-    this.webAudio.update_music(this.currentIndex);
-    this.bgAudio.updateMediaSessionMetadata(this.currentIndex);
 
     if (this.test) {
       console.log('next');
@@ -240,22 +221,7 @@ export class Control {
 
   previous() {
     this.currentIndex = (this.currentIndex - 1 + this.music_length) % this.music_length;
-    this.audio.pause();
-    this.audio.currentTime = 0; // 重置播放進度
-    this.audio.loop = false;
-
-
-    var address = '/media/' + this.music_list[this.currentIndex].artist + "/songs/" + this.music_list[this.currentIndex].music_ID + '.mp3';
-    this.audio.src = address;
-    this.audio.load();
-    this.audio.play();
-
-    //change information 
-    this.webAudio.update_music(this.currentIndex);
-    this.bgAudio.updateMediaSessionMetadata(this.currentIndex);
-
-
-
+    this.update_song();
     if (this.test)
       console.log('prev');
   }
@@ -279,5 +245,21 @@ export class Control {
       randomIndex = Math.floor(Math.random() * this.music_length);
     } while (randomIndex == this.currentIndex);
     this.currentIndex = randomIndex;
+  }
+
+  update_song() {
+    this.audio.pause();
+    this.audio.currentTime = 0; // 重置播放進度
+    this.audio.loop = false;
+
+
+    var address = '/media/' + this.music_list[this.currentIndex].artist + "/songs/" + this.music_list[this.currentIndex].music_ID + '.mp3';
+    this.audio.src = address;
+    this.audio.load();
+    this.audio.play();
+
+    //change information 
+    this.webAudio.update_music(this.currentIndex);
+    this.bgAudio.updateMediaSessionMetadata(this.currentIndex);
   }
 }

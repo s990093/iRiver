@@ -16,3 +16,24 @@
 2023-05-06 13:09:17,063 - django.request - WARNING - Not Found: /media/SaucyDog/music/3Yq58d2rsRk.mp3
 2023-05-06 13:13:20,353 - django.request - WARNING - Not Found: /media/SaucyDog/music/U8pJgoOhiDs.mp3
 2023-05-06 13:13:27,380 - django.request - WARNING - Not Found: /media/SaucyDog/music/U8pJgoOhiDs.mp3
+2023-05-06 13:31:44,663 - root - WARNING - Already exists '3Yq58d2rsRk' by 'SaucyDog'.
+2023-05-06 13:32:31,758 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:33:22,288 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:34:03,880 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:34:30,502 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:34:34,786 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:35:01,223 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:35:25,834 - root - WARNING - Already exists 'agQ23NdBROY' by 'SaucyDog'.
+2023-05-06 13:37:06,635 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:37:28,634 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:37:34,962 - root - WARNING - Already exists '3Yq58d2rsRk' by 'SaucyDog'.
+2023-05-06 13:43:55,891 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:44:13,757 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:44:14,249 - django.request - WARNING - Not Found: /media/Vaundy/img/UM9XNpgrqVk.jpg
+2023-05-06 13:44:14,250 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-06 13:45:21,411 - root - INFO - Downloaded music '7HgJIAUtICU' by 'Vaundy' successfully.
+2023-05-06 13:46:25,813 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\орн▒\django\myproject\music\lib\sql\sql.py changed, reloading.
+2023-05-06 13:46:56,923 - root - WARNING - Already exists '7HgJIAUtICU' by 'Vaundy'.
+2023-05-06 13:47:13,255 - root - WARNING - Already exists '7HgJIAUtICU' by 'Vaundy'.
+2023-05-06 13:52:59,266 - root - WARNING - Already exists '7HgJIAUtICU' by 'Vaundy'.
+2023-05-06 14:52:32,911 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\орн▒\django\myproject\login\views.py changed, reloading.

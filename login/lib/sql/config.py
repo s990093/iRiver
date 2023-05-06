@@ -6,4 +6,3 @@ DB_CONFIG = {
     'db': 'iriver_user',
     'charset': 'utf8mb4',
 }
-

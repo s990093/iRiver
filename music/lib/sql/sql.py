@@ -18,7 +18,7 @@ class SQL:
             CREATE TABLE IF NOT EXISTS artists (
                 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 artist VARCHAR(255) NOT NULL,
-                summary VARCHAR(255)
+                summary VARCHAR(1000)
             )
         '''
         self.cursor.execute(sql)

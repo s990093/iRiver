@@ -17,7 +17,6 @@ import concurrent.futures
 # 自製
 import music.lib.sql.config
 from music.lib.sql.sql import SQL
-from music.lib.sql.sql import SQL
 
 from music.lib.clear_str import clear_str
 
@@ -103,7 +102,7 @@ def query_db_song(request):
                         'views' : row[6],
                         'publish_time' :row[7]}
         music_list.append(result_dict)
-        
+
     return JsonResponse({'success': True , 'music_list' : music_list}, safe=False)
 
 
