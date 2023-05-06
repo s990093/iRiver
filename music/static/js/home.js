@@ -85,14 +85,14 @@ function paush_web_data(music_list) {
   $('#table-body').on('click', 'tr', function () {
     loading(true);
     var clickedRowIndex = $(this).index();
-    if (!isClickEventRegistered_db) {
-      control_web.register();
-      isClickEventRegistered_db = true;
-    }
 
     console.log(clickedRowIndex)
     console.log(length)
     if (clickedRowIndex >= length) {
+      if (!isClickEventRegistered_db) {
+        control_web.register();
+        isClickEventRegistered_db = true;
+      }
       fetch(`/music/download?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
         method: 'GET',
         headers: {
