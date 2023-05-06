@@ -25,7 +25,11 @@ class SQL:
             )
         '''
         self.cursor.execute(sql)
-
+    
+    def set_all_favorite(self, music_id, value):
+        sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
+        self.cursor.execute(sql, (value, music_id))
+        self.db.commit()
 
     def save_data(self, music_ID_list, music_list ):
         """1  我的最愛"""
@@ -35,15 +39,13 @@ class SQL:
             for music_ID in music_ID_list:
                 if music_list == 1:
                     favorite = True
+                    self.set_all_favorite(True)
                 else:
-                    favorite = self.get_music_info(music_ID)['favorite']
+                    favorite = self.cheak_ID_in_1(music_ID)
 
-                if not music_ID:
-                    continue
                 # 查询数据库中是否已存在相同的 music_ID
-                select_sql = (f'SELECT COUNT(*) FROM {self.table_name} '
-                            'WHERE music_ID = %s')
-                self.cursor.execute(select_sql, (music_ID,))
+                select_sql = (f'SELECT COUNT(*) FROM {self.table_name} ''WHERE music_ID = %s AND music_list = %s')
+                self.cursor.execute(select_sql, (music_ID, music_list))
                 result = self.cursor.fetchone()
                 if result[0] == 0:
                     # 不存在则插入新数据
@@ -60,16 +62,14 @@ class SQL:
             return False
 
 
-    
-    
     def delete_data(self, music_ID_list, music_list=1):
         try:
             # 解析list
             music_ID_list = json.loads(music_ID_list)
             # 删除每个id
             for music_ID in music_ID_list:
-                if not music_ID:
-                    continue
+                if music_list == 1:
+                    self.set_all_favorite(False)
                 music_list_sql = (f'DELETE FROM {self.table_name} '
                                 'WHERE music_list = %s AND music_ID = %s'
                                 )
@@ -91,9 +91,10 @@ class SQL:
     def setfavorite(self, music_ID_list):
         music_ID_list = json.loads(music_ID_list)
         for music_ID in music_ID_list:
+            if self.cheak_ID_in_1(music_ID):
+                self.save_data(music_ID, 1)
             current_favorite = self.get_music_info(music_ID)['favorite']
             current_favorite = not current_favorite  # 把 current_favorite 取反
-
             sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
             try:
                 self.cursor.execute(sql, (current_favorite, music_ID))  # 把 value 改成 current_favorite
@@ -103,18 +104,16 @@ class SQL:
         return True 
 
 
-    def get_music_info(self, music_ID):
+    def cheak_ID_in_1(self, music_ID):
         sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s AND music_list = 1'
         self.cursor.execute(sql, (music_ID,))
         result = self.cursor.fetchone()
         if result:
-            music_info = {
-                'favorite': result[2]
-            }
-            return music_info
+            return True
         else:
-            print('No such music_ID')
-            return None
+            return False
 
     def close(self):
         self.db.close()
+
+   
