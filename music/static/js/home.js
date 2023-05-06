@@ -78,15 +78,20 @@ function table_template(song, i, isWeb) {
 }
 
 function paush_web_data(music_list) {
-  const control_web = new Control(audio, music_list, false, false, true);
+  const control_web = new Control(audio, music_list, true, false, true);
   for (var i = 0; i < music_list.length; i++) {
     $('#table-body').append(table_template(music_list[i], i, true));
   }
   $('#table-body').on('click', 'tr .play', function () {
     loading(true);
     var clickedRowIndex = $(this).index();
+<<<<<<< Updated upstream
     // console.log(clickedRowIndex)
     // console.log(length)
+=======
+    console.log(clickedRowIndex)
+    console.log(length)
+>>>>>>> Stashed changes
     if (clickedRowIndex >= length) {
       if (!isClickEventRegistered_db) {
         control_web.register();
@@ -101,6 +106,10 @@ function paush_web_data(music_list) {
         .then(response => response.json())
         .then(data => {
           if (data.success) {
+            if (!isClickEventRegistered_db) {
+              control_web.register();
+              isClickEventRegistered_db = true;
+            }
             control_web.insert(clickedRowIndex - length)
           } else {
             alert('Error');
@@ -114,7 +123,7 @@ function paush_web_data(music_list) {
 }
 
 function paush_db_data(music_list) {
-  const control_db = new Control(audio, music_list, false, false, true);
+  const control_db = new Control(audio, music_list, true, false, true);
   for (var i = 0; i < music_list.length; i++) {
     music_list[i].img_url = '/media/' + music_list[i]['artist'] + '/img/' + music_list[i]['music_ID'] + '.jpg';
     music_list[i].artist_img_url = '/media/' + music_list[i]['artist'] + '/img/artist.jpg';
