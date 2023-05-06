@@ -12,11 +12,12 @@ import time
 import re
 # 自製
 from .options import get_chrome_options
+from .options import get_available_port
 
 
 def query_music_list(url :str) ->json:
     service = Service('chromedriver.exe')
-    options = get_chrome_options()
+    options = get_chrome_options(port=get_available_port() , is_headLess= True)
     driver = webdriver.Chrome(service = service, options=options) 
     driver.get(url)
     wait = WebDriverWait(driver, 10)

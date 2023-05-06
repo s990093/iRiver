@@ -4,9 +4,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.service import Service
 from typing import List
 # 自製
 from .options import get_chrome_options
+from .options import get_available_port
 
 def query_artist_iocn_src(query: str) -> str:
     # 設定搜尋關鍵字和搜尋數量
@@ -14,8 +16,9 @@ def query_artist_iocn_src(query: str) -> str:
     # 設定 Google 圖片搜尋的 URL
     url = 'https://www.google.com/search?q={}&source=lnms&tbm=isch'.format(keyword)
     # 初始化 Chrome Driver
-    options = get_chrome_options(9223)
-    driver = webdriver.Chrome(options=options)
+    service = Service('chromedriver.exe')
+    options = get_chrome_options(port= get_available_port() , is_headLess= True)
+    driver = webdriver.Chrome(service= service , options=options)
     # 設定式等待時間
     driver.implicitly_wait(10)
     # 發送請求

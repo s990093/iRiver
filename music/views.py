@@ -26,8 +26,7 @@ from music.lib.web_scutter.iocn import query_artist_iocn_src
 from music.lib.web_scutter.summary import query_summary
 from music.lib.web_scutter.music_list import query_music_list
 
-from music.lib.download.audio import download_audio
-from music.lib.download.img import download_img , download_img_base64
+from music.lib.dow import download
 
 
 # test bool
@@ -128,36 +127,30 @@ def query_web_song(request):
 def download_song(request):
     song_str = request.GET.get('song_info')
     song_info = json.loads(unquote(song_str))
-
+    
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         src = executor.submit(query_artist_iocn_src, song_info['artist'])
-        summary = executor.submit(query_summary , song_info['artist'])
-
-    params = {
-        'output_path': f"media/{song_info['artist']}/music/",
-        'url': song_info['url'],
-        'ID': song_info['music_ID'],
-        'title': song_info['title'],
-        'artist_url': song_info['artist_url'],
-        'original_artist': song_info['artist'],
-        'max_retry': 2,
-    }
-    
-    # song
-    song_info_str = download_audio(params=params)
-    download_img(url=song_info['img_url'] ,file_name='artist.jpg' ,file_dir= f"media/{song_info['artist']}/img/")
-
-    # cover
-    download_img_base64(url=src.result() ,file_name='cover.jpg' ,file_dir= f"media/{song_info['artist']}/img/" )
-    
-    # artist
-    download_img(url=song_info['artist_img_url'] ,file_name='artist.jpg' ,file_dir= f"media/{song_info['artist']}/img/")
-
-    print(song_info_str)
-    if song_info_str is not None:
+        summary = executor.submit(query_summary , song_info['artist'])    
+    music_ID_list = [song_info['music_ID']]
+    success =  download(music_ID_list= music_ID_list ,
+                        img_url= song_info['img_url'],
+                        cover_img_url= src.result,
+                        artist_img_url= song_info['artist_img_url'],
+                        artsit= song_info['artist'])
+    params = [{
+            'artist': song_info['artist'],
+            'title': song_info['title'],
+            'music_ID': song_info['music_ID'],
+            'artist_url': song_info['artist_url'],
+            # TODO remove this null parameter
+            'keywords' :  'null,',
+            'views': '0',
+            'publish_time': '0',
+        }]
+    if success is not None:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         mysql.create_tables()
-        mysql.save_data(song_infos=json.dumps(song_info_str))
+        mysql.save_data(song_infos=json.dumps(params))
         mysql.save_summary(artist=song_info['artist'] , summary=summary)
         mysql.close()
         return JsonResponse({"success": True})
@@ -165,52 +158,54 @@ def download_song(request):
         return JsonResponse({"success": False})
 
 def download_songs(request):
-    song_str = request.GET.get('song_info')
-    song_info = json.loads(unquote(song_str))
+    return True
+#     song_str = request.GET.get('song_info')
+#     song_info = json.loads(unquote(song_str))
 
-    ID_list = query_music_list(url=song_info['url'])
-    print('~'*30)
-    print(ID_list)
+#     ID_list = query_music_list(url=song_info['url'])
+#     print('~'*30)
+#     print(ID_list)
   
-    results = []
-    # dow
-    for i in range(0, len(ID_list), 2):
-        id, title = ID_list[i:i+2]
-        title = clear_str(title=title , artist=song_info['artist'])
-        params = {
-        'output_path': f"media/{song_info['artist']}/music/",
-        'url': song_info['url'],
-        'ID': id,
-        'title': title,
-        'artist_url': song_info['artist_url'],
-        'original_artist': song_info['artist'],
-        'max_retry': 2,
-        }
-        res = download_audio(params=params)
-        download_img(url=f'https://i.ytimg.com/vi/{id}/hqdefault.jpg', 
-                    file_name=f'{id}.jpg' ,
-                    file_dir= f"media/{song_info['artist']}/img/" )
+#     results = []
+#     # dow
+#     for i in range(0, len(ID_list), 2):
+#         id, title = ID_list[i:i+2]
+#         title = clear_str(title=title , artist=song_info['artist'])
+#         params = {
+#         'output_path': f"media/{song_info['artist']}/music/",
+#         'url': song_info['url'],
+#         'ID': id,
+#         'title': title,
+#         'artist_url': song_info['artist_url'],
+#         'original_artist': song_info['artist'],
+#         'max_retry': 2,
+#         }
+
+#         # res = download_audio(params=params)
+#         # download_img(url=f'https://i.ytimg.com/vi/{id}/hqdefault.jpg', 
+#         #             file_name=f'{id}.jpg' ,
+#         #             file_dir= f"media/{song_info['artist']}/img/" )
         
-        if res is not None:
-            results.append(json.loads(res))
-            download_img(url=song_info['img_url'] ,file_name='artist.jpg' ,file_dir= f"media/{song_info['artist']}/img/")
+#         # if res is not None:
+#         #     results.append(json.loads(res))
+#         #     download_img(url=song_info['img_url'] ,file_name='artist.jpg' ,file_dir= f"media/{song_info['artist']}/img/")
 
            
-    # 输出结果
-    print(f'總共有{len(results)}首歌')
-      # 删除结果列表中为None的元素
-    results = [r for r in results if r is not None]
+#     # 输出结果
+#     print(f'總共有{len(results)}首歌')
+#       # 删除结果列表中为None的元素
+#     results = [r for r in results if r is not None]
 
-    # 寫入資料庫
-    mysql = SQL(music.lib.sql.config.DB_CONFIG)
-    mysql.create_tables()
-    mysql.save_data(song_infos=json.dumps(results , indent=4))
+#     # 寫入資料庫
+#     mysql = SQL(music.lib.sql.config.DB_CONFIG)
+#     mysql.create_tables()
+#     mysql.save_data(song_infos=json.dumps(results , indent=4))
     
-    r = mysql.get_all_artist_song(artist=song_info['artist'])
-    r = [' '.join(map(str, i)) + '\n' for i in r]
-    print(f'{len(r)}首歌')
-    print(''.join(r))
-    mysql.close()
+#     r = mysql.get_all_artist_song(artist=song_info['artist'])
+#     r = [' '.join(map(str, i)) + '\n' for i in r]
+#     print(f'{len(r)}首歌')
+#     print(''.join(r))
+#     mysql.close()
     
-    return JsonResponse({'success': True, 'message': 'ok'})
+#     return JsonResponse({'success': True, 'message': 'ok'})
 

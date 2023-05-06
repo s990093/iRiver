@@ -81,14 +81,18 @@ function paush_web_data(music_list) {
   for (var i = 0; i < music_list.length; i++) {
     $('#table-body').append(table_template(music_list[i], i, true));
   }
-  $('#table-body').on('click', 'tr a.play', function () {
+  $('#table-body').on('click', 'tr', function () {
     loading(true);
     var clickedRowIndex = $(this).index();
     // if (!isClickEventRegistered_db) {
     //   control_web.register();
     //   isClickEventRegistered_db = true;
     // 
-    if (clickedRowIndex > length) {
+    console.log(clickedRowIndex)
+    console.log(length)
+
+    if (clickedRowIndex >= length) {
+      console.log('dasdasdasdasd')
       fetch(`/music/download?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
         method: 'GET',
         headers: {
@@ -101,22 +105,8 @@ function paush_web_data(music_list) {
             // control_web.insert(clickedRowIndex - length)
           }
           loading(false);
-
         });
 
-      fetch(`/music/download_songs?song_info=${encodeURIComponent(JSON.stringify(music_list[clickedRowIndex - length]))}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(response => response.json())
-        .then(data => {
-          if (data.success) {
-            // control_web.insert(clickedRowIndex - length)
-          }
-          loading(false);
-        });
     }
   });
   loading(false);

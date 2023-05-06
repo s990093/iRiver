@@ -23,7 +23,7 @@ def download_img(url, file_name, file_dir) ->bool:
     file_path = os.path.join(file_dir, file_name)
     if os.path.exists(file_path):
         print(f"圖片已經存在 {file_path}")
-        return False
+        return None
     response = requests.get(url)
     with open(file_path, 'wb') as f:
         f.write(response.content)
@@ -38,7 +38,7 @@ def download_img_base64(url, file_name, file_dir) ->bool:
     file_path = os.path.join(file_dir, file_name)
     if os.path.exists(file_path):
         print(f"圖片已經存在 {file_path}{file_name}")
-        return False
+        return None
     with open(file_path, 'wb') as f:
         f.write(image_binary)
 

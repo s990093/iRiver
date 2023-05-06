@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.service import Service
 import re
 # 自製
 from .options import get_chrome_options
-
+from .options import get_available_port
 
 def query_summary(query: str) -> str:
     keyword = f'{query}'
@@ -15,7 +15,7 @@ def query_summary(query: str) -> str:
     url = 'https://www.google.com/search?q={}- 維基百科'.format(query)
     # 初始化 Chrome Driver
     service = Service('chromedriver.exe')
-    options = get_chrome_options(port = 9224)
+    options = get_chrome_options( port = get_available_port() , is_headLess= True)
     driver = webdriver.Chrome(service=service , options=options) 
     # driver = webdriver.Chrome() 
     # 設定式等待時間

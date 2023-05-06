@@ -39,45 +39,53 @@ class SQL:
         self.cursor.execute(sql)
         
     def save_data(self, song_infos):
-        song_infos_lsit =  json.loads(song_infos) 
-        for i in range(len(song_infos_lsit)):
-            if not song_infos_lsit[i]:  # 如果song_infos_lsit[i]是空的，則跳過當前迭代
-             continue     
+        # Load song_infos into a list
+        song_infos_list = json.loads(song_infos)
+        
+        # Iterate through the list of song infos
+        for i in range(len(song_infos_list)):
+            # Skip the current iteration if song_infos_list[i] is empty
+            if not song_infos_list[i]:
+                continue
+
             # Check if the artist already exists in the artists table
-            print(f'save {song_infos_lsit[i]["music_ID"]}')
+            print(f'save {song_infos_list[i]["music_ID"]}')
             select_sql = 'SELECT * FROM artists WHERE artist = %s'
-            select_values = (song_infos_lsit[i]['artist'], )
-            self.cursor.execute(select_sql , select_values)
+            select_values = (song_infos_list[i]['artist'], )
+            self.cursor.execute(select_sql, select_values)
             result = self.cursor.fetchone()
 
             if not result:
                 # Insert data into the artists table if it doesn't exist
                 artist_sql = 'INSERT INTO artists (artist) VALUES (%s)'
-                artist_values = (song_infos_lsit[i]['artist'], )
-                self.cursor.execute(artist_sql , artist_values)
+                artist_values = (song_infos_list[i]['artist'], )
+                self.cursor.execute(artist_sql, artist_values)
 
             # Check if the song already exists in the songs table
             select_sql = 'SELECT * FROM songs WHERE music_ID = %s'
-            select_values = (song_infos_lsit[i]['music_ID'], )
-            self.cursor.execute(select_sql , select_values)
+            select_values = (song_infos_list[i]['music_ID'], )
+            self.cursor.execute(select_sql, select_values)
             result = self.cursor.fetchone()
 
             if not result:
                 # Insert data into the songs table if it doesn't exist
-                song_sql = 'INSERT INTO songs (artist, title, music_ID, artist_url, keywords, views, publish_time) VALUES (%s, %s, %s, %s, %s, %s, %s)'
-                song_values = (song_infos_lsit[i]['artist'],
-                               song_infos_lsit[i]['title'],
-                               song_infos_lsit[i]['music_ID'],
-                               song_infos_lsit[i]['artist_url'],
-                            ','.join(song_infos_lsit[i]['keywords']),
-                                song_infos_lsit[i]['views'], 
-                                song_infos_lsit[i]['publish_time'])
-                
+                song_sql = ('INSERT INTO songs '
+                            '(artist, title, music_ID, artist_url, keywords, views, publish_time) '
+                            'VALUES (%s, %s, %s, %s, %s, %s, %s)')
+                song_values = (song_infos_list[i]['artist'],
+                            song_infos_list[i]['title'],
+                            song_infos_list[i]['music_ID'],
+                            song_infos_list[i]['artist_url'],
+                            ','.join(song_infos_list[i]['keywords']),
+                            song_infos_list[i]['views'],
+                            song_infos_list[i]['publish_time'])
                 self.cursor.execute(song_sql, song_values)
-            # Commit the transactiony
+
+        # Commit the transaction
         self.db.commit()
-        print('='*30)
+        print('=' * 30)
         print('save data')
+
         
     def save_summary(self, artist: str, summary: str):
         update_sql = 'UPDATE artists SET summary = %s WHERE artist = %s'
