@@ -17,8 +17,10 @@ class SQL:
         # Create the artists table
         sql = f'''
             CREATE TABLE IF NOT EXISTS {table_name} (
-                email VARCHAR(32) NOT NULL PRIMARY KEY,
-                phone VARCHAR(32) NOT NULL
+                email VARCHAR(100) NOT NULL PRIMARY KEY,
+                phone VARCHAR(20) NOT NULL,
+                country CHAR(2),
+                birthday DATE
             )
         '''
         self.cursor.execute(sql)

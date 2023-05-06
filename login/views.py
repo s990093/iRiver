@@ -16,10 +16,14 @@ from login.lib.sql.sql_music_list import SQL as SQL_music_list
 
 #測試
 def hello(request):
+
+    temp = request.user.email
+    mail = temp.split("@")[0]
+
+    key = mail
     
-    key = 'popop'
-    # sql_user = SQL_user(login.lib.sql.config.DB_CONFIG_user)
-    # sql_user.create_tables(table_name= key)
+    sql_user = SQL_user(login.lib.sql.config.DB_CONFIG_user)
+    sql_user.create_tables(table_name= key)
 
     sql_user_music_list = SQL_music_list(login.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
     sql_user_music_list.create_tables()
@@ -36,7 +40,7 @@ def hello(request):
     music_ID_list = sql_user_music_list.get_music_list()
     #return json.dumps(music_ID_list, indent=4)
     
-    return HttpResponse(music_ID_list)
+    return HttpResponse("test")
 
 
 def check_login(request):
