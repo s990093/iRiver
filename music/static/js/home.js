@@ -177,12 +177,20 @@ $('#table-body').on('click', '.love-icon a', function () {
             music_ID: music_ID,
             method: 'insert'
           })
-        })
-          .then(response => response.json())
-          .then(data => {
-            alert(data)
-          })
-          .catch(error => console.error(error));
+        }).then(response => {
+          if (response.ok) {
+            // 保存成功
+            console.log('保存成功');
+          } else {
+            // 保存失败
+            console.log('保存失败');
+          }
+        });
+          // .then(response => response.json())
+          // .then(data => {
+          //   alert(data)
+          // })
+          // .catch(error => console.error(error));
       } else {
         location.href = "/user/login/";
       }

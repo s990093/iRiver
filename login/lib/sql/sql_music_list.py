@@ -27,21 +27,33 @@ class SQL:
         self.cursor.execute(sql)
 
 
-    def save_data(self, music_ID_list,  music_list=1):
-        #解析list
-        music_ID_list = json.loads(music_ID_list)
-        #把每個id都存進去
-        for music_ID in music_ID_list:
-            if not music_ID:
-                continue
-            music_list_sql = (f'INSERT INTO {self.table_name} '
-                              '(music_list , music_ID) '
-                              'VALUES (%s, %s)'
-                              )
-            music_list_values = (music_list, music_ID)
-            self.cursor.execute(music_list_sql, music_list_values)
-        #儲存
-        self.db.commit()
+    def save_data(self, music_ID_list, music_list=1):
+        try:
+            # 解析list
+            music_ID_list = json.loads(music_ID_list)
+            for music_ID in music_ID_list:
+                if not music_ID:
+                    continue
+                # 查询数据库中是否已存在相同的 music_ID
+                select_sql = (f'SELECT COUNT(*) FROM {self.table_name} '
+                            'WHERE music_ID = %s')
+                self.cursor.execute(select_sql, (music_ID,))
+                result = self.cursor.fetchone()
+                if result[0] == 0:
+                    # 不存在则插入新数据
+                    insert_sql = (f'INSERT INTO {self.table_name} '
+                                '(music_list, music_ID) '
+                                'VALUES (%s, %s)')
+                    insert_values = (music_list, music_ID)
+                    self.cursor.execute(insert_sql, insert_values)
+            # 提交事务
+            self.db.commit()
+            return {'success': True}
+        except Exception as e:
+            print(e)
+            return {'success': False}
+
+
     
     
     def delete_data(self, music_ID_list, music_list=1):
