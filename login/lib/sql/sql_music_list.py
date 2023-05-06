@@ -20,6 +20,7 @@ class SQL:
             CREATE TABLE IF NOT EXISTS {self.table_name} (
                 music_list INT NOT NULL,
                 music_ID VARCHAR(32) NOT NULL,
+                favorite VARCHAR(2) NOT NULL,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         '''

@@ -15,8 +15,14 @@ from login.lib.sql.sql_user import SQL as SQL_user
 from login.lib.sql.sql_music_list import SQL as SQL_music_list
 
 #測試
-def hello(request):
+# def get_user_data(request):
 
+def get_user_music_list(request):
+    method =  request.POST.get('method')
+    # if method == 'delete':
+
+
+def hello(request):
     temp = request.user.email
     mail = temp.split("@")[0]
 
@@ -53,6 +59,7 @@ def check_login(request):
 def data(request):
     if request.user.is_authenticated:
         print("已登入")
+        request.session['email'] = request.user.email
         request.session['isLogin'] = True
         name = request.user.username
         email = request.user.email
@@ -122,6 +129,7 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
+
             print("成功修改")
             return redirect('/user/data')
     else:

@@ -25,7 +25,7 @@ def iRiver(request):
     #     # 请求失败
     #     print(f'Request failed with status code {response.status_code}')
     #     return render(request, 'index.html')
-     return render(request, 'index.html')
+    return render(request, 'index.html')
 
 
 

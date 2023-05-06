@@ -124,12 +124,12 @@ function paush_db_data(music_list) {
   $('#table-body').on('click', 'tr', function () {
     loading(true);
     var clickedRowIndex = $(this).index();
-    if (!isClickEventRegistered_db) {
-      control_db.register();
-      isClickEventRegistered_db = true;
-    }
     // console.log(clickedRowIndex);
     if (clickedRowIndex <= length) {
+      if (!isClickEventRegistered_db) {
+        control_db.register();
+        isClickEventRegistered_db = true;
+      }
       control_db.insert(clickedRowIndex);
       loading(false);
     }
