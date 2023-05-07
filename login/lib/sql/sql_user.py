@@ -2,7 +2,6 @@ import MySQLdb
 import json
 import difflib
 
-#131321132
 class SQL:
     def __init__(self, config):
         self.config = config

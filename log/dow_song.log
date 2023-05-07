@@ -24,33 +24,33 @@
 2023-05-07 22:13:34,629 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
 2023-05-07 22:13:34,630 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial'.
 2023-05-07 22:13:50,911 - django.request - WARNING - Not Found: /media/Ǣǥ�O�Cn-bunaOfficial/img/ENcnYh79dUY.jpg
-2023-05-07 22:15:41,260 - django.request - WARNING - Not Found: /media/Ǣǥ�O�Cn-bunaOfficial/img/ENcnYh79dUY.jpg
-2023-05-07 22:15:43,173 - django.request - WARNING - Not Found: /media/Ǣǥ�O�Cn-bunaOfficial/img/ENcnYh79dUY.jpg
-2023-05-07 22:18:40,932 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py changed, reloading.
+2023-05-07 22:15:41,260 - django.request - WARNING - Not Found: /media/Ǣǥ�O�Cn-bunaOfficial/img/ENcnYh79dUY.jpg
+2023-05-07 22:15:43,173 - django.request - WARNING - Not Found: /media/Ǣǥ�O�Cn-bunaOfficial/img/ENcnYh79dUY.jpg
+2023-05-07 22:18:40,932 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py changed, reloading.
 2023-05-07 23:50:26,159 - root - INFO - Downloaded music 'x8VYWazR5mE' by 'AyaseYOASOBI' successfully.
 2023-05-07 23:50:36,388 - django.request - ERROR - Internal Server Error: /music/download_songs/
 Traceback (most recent call last):
-  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py", line 195, in download_songs
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py", line 195, in download_songs
     music_list_infos = query_music_list(url=artist_url)
                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\web_scutter\music_list.py", line 47, in query_music_list
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\web_scutter\music_list.py", line 47, in query_music_list
     thumbnail = item.find_element(By.XPATH, '../..').find_element(By.CSS_SELECTOR, '#thumbnail').get_attribute('src')
                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 426, in find_element
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 426, in find_element
     return self._execute(Command.FIND_CHILD_ELEMENT, {"using": by, "value": value})["value"]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 404, in _execute
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 404, in _execute
     return self._parent.execute(command, params)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
     self.error_handler.check_response(response)
-  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
     raise exception_class(message, screen, stacktrace)
 selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#thumbnail"}
   (Session info: headless chrome=113.0.5672.63)
@@ -81,47 +81,1357 @@ Backtrace:
 	RtlInitializeExceptionChain [0x77EAB74B+107]
 	RtlClearBits [0x77EAB6CF+191]
 
-2023-05-07 23:50:59,922 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\web_scutter\music_list.py changed, reloading.
-2023-05-07 23:54:46,594 - root - INFO - Downloaded music '0yoM7ETNPIY' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:54:47,465 - root - INFO - Downloaded music 'ZRtdQ81jPUQ' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:55:26,071 - root - INFO - Downloaded music '7G0ovtPqHnI' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:55:37,729 - root - INFO - Downloaded music 'wPNCj5AfHWY' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:55:37,981 - root - INFO - Downloaded music '_ZtBv0hTm1w' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:55:48,791 - root - INFO - Downloaded music 'qtQmuFuifzs' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:55:55,133 - django.request - WARNING - Not Found: /media/THEFIRSTTAKE/img/artist.jpg
-2023-05-07 23:55:55,134 - django.request - WARNING - Not Found: /media/THEFIRSTTAKE/songs/j1hft9Wjq9U.mp3
-2023-05-07 23:55:55,136 - django.request - WARNING - Not Found: /media/THEFIRSTTAKE/img/j1hft9Wjq9U.jpg
-2023-05-07 23:56:00,496 - root - INFO - Downloaded music 'ZLBUxmIWTa0' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:56:00,811 - root - INFO - Downloaded music '8dywenCWPI0' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:56:11,299 - root - INFO - Downloaded music 'DtBoAqkIJzI' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:56:23,169 - root - INFO - Downloaded music 'reINsbFQfrM' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:56:23,172 - root - INFO - Downloaded music 'eG_bYp9gV6A' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:56:34,089 - root - INFO - Downloaded music 'kCIWCPeZfho' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:56:46,091 - root - INFO - Downloaded music 'IguuS6eajAI' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:56:47,737 - root - INFO - Downloaded music 'zNOe2fK1hM0' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:56:57,428 - root - INFO - Downloaded music 'BmWfXDXjqwc' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:57:08,725 - root - INFO - Downloaded music 'WQ6ePunO8uY' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:57:09,339 - root - INFO - Downloaded music '3eytpBOkOFA' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:57:20,365 - root - INFO - Downloaded music '2-c0DFt6vK4' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:57:31,585 - root - INFO - Downloaded music 'nhOhFOoURnE' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:57:31,747 - root - INFO - Downloaded music 'VyvhvlYvRnc' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:57:42,872 - root - INFO - Downloaded music 'EaA6NlH80wg' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:57:54,626 - root - INFO - Downloaded music 'sAuEeM_6zpk' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:57:54,627 - root - WARNING - Already exists 'x8VYWazR5mE' by 'AyaseYOASOBI'.
-2023-05-07 23:57:54,660 - root - INFO - Downloaded music 'kzdJkT4kp-A' by 'AyaseYOASOBI' successfully.
-2023-05-07 23:58:51,440 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\web_scutter\options.py changed, reloading.
-2023-05-08 00:04:01,574 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\web_scutter\options.py changed, reloading.
-2023-05-08 00:06:53,889 - root - INFO - Downloaded music 'TDi-hGRYX6g' by 'RADWIMPS' successfully.
-2023-05-08 00:07:19,491 - root - INFO - Downloaded music 'EQ94zflNqn4' by 'RADWIMPS' successfully.
-2023-05-08 00:07:33,217 - root - WARNING - Already exists 'TDi-hGRYX6g' by 'RADWIMPS'.
-2023-05-08 00:07:46,320 - root - INFO - Downloaded music 'Q-Mha5rJGKc' by 'RADWIMPS' successfully.
-2023-05-08 00:07:53,585 - root - INFO - Downloaded music 'k6EkU1jpBQk' by 'RADWIMPS' successfully.
-2023-05-08 00:08:05,471 - root - INFO - Downloaded music 'epQGR34yiTY' by 'RADWIMPS' successfully.
-2023-05-08 00:08:40,184 - root - ERROR - Failed to download music 'XjDQtUuuc5o' by 'RADWIMPS'.
-2023-05-08 00:08:51,184 - root - ERROR - Failed to download music 'XRnX65LDRoU' by 'RADWIMPS'.
-2023-05-08 00:09:37,253 - root - ERROR - Failed to download music 'X1OoLpUwPtI' by 'RADWIMPS'.
-2023-05-08 00:09:37,567 - root - ERROR - Failed to download music '_P87ZLmZCdk' by 'RADWIMPS'.
-2023-05-08 00:10:07,703 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A8318E4850>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/c83083f74e7d1a895fccd93f5632638e
-2023-05-08 00:10:11,755 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A830D7EFD0>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/c83083f74e7d1a895fccd93f5632638e
-2023-05-08 00:10:15,850 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A831162190>: Failed to establish a new connection: [WinError 10061] �L�k�s�u�A�]���ؼйq���ڵ��s�u�C')': /session/c83083f74e7d1a895fccd93f5632638e
-2023-05-08 00:10:33,308 - root - INFO - Downloaded music 'BXsYMX-kt5U' by 'RADWIMPS' successfully.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py", line 213, in download_songs
+    success =  download(music_ID_list= music_ID_list ,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 67, in crawl
+    driver.close()
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x0062D073]
+	(No symbol) [0x0068DEBB]
+	(No symbol) [0x0069237F]
+	(No symbol) [0x0068A283]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+2023-05-07 20:14:11,747 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py changed, reloading.
+2023-05-07 20:15:13,658 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,662 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,662 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,663 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,663 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,664 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,665 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,665 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,667 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,667 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,668 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,670 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,670 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,671 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,672 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,672 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,674 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,675 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,675 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,675 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,675 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,676 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,676 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,677 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,677 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,677 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,677 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,678 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,678 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,678 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,680 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,680 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,681 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,681 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,681 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:13,682 - root - WARNING - Already exists 'GXf33fyxr1M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:28,455 - root - INFO - Downloaded music 'cEeTW4C2GA0' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:30,608 - root - INFO - Downloaded music '8Zf66WSPU9E' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:30,972 - root - INFO - Downloaded music 'JFFedRQpqg8' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:30,977 - root - WARNING - Already exists 'Y1K-ZD2bB8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:40,398 - root - INFO - Downloaded music 'Ckk9IJwDhNI' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:40,398 - root - WARNING - Already exists 'POCs38Rputs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:40,400 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:40,401 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:40,402 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:40,403 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:40,404 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:40,405 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:40,405 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:43,406 - root - INFO - Downloaded music 'ZgC5umCFkp0' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:44,977 - root - INFO - Downloaded music '7JANm3jOb2k' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:44,978 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:44,980 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,571 - root - INFO - Downloaded music 'EpFxTXgElLA' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:46,574 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,575 - root - WARNING - Already exists 'GVrRXhS0mLs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,576 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,577 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,579 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,580 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,581 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,582 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,583 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,585 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,586 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,588 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,589 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,591 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,593 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,594 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,595 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,596 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:46,598 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:15:47,112 - root - INFO - Downloaded music 'U2-K_eFGtJM' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:54,073 - root - INFO - Downloaded music 'm2xmJFdYfJw' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:55,493 - root - INFO - Downloaded music 'OuSFM2l9OaI' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:57,829 - root - INFO - Downloaded music 'Ht6lcYg9Zfo' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:15:58,369 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00644F20]
+	(No symbol) [0x006677AC]
+	(No symbol) [0x0068A1B6]
+	(No symbol) [0x00686C2D]
+	(No symbol) [0x0068669A]
+	(No symbol) [0x00625301]
+	(No symbol) [0x0062570E]
+	(No symbol) [0x00625AEA]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x00624F5A]
+	(No symbol) [0x00624959]
+	GetHandleVerifier [0x00A6FD7C+2961964]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py", line 213, in download_songs
+    success =  download(music_ID_list= music_ID_list ,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 67, in crawl
+    driver.close()
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00644F20]
+	(No symbol) [0x006677AC]
+	(No symbol) [0x0068A1B6]
+	(No symbol) [0x00686C2D]
+	(No symbol) [0x0068669A]
+	(No symbol) [0x00625301]
+	(No symbol) [0x0062570E]
+	(No symbol) [0x00625AEA]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x00624F5A]
+	(No symbol) [0x00624959]
+	GetHandleVerifier [0x00A6FD7C+2961964]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+2023-05-07 20:17:14,651 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,656 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,656 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,658 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,659 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,660 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,660 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,663 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,665 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,666 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,667 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,668 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,671 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,672 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,673 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,674 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,675 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,678 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,680 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,682 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,684 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,686 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,686 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,687 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,688 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,690 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,691 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,692 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,693 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,694 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,696 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,700 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,701 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,703 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,703 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,703 - root - WARNING - Already exists 'cEeTW4C2GA0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,704 - root - WARNING - Already exists 'GXf33fyxr1M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,705 - root - WARNING - Already exists '8Zf66WSPU9E' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,705 - root - WARNING - Already exists 'JFFedRQpqg8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,706 - root - WARNING - Already exists 'Ckk9IJwDhNI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,706 - root - WARNING - Already exists 'ZgC5umCFkp0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,708 - root - WARNING - Already exists 'Y1K-ZD2bB8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,708 - root - WARNING - Already exists '7JANm3jOb2k' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,708 - root - WARNING - Already exists 'EpFxTXgElLA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,708 - root - WARNING - Already exists 'U2-K_eFGtJM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,709 - root - WARNING - Already exists 'POCs38Rputs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,712 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,712 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,712 - root - WARNING - Already exists 'm2xmJFdYfJw' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,713 - root - WARNING - Already exists 'OuSFM2l9OaI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,713 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,713 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,714 - root - WARNING - Already exists 'Ht6lcYg9Zfo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,714 - root - WARNING - Already exists 'GVrRXhS0mLs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,714 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,715 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,716 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,716 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,717 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,717 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,717 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,718 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,718 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,718 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,719 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,719 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,719 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,719 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,720 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,720 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,720 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:14,720 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:17:27,352 - root - INFO - Downloaded music 'iT318d30d2c' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:17:31,194 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00644F20]
+	(No symbol) [0x006677AC]
+	(No symbol) [0x0068A1B6]
+	(No symbol) [0x00686C2D]
+	(No symbol) [0x0068669A]
+	(No symbol) [0x00625301]
+	(No symbol) [0x0062570E]
+	(No symbol) [0x00625AEA]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x00624F5A]
+	(No symbol) [0x00624959]
+	GetHandleVerifier [0x00A6FD7C+2961964]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py", line 213, in download_songs
+    success =  download(music_ID_list= music_ID_list ,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 67, in crawl
+    driver.close()
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00644F20]
+	(No symbol) [0x006677AC]
+	(No symbol) [0x0068A1B6]
+	(No symbol) [0x00686C2D]
+	(No symbol) [0x0068669A]
+	(No symbol) [0x00625301]
+	(No symbol) [0x0062570E]
+	(No symbol) [0x00625AEA]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x00624F5A]
+	(No symbol) [0x00624959]
+	GetHandleVerifier [0x00A6FD7C+2961964]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+2023-05-07 20:19:03,879 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py changed, reloading.
+2023-05-07 20:20:16,159 - root - INFO - Downloaded music 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:20:43,248 - root - INFO - Downloaded music 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:20:43,265 - root - INFO - Downloaded music 'pHdJmDFYqTU' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:20:44,443 - root - INFO - Downloaded music '_9_rUFrgLI8' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:20:55,929 - root - INFO - Downloaded music 'LTeROfwwtnA' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:20:56,006 - root - INFO - Downloaded music 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:20:59,284 - root - INFO - Downloaded music '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:20:59,285 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:21:07,877 - root - INFO - Downloaded music '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:11,573 - root - INFO - Downloaded music 'Sw1Flgub9s8' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:13,150 - root - INFO - Downloaded music '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:19,889 - root - INFO - Downloaded music 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:23,411 - root - INFO - Downloaded music 'siNFnlqtd8M' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:23,415 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:21:23,417 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:21:23,419 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:21:25,081 - root - INFO - Downloaded music 'wCN9WliV-ew' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:32,686 - root - INFO - Downloaded music 'oy6MDr6I6rM' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:32,687 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:21:34,653 - root - INFO - Downloaded music 'iT318d30d2c' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:38,677 - root - INFO - Downloaded music 'MH5noJJfqDY' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:44,258 - root - INFO - Downloaded music 'F3cXxqgbx9Y' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:46,447 - root - INFO - Downloaded music 'ENcnYh79dUY' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:50,479 - root - INFO - Downloaded music 'CS4f3jawFxY' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:56,192 - root - INFO - Downloaded music '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:21:58,713 - root - INFO - Downloaded music 'ry3Tupx4BL4' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:04,448 - root - INFO - Downloaded music 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:08,569 - root - INFO - Downloaded music 'DlyG6MAKUOA' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:10,310 - root - INFO - Downloaded music 'PWbRleMGagU' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:10,311 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:22:16,235 - root - INFO - Downloaded music 'j83OVgv6woA' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:16,237 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:22:16,238 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:22:21,259 - root - INFO - Downloaded music 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:31,703 - root - INFO - Downloaded music 'JJaCwW4HyVs' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:35,931 - root - INFO - Downloaded music 'cEeTW4C2GA0' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:41,827 - root - INFO - Downloaded music 'GXf33fyxr1M' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:44,714 - root - INFO - Downloaded music '8Zf66WSPU9E' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:48,118 - root - INFO - Downloaded music 'I0KPgxLcGnk' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:22:53,988 - root - INFO - Downloaded music 'JFFedRQpqg8' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:23:03,086 - root - INFO - Downloaded music 'ZgC5umCFkp0' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:23:08,475 - root - INFO - Downloaded music 'Y1K-ZD2bB8M' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:23:49,819 - root - INFO - Downloaded music 'POCs38Rputs' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:23:49,820 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:23:49,821 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:23:49,822 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:23:49,822 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:23:49,824 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:23:49,826 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:23:49,826 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:23:51,222 - root - INFO - Downloaded music 'U2-K_eFGtJM' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:23:52,877 - root - INFO - Downloaded music '7JANm3jOb2k' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:23:52,877 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:23:52,879 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:01,861 - root - INFO - Downloaded music 'm2xmJFdYfJw' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:24:01,861 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,456 - root - INFO - Downloaded music 'OuSFM2l9OaI' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:24:03,459 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,461 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,463 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,467 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,468 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,470 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,471 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,472 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,473 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,473 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,475 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,476 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,477 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:03,478 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:06,773 - root - INFO - Downloaded music 'Ht6lcYg9Zfo' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:24:06,777 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:06,779 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:24:15,540 - root - INFO - Downloaded music '9ypEFXTakV8' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:24:16,052 - root - INFO - Downloaded music 'GVrRXhS0mLs' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:24:16,476 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py", line 213, in download_songs
+    success =  download(music_ID_list= music_ID_list ,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\lib\download\y2mate.py", line 42, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\�ୱ\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: uniqueContextId not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x006387D0]
+	(No symbol) [0x00636F58]
+	(No symbol) [0x006375CA]
+	(No symbol) [0x00648067]
+	(No symbol) [0x00649631]
+	(No symbol) [0x006496D0]
+	(No symbol) [0x00691A58]
+	(No symbol) [0x0069047C]
+	(No symbol) [0x0068A0B6]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+2023-05-07 20:24:20,280 - django.request - WARNING - Not Found: /media/Ǣǥ�O�Cn-bunaOfficial/img/-VKIqrvVOpo.jpg
+2023-05-07 20:24:20,399 - django.request - WARNING - Not Found: /media/Ǣǥ�O�Cn-bunaOfficial/img/-VKIqrvVOpo.jpg
+2023-05-07 20:24:20,412 - django.request - WARNING - Not Found: /media/Ǣǥ�O�Cn-bunaOfficial/img/-VKIqrvVOpo.jpg
+2023-05-07 20:24:28,809 - django.request - WARNING - Not Found: /music_list/
+2023-05-07 20:24:28,928 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-07 20:26:18,635 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\�ୱ\django\myproject\music\views.py changed, reloading.
+2023-05-07 20:31:32,932 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,938 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,939 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,940 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,941 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,945 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,946 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,954 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,955 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:32,955 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,088 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,089 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,093 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,093 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,097 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,098 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,099 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,100 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,101 - root - WARNING - Already exists 'iT318d30d2c' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:34,103 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,531 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,532 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,535 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,535 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,537 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,538 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,539 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,544 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,544 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:35,547 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,497 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,499 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,500 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,500 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,501 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,501 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,504 - root - WARNING - Already exists 'cEeTW4C2GA0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,504 - root - WARNING - Already exists 'GXf33fyxr1M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,505 - root - WARNING - Already exists '8Zf66WSPU9E' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:36,505 - root - WARNING - Already exists 'I0KPgxLcGnk' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:37,426 - root - WARNING - Already exists 'JFFedRQpqg8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:37,430 - root - WARNING - Already exists 'ZgC5umCFkp0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:37,432 - root - WARNING - Already exists 'Y1K-ZD2bB8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:49,699 - root - INFO - Downloaded music 'EpFxTXgElLA' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:31:49,700 - root - WARNING - Already exists '7JANm3jOb2k' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:49,701 - root - WARNING - Already exists 'U2-K_eFGtJM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:49,704 - root - WARNING - Already exists 'POCs38Rputs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:49,704 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:49,705 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:51,315 - root - INFO - Downloaded music 'Ckk9IJwDhNI' by 'Ǣǥ�O�Cn-bunaOfficial' successfully.
+2023-05-07 20:31:52,335 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,335 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,336 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,336 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,338 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,338 - root - WARNING - Already exists 'm2xmJFdYfJw' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,340 - root - WARNING - Already exists 'OuSFM2l9OaI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,341 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,341 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:52,343 - root - WARNING - Already exists 'Ht6lcYg9Zfo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,144 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,144 - root - WARNING - Already exists 'GVrRXhS0mLs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,144 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,146 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,146 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,146 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,148 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,149 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,150 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:53,154 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,126 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,126 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,128 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,128 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,130 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,131 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,133 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,133 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:31:54,134 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:50:36,380 - root - INFO - Downloaded music 'ony539T074w' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:00,651 - root - INFO - Downloaded music 'C47K1TX9PAA' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:02,092 - root - INFO - Downloaded music 'M6gcoDN9jBc' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:02,250 - root - INFO - Downloaded music 'n0QNaym0jDI' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:04,090 - root - INFO - Downloaded music 'b2loI23h3bo' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:12,972 - root - INFO - Downloaded music 'IPzOxKW3fSA' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:19,851 - root - INFO - Downloaded music 'O3-6fHVB1Sg' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:20,418 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x00000001012ef8ac chromedriver + 4257964
+1   chromedriver                        0x00000001012e7f40 chromedriver + 4226880
+2   chromedriver                        0x0000000100f249d4 chromedriver + 281044
+3   chromedriver                        0x0000000100efedb0 chromedriver + 126384
+4   chromedriver                        0x0000000100f83938 chromedriver + 670008
+5   chromedriver                        0x0000000100f95fe8 chromedriver + 745448
+6   chromedriver                        0x0000000100f5398c chromedriver + 473484
+7   chromedriver                        0x0000000100f5498c chromedriver + 477580
+8   chromedriver                        0x00000001012ae900 chromedriver + 3991808
+9   chromedriver                        0x00000001012b2354 chromedriver + 4006740
+10  chromedriver                        0x00000001012b2940 chromedriver + 4008256
+11  chromedriver                        0x00000001012b833c chromedriver + 4031292
+12  chromedriver                        0x00000001012b2f34 chromedriver + 4009780
+13  chromedriver                        0x000000010128b490 chromedriver + 3847312
+14  chromedriver                        0x00000001012d09f4 chromedriver + 4131316
+15  chromedriver                        0x00000001012d0b4c chromedriver + 4131660
+16  chromedriver                        0x00000001012e1230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=10)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x00000001012ef8ac chromedriver + 4257964
+1   chromedriver                        0x00000001012e7f40 chromedriver + 4226880
+2   chromedriver                        0x0000000100f249d4 chromedriver + 281044
+3   chromedriver                        0x0000000100efedb0 chromedriver + 126384
+4   chromedriver                        0x0000000100f83938 chromedriver + 670008
+5   chromedriver                        0x0000000100f89384 chromedriver + 693124
+6   chromedriver                        0x0000000100f5398c chromedriver + 473484
+7   chromedriver                        0x0000000100f5498c chromedriver + 477580
+8   chromedriver                        0x00000001012ae900 chromedriver + 3991808
+9   chromedriver                        0x00000001012b2354 chromedriver + 4006740
+10  chromedriver                        0x00000001012b2940 chromedriver + 4008256
+11  chromedriver                        0x00000001012b833c chromedriver + 4031292
+12  chromedriver                        0x00000001012b2f34 chromedriver + 4009780
+13  chromedriver                        0x000000010128b490 chromedriver + 3847312
+14  chromedriver                        0x00000001012d09f4 chromedriver + 4131316
+15  chromedriver                        0x00000001012d0b4c chromedriver + 4131660
+16  chromedriver                        0x00000001012e1230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+2023-05-07 20:52:23,679 - django.utils.autoreload - INFO - /Users/ru/Desktop/code/test0501/iRiver/music/views.py changed, reloading.
+2023-05-07 20:53:24,139 - root - INFO - Downloaded music 'YJfHuATJYsQ' by '周杰倫JayChou' successfully.
+2023-05-07 20:53:50,708 - root - INFO - Downloaded music 'F_dGEjzRG_Y' by '周杰倫JayChou' successfully.
+2023-05-07 20:53:55,416 - root - INFO - Downloaded music 'BSlMAJ7SkMA' by '周杰倫JayChou' successfully.
+2023-05-07 20:54:00,015 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x0000000102bd78ac chromedriver + 4257964
+1   chromedriver                        0x0000000102bcff40 chromedriver + 4226880
+2   chromedriver                        0x000000010280c854 chromedriver + 280660
+3   chromedriver                        0x000000010283b1e4 chromedriver + 471524
+4   chromedriver                        0x0000000102863120 chromedriver + 635168
+5   chromedriver                        0x0000000102862868 chromedriver + 632936
+6   chromedriver                        0x00000001027dd098 chromedriver + 86168
+7   chromedriver                        0x0000000102b96900 chromedriver + 3991808
+8   chromedriver                        0x0000000102b9a354 chromedriver + 4006740
+9   chromedriver                        0x0000000102b9a940 chromedriver + 4008256
+10  chromedriver                        0x0000000102ba033c chromedriver + 4031292
+11  chromedriver                        0x0000000102b9af34 chromedriver + 4009780
+12  chromedriver                        0x0000000102b73490 chromedriver + 3847312
+13  chromedriver                        0x00000001027dbae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=9)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x0000000102bd78ac chromedriver + 4257964
+1   chromedriver                        0x0000000102bcff40 chromedriver + 4226880
+2   chromedriver                        0x000000010280c854 chromedriver + 280660
+3   chromedriver                        0x000000010283b1e4 chromedriver + 471524
+4   chromedriver                        0x0000000102863120 chromedriver + 635168
+5   chromedriver                        0x0000000102862868 chromedriver + 632936
+6   chromedriver                        0x00000001027dd098 chromedriver + 86168
+7   chromedriver                        0x0000000102b96900 chromedriver + 3991808
+8   chromedriver                        0x0000000102b9a354 chromedriver + 4006740
+9   chromedriver                        0x0000000102b9a940 chromedriver + 4008256
+10  chromedriver                        0x0000000102ba033c chromedriver + 4031292
+11  chromedriver                        0x0000000102b9af34 chromedriver + 4009780
+12  chromedriver                        0x0000000102b73490 chromedriver + 3847312
+13  chromedriver                        0x00000001027dbae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+2023-05-07 20:54:59,748 - django.utils.autoreload - INFO - /Users/ru/Desktop/code/test0501/iRiver/music/views.py changed, reloading.
+2023-05-07 20:55:26,142 - root - INFO - Downloaded music '6Q0Pd53mojY' by '周杰倫JayChou' successfully.
+2023-05-07 20:55:37,380 - root - WARNING - Already exists 'F_dGEjzRG_Y' by '周杰倫JayChou'.
+2023-05-07 20:55:49,702 - root - INFO - Downloaded music '9tN1xixvYOc' by '周杰倫JayChou' successfully.
+2023-05-07 20:55:50,102 - root - INFO - Downloaded music 'APgx1k-2Tqc' by '周杰倫JayChou' successfully.
+2023-05-07 20:55:50,103 - root - WARNING - Already exists 'BSlMAJ7SkMA' by '周杰倫JayChou'.
+2023-05-07 20:55:50,846 - root - INFO - Downloaded music 'HES2zSyauaM' by '周杰倫JayChou' successfully.
+2023-05-07 20:56:01,789 - root - INFO - Downloaded music 'yyeJ2huGKbE' by '周杰倫JayChou' successfully.
+2023-05-07 20:56:05,909 - root - INFO - Downloaded music 'xmI7xxo_CvU' by '周杰倫JayChou' successfully.
+2023-05-07 20:56:13,476 - root - INFO - Downloaded music 'CQpg2tuythc' by '周杰倫JayChou' successfully.
+2023-05-07 20:56:14,390 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001049d78ac chromedriver + 4257964
+1   chromedriver                        0x00000001049cff40 chromedriver + 4226880
+2   chromedriver                        0x000000010460c854 chromedriver + 280660
+3   chromedriver                        0x000000010463b1e4 chromedriver + 471524
+4   chromedriver                        0x0000000104663120 chromedriver + 635168
+5   chromedriver                        0x0000000104662868 chromedriver + 632936
+6   chromedriver                        0x00000001045dd098 chromedriver + 86168
+7   chromedriver                        0x0000000104996900 chromedriver + 3991808
+8   chromedriver                        0x000000010499a354 chromedriver + 4006740
+9   chromedriver                        0x000000010499a940 chromedriver + 4008256
+10  chromedriver                        0x00000001049a033c chromedriver + 4031292
+11  chromedriver                        0x000000010499af34 chromedriver + 4009780
+12  chromedriver                        0x0000000104973490 chromedriver + 3847312
+13  chromedriver                        0x00000001045dbae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=3)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001049d78ac chromedriver + 4257964
+1   chromedriver                        0x00000001049cff40 chromedriver + 4226880
+2   chromedriver                        0x000000010460c854 chromedriver + 280660
+3   chromedriver                        0x000000010463b1e4 chromedriver + 471524
+4   chromedriver                        0x0000000104663120 chromedriver + 635168
+5   chromedriver                        0x0000000104662868 chromedriver + 632936
+6   chromedriver                        0x00000001045dd098 chromedriver + 86168
+7   chromedriver                        0x0000000104996900 chromedriver + 3991808
+8   chromedriver                        0x000000010499a354 chromedriver + 4006740
+9   chromedriver                        0x000000010499a940 chromedriver + 4008256
+10  chromedriver                        0x00000001049a033c chromedriver + 4031292
+11  chromedriver                        0x000000010499af34 chromedriver + 4009780
+12  chromedriver                        0x0000000104973490 chromedriver + 3847312
+13  chromedriver                        0x00000001045dbae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+2023-05-07 20:57:22,340 - django.utils.autoreload - INFO - /Users/ru/Desktop/code/test0501/iRiver/music/views.py changed, reloading.
+2023-05-07 20:59:29,886 - root - INFO - Downloaded music 'HzWIQw0_CTQ' by 'SKRpresents陶山音樂' successfully.
+2023-05-07 20:59:59,727 - root - INFO - Downloaded music 'qpyx66jpCKw' by 'SKRpresents陶山音樂' successfully.
+2023-05-07 21:00:00,025 - root - INFO - Downloaded music 'wC4yv_XPY_w' by 'SKRpresents陶山音樂' successfully.
+2023-05-07 21:00:01,342 - root - INFO - Downloaded music 'Qo0qfbp2mTs' by 'SKRpresents陶山音樂' successfully.
+2023-05-07 21:00:01,825 - root - WARNING - Already exists 'Qo0qfbp2mTs' by 'SKRpresents陶山音樂'.
+2023-05-07 21:00:20,087 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001031ef8ac chromedriver + 4257964
+1   chromedriver                        0x00000001031e7f40 chromedriver + 4226880
+2   chromedriver                        0x0000000102e24854 chromedriver + 280660
+3   chromedriver                        0x0000000102e531e4 chromedriver + 471524
+4   chromedriver                        0x0000000102e7b120 chromedriver + 635168
+5   chromedriver                        0x0000000102e7a868 chromedriver + 632936
+6   chromedriver                        0x0000000102df5098 chromedriver + 86168
+7   chromedriver                        0x00000001031ae900 chromedriver + 3991808
+8   chromedriver                        0x00000001031b2354 chromedriver + 4006740
+9   chromedriver                        0x00000001031b2940 chromedriver + 4008256
+10  chromedriver                        0x00000001031b833c chromedriver + 4031292
+11  chromedriver                        0x00000001031b2f34 chromedriver + 4009780
+12  chromedriver                        0x000000010318b490 chromedriver + 3847312
+13  chromedriver                        0x0000000102df3ae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=3)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001031ef8ac chromedriver + 4257964
+1   chromedriver                        0x00000001031e7f40 chromedriver + 4226880
+2   chromedriver                        0x0000000102e24854 chromedriver + 280660
+3   chromedriver                        0x0000000102e531e4 chromedriver + 471524
+4   chromedriver                        0x0000000102e7b120 chromedriver + 635168
+5   chromedriver                        0x0000000102e7a868 chromedriver + 632936
+6   chromedriver                        0x0000000102df5098 chromedriver + 86168
+7   chromedriver                        0x00000001031ae900 chromedriver + 3991808
+8   chromedriver                        0x00000001031b2354 chromedriver + 4006740
+9   chromedriver                        0x00000001031b2940 chromedriver + 4008256
+10  chromedriver                        0x00000001031b833c chromedriver + 4031292
+11  chromedriver                        0x00000001031b2f34 chromedriver + 4009780
+12  chromedriver                        0x000000010318b490 chromedriver + 3847312
+13  chromedriver                        0x0000000102df3ae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+2023-05-07 21:01:07,108 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-07 21:01:43,165 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-07 21:02:25,514 - django.request - ERROR - Internal Server Error: /music/download/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x00000001011678ac chromedriver + 4257964
+1   chromedriver                        0x000000010115ff40 chromedriver + 4226880
+2   chromedriver                        0x0000000100d9c9d4 chromedriver + 281044
+3   chromedriver                        0x0000000100d76db0 chromedriver + 126384
+4   chromedriver                        0x0000000100dfb938 chromedriver + 670008
+5   chromedriver                        0x0000000100e0dfe8 chromedriver + 745448
+6   chromedriver                        0x0000000100dcb98c chromedriver + 473484
+7   chromedriver                        0x0000000100dcc98c chromedriver + 477580
+8   chromedriver                        0x0000000101126900 chromedriver + 3991808
+9   chromedriver                        0x000000010112a354 chromedriver + 4006740
+10  chromedriver                        0x000000010112a940 chromedriver + 4008256
+11  chromedriver                        0x000000010113033c chromedriver + 4031292
+12  chromedriver                        0x000000010112af34 chromedriver + 4009780
+13  chromedriver                        0x0000000101103490 chromedriver + 3847312
+14  chromedriver                        0x00000001011489f4 chromedriver + 4131316
+15  chromedriver                        0x0000000101148b4c chromedriver + 4131660
+16  chromedriver                        0x0000000101159230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 164, in download_song
+    success =  download(music_ID_list= music_ID_list ,
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x00000001011678ac chromedriver + 4257964
+1   chromedriver                        0x000000010115ff40 chromedriver + 4226880
+2   chromedriver                        0x0000000100d9c9d4 chromedriver + 281044
+3   chromedriver                        0x0000000100d76db0 chromedriver + 126384
+4   chromedriver                        0x0000000100dfb938 chromedriver + 670008
+5   chromedriver                        0x0000000100e01384 chromedriver + 693124
+6   chromedriver                        0x0000000100dcb98c chromedriver + 473484
+7   chromedriver                        0x0000000100dcc98c chromedriver + 477580
+8   chromedriver                        0x0000000101126900 chromedriver + 3991808
+9   chromedriver                        0x000000010112a354 chromedriver + 4006740
+10  chromedriver                        0x000000010112a940 chromedriver + 4008256
+11  chromedriver                        0x000000010113033c chromedriver + 4031292
+12  chromedriver                        0x000000010112af34 chromedriver + 4009780
+13  chromedriver                        0x0000000101103490 chromedriver + 3847312
+14  chromedriver                        0x00000001011489f4 chromedriver + 4131316
+15  chromedriver                        0x0000000101148b4c chromedriver + 4131660
+16  chromedriver                        0x0000000101159230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+2023-05-07 21:03:33,942 - root - INFO - Downloaded music 'o3YadwGH0ZA' by 'MartinGarrix' successfully.
+2023-05-07 21:04:05,627 - django.request - WARNING - Not Found: /media/MartinGarrix/img/e2vBLd5Egnk.jpg
+2023-05-07 21:04:05,631 - django.request - WARNING - Not Found: /media/MartinGarrix/songs/e2vBLd5Egnk.mp3
+2023-05-07 21:05:19,888 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x0000000104c0f8ac chromedriver + 4257964
+1   chromedriver                        0x0000000104c07f40 chromedriver + 4226880
+2   chromedriver                        0x00000001048449d4 chromedriver + 281044
+3   chromedriver                        0x000000010481edb0 chromedriver + 126384
+4   chromedriver                        0x00000001048a3938 chromedriver + 670008
+5   chromedriver                        0x00000001048b5fe8 chromedriver + 745448
+6   chromedriver                        0x000000010487398c chromedriver + 473484
+7   chromedriver                        0x000000010487498c chromedriver + 477580
+8   chromedriver                        0x0000000104bce900 chromedriver + 3991808
+9   chromedriver                        0x0000000104bd2354 chromedriver + 4006740
+10  chromedriver                        0x0000000104bd2940 chromedriver + 4008256
+11  chromedriver                        0x0000000104bd833c chromedriver + 4031292
+12  chromedriver                        0x0000000104bd2f34 chromedriver + 4009780
+13  chromedriver                        0x0000000104bab490 chromedriver + 3847312
+14  chromedriver                        0x0000000104bf09f4 chromedriver + 4131316
+15  chromedriver                        0x0000000104bf0b4c chromedriver + 4131660
+16  chromedriver                        0x0000000104c01230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=3)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x0000000104c0f8ac chromedriver + 4257964
+1   chromedriver                        0x0000000104c07f40 chromedriver + 4226880
+2   chromedriver                        0x00000001048449d4 chromedriver + 281044
+3   chromedriver                        0x000000010481edb0 chromedriver + 126384
+4   chromedriver                        0x00000001048a3938 chromedriver + 670008
+5   chromedriver                        0x00000001048a9384 chromedriver + 693124
+6   chromedriver                        0x000000010487398c chromedriver + 473484
+7   chromedriver                        0x000000010487498c chromedriver + 477580
+8   chromedriver                        0x0000000104bce900 chromedriver + 3991808
+9   chromedriver                        0x0000000104bd2354 chromedriver + 4006740
+10  chromedriver                        0x0000000104bd2940 chromedriver + 4008256
+11  chromedriver                        0x0000000104bd833c chromedriver + 4031292
+12  chromedriver                        0x0000000104bd2f34 chromedriver + 4009780
+13  chromedriver                        0x0000000104bab490 chromedriver + 3847312
+14  chromedriver                        0x0000000104bf09f4 chromedriver + 4131316
+15  chromedriver                        0x0000000104bf0b4c chromedriver + 4131660
+16  chromedriver                        0x0000000104c01230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+2023-05-07 21:06:08,503 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-07 21:08:50,513 - django.request - ERROR - Internal Server Error: /music/download/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x0000000100fe38ac chromedriver + 4257964
+1   chromedriver                        0x0000000100fdbf40 chromedriver + 4226880
+2   chromedriver                        0x0000000100c189d4 chromedriver + 281044
+3   chromedriver                        0x0000000100bf2db0 chromedriver + 126384
+4   chromedriver                        0x0000000100c77938 chromedriver + 670008
+5   chromedriver                        0x0000000100c89fe8 chromedriver + 745448
+6   chromedriver                        0x0000000100c4798c chromedriver + 473484
+7   chromedriver                        0x0000000100c4898c chromedriver + 477580
+8   chromedriver                        0x0000000100fa2900 chromedriver + 3991808
+9   chromedriver                        0x0000000100fa6354 chromedriver + 4006740
+10  chromedriver                        0x0000000100fa6940 chromedriver + 4008256
+11  chromedriver                        0x0000000100fac33c chromedriver + 4031292
+12  chromedriver                        0x0000000100fa6f34 chromedriver + 4009780
+13  chromedriver                        0x0000000100f7f490 chromedriver + 3847312
+14  chromedriver                        0x0000000100fc49f4 chromedriver + 4131316
+15  chromedriver                        0x0000000100fc4b4c chromedriver + 4131660
+16  chromedriver                        0x0000000100fd5230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 164, in download_song
+    success =  download(music_ID_list= music_ID_list ,
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x0000000100fe38ac chromedriver + 4257964
+1   chromedriver                        0x0000000100fdbf40 chromedriver + 4226880
+2   chromedriver                        0x0000000100c189d4 chromedriver + 281044
+3   chromedriver                        0x0000000100bf2db0 chromedriver + 126384
+4   chromedriver                        0x0000000100c77938 chromedriver + 670008
+5   chromedriver                        0x0000000100c7d384 chromedriver + 693124
+6   chromedriver                        0x0000000100c4798c chromedriver + 473484
+7   chromedriver                        0x0000000100c4898c chromedriver + 477580
+8   chromedriver                        0x0000000100fa2900 chromedriver + 3991808
+9   chromedriver                        0x0000000100fa6354 chromedriver + 4006740
+10  chromedriver                        0x0000000100fa6940 chromedriver + 4008256
+11  chromedriver                        0x0000000100fac33c chromedriver + 4031292
+12  chromedriver                        0x0000000100fa6f34 chromedriver + 4009780
+13  chromedriver                        0x0000000100f7f490 chromedriver + 3847312
+14  chromedriver                        0x0000000100fc49f4 chromedriver + 4131316
+15  chromedriver                        0x0000000100fc4b4c chromedriver + 4131660
+16  chromedriver                        0x0000000100fd5230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+2023-05-07 21:09:05,723 - django.request - ERROR - Internal Server Error: /music/download/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x000000010091f8ac chromedriver + 4257964
+1   chromedriver                        0x0000000100917f40 chromedriver + 4226880
+2   chromedriver                        0x00000001005549d4 chromedriver + 281044
+3   chromedriver                        0x000000010052edb0 chromedriver + 126384
+4   chromedriver                        0x00000001005b3938 chromedriver + 670008
+5   chromedriver                        0x00000001005c5fe8 chromedriver + 745448
+6   chromedriver                        0x000000010058398c chromedriver + 473484
+7   chromedriver                        0x000000010058498c chromedriver + 477580
+8   chromedriver                        0x00000001008de900 chromedriver + 3991808
+9   chromedriver                        0x00000001008e2354 chromedriver + 4006740
+10  chromedriver                        0x00000001008e2940 chromedriver + 4008256
+11  chromedriver                        0x00000001008e833c chromedriver + 4031292
+12  chromedriver                        0x00000001008e2f34 chromedriver + 4009780
+13  chromedriver                        0x00000001008bb490 chromedriver + 3847312
+14  chromedriver                        0x00000001009009f4 chromedriver + 4131316
+15  chromedriver                        0x0000000100900b4c chromedriver + 4131660
+16  chromedriver                        0x0000000100911230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 164, in download_song
+    success =  download(music_ID_list= music_ID_list ,
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x000000010091f8ac chromedriver + 4257964
+1   chromedriver                        0x0000000100917f40 chromedriver + 4226880
+2   chromedriver                        0x00000001005549d4 chromedriver + 281044
+3   chromedriver                        0x000000010052edb0 chromedriver + 126384
+4   chromedriver                        0x00000001005b3938 chromedriver + 670008
+5   chromedriver                        0x00000001005b9384 chromedriver + 693124
+6   chromedriver                        0x000000010058398c chromedriver + 473484
+7   chromedriver                        0x000000010058498c chromedriver + 477580
+8   chromedriver                        0x00000001008de900 chromedriver + 3991808
+9   chromedriver                        0x00000001008e2354 chromedriver + 4006740
+10  chromedriver                        0x00000001008e2940 chromedriver + 4008256
+11  chromedriver                        0x00000001008e833c chromedriver + 4031292
+12  chromedriver                        0x00000001008e2f34 chromedriver + 4009780
+13  chromedriver                        0x00000001008bb490 chromedriver + 3847312
+14  chromedriver                        0x00000001009009f4 chromedriver + 4131316
+15  chromedriver                        0x0000000100900b4c chromedriver + 4131660
+16  chromedriver                        0x0000000100911230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+

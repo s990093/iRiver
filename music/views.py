@@ -212,7 +212,7 @@ def download_songs(request):
     for chunk in music_ID_list_chunks:
         success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                             artist=artist , 
-                            only_dow_song=True, max_thread=2
+                            only_dow_song=True, max_thread=3
                           )
         if success:
             mysql.save_data(song_infos=json.dumps(chunk, indent=4))
