@@ -82,6 +82,7 @@ def data(request):
         name = request.user.username
         email = request.user.email
     else:
+        del request.session['email']
         request.session['isLogin'] = False
         print("未登入")
         name = None
@@ -157,7 +158,6 @@ def profile(request):
             #sql.create_tables("user") #建立資料表
             sql.save_user_data(email, username, phone, country, birthday)
             print("成功修改")
-            
             return redirect('/user/data')
     else:
         print("修改錯誤")

@@ -49,7 +49,7 @@ class SQL:
                     insert_values = (music_list, music_ID , False)
                     self.cursor.execute(insert_sql, insert_values)
                 # 如果是我的最愛或在最愛裡面，則將favorite設為true    
-                if music_list == 1 or self.cheak_ID_in_1(music_ID) == True:
+                if music_list == 1 or self.check_ID_in_1(music_ID) == True:
                     self.set_all_favorite(music_ID ,True)
             # 提交事务
             self.db.commit()
@@ -86,7 +86,7 @@ class SQL:
         for music_ID in music_ID_list:
             self.save_data(music_ID, 1)
 
-    def cheak_ID_in_1(self, music_ID):
+    def check_ID_in_1(self, music_ID):
         sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s AND music_list = 1'
         self.cursor.execute(sql, (music_ID,))
         result = self.cursor.fetchone()
