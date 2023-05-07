@@ -1435,3 +1435,459 @@ Stacktrace:
 17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
 18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
 
+2023-05-08 00:51:07,122 - root - INFO - Downloaded music 'Hh9yZWeTmVM' by 'ONEOKROCK' successfully.
+2023-05-08 00:52:01,473 - root - ERROR - Failed to download music 'fnyzHd2PoS0' by 'ONEOKROCK'.
+2023-05-08 00:52:02,741 - root - ERROR - Failed to download music 'ec7H8oXiSSs' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:52:03,259 - django.request - WARNING - Not Found: /media/芖地ら龙﹛よ繵笵/songs/ec7H8oXiSSs.mp3
+2023-05-08 00:52:08,268 - root - ERROR - Failed to download music 'KCCqTdBNglY' by 'ONEOKROCK'.
+2023-05-08 00:52:11,187 - root - ERROR - Failed to download music 'x1yPxiRuTWo' by 'ONEOKROCK'.
+2023-05-08 00:52:26,019 - root - INFO - Downloaded music 'Z0Iqri-ZMnM' by 'ONEOKROCK' successfully.
+2023-05-08 00:52:35,901 - root - INFO - Downloaded music 'pXvC7GkN9kY' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:52:36,317 - root - INFO - Downloaded music 'FtNWNUsCJoI' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:52:36,486 - root - INFO - Downloaded music 'br8m6W3YnlE' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:52:37,080 - root - WARNING - Already exists 'pXvC7GkN9kY' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:52:57,903 - root - ERROR - Failed to download music 'NncyuRWmjEE' by 'ONEOKROCK'.
+2023-05-08 00:52:59,306 - root - ERROR - Failed to download music 'A3-R9gs5RJU' by 'ONEOKROCK'.
+2023-05-08 00:53:11,552 - root - INFO - Downloaded music 'wJ6FMjZkbMI' by 'ONEOKROCK' successfully.
+2023-05-08 00:53:11,647 - root - INFO - Downloaded music 'Ajr18Yw5xdY' by 'ONEOKROCK' successfully.
+2023-05-08 00:53:21,984 - root - ERROR - Failed to download music 'RVDdgR5iiAs' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:53:23,910 - root - ERROR - Failed to download music 'mCBqH3unsvs' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:53:36,251 - root - INFO - Downloaded music 'L9x4Tu10mLE' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:53:36,982 - root - INFO - Downloaded music 'kIuEX64H_ao' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:53:37,132 - root - INFO - Downloaded music 'jgCVkQhlScc' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:53:37,438 - root - WARNING - Already exists 'L9x4Tu10mLE' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:53:47,289 - root - ERROR - Failed to download music 'qwj_TFDdUSI' by 'ONEOKROCK'.
+2023-05-08 00:53:48,567 - root - INFO - Downloaded music 'lYhsX1FXA1U' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:53:49,660 - root - INFO - Downloaded music 'IlkbI3RXkNI' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:54:01,837 - root - INFO - Downloaded music 'A3-R9gs5RJU' by 'ONEOKROCK' successfully.
+2023-05-08 00:54:02,190 - root - INFO - Downloaded music '2IRou8fHgXc' by 'ONEOKROCK' successfully.
+2023-05-08 00:54:03,322 - root - INFO - Downloaded music 'tOpPohbJeqo' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:54:03,497 - root - INFO - Downloaded music 'XTmI8j6X3IA' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:54:03,797 - root - INFO - Downloaded music 'nENE6X11j3g' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:54:17,444 - root - INFO - Downloaded music 'qWJfgyROX5Q' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:54:20,792 - root - INFO - Downloaded music 'ZSrTtHSD0LI' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:54:22,212 - root - INFO - Downloaded music 'ut6SOLxVPCY' by 'ONEOKROCK' successfully.
+2023-05-08 00:54:22,496 - root - WARNING - Already exists 'Ajr18Yw5xdY' by 'ONEOKROCK'.
+2023-05-08 00:54:42,773 - root - INFO - Downloaded music 'CMytXM8k9qE' by 'ONEOKROCK' successfully.
+2023-05-08 00:54:52,916 - root - ERROR - Failed to download music 'Q-xF-85rASM' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:55:05,607 - root - INFO - Downloaded music 'fvtzZFhrKLE' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:55:06,256 - root - INFO - Downloaded music 'WJlt_xw4tf0' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:55:08,809 - root - ERROR - Failed to download music 'henLlt2cy-Y' by 'ONEOKROCK'.
+2023-05-08 00:55:21,394 - root - INFO - Downloaded music 'dOObQ4ourxg' by 'ONEOKROCK' successfully.
+2023-05-08 00:55:21,410 - root - INFO - Downloaded music '0cFQxqDPKOs' by 'ONEOKROCK' successfully.
+2023-05-08 00:55:23,541 - root - INFO - Downloaded music 'xa8WkJZ_Zr0' by 'ONEOKROCK' successfully.
+2023-05-08 00:55:36,271 - root - INFO - Downloaded music 'uA832zpafis' by 'ONEOKROCK' successfully.
+2023-05-08 00:55:36,280 - root - INFO - Downloaded music 'x1yPxiRuTWo' by 'ONEOKROCK' successfully.
+2023-05-08 00:55:42,593 - root - ERROR - Failed to download music 'kd9LjYhu8ao' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:55:55,447 - root - INFO - Downloaded music 'ZLV_pKbMXxE' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:56:11,531 - root - ERROR - Failed to download music '1Qm98uDsh4U' by 'ONEOKROCK'.
+2023-05-08 00:56:22,258 - root - INFO - Downloaded music 'iasdEx2LgBk' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:56:23,686 - root - INFO - Downloaded music 'YdWJmKSVf5c' by 'ONEOKROCK' successfully.
+2023-05-08 00:56:30,445 - root - INFO - Downloaded music 'd8pGPdTzxdM' by 'ONEOKROCK' successfully.
+2023-05-08 00:56:31,162 - root - ERROR - Failed to download music 'seO3t3tBOwg' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:56:31,935 - root - INFO - Downloaded music 'ZXhBduTZnI0' by 'ONEOKROCK' successfully.
+2023-05-08 00:56:46,997 - root - INFO - Downloaded music 'pD87lE6aVn8' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:57:18,320 - root - ERROR - Failed to download music 'dITCMN0hrYA' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:57:19,344 - root - ERROR - Failed to download music 'pdEzfr8KDgo' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:57:31,433 - root - INFO - Downloaded music 'A6AzYntMhY4' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:57:31,529 - root - INFO - Downloaded music '7x5Fjnnt2ic' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:57:37,599 - root - INFO - Downloaded music '7SufPQo1DGE' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:57:50,569 - root - INFO - Downloaded music 'g7CvXLenCQE' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:57:51,281 - root - INFO - Downloaded music 'kSA-muDWh4c' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 00:58:25,745 - root - ERROR - Failed to download music '1UecEnegC6k' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:59:12,745 - root - ERROR - Failed to download music 'hURlF-Kbj04' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:59:13,212 - root - ERROR - Failed to download music 'Iq6MtiANS38' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:59:13,847 - root - ERROR - Failed to download music 'Ew7ySIo1ULk' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 00:59:26,484 - root - INFO - Downloaded music 'iG-rKkWcIhY' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:00:01,115 - root - ERROR - Failed to download music 'YfmIWqEnggo' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 01:00:01,580 - root - ERROR - Failed to download music 'uJhRzSN3pj8' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 01:00:13,037 - root - INFO - Downloaded music 'Xnzm0WEHCUw' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:00:13,536 - root - INFO - Downloaded music 'Lfp4ArqQN_E' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:00:48,462 - root - ERROR - Failed to download music 'XDDVhRFBQ8k' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 01:01:00,740 - root - INFO - Downloaded music 'zmPXAXg9Cbs' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:01:01,256 - root - INFO - Downloaded music 'tM90fadAQfI' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:01:35,972 - root - ERROR - Failed to download music 'FtGEL5Uoa3w' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 01:02:23,552 - root - ERROR - Failed to download music 'WYB8xGSW-fk' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 01:02:23,738 - root - ERROR - Failed to download music 'ZdwJ7DsN3cY' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 01:02:25,267 - root - ERROR - Failed to download music 'PDfm-V8MIFE' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 01:02:37,534 - root - INFO - Downloaded music 'lSQMiBTBUOI' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:02:52,652 - root - INFO - Downloaded music 'w_AXIaqsZg8' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:03:12,706 - root - ERROR - Failed to download music 'xBL2girV3gM' by '芖地ら龙﹛よ繵笵'.
+2023-05-08 01:03:26,081 - root - INFO - Downloaded music 'lGtLGRJ6Pt4' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:03:35,501 - root - INFO - Downloaded music 'aFwGkRyZxO0' by '芖地ら龙﹛よ繵笵' successfully.
+2023-05-08 01:03:35,914 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 48, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: uniqueContextId not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x006387D0]
+	(No symbol) [0x00636F58]
+	(No symbol) [0x006375CA]
+	(No symbol) [0x00648067]
+	(No symbol) [0x00649631]
+	(No symbol) [0x006496D0]
+	(No symbol) [0x00691A58]
+	(No symbol) [0x0069047C]
+	(No symbol) [0x0068A0B6]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\views.py", line 213, in download_songs
+    success = download( music_ID_list=[song['music_ID'] for song in chunk],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\dow.py", line 51, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 62, in crawl
+    driver.quit()
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+2023-05-08 01:31:44,166 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\\django\myproject\music\views.py changed, reloading.
+2023-05-08 01:32:43,072 - root - INFO - Downloaded music 'SX_ViT4Ra7k' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:32:56,474 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\views.py", line 213, in download_songs
+    success = download( music_ID_list=[song['music_ID'] for song in chunk],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: download() got an unexpected keyword argument 'max_threa'
+2023-05-08 01:33:31,258 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\\django\myproject\music\views.py changed, reloading.
+2023-05-08 01:38:13,752 - root - INFO - Downloaded music 'gJX2iy6nhHc' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:38:14,126 - django.request - ERROR - Internal Server Error: /music/download/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\common\service.py", line 97, in start
+    path = SeleniumManager().driver_location(browser)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\common\selenium_manager.py", line 81, in driver_location
+    result = self.run((binary, browser_flag, browser, output_flag, output))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\common\selenium_manager.py", line 102, in run
+    raise SeleniumManagerException(f"Selenium manager failed for: {command}.\n{result}{stderr}")
+selenium.common.exceptions.SeleniumManagerException: Message: Selenium manager failed for: C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+error sending request for url (https://chromedriver.storage.googleapis.com/LATEST_RELEASE_113): error trying to connect: tcp connect error: 硈絬砆眤诀硁砰いゎ (os error 10053)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\views.py", line 184, in download_song
+    mysql.save_summary(artist=song_info['artist'] , summary=summary.result())  # 纗簈も篕璶
+                                                            ^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\web_scutter\summary.py", line 19, in query_summary
+    driver = webdriver.Chrome(service=service , options=options)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 101, in __init__
+    self.service.start()
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\common\service.py", line 100, in start
+    raise err
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\common\service.py", line 90, in start
+    self._start_process(self.path)
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\common\service.py", line 218, in _start_process
+    raise WebDriverException(
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+2023-05-08 01:39:32,217 - root - INFO - Downloaded music 'JAMNqRBL_CY' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:33,725 - root - INFO - Downloaded music 'AS4q9yaWJkI' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:34,365 - root - INFO - Downloaded music '0RU_05zpETo' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:34,632 - root - INFO - Downloaded music '8nxaZ69ElEc' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:34,724 - root - INFO - Downloaded music 'qnX2CdOBcDI' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:34,991 - root - INFO - Downloaded music 'HOz-9FzIDf0' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:35,005 - root - INFO - Downloaded music 'M2cckDmNLMI' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:39,382 - root - INFO - Downloaded music 'Zhx1n6uvgUE' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:40,364 - root - INFO - Downloaded music '7WZ1Kt3zraY' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:56,820 - root - INFO - Downloaded music 'A1BDQeRZv3Q' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:39:57,924 - root - INFO - Downloaded music 'HSNWJbkIsmo' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:40:03,074 - root - INFO - Downloaded music 'Cu8V1SGJZ_8' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:40:04,023 - root - INFO - Downloaded music 'QeqbN1IZVpk' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:40:09,923 - root - INFO - Downloaded music 'hEyvYm2YRXQ' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:40:11,050 - root - INFO - Downloaded music 'K9RpXW97arA' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:40:18,241 - root - INFO - Downloaded music 'AKffZySqQts' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:40:25,852 - root - ERROR - Failed to download music 'ly_4WV4rdts' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:40:29,920 - root - ERROR - Failed to download music 'f0Z4hiPhlz4' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:40:30,213 - root - ERROR - Failed to download music 'R0kxCX_Edm8' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:40:30,277 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 48, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x006479D6]
+	(No symbol) [0x00649631]
+	(No symbol) [0x006496D0]
+	(No symbol) [0x00691A58]
+	(No symbol) [0x0069047C]
+	(No symbol) [0x0068A0B6]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\views.py", line 213, in download_songs
+    success = download( music_ID_list=[song['music_ID'] for song in chunk],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\dow.py", line 51, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 62, in crawl
+    driver.quit()
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+2023-05-08 01:41:25,895 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\\django\myproject\music\views.py changed, reloading.
+2023-05-08 01:41:52,196 - root - WARNING - Already exists 'M2cckDmNLMI' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,197 - root - WARNING - Already exists 'Zhx1n6uvgUE' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,197 - root - WARNING - Already exists '7WZ1Kt3zraY' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,197 - root - WARNING - Already exists '8nxaZ69ElEc' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,201 - root - WARNING - Already exists 'JAMNqRBL_CY' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,201 - root - WARNING - Already exists 'AS4q9yaWJkI' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,202 - root - WARNING - Already exists 'qnX2CdOBcDI' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,203 - root - WARNING - Already exists 'HOz-9FzIDf0' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,204 - root - WARNING - Already exists '0RU_05zpETo' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,204 - root - WARNING - Already exists 'AKffZySqQts' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,204 - root - WARNING - Already exists 'QeqbN1IZVpk' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,206 - root - WARNING - Already exists 'hEyvYm2YRXQ' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:41:52,207 - root - WARNING - Already exists 'K9RpXW97arA' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:03,292 - root - INFO - Downloaded music 'mHP6-D-yBEw' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:42:07,248 - root - INFO - Downloaded music 'ly_4WV4rdts' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:42:08,681 - root - WARNING - Already exists 'AKffZySqQts' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:08,682 - root - WARNING - Already exists 'hEyvYm2YRXQ' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:08,682 - root - WARNING - Already exists 'QeqbN1IZVpk' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:08,682 - root - WARNING - Already exists 'ly_4WV4rdts' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:08,684 - root - WARNING - Already exists 'K9RpXW97arA' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:08,685 - root - WARNING - Already exists 'Cu8V1SGJZ_8' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:08,686 - root - WARNING - Already exists 'HSNWJbkIsmo' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:08,686 - root - WARNING - Already exists 'A1BDQeRZv3Q' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:42:24,608 - root - INFO - Downloaded music '0t6TjQotSHw' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:42:26,404 - root - INFO - Downloaded music 'kGVKMBnilcM' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:42:28,012 - root - INFO - Downloaded music 'EnfuDqHZeaU' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:42:37,578 - root - INFO - Downloaded music 'dFlDRhvM4L0' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:42:40,660 - root - INFO - Downloaded music 'f0Z4hiPhlz4' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:42:56,796 - root - ERROR - Failed to download music 'R0kxCX_Edm8' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:43:10,503 - root - ERROR - Failed to download music 'HUKDl1MxxDQ' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:43:11,810 - root - WARNING - Already exists 'EnfuDqHZeaU' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:43:11,815 - root - WARNING - Already exists '0t6TjQotSHw' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:43:11,816 - root - WARNING - Already exists 'kGVKMBnilcM' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:43:11,817 - root - WARNING - Already exists 'dFlDRhvM4L0' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:43:24,187 - root - INFO - Downloaded music 'qzwLLKD7ZIQ' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:43:24,328 - root - INFO - Downloaded music 'HUKDl1MxxDQ' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:43:32,840 - root - INFO - Downloaded music 'Gtku_jsNgAA' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:43:37,966 - root - INFO - Downloaded music 'ETLT0WXFX1E' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:43:40,986 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-08 01:43:41,518 - django.request - WARNING - Not Found: /media/KenshiYonezuμ瑉ト畍/img/M2cckDmNLMI.jpg
+2023-05-08 01:43:41,520 - django.request - WARNING - Not Found: /media/KenshiYonezuμ瑉ト畍/img/Zhx1n6uvgUE.jpg
+2023-05-08 01:43:44,242 - root - INFO - Downloaded music '7940nuwCEYA' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:43:51,913 - root - INFO - Downloaded music 'wk_0Bej-myQ' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:44:00,518 - root - INFO - Downloaded music '-tKVN2mAKRI' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:44:00,554 - root - ERROR - Failed to download music 'iBx4Wusc7aY' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:44:02,114 - root - ERROR - Failed to download music 'toeThZQb8cw' by 'KenshiYonezuμ瑉ト畍'.
+2023-05-08 01:44:11,053 - root - INFO - Downloaded music 'uINfdDaZ1Ww' by 'KenshiYonezuμ瑉ト畍' successfully.
+2023-05-08 01:44:11,161 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 48, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x006479D6]
+	(No symbol) [0x00649631]
+	(No symbol) [0x006496D0]
+	(No symbol) [0x00691A58]
+	(No symbol) [0x0069047C]
+	(No symbol) [0x0068A0B6]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\views.py", line 213, in download_songs
+    success = download( music_ID_list=[song['music_ID'] for song in chunk],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\dow.py", line 51, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\\django\myproject\music\lib\download\y2mate.py", line 62, in crawl
+    driver.quit()
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+2023-05-08 01:44:44,531 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\\django\myproject\music\views.py changed, reloading.
