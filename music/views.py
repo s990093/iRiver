@@ -147,6 +147,12 @@ def query_web_song(request):
 def download_song(request):
     song_str = request.GET.get('song_info')
     song_info = json.loads(unquote(song_str))
+
+    path = os.path.join("media", song_info['artist'], "songs" ,f"{song_info['music_ID']}.mp3")
+   
+    if os.path.exists(path=path) :
+        return JsonResponse({"success": True})
+    
     # 使用 ThreadPoolExecutor 讓下載封面圖片和維基百科摘要的工作可以同時進行
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         src = executor.submit(query_artist_iocn_src, song_info['artist'])  # 取得歌手圖片的來源 URL
@@ -154,11 +160,12 @@ def download_song(request):
 
     music_ID_list = [song_info['music_ID']]
     # 呼叫 download 函式進行歌曲下載，將歌曲 ID、圖片 URL 和歌手圖片 URL 傳入
-    success =  download(music_ID_list= music_ID_list ,
+    success =  download(music_ID_list= music_ID_list , 
+                        artist= song_info['artist'],
                         img_url= song_info['img_url'],
                         cover_img_url= src.result(),
-                        artist_img_url= song_info['artist_img_url'],
-                        artsit= song_info['artist'])
+                        artist_img_url= song_info['artist_img_url']
+                        )
     params = [{
             'artist': song_info['artist'],
             'title': song_info['title'],
@@ -181,54 +188,35 @@ def download_song(request):
 
 
 def download_songs(request):
-    return True
-#     song_str = request.GET.get('song_info')
-#     song_info = json.loads(unquote(song_str))
+    artist_url = request.GET.get('artist_url')
+    artist = request.GET.get('artist')
+    music_list_infos = query_music_list(url=artist_url)
+    print('~'*30)
+    print(music_list_infos)
+    music_ID_list = []
+    music_list = []
+    for i in range(0, len(music_list_infos), 2):
+        music_ID_list.append({'music_ID': music_list_infos[i]})
+        music_list.append({
+             'artist': artist,
+            'title':  music_list_infos[i+1],
+            'music_ID':  music_list_infos[i],
+            'artist_url':  artist_url ,
+            # TODO remove this null parameter
+            'keywords' :  'null',  # 關鍵字暫時設為 null
+            'views': '0',  # 歌曲觀看次數暫時設為 0
+            'publish_time': '0',  # 歌曲發佈時間暫時設為 0
+        })
 
-#     ID_list = query_music_list(url=song_info['url'])
-#     print('~'*30)
-#     print(ID_list)
-  
-#     results = []
-#     # dow
-#     for i in range(0, len(ID_list), 2):
-#         id, title = ID_list[i:i+2]
-#         title = clear_str(title=title , artist=song_info['artist'])
-#         params = {
-#         'output_path': f"media/{song_info['artist']}/music/",
-#         'url': song_info['url'],
-#         'ID': id,
-#         'title': title,
-#         'artist_url': song_info['artist_url'],
-#         'original_artist': song_info['artist'],
-#         'max_retry': 2,
-#         }
-
-#         # res = download_audio(params=params)
-#         # download_img(url=f'https://i.ytimg.com/vi/{id}/hqdefault.jpg', 
-#         #             file_name=f'{id}.jpg' ,
-#         #             file_dir= f"media/{song_info['artist']}/img/" )
-        
-#         # if res is not None:
-#         #     results.append(json.loads(res))
-#         #     download_img(url=song_info['img_url'] ,file_name='artist.jpg' ,file_dir= f"media/{song_info['artist']}/img/")
-
-           
-#     # 输出结果
-#     print(f'總共有{len(results)}首歌')
-#       # 删除结果列表中为None的元素
-#     results = [r for r in results if r is not None]
-
-#     # 寫入資料庫
-#     mysql = SQL(music.lib.sql.config.DB_CONFIG)
-#     mysql.create_tables()
-#     mysql.save_data(song_infos=json.dumps(results , indent=4))
+    success =  download(music_ID_list= music_ID_list ,
+                        artist= artist,
+                        only_dow_song= True)
     
-#     r = mysql.get_all_artist_song(artist=song_info['artist'])
-#     r = [' '.join(map(str, i)) + '\n' for i in r]
-#     print(f'{len(r)}首歌')
-#     print(''.join(r))
-#     mysql.close()
+   
+    # 寫入資料庫
+    mysql = SQL(music.lib.sql.config.DB_CONFIG)
+    mysql.save_data(song_infos=json.dumps(music_list , indent=4))
+    mysql.close()
     
-#     return JsonResponse({'success': True, 'message': 'ok'})
+    return JsonResponse({'success': True})
 
