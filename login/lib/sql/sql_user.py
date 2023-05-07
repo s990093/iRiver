@@ -26,13 +26,13 @@ class SQL:
         '''
         self.cursor.execute(sql)
 
-    def save_user_data(self, table_name, email, username, phone, country, birthday):
+    def save_user_data(self, email, username, phone, country, birthday):
         self.cursor.execute(
-            f'INSERT IGNORE INTO {table_name} (email, username, phone, country, birthday) VALUES (%s, %s, %s, %s, %s)',
+            f'INSERT IGNORE INTO user (email, username, phone, country, birthday) VALUES (%s, %s, %s, %s, %s)',
             (email, username, phone, country, birthday)
         )
         self.cursor.execute(
-            f'UPDATE {table_name} SET username=%s, phone=%s, country=%s, birthday=%s WHERE email=%s',
+            f'UPDATE user SET username=%s, phone=%s, country=%s, birthday=%s WHERE email=%s',
             (username, phone, country, birthday, email)
         )
         self.db.commit()
