@@ -71,8 +71,8 @@ function paush_web_data(music_list) {
         } else {
           alert('Error');
         }
+        loading(false);
       });
-    loading(false);
   });
   loading(false);
 }

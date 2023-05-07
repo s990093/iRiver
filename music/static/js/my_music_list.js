@@ -6,12 +6,12 @@ $('document').ready(function () {
     const control = new Control(audio, music_list_infos, false, false, false);
     $('tr .play').on('click', function (e) {
         e.preventDefault();
-        var clickedRowIndex = $(this).index();
+        var index = $(this).attr('value');
         if (!isClickEventRegistered) {
             control.register();
             isClickEventRegistered = true;
         }
-        control.insert(clickedRowIndex);
+        control.insert(index);
     });
 });
 

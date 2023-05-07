@@ -13,7 +13,7 @@
         {% for song in music_list_infos %}
         <tr>
           <td>
-            <a href="#" class="play">
+            <a href="#" class="play" value="{{forloop.counter0}}">
               <img
                 src="{{ '/media/'|add:song.artist|add:'/img/'|add:song.music_ID|add:'.jpg' }}"
                 alt="none"
