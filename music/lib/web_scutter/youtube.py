@@ -56,7 +56,6 @@ def query_youtube(query : str) ->json:
         except NoSuchElementException as e:
             print(e)
             pass
-
     # 统计所有艺术家的出现次数
     artists = [ video["artist"] for video in music_list]
     most_common_artist = Counter(artists).most_common(1)[0][0]
