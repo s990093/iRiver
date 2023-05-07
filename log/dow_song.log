@@ -867,3 +867,704 @@ Backtrace:
 2023-05-07 20:31:54,133 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ǣǥ�O�Cn-bunaOfficial'.
 2023-05-07 20:31:54,133 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ǣǥ�O�Cn-bunaOfficial'.
 2023-05-07 20:31:54,134 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ǣǥ�O�Cn-bunaOfficial'.
+2023-05-07 20:50:36,380 - root - INFO - Downloaded music 'ony539T074w' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:00,651 - root - INFO - Downloaded music 'C47K1TX9PAA' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:02,092 - root - INFO - Downloaded music 'M6gcoDN9jBc' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:02,250 - root - INFO - Downloaded music 'n0QNaym0jDI' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:04,090 - root - INFO - Downloaded music 'b2loI23h3bo' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:12,972 - root - INFO - Downloaded music 'IPzOxKW3fSA' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:19,851 - root - INFO - Downloaded music 'O3-6fHVB1Sg' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-07 20:51:20,418 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x00000001012ef8ac chromedriver + 4257964
+1   chromedriver                        0x00000001012e7f40 chromedriver + 4226880
+2   chromedriver                        0x0000000100f249d4 chromedriver + 281044
+3   chromedriver                        0x0000000100efedb0 chromedriver + 126384
+4   chromedriver                        0x0000000100f83938 chromedriver + 670008
+5   chromedriver                        0x0000000100f95fe8 chromedriver + 745448
+6   chromedriver                        0x0000000100f5398c chromedriver + 473484
+7   chromedriver                        0x0000000100f5498c chromedriver + 477580
+8   chromedriver                        0x00000001012ae900 chromedriver + 3991808
+9   chromedriver                        0x00000001012b2354 chromedriver + 4006740
+10  chromedriver                        0x00000001012b2940 chromedriver + 4008256
+11  chromedriver                        0x00000001012b833c chromedriver + 4031292
+12  chromedriver                        0x00000001012b2f34 chromedriver + 4009780
+13  chromedriver                        0x000000010128b490 chromedriver + 3847312
+14  chromedriver                        0x00000001012d09f4 chromedriver + 4131316
+15  chromedriver                        0x00000001012d0b4c chromedriver + 4131660
+16  chromedriver                        0x00000001012e1230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=10)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x00000001012ef8ac chromedriver + 4257964
+1   chromedriver                        0x00000001012e7f40 chromedriver + 4226880
+2   chromedriver                        0x0000000100f249d4 chromedriver + 281044
+3   chromedriver                        0x0000000100efedb0 chromedriver + 126384
+4   chromedriver                        0x0000000100f83938 chromedriver + 670008
+5   chromedriver                        0x0000000100f89384 chromedriver + 693124
+6   chromedriver                        0x0000000100f5398c chromedriver + 473484
+7   chromedriver                        0x0000000100f5498c chromedriver + 477580
+8   chromedriver                        0x00000001012ae900 chromedriver + 3991808
+9   chromedriver                        0x00000001012b2354 chromedriver + 4006740
+10  chromedriver                        0x00000001012b2940 chromedriver + 4008256
+11  chromedriver                        0x00000001012b833c chromedriver + 4031292
+12  chromedriver                        0x00000001012b2f34 chromedriver + 4009780
+13  chromedriver                        0x000000010128b490 chromedriver + 3847312
+14  chromedriver                        0x00000001012d09f4 chromedriver + 4131316
+15  chromedriver                        0x00000001012d0b4c chromedriver + 4131660
+16  chromedriver                        0x00000001012e1230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+2023-05-07 20:52:23,679 - django.utils.autoreload - INFO - /Users/ru/Desktop/code/test0501/iRiver/music/views.py changed, reloading.
+2023-05-07 20:53:24,139 - root - INFO - Downloaded music 'YJfHuATJYsQ' by '周杰倫JayChou' successfully.
+2023-05-07 20:53:50,708 - root - INFO - Downloaded music 'F_dGEjzRG_Y' by '周杰倫JayChou' successfully.
+2023-05-07 20:53:55,416 - root - INFO - Downloaded music 'BSlMAJ7SkMA' by '周杰倫JayChou' successfully.
+2023-05-07 20:54:00,015 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x0000000102bd78ac chromedriver + 4257964
+1   chromedriver                        0x0000000102bcff40 chromedriver + 4226880
+2   chromedriver                        0x000000010280c854 chromedriver + 280660
+3   chromedriver                        0x000000010283b1e4 chromedriver + 471524
+4   chromedriver                        0x0000000102863120 chromedriver + 635168
+5   chromedriver                        0x0000000102862868 chromedriver + 632936
+6   chromedriver                        0x00000001027dd098 chromedriver + 86168
+7   chromedriver                        0x0000000102b96900 chromedriver + 3991808
+8   chromedriver                        0x0000000102b9a354 chromedriver + 4006740
+9   chromedriver                        0x0000000102b9a940 chromedriver + 4008256
+10  chromedriver                        0x0000000102ba033c chromedriver + 4031292
+11  chromedriver                        0x0000000102b9af34 chromedriver + 4009780
+12  chromedriver                        0x0000000102b73490 chromedriver + 3847312
+13  chromedriver                        0x00000001027dbae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=9)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x0000000102bd78ac chromedriver + 4257964
+1   chromedriver                        0x0000000102bcff40 chromedriver + 4226880
+2   chromedriver                        0x000000010280c854 chromedriver + 280660
+3   chromedriver                        0x000000010283b1e4 chromedriver + 471524
+4   chromedriver                        0x0000000102863120 chromedriver + 635168
+5   chromedriver                        0x0000000102862868 chromedriver + 632936
+6   chromedriver                        0x00000001027dd098 chromedriver + 86168
+7   chromedriver                        0x0000000102b96900 chromedriver + 3991808
+8   chromedriver                        0x0000000102b9a354 chromedriver + 4006740
+9   chromedriver                        0x0000000102b9a940 chromedriver + 4008256
+10  chromedriver                        0x0000000102ba033c chromedriver + 4031292
+11  chromedriver                        0x0000000102b9af34 chromedriver + 4009780
+12  chromedriver                        0x0000000102b73490 chromedriver + 3847312
+13  chromedriver                        0x00000001027dbae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+2023-05-07 20:54:59,748 - django.utils.autoreload - INFO - /Users/ru/Desktop/code/test0501/iRiver/music/views.py changed, reloading.
+2023-05-07 20:55:26,142 - root - INFO - Downloaded music '6Q0Pd53mojY' by '周杰倫JayChou' successfully.
+2023-05-07 20:55:37,380 - root - WARNING - Already exists 'F_dGEjzRG_Y' by '周杰倫JayChou'.
+2023-05-07 20:55:49,702 - root - INFO - Downloaded music '9tN1xixvYOc' by '周杰倫JayChou' successfully.
+2023-05-07 20:55:50,102 - root - INFO - Downloaded music 'APgx1k-2Tqc' by '周杰倫JayChou' successfully.
+2023-05-07 20:55:50,103 - root - WARNING - Already exists 'BSlMAJ7SkMA' by '周杰倫JayChou'.
+2023-05-07 20:55:50,846 - root - INFO - Downloaded music 'HES2zSyauaM' by '周杰倫JayChou' successfully.
+2023-05-07 20:56:01,789 - root - INFO - Downloaded music 'yyeJ2huGKbE' by '周杰倫JayChou' successfully.
+2023-05-07 20:56:05,909 - root - INFO - Downloaded music 'xmI7xxo_CvU' by '周杰倫JayChou' successfully.
+2023-05-07 20:56:13,476 - root - INFO - Downloaded music 'CQpg2tuythc' by '周杰倫JayChou' successfully.
+2023-05-07 20:56:14,390 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001049d78ac chromedriver + 4257964
+1   chromedriver                        0x00000001049cff40 chromedriver + 4226880
+2   chromedriver                        0x000000010460c854 chromedriver + 280660
+3   chromedriver                        0x000000010463b1e4 chromedriver + 471524
+4   chromedriver                        0x0000000104663120 chromedriver + 635168
+5   chromedriver                        0x0000000104662868 chromedriver + 632936
+6   chromedriver                        0x00000001045dd098 chromedriver + 86168
+7   chromedriver                        0x0000000104996900 chromedriver + 3991808
+8   chromedriver                        0x000000010499a354 chromedriver + 4006740
+9   chromedriver                        0x000000010499a940 chromedriver + 4008256
+10  chromedriver                        0x00000001049a033c chromedriver + 4031292
+11  chromedriver                        0x000000010499af34 chromedriver + 4009780
+12  chromedriver                        0x0000000104973490 chromedriver + 3847312
+13  chromedriver                        0x00000001045dbae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=3)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001049d78ac chromedriver + 4257964
+1   chromedriver                        0x00000001049cff40 chromedriver + 4226880
+2   chromedriver                        0x000000010460c854 chromedriver + 280660
+3   chromedriver                        0x000000010463b1e4 chromedriver + 471524
+4   chromedriver                        0x0000000104663120 chromedriver + 635168
+5   chromedriver                        0x0000000104662868 chromedriver + 632936
+6   chromedriver                        0x00000001045dd098 chromedriver + 86168
+7   chromedriver                        0x0000000104996900 chromedriver + 3991808
+8   chromedriver                        0x000000010499a354 chromedriver + 4006740
+9   chromedriver                        0x000000010499a940 chromedriver + 4008256
+10  chromedriver                        0x00000001049a033c chromedriver + 4031292
+11  chromedriver                        0x000000010499af34 chromedriver + 4009780
+12  chromedriver                        0x0000000104973490 chromedriver + 3847312
+13  chromedriver                        0x00000001045dbae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+2023-05-07 20:57:22,340 - django.utils.autoreload - INFO - /Users/ru/Desktop/code/test0501/iRiver/music/views.py changed, reloading.
+2023-05-07 20:59:29,886 - root - INFO - Downloaded music 'HzWIQw0_CTQ' by 'SKRpresents陶山音樂' successfully.
+2023-05-07 20:59:59,727 - root - INFO - Downloaded music 'qpyx66jpCKw' by 'SKRpresents陶山音樂' successfully.
+2023-05-07 21:00:00,025 - root - INFO - Downloaded music 'wC4yv_XPY_w' by 'SKRpresents陶山音樂' successfully.
+2023-05-07 21:00:01,342 - root - INFO - Downloaded music 'Qo0qfbp2mTs' by 'SKRpresents陶山音樂' successfully.
+2023-05-07 21:00:01,825 - root - WARNING - Already exists 'Qo0qfbp2mTs' by 'SKRpresents陶山音樂'.
+2023-05-07 21:00:20,087 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001031ef8ac chromedriver + 4257964
+1   chromedriver                        0x00000001031e7f40 chromedriver + 4226880
+2   chromedriver                        0x0000000102e24854 chromedriver + 280660
+3   chromedriver                        0x0000000102e531e4 chromedriver + 471524
+4   chromedriver                        0x0000000102e7b120 chromedriver + 635168
+5   chromedriver                        0x0000000102e7a868 chromedriver + 632936
+6   chromedriver                        0x0000000102df5098 chromedriver + 86168
+7   chromedriver                        0x00000001031ae900 chromedriver + 3991808
+8   chromedriver                        0x00000001031b2354 chromedriver + 4006740
+9   chromedriver                        0x00000001031b2940 chromedriver + 4008256
+10  chromedriver                        0x00000001031b833c chromedriver + 4031292
+11  chromedriver                        0x00000001031b2f34 chromedriver + 4009780
+12  chromedriver                        0x000000010318b490 chromedriver + 3847312
+13  chromedriver                        0x0000000102df3ae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=3)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+0   chromedriver                        0x00000001031ef8ac chromedriver + 4257964
+1   chromedriver                        0x00000001031e7f40 chromedriver + 4226880
+2   chromedriver                        0x0000000102e24854 chromedriver + 280660
+3   chromedriver                        0x0000000102e531e4 chromedriver + 471524
+4   chromedriver                        0x0000000102e7b120 chromedriver + 635168
+5   chromedriver                        0x0000000102e7a868 chromedriver + 632936
+6   chromedriver                        0x0000000102df5098 chromedriver + 86168
+7   chromedriver                        0x00000001031ae900 chromedriver + 3991808
+8   chromedriver                        0x00000001031b2354 chromedriver + 4006740
+9   chromedriver                        0x00000001031b2940 chromedriver + 4008256
+10  chromedriver                        0x00000001031b833c chromedriver + 4031292
+11  chromedriver                        0x00000001031b2f34 chromedriver + 4009780
+12  chromedriver                        0x000000010318b490 chromedriver + 3847312
+13  chromedriver                        0x0000000102df3ae8 chromedriver + 80616
+14  dyld                                0x0000000191bfbf28 start + 2236
+
+2023-05-07 21:01:07,108 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-07 21:01:43,165 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-07 21:02:25,514 - django.request - ERROR - Internal Server Error: /music/download/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x00000001011678ac chromedriver + 4257964
+1   chromedriver                        0x000000010115ff40 chromedriver + 4226880
+2   chromedriver                        0x0000000100d9c9d4 chromedriver + 281044
+3   chromedriver                        0x0000000100d76db0 chromedriver + 126384
+4   chromedriver                        0x0000000100dfb938 chromedriver + 670008
+5   chromedriver                        0x0000000100e0dfe8 chromedriver + 745448
+6   chromedriver                        0x0000000100dcb98c chromedriver + 473484
+7   chromedriver                        0x0000000100dcc98c chromedriver + 477580
+8   chromedriver                        0x0000000101126900 chromedriver + 3991808
+9   chromedriver                        0x000000010112a354 chromedriver + 4006740
+10  chromedriver                        0x000000010112a940 chromedriver + 4008256
+11  chromedriver                        0x000000010113033c chromedriver + 4031292
+12  chromedriver                        0x000000010112af34 chromedriver + 4009780
+13  chromedriver                        0x0000000101103490 chromedriver + 3847312
+14  chromedriver                        0x00000001011489f4 chromedriver + 4131316
+15  chromedriver                        0x0000000101148b4c chromedriver + 4131660
+16  chromedriver                        0x0000000101159230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 164, in download_song
+    success =  download(music_ID_list= music_ID_list ,
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x00000001011678ac chromedriver + 4257964
+1   chromedriver                        0x000000010115ff40 chromedriver + 4226880
+2   chromedriver                        0x0000000100d9c9d4 chromedriver + 281044
+3   chromedriver                        0x0000000100d76db0 chromedriver + 126384
+4   chromedriver                        0x0000000100dfb938 chromedriver + 670008
+5   chromedriver                        0x0000000100e01384 chromedriver + 693124
+6   chromedriver                        0x0000000100dcb98c chromedriver + 473484
+7   chromedriver                        0x0000000100dcc98c chromedriver + 477580
+8   chromedriver                        0x0000000101126900 chromedriver + 3991808
+9   chromedriver                        0x000000010112a354 chromedriver + 4006740
+10  chromedriver                        0x000000010112a940 chromedriver + 4008256
+11  chromedriver                        0x000000010113033c chromedriver + 4031292
+12  chromedriver                        0x000000010112af34 chromedriver + 4009780
+13  chromedriver                        0x0000000101103490 chromedriver + 3847312
+14  chromedriver                        0x00000001011489f4 chromedriver + 4131316
+15  chromedriver                        0x0000000101148b4c chromedriver + 4131660
+16  chromedriver                        0x0000000101159230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+2023-05-07 21:03:33,942 - root - INFO - Downloaded music 'o3YadwGH0ZA' by 'MartinGarrix' successfully.
+2023-05-07 21:04:05,627 - django.request - WARNING - Not Found: /media/MartinGarrix/img/e2vBLd5Egnk.jpg
+2023-05-07 21:04:05,631 - django.request - WARNING - Not Found: /media/MartinGarrix/songs/e2vBLd5Egnk.mp3
+2023-05-07 21:05:19,888 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x0000000104c0f8ac chromedriver + 4257964
+1   chromedriver                        0x0000000104c07f40 chromedriver + 4226880
+2   chromedriver                        0x00000001048449d4 chromedriver + 281044
+3   chromedriver                        0x000000010481edb0 chromedriver + 126384
+4   chromedriver                        0x00000001048a3938 chromedriver + 670008
+5   chromedriver                        0x00000001048b5fe8 chromedriver + 745448
+6   chromedriver                        0x000000010487398c chromedriver + 473484
+7   chromedriver                        0x000000010487498c chromedriver + 477580
+8   chromedriver                        0x0000000104bce900 chromedriver + 3991808
+9   chromedriver                        0x0000000104bd2354 chromedriver + 4006740
+10  chromedriver                        0x0000000104bd2940 chromedriver + 4008256
+11  chromedriver                        0x0000000104bd833c chromedriver + 4031292
+12  chromedriver                        0x0000000104bd2f34 chromedriver + 4009780
+13  chromedriver                        0x0000000104bab490 chromedriver + 3847312
+14  chromedriver                        0x0000000104bf09f4 chromedriver + 4131316
+15  chromedriver                        0x0000000104bf0b4c chromedriver + 4131660
+16  chromedriver                        0x0000000104c01230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 213, in download_songs
+    success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=3)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x0000000104c0f8ac chromedriver + 4257964
+1   chromedriver                        0x0000000104c07f40 chromedriver + 4226880
+2   chromedriver                        0x00000001048449d4 chromedriver + 281044
+3   chromedriver                        0x000000010481edb0 chromedriver + 126384
+4   chromedriver                        0x00000001048a3938 chromedriver + 670008
+5   chromedriver                        0x00000001048a9384 chromedriver + 693124
+6   chromedriver                        0x000000010487398c chromedriver + 473484
+7   chromedriver                        0x000000010487498c chromedriver + 477580
+8   chromedriver                        0x0000000104bce900 chromedriver + 3991808
+9   chromedriver                        0x0000000104bd2354 chromedriver + 4006740
+10  chromedriver                        0x0000000104bd2940 chromedriver + 4008256
+11  chromedriver                        0x0000000104bd833c chromedriver + 4031292
+12  chromedriver                        0x0000000104bd2f34 chromedriver + 4009780
+13  chromedriver                        0x0000000104bab490 chromedriver + 3847312
+14  chromedriver                        0x0000000104bf09f4 chromedriver + 4131316
+15  chromedriver                        0x0000000104bf0b4c chromedriver + 4131660
+16  chromedriver                        0x0000000104c01230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+2023-05-07 21:06:08,503 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-07 21:08:50,513 - django.request - ERROR - Internal Server Error: /music/download/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x0000000100fe38ac chromedriver + 4257964
+1   chromedriver                        0x0000000100fdbf40 chromedriver + 4226880
+2   chromedriver                        0x0000000100c189d4 chromedriver + 281044
+3   chromedriver                        0x0000000100bf2db0 chromedriver + 126384
+4   chromedriver                        0x0000000100c77938 chromedriver + 670008
+5   chromedriver                        0x0000000100c89fe8 chromedriver + 745448
+6   chromedriver                        0x0000000100c4798c chromedriver + 473484
+7   chromedriver                        0x0000000100c4898c chromedriver + 477580
+8   chromedriver                        0x0000000100fa2900 chromedriver + 3991808
+9   chromedriver                        0x0000000100fa6354 chromedriver + 4006740
+10  chromedriver                        0x0000000100fa6940 chromedriver + 4008256
+11  chromedriver                        0x0000000100fac33c chromedriver + 4031292
+12  chromedriver                        0x0000000100fa6f34 chromedriver + 4009780
+13  chromedriver                        0x0000000100f7f490 chromedriver + 3847312
+14  chromedriver                        0x0000000100fc49f4 chromedriver + 4131316
+15  chromedriver                        0x0000000100fc4b4c chromedriver + 4131660
+16  chromedriver                        0x0000000100fd5230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 164, in download_song
+    success =  download(music_ID_list= music_ID_list ,
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x0000000100fe38ac chromedriver + 4257964
+1   chromedriver                        0x0000000100fdbf40 chromedriver + 4226880
+2   chromedriver                        0x0000000100c189d4 chromedriver + 281044
+3   chromedriver                        0x0000000100bf2db0 chromedriver + 126384
+4   chromedriver                        0x0000000100c77938 chromedriver + 670008
+5   chromedriver                        0x0000000100c7d384 chromedriver + 693124
+6   chromedriver                        0x0000000100c4798c chromedriver + 473484
+7   chromedriver                        0x0000000100c4898c chromedriver + 477580
+8   chromedriver                        0x0000000100fa2900 chromedriver + 3991808
+9   chromedriver                        0x0000000100fa6354 chromedriver + 4006740
+10  chromedriver                        0x0000000100fa6940 chromedriver + 4008256
+11  chromedriver                        0x0000000100fac33c chromedriver + 4031292
+12  chromedriver                        0x0000000100fa6f34 chromedriver + 4009780
+13  chromedriver                        0x0000000100f7f490 chromedriver + 3847312
+14  chromedriver                        0x0000000100fc49f4 chromedriver + 4131316
+15  chromedriver                        0x0000000100fc4b4c chromedriver + 4131660
+16  chromedriver                        0x0000000100fd5230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+2023-05-07 21:09:05,723 - django.request - ERROR - Internal Server Error: /music/download/
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x000000010091f8ac chromedriver + 4257964
+1   chromedriver                        0x0000000100917f40 chromedriver + 4226880
+2   chromedriver                        0x00000001005549d4 chromedriver + 281044
+3   chromedriver                        0x000000010052edb0 chromedriver + 126384
+4   chromedriver                        0x00000001005b3938 chromedriver + 670008
+5   chromedriver                        0x00000001005c5fe8 chromedriver + 745448
+6   chromedriver                        0x000000010058398c chromedriver + 473484
+7   chromedriver                        0x000000010058498c chromedriver + 477580
+8   chromedriver                        0x00000001008de900 chromedriver + 3991808
+9   chromedriver                        0x00000001008e2354 chromedriver + 4006740
+10  chromedriver                        0x00000001008e2940 chromedriver + 4008256
+11  chromedriver                        0x00000001008e833c chromedriver + 4031292
+12  chromedriver                        0x00000001008e2f34 chromedriver + 4009780
+13  chromedriver                        0x00000001008bb490 chromedriver + 3847312
+14  chromedriver                        0x00000001009009f4 chromedriver + 4131316
+15  chromedriver                        0x0000000100900b4c chromedriver + 4131660
+16  chromedriver                        0x0000000100911230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/views.py", line 164, in download_song
+    success =  download(music_ID_list= music_ID_list ,
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 50, in download
+    results.append(future.result())
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+  File "/Users/ru/Desktop/code/test0501/iRiver/music/lib/download/y2mate.py", line 67, in crawl
+    driver.close()
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "/Users/ru/Desktop/code/test0501/env/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+0   chromedriver                        0x000000010091f8ac chromedriver + 4257964
+1   chromedriver                        0x0000000100917f40 chromedriver + 4226880
+2   chromedriver                        0x00000001005549d4 chromedriver + 281044
+3   chromedriver                        0x000000010052edb0 chromedriver + 126384
+4   chromedriver                        0x00000001005b3938 chromedriver + 670008
+5   chromedriver                        0x00000001005b9384 chromedriver + 693124
+6   chromedriver                        0x000000010058398c chromedriver + 473484
+7   chromedriver                        0x000000010058498c chromedriver + 477580
+8   chromedriver                        0x00000001008de900 chromedriver + 3991808
+9   chromedriver                        0x00000001008e2354 chromedriver + 4006740
+10  chromedriver                        0x00000001008e2940 chromedriver + 4008256
+11  chromedriver                        0x00000001008e833c chromedriver + 4031292
+12  chromedriver                        0x00000001008e2f34 chromedriver + 4009780
+13  chromedriver                        0x00000001008bb490 chromedriver + 3847312
+14  chromedriver                        0x00000001009009f4 chromedriver + 4131316
+15  chromedriver                        0x0000000100900b4c chromedriver + 4131660
+16  chromedriver                        0x0000000100911230 chromedriver + 4198960
+17  libsystem_pthread.dylib             0x0000000191f53fa8 _pthread_start + 148
+18  libsystem_pthread.dylib             0x0000000191f4eda0 thread_start + 8
+
