@@ -74,11 +74,12 @@ function paush_web_data(music_list) {
         loading(false);
       });
   });
-  loading(false);
+  loading(false)
 }
 
 function fetch_dow_all_songs(artist_url, artist) {
-  fetch(`/music/download_songs?artist_url=${artist_url}&${artist}`)
+
+  fetch(`/music/download_songs?artist_url=${artist_url}&artist=${artist}`)
     .then(response => response.json())
     .then(data => {
       if (data.success) {

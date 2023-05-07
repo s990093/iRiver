@@ -63,3 +63,807 @@
 2023-05-07 11:58:46,291 - root - WARNING - Already exists 'gnL-bVDf7Tc' by '±d¤h©ZªºÅÜ¤Æ²yKST'.
 2023-05-07 12:00:10,403 - root - WARNING - Already exists 'uK4ExmTDxPM' by '±d¤h©ZªºÅÜ¤Æ²yKST'.
 2023-05-07 12:19:42,870 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py changed, reloading.
+2023-05-07 19:31:14,287 - root - INFO - Downloaded music 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 19:31:28,457 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py", line 218, in download_songs
+    mysql.save_data(song_infos=json.dumps(music_list , indent=4))
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\sql\sql.py", line 62, in save_data
+    self.cursor.execute(artist_sql, artist_values)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1048, "Column 'artist' cannot be null")
+2023-05-07 19:33:25,763 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py changed, reloading.
+2023-05-07 19:43:43,969 - root - INFO - Downloaded music 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 19:43:58,368 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py", line 218, in download_songs
+    mysql.save_data(song_infos=json.dumps(music_list , indent=4))
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\sql\sql.py", line 62, in save_data
+    self.cursor.execute(artist_sql, artist_values)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\MySQLdb\cursors.py", line 206, in execute
+    res = self._query(query)
+          ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\MySQLdb\cursors.py", line 319, in _query
+    db.query(q)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\MySQLdb\connections.py", line 254, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1048, "Column 'artist' cannot be null")
+2023-05-07 19:44:46,846 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\web_scutter\music_list.py changed, reloading.
+2023-05-07 19:49:30,727 - root - INFO - Downloaded music 'Fq55MMfHoJg' by 'test' successfully.
+2023-05-07 19:49:30,968 - root - INFO - Downloaded music 'Fq55MMfHoJg' by 'test' successfully.
+2023-05-07 19:49:30,978 - root - INFO - Downloaded music 'Fq55MMfHoJg' by 'test' successfully.
+2023-05-07 19:49:31,152 - root - INFO - Downloaded music 'Fq55MMfHoJg' by 'test' successfully.
+2023-05-07 19:49:45,510 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py changed, reloading.
+2023-05-07 20:08:47,555 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:08:47,558 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:08:47,560 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:08:47,563 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:04,311 - root - INFO - Downloaded music 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:04,319 - root - INFO - Downloaded music 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:05,614 - root - INFO - Downloaded music 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:05,616 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:05,618 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:07,635 - root - INFO - Downloaded music 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:07,722 - root - INFO - Downloaded music '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:07,723 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:08,436 - root - INFO - Downloaded music 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:09,036 - root - INFO - Downloaded music 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:09,052 - root - INFO - Downloaded music '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:09,512 - root - INFO - Downloaded music 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:09,988 - root - INFO - Downloaded music '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:09,990 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:18,038 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:18,040 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:20,537 - root - INFO - Downloaded music 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:21,357 - root - INFO - Downloaded music 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:21,358 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:22,769 - root - INFO - Downloaded music 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:22,776 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:22,779 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:23,163 - root - INFO - Downloaded music 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:25,024 - root - INFO - Downloaded music 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:26,254 - root - INFO - Downloaded music '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:27,927 - root - INFO - Downloaded music 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:28,415 - root - INFO - Downloaded music 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:31,531 - root - INFO - Downloaded music 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:33,695 - root - INFO - Downloaded music 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:34,760 - root - INFO - Downloaded music '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:35,927 - root - INFO - Downloaded music 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:39,327 - root - INFO - Downloaded music 'GXf33fyxr1M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:42,319 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:42,342 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:42,372 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:42,374 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:42,376 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:42,378 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:42,380 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:44,931 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:44,933 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:45,973 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,909 - root - INFO - Downloaded music 'Y1K-ZD2bB8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:09:53,911 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,913 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,914 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,916 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,916 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,918 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,919 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,921 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,922 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,925 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,927 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,929 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,930 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,932 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,933 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,935 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:09:53,936 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:11:35,272 - root - INFO - Downloaded music 'GVrRXhS0mLs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:12:00,898 - root - INFO - Downloaded music 'POCs38Rputs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:12:01,430 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x0062D073]
+	(No symbol) [0x0068DEBB]
+	(No symbol) [0x0069BFD3]
+	(No symbol) [0x0068A0B6]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py", line 213, in download_songs
+    success =  download(music_ID_list= music_ID_list ,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 67, in crawl
+    driver.close()
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x0062D073]
+	(No symbol) [0x0068DEBB]
+	(No symbol) [0x0069237F]
+	(No symbol) [0x0068A283]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+2023-05-07 20:14:11,747 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py changed, reloading.
+2023-05-07 20:15:13,658 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,662 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,662 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,663 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,663 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,664 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,665 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,665 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,667 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,667 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,668 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,670 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,670 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,671 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,672 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,672 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,674 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,675 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,675 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,675 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,675 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,676 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,676 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,677 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,677 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,677 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,677 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,678 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,678 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,678 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,680 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,680 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,681 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,681 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,681 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:13,682 - root - WARNING - Already exists 'GXf33fyxr1M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:28,455 - root - INFO - Downloaded music 'cEeTW4C2GA0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:30,608 - root - INFO - Downloaded music '8Zf66WSPU9E' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:30,972 - root - INFO - Downloaded music 'JFFedRQpqg8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:30,977 - root - WARNING - Already exists 'Y1K-ZD2bB8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:40,398 - root - INFO - Downloaded music 'Ckk9IJwDhNI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:40,398 - root - WARNING - Already exists 'POCs38Rputs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:40,400 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:40,401 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:40,402 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:40,403 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:40,404 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:40,405 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:40,405 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:43,406 - root - INFO - Downloaded music 'ZgC5umCFkp0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:44,977 - root - INFO - Downloaded music '7JANm3jOb2k' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:44,978 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:44,980 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,571 - root - INFO - Downloaded music 'EpFxTXgElLA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:46,574 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,575 - root - WARNING - Already exists 'GVrRXhS0mLs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,576 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,577 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,579 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,580 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,581 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,582 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,583 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,585 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,586 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,588 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,589 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,591 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,593 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,594 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,595 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,596 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:46,598 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:15:47,112 - root - INFO - Downloaded music 'U2-K_eFGtJM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:54,073 - root - INFO - Downloaded music 'm2xmJFdYfJw' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:55,493 - root - INFO - Downloaded music 'OuSFM2l9OaI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:57,829 - root - INFO - Downloaded music 'Ht6lcYg9Zfo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:15:58,369 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00644F20]
+	(No symbol) [0x006677AC]
+	(No symbol) [0x0068A1B6]
+	(No symbol) [0x00686C2D]
+	(No symbol) [0x0068669A]
+	(No symbol) [0x00625301]
+	(No symbol) [0x0062570E]
+	(No symbol) [0x00625AEA]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x00624F5A]
+	(No symbol) [0x00624959]
+	GetHandleVerifier [0x00A6FD7C+2961964]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py", line 213, in download_songs
+    success =  download(music_ID_list= music_ID_list ,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 67, in crawl
+    driver.close()
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00644F20]
+	(No symbol) [0x006677AC]
+	(No symbol) [0x0068A1B6]
+	(No symbol) [0x00686C2D]
+	(No symbol) [0x0068669A]
+	(No symbol) [0x00625301]
+	(No symbol) [0x0062570E]
+	(No symbol) [0x00625AEA]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x00624F5A]
+	(No symbol) [0x00624959]
+	GetHandleVerifier [0x00A6FD7C+2961964]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+2023-05-07 20:17:14,651 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,656 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,656 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,658 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,659 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,660 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,660 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,663 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,665 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,666 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,667 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,668 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,671 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,672 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,673 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,674 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,675 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,678 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,680 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,682 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,684 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,686 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,686 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,687 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,688 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,690 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,691 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,692 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,693 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,694 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,696 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,700 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,701 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,703 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,703 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,703 - root - WARNING - Already exists 'cEeTW4C2GA0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,704 - root - WARNING - Already exists 'GXf33fyxr1M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,705 - root - WARNING - Already exists '8Zf66WSPU9E' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,705 - root - WARNING - Already exists 'JFFedRQpqg8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,706 - root - WARNING - Already exists 'Ckk9IJwDhNI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,706 - root - WARNING - Already exists 'ZgC5umCFkp0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,708 - root - WARNING - Already exists 'Y1K-ZD2bB8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,708 - root - WARNING - Already exists '7JANm3jOb2k' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,708 - root - WARNING - Already exists 'EpFxTXgElLA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,708 - root - WARNING - Already exists 'U2-K_eFGtJM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,709 - root - WARNING - Already exists 'POCs38Rputs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,710 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,712 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,712 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,712 - root - WARNING - Already exists 'm2xmJFdYfJw' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,713 - root - WARNING - Already exists 'OuSFM2l9OaI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,713 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,713 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,714 - root - WARNING - Already exists 'Ht6lcYg9Zfo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,714 - root - WARNING - Already exists 'GVrRXhS0mLs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,714 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,715 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,716 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,716 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,717 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,717 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,717 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,718 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,718 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,718 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,719 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,719 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,719 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,719 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,720 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,720 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,720 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:14,720 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:17:27,352 - root - INFO - Downloaded music 'iT318d30d2c' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:17:31,194 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 47, in crawl
+    driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 449, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00644F20]
+	(No symbol) [0x006677AC]
+	(No symbol) [0x0068A1B6]
+	(No symbol) [0x00686C2D]
+	(No symbol) [0x0068669A]
+	(No symbol) [0x00625301]
+	(No symbol) [0x0062570E]
+	(No symbol) [0x00625AEA]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x00624F5A]
+	(No symbol) [0x00624959]
+	GetHandleVerifier [0x00A6FD7C+2961964]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py", line 213, in download_songs
+    success =  download(music_ID_list= music_ID_list ,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 67, in crawl
+    driver.close()
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 551, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00644F20]
+	(No symbol) [0x006677AC]
+	(No symbol) [0x0068A1B6]
+	(No symbol) [0x00686C2D]
+	(No symbol) [0x0068669A]
+	(No symbol) [0x00625301]
+	(No symbol) [0x0062570E]
+	(No symbol) [0x00625AEA]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x00624F5A]
+	(No symbol) [0x00624959]
+	GetHandleVerifier [0x00A6FD7C+2961964]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+2023-05-07 20:19:03,879 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py changed, reloading.
+2023-05-07 20:20:16,159 - root - INFO - Downloaded music 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:20:43,248 - root - INFO - Downloaded music 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:20:43,265 - root - INFO - Downloaded music 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:20:44,443 - root - INFO - Downloaded music '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:20:55,929 - root - INFO - Downloaded music 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:20:56,006 - root - INFO - Downloaded music 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:20:59,284 - root - INFO - Downloaded music '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:20:59,285 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:21:07,877 - root - INFO - Downloaded music '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:11,573 - root - INFO - Downloaded music 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:13,150 - root - INFO - Downloaded music '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:19,889 - root - INFO - Downloaded music 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:23,411 - root - INFO - Downloaded music 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:23,415 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:21:23,417 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:21:23,419 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:21:25,081 - root - INFO - Downloaded music 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:32,686 - root - INFO - Downloaded music 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:32,687 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:21:34,653 - root - INFO - Downloaded music 'iT318d30d2c' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:38,677 - root - INFO - Downloaded music 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:44,258 - root - INFO - Downloaded music 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:46,447 - root - INFO - Downloaded music 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:50,479 - root - INFO - Downloaded music 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:56,192 - root - INFO - Downloaded music '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:21:58,713 - root - INFO - Downloaded music 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:04,448 - root - INFO - Downloaded music 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:08,569 - root - INFO - Downloaded music 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:10,310 - root - INFO - Downloaded music 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:10,311 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:22:16,235 - root - INFO - Downloaded music 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:16,237 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:22:16,238 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:22:21,259 - root - INFO - Downloaded music 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:31,703 - root - INFO - Downloaded music 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:35,931 - root - INFO - Downloaded music 'cEeTW4C2GA0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:41,827 - root - INFO - Downloaded music 'GXf33fyxr1M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:44,714 - root - INFO - Downloaded music '8Zf66WSPU9E' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:48,118 - root - INFO - Downloaded music 'I0KPgxLcGnk' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:22:53,988 - root - INFO - Downloaded music 'JFFedRQpqg8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:23:03,086 - root - INFO - Downloaded music 'ZgC5umCFkp0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:23:08,475 - root - INFO - Downloaded music 'Y1K-ZD2bB8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:23:49,819 - root - INFO - Downloaded music 'POCs38Rputs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:23:49,820 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:23:49,821 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:23:49,822 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:23:49,822 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:23:49,824 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:23:49,826 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:23:49,826 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:23:51,222 - root - INFO - Downloaded music 'U2-K_eFGtJM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:23:52,877 - root - INFO - Downloaded music '7JANm3jOb2k' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:23:52,877 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:23:52,879 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:01,861 - root - INFO - Downloaded music 'm2xmJFdYfJw' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:24:01,861 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,456 - root - INFO - Downloaded music 'OuSFM2l9OaI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:24:03,459 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,461 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,463 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,467 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,468 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,470 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,471 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,472 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,473 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,473 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,475 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,476 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,477 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:03,478 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:06,773 - root - INFO - Downloaded music 'Ht6lcYg9Zfo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:24:06,777 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:06,779 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:24:15,540 - root - INFO - Downloaded music '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:24:16,052 - root - INFO - Downloaded music 'GVrRXhS0mLs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:24:16,476 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py", line 213, in download_songs
+    success =  download(music_ID_list= music_ID_list ,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\myproject\music\lib\download\y2mate.py", line 42, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\®à­±\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: uniqueContextId not found
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x006387D0]
+	(No symbol) [0x00636F58]
+	(No symbol) [0x006375CA]
+	(No symbol) [0x00648067]
+	(No symbol) [0x00649631]
+	(No symbol) [0x006496D0]
+	(No symbol) [0x00691A58]
+	(No symbol) [0x0069047C]
+	(No symbol) [0x0068A0B6]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+2023-05-07 20:24:20,280 - django.request - WARNING - Not Found: /media/Ç¢Ç¥ÇOÇCn-bunaOfficial/img/-VKIqrvVOpo.jpg
+2023-05-07 20:24:20,399 - django.request - WARNING - Not Found: /media/Ç¢Ç¥ÇOÇCn-bunaOfficial/img/-VKIqrvVOpo.jpg
+2023-05-07 20:24:20,412 - django.request - WARNING - Not Found: /media/Ç¢Ç¥ÇOÇCn-bunaOfficial/img/-VKIqrvVOpo.jpg
+2023-05-07 20:24:28,809 - django.request - WARNING - Not Found: /music_list/
+2023-05-07 20:24:28,928 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-07 20:26:18,635 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\®à­±\django\myproject\music\views.py changed, reloading.
+2023-05-07 20:31:32,932 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,938 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,939 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,940 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,941 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,945 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,946 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,954 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,955 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:32,955 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,088 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,089 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,093 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,093 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,097 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,098 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,099 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,100 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,101 - root - WARNING - Already exists 'iT318d30d2c' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:34,103 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,531 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,532 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,535 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,535 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,537 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,538 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,539 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,544 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,544 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:35,547 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,497 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,499 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,500 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,500 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,501 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,501 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,504 - root - WARNING - Already exists 'cEeTW4C2GA0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,504 - root - WARNING - Already exists 'GXf33fyxr1M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,505 - root - WARNING - Already exists '8Zf66WSPU9E' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:36,505 - root - WARNING - Already exists 'I0KPgxLcGnk' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:37,426 - root - WARNING - Already exists 'JFFedRQpqg8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:37,430 - root - WARNING - Already exists 'ZgC5umCFkp0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:37,432 - root - WARNING - Already exists 'Y1K-ZD2bB8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:49,699 - root - INFO - Downloaded music 'EpFxTXgElLA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:31:49,700 - root - WARNING - Already exists '7JANm3jOb2k' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:49,701 - root - WARNING - Already exists 'U2-K_eFGtJM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:49,704 - root - WARNING - Already exists 'POCs38Rputs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:49,704 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:49,705 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:51,315 - root - INFO - Downloaded music 'Ckk9IJwDhNI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial' successfully.
+2023-05-07 20:31:52,335 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,335 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,336 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,336 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,338 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,338 - root - WARNING - Already exists 'm2xmJFdYfJw' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,340 - root - WARNING - Already exists 'OuSFM2l9OaI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,341 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,341 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:52,343 - root - WARNING - Already exists 'Ht6lcYg9Zfo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,144 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,144 - root - WARNING - Already exists 'GVrRXhS0mLs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,144 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,146 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,146 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,146 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,148 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,149 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,150 - root - WARNING - Already exists 'PWbRleMGagU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:53,154 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,126 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,126 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,128 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,128 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,130 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,131 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,133 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,133 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-07 20:31:54,134 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.

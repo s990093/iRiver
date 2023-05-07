@@ -15,6 +15,7 @@ from .options import get_chrome_options
 from .options import get_available_port
 
 
+
 def query_music_list(url :str) ->json:
     service = Service('chromedriver.exe')
     options = get_chrome_options(port=get_available_port() , is_headLess= True)
@@ -42,11 +43,11 @@ def query_music_list(url :str) ->json:
             ID = match.group(0)[-11:]
         else:
             ID = re.search(r"shorts\/(\w{11})", url).group(1)
-        print(ID)
         title = item.text
         if title in result:
             continue
-        result.append(ID)
-        result.append(title)
+        result.append({"music_ID": ID, "title": title})
+    
     driver.close()
     return result
+

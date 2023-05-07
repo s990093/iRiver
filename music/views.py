@@ -189,19 +189,17 @@ def download_song(request):
 
 
 def download_songs(request):
+    mysql = SQL(music.lib.sql.config.DB_CONFIG)
     artist_url = request.GET.get('artist_url')
     artist = request.GET.get('artist')
     music_list_infos = query_music_list(url=artist_url)
-    print('~'*30)
-    print(music_list_infos)
-    music_ID_list = []
     music_list = []
-    for i in range(0, len(music_list_infos), 2):
-        music_ID_list.append({'music_ID': music_list_infos[i]})
+
+    for song in music_list_infos:
         music_list.append({
-             'artist': artist,
-            'title':  music_list_infos[i+1],
-            'music_ID':  music_list_infos[i],
+            'artist': artist,
+            'title':  song['title'],
+            'music_ID':  song['music_ID'],
             'artist_url':  artist_url ,
             # TODO remove this null parameter
             'keywords' :  'null',  # 關鍵字暫時設為 null
@@ -209,14 +207,14 @@ def download_songs(request):
             'publish_time': '0',  # 歌曲發佈時間暫時設為 0
         })
 
-    success =  download(music_ID_list= music_ID_list ,
-                        artist= artist,
-                        only_dow_song= True)
-    
-   
-    # 寫入資料庫
-    mysql = SQL(music.lib.sql.config.DB_CONFIG)
-    mysql.save_data(song_infos=json.dumps(music_list , indent=4))
+    music_ID_list_chunks = [music_list[x:x+10] for x in range(0, len(music_list), 10)]
+
+    for chunk in music_ID_list_chunks:
+        success = download(music_ID_list=[song['music_ID'] for song in chunk], artist=artist, only_dow_song=True, max_thread=2)
+        if success:
+            mysql.save_data(song_infos=json.dumps(chunk, indent=4))
+
+
     mysql.close()
     
     return JsonResponse({'success': True})

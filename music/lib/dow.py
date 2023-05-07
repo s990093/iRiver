@@ -1,9 +1,9 @@
 """直接使用  不須額外"""
-import threading
 import os 
 import logging
-from concurrent.futures import ThreadPoolExecutor
 import concurrent.futures
+import threading
+from typing import List
 # 自製
 import music.lib.download.img as img
 import music.lib.download.y2mate as y2mate
@@ -11,10 +11,14 @@ import music.lib.download.y2mate as y2mate
 
 #         log(music_ID= music_ID , artist=artist, success=res)
 
-def download(music_ID_list: list, artist: str, img_url: str = None, 
-             cover_img_url: str = None, artist_img_url: str = None,  
-             only_dow_song: bool = False, max_thread: int = 10) -> list:
+import concurrent.futures
+import threading
+from typing import List
 
+def download(music_ID_list: List[str], artist: str, img_url: str = None, 
+             cover_img_url: str = None, artist_img_url: str = None,  
+             only_dow_song: bool = False, max_thread: int = 10) -> List[str]:
+    
     class WorkerThread(threading.Thread):
         def __init__(self, music_ID, artist, only_dow_song):
             super().__init__()
@@ -25,7 +29,8 @@ def download(music_ID_list: list, artist: str, img_url: str = None,
 
         def run(self):
             self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
-            if  self.only_dow_song is False:
+            log(music_ID= self.music_ID, artist=self.artist , success= self.result)
+            if not self.only_dow_song:
                 if img_url:
                     img.download_img(url=img_url, file_name=f"{self.music_ID}.jpg", file_dir=f"media/{self.artist}/img/")
                 if cover_img_url:
@@ -38,9 +43,13 @@ def download(music_ID_list: list, artist: str, img_url: str = None,
         for music_ID in music_ID_list:
             t = WorkerThread(music_ID=music_ID, artist=artist, only_dow_song=only_dow_song)
             futures.append(executor.submit(t.run))
-        concurrent.futures.wait(futures)
-
-    return True
+        
+        # 等待所有執行緒完成並獲取結果
+        results = []
+        for future in concurrent.futures.as_completed(futures):
+            results.append(future.result())
+    
+    return results
 
 
 
