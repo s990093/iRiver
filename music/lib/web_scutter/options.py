@@ -9,45 +9,30 @@ def get_chrome_options(port=9222 , is_headLess = False):
     if is_headLess:
         options.add_argument("--headless")  # run Chrome in headless mode
         
+   
     options.add_argument("--detach")
-    options.add_argument("--disable-gpu")  # disable GPU
-    options.add_argument("--no-sandbox")  # disable sandbox mode
-    options.add_argument("--disable-dev-shm-usage")  # disable /dev/shm usage
-    options.add_argument('--log-level=3')  # set log level to ERROR
-    options.add_argument('--disable-extensions')  # disable extensions
-    # disable timer throttling
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument('--log-level=3')
+    options.add_argument('--disable-extensions')
     options.add_argument('--disable-background-timer-throttling')
-    # disable background networking
     options.add_argument('--disable-background-networking')
-    # disable certain features
-    options.add_argument(
-        '--disable-features=NetworkService,RendererCodeIntegrity')
-    # disable site isolation trials
-    options.add_argument('--disable-site-isolation-trials')
-    options.add_argument('--disable-breakpad')  # disable breakpad
-    # disable component extensions with background pages
-    options.add_argument(
-        '--disable-component-extensions-with-background-pages')
-    # disable IPC flooding protection
+    options.add_argument('--disable-component-extensions-with-background-pages')
     options.add_argument('--disable-ipc-flooding-protection')
-    # disable renderer backgrounding
     options.add_argument('--disable-renderer-backgrounding')
-    # enable network service in process
     options.add_argument('--enable-features=NetworkServiceInProcess')
-    # set color profile to sRGB
     options.add_argument('--force-color-profile=srgb')
-    options.add_argument('--hide-scrollbars')  # hide scrollbars
-    options.add_argument('--metrics-recording-only')  # only record metrics
-    options.add_argument('--mute-audio')  # mute audio
-    # don't perform default browser check
+    options.add_argument('--hide-scrollbars')
+    options.add_argument('--metrics-recording-only')
+    options.add_argument('--mute-audio')
     options.add_argument('--no-default-browser-check')
-    options.add_argument('--no-first-run')  # don't perform first run setup
-    # disable safe browsing auto-update
+    options.add_argument('--no-first-run')
     options.add_argument('--safebrowsing-disable-auto-update')
-    options.add_argument('--disable-popup-blocking') # 禁止弹出窗口的阻止
-    # set remote debugging port
+    options.add_argument('--disable-popup-blocking')
+    options.add_argument('--disable-gpu')
     options.add_argument(f"--remote-debugging-port={port}")
-    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument("--start-minimized")
+    options.add_argument('--blink-settings=imagesEnabled=false')
     return options
 
 def get_available_port():

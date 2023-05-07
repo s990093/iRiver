@@ -29,10 +29,11 @@ def download(music_ID_list: List[str], artist: str, img_url: str = None,
 
         def run(self):
             self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+            if img_url:
+                    img.download_img(url= f"https://i.ytimg.com/vi/{self.music_ID}/hqdefault.jpg?" ,
+                                      file_name=f"{self.music_ID}.jpg", file_dir=f"media/{self.artist}/img/")
             log(music_ID= self.music_ID, artist=self.artist , success= self.result)
             if not self.only_dow_song:
-                if img_url:
-                    img.download_img(url=img_url, file_name=f"{self.music_ID}.jpg", file_dir=f"media/{self.artist}/img/")
                 if cover_img_url:
                     img.download_img_base64(url=cover_img_url, file_name='cover.jpg', file_dir=f"media/{self.artist}/img/")
                 if artist_img_url:

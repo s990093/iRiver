@@ -35,36 +35,32 @@ def download_audio(music_ID: str , artist: str ,  num_retries: int =0 ,  max_ret
     else:
         return False
 
-def crawl(music_ID , num_retries , max_retries):
-    # 启动浏览器并打开网页
-    service = Service('C:\\Program Files\\Google\\Chrome\\Application\\chromedriver.exe')  
-    options =  option.get_chrome_options(port=option.get_available_port() , is_headLess= False)
-    driver = webdriver.Chrome(service=service, options=options)
 
+def crawl(music_ID , num_retries , max_retries):
     success = False
     while not success and num_retries < max_retries:
         try:
+            # # 启动虚拟显示器
+            # display = Display(visible=0, size=(800, 600))
+            # display.start()
+            service = Service('chromedriver.exe')  
+            options =  option.get_chrome_options(port=option.get_available_port() , is_headLess= False)
+            driver = webdriver.Chrome(service=service, options=options)
             driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
-            # 等待页面加载完成
+
             wait = WebDriverWait(driver, 10)
-            # 执行操作
             audio_btn = wait.until(EC.visibility_of_element_located((By.XPATH , "/html/body/div[1]/div/div/div/div[1]/div/div/div/div[4]/div[1]/div[2]/ul/li[2]/a")))
-            ActionChains(driver).move_to_element(audio_btn).click().perform()
-
+            audio_btn.click()
             download_btn = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[4]/div[1]/div[2]/div/div[2]/table/tbody/tr/td[3]/button')))
-            ActionChains(driver).move_to_element(download_btn).click().perform()
-
-            # 按下確認下載按鈕
-            check_download_btn = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[3]/div[2]/div/div[2]/div[2]/div/a')))
-            ActionChains(driver).move_to_element(check_download_btn ).click().perform()
-
-            # 下載url
+            download_btn.click()
             song_element = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div/div[1]/div/div/div/div[3]/div[2]/div/div[2]/div[2]/div/a')))
             song_url = song_element.get_attribute('href')
+
             success = True
         except:
             # 发生异常，继续尝试
-            driver.close()
+            driver.quit()
+            # display.stop()
             num_retries += 1
             print(f"Attempt {num_retries} failed, retrying...")
             time.sleep(0.5)  # 等待1秒后重试
