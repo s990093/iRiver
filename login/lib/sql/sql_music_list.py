@@ -37,6 +37,7 @@ class SQL:
         try:
             music_ID_list = json.loads(music_ID_list)
             for music_ID in music_ID_list:
+                print("add ",music_ID ," => ",  music_list )
                 # 查询数据库中是否已存在相同的 music_ID
                 select_sql = (f'SELECT COUNT(*) FROM {self.table_name} ''WHERE music_ID = %s AND music_list = %s')
                 self.cursor.execute(select_sql, (music_ID, music_list))
