@@ -61,6 +61,7 @@ function paush_web_data(music_list) {
       .then(response => response.json())
       .then(data => {
         if (data.success) {
+          fetch_dow_all_songs(music_list[index].artist_url, music_list[index].artist);
           console.log('success get music on db');
           if (!isClickEventRegistered_web) {
             control_web.register();
@@ -74,6 +75,16 @@ function paush_web_data(music_list) {
     loading(false);
   });
   loading(false);
+}
+
+function fetch_dow_all_songs(artist_url, artist) {
+  fetch(`/music/download_songs?artist_url=${artist_url}&${artist}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        console.log('dow all songs on db');
+      }
+    });
 }
 
 function paush_db_data(music_list) {

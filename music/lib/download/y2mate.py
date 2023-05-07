@@ -24,6 +24,10 @@ def download_audio(music_ID: str , artist: str ,  num_retries: int =0 ,  max_ret
     Returns:
         bool: True
     '''
+    path = os.path.join("media", artist, "songs" ,f"{ music_ID}.mp3")
+    if os.path.exists(path=path):
+        return None
+    
     song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
     if song_url is not None:
         res = download(song_url , music_ID , artist= artist)
@@ -69,7 +73,6 @@ def crawl(music_ID , num_retries , max_retries):
         return song_url
     else:
         return None
-
 
 
 def download(url, music_ID , artist):
