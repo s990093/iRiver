@@ -3359,3 +3359,19 @@ django.template.exceptions.TemplateDoesNotExist: template/music_player/music_pla
 2023-05-08 13:19:42,466 - django.request - WARNING - Not Found: /media/¥xÆWµØ¯Ç¤éÁú©x¤èÀW¹D/img/WYB8xGSW-fk.jpg
 2023-05-08 13:19:49,625 - django.request - WARNING - Not Found: /media/¥xÆWµØ¯Ç¤éÁú©x¤èÀW¹D/img/WYB8xGSW-fk.jpg
 2023-05-08 13:19:49,626 - django.request - WARNING - Not Found: /media/¥xÆWµØ¯Ç¤éÁú©x¤èÀW¹D/songs/WYB8xGSW-fk.mp3
+2023-05-08 19:22:24,794 - root - INFO - Downloaded music 'i19bvo5Afuw' by 'ç©¶æ¥µç„¡èŠ' successfully.
+2023-05-08 19:22:31,359 - django.request - WARNING - Not Found: /media/AcapellaTimes/img/z2ueaL1EJCY.jpg
+2023-05-08 19:22:31,362 - django.request - WARNING - Not Found: /media/ç°¡ä½‘è“/img/CGVMEwoFsFo.jpg
+2023-05-08 19:22:31,364 - django.request - WARNING - Not Found: /media/[JumperHK]æ˜Ÿç¾½StarFeather/img/_iuVx2ZDN3o.jpg
+2023-05-08 19:25:44,743 - django.request - WARNING - Not Found: /media/ç°¡ä½‘è“/img/artist.jpg
+2023-05-08 19:25:44,744 - django.request - WARNING - Not Found: /media/ç°¡ä½‘è“/img/CGVMEwoFsFo.jpg
+2023-05-08 19:25:44,745 - django.request - WARNING - Not Found: /media/ç°¡ä½‘è“/songs/CGVMEwoFsFo.mp3
+2023-05-08 19:25:48,878 - django.request - WARNING - Not Found: /media/[JumperHK]æ˜Ÿç¾½StarFeather/img/artist.jpg
+2023-05-08 19:25:48,879 - django.request - WARNING - Not Found: /media/[JumperHK]æ˜Ÿç¾½StarFeather/img/_iuVx2ZDN3o.jpg
+2023-05-08 19:25:48,883 - django.request - WARNING - Not Found: /media/[JumperHK]æ˜Ÿç¾½StarFeather/songs/_iuVx2ZDN3o.mp3
+2023-05-08 19:25:50,642 - django.request - WARNING - Not Found: /media/[JumperHK]æ˜Ÿç¾½StarFeather/img/_iuVx2ZDN3o.jpg
+2023-05-08 19:25:50,644 - django.request - WARNING - Not Found: /media/[JumperHK]æ˜Ÿç¾½StarFeather/img/artist.jpg
+2023-05-08 19:25:50,645 - django.request - WARNING - Not Found: /media/[JumperHK]æ˜Ÿç¾½StarFeather/songs/_iuVx2ZDN3o.mp3
+2023-05-08 19:25:51,525 - django.request - WARNING - Not Found: /media/AcapellaTimes/songs/z2ueaL1EJCY.mp3
+2023-05-08 19:25:51,527 - django.request - WARNING - Not Found: /media/AcapellaTimes/img/artist.jpg
+2023-05-08 19:25:51,529 - django.request - WARNING - Not Found: /media/AcapellaTimes/img/z2ueaL1EJCY.jpg
