@@ -7,8 +7,8 @@ export class MediaPlayer {
     }
 
     _register() {
-
         this.changeVolumeSlider();
+
     }
 
     changeVolumeSlider() {
@@ -37,5 +37,29 @@ export class MediaPlayer {
         var currentTime = (this.audio.currentTime / this.audio.duration) * 100;
         // 更新进度条的值
         $('#progressBar').val(currentTime);
+    }
+
+    insert_my_music_list(music_ID, music_list = 1, favorite = true, method) {
+        fetch(`/user/isLogin/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.isLogin) {
+                    const csrftoken = getCookie('csrftoken');
+                    fetch('/user/get_user_music_list/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': csrftoken
+                        },
+
+                        body: JSON.stringify({
+                            music_ID: music_ID,
+                            method: method,
+                            music_list: music_list,
+                            favorite: favorite
+                        })
+                    });
+                } else location.href = "/user/login/";
+            });
     }
 }

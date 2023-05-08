@@ -3359,3 +3359,19 @@ django.template.exceptions.TemplateDoesNotExist: template/music_player/music_pla
 2023-05-08 13:19:42,466 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
 2023-05-08 13:19:49,625 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
 2023-05-08 13:19:49,626 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 19:21:18,300 - root - ERROR - Failed to download music 'CGVMEwoFsFo' by '簡佑蓁'.
+2023-05-08 19:21:59,902 - root - ERROR - Failed to download music 'z2ueaL1EJCY' by 'AcapellaTimes'.
+2023-05-08 19:22:03,787 - root - WARNING - Already exists '_iuVx2ZDN3o' by '[JumperHK]星羽StarFeather'.
+2023-05-08 19:22:03,789 - root - INFO - Downloaded music '_iuVx2ZDN3o' by '[JumperHK]星羽StarFeather' successfully.
+2023-05-08 19:22:03,789 - root - WARNING - Already exists '_iuVx2ZDN3o' by '[JumperHK]星羽StarFeather'.
+2023-05-08 19:22:11,619 - root - ERROR - Failed to download music '_iuVx2ZDN3o' by '[JumperHK]星羽StarFeather'.
+2023-05-08 19:22:23,408 - root - WARNING - Already exists '_iuVx2ZDN3o' by '[JumperHK]星羽StarFeather'.
+2023-05-08 19:44:56,647 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 19:46:33,407 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 19:46:57,259 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 19:53:31,617 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 19:53:31,632 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 19:53:46,636 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 19:53:46,637 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 19:53:47,658 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 19:53:47,660 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
