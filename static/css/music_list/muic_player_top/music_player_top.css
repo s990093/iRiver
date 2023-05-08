@@ -42,7 +42,7 @@ body {
 
 @media screen and (max-width: 576px), (max-height: 500px) {
   .player {
-    /* width: 95%; */
+    width: 95%;
     padding: 20px;
     margin-top: 75px;
     min-height: initial;
@@ -51,6 +51,7 @@ body {
   }
 }
 .player__top {
+  justify-content: center;
   display: flex;
   align-items: flex-start;
   position: relative;
@@ -93,6 +94,8 @@ body {
   top: 0;
 }
 .player-cover__item:before {
+  background-size: cover;
+
   content: "";
   background: inherit;
   width: 100%;
@@ -111,13 +114,17 @@ body {
   content: "";
   background: inherit;
   width: 100%;
+  max-width: 100%;
   height: 100%;
   box-shadow: 0px 10px 40px 0px rgba(76, 70, 124, 0.5);
   display: block;
   z-index: 2;
   position: absolute;
   border-radius: 15px;
+  background-size: cover;
+  background-position: center;
 }
+
 .player-cover__img {
   width: 100%;
   height: 100%;
