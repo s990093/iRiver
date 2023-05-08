@@ -3375,3 +3375,4 @@ django.template.exceptions.TemplateDoesNotExist: template/music_player/music_pla
 2023-05-08 19:53:46,637 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
 2023-05-08 19:53:47,658 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
 2023-05-08 19:53:47,660 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 19:58:42,406 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py changed, reloading.

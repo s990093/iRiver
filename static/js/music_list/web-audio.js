@@ -23,10 +23,9 @@ export class WebAudio {
 
     changButtonIcon(isplaying) {
         if (isplaying)
-            $('.playPauseButton').html('<i class="fa fa-pause"></i>');
+            $('#play .icon use').attr('href', '/static/svg/iocn.svg#icon-pause');
         else
-            $('.playPauseButton').html('<i class="fa fa-play"></i>');
-
+            $('#play .icon use').attr('href', '/static/svg/iocn.svg#icon-play');
     }
 
     changMuteButton(isMute) {
