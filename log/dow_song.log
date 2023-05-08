@@ -3527,3 +3527,200 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-08 23:02:33,956 - root - INFO - Downloaded music 'LHjpZ7I9uP4' by 'SaucyDog' successfully.
 2023-05-08 23:02:48,841 - root - INFO - Downloaded music 'm3jQCwjMS4Q' by 'SaucyDog' successfully.
 2023-05-08 23:03:10,003 - root - ERROR - Failed to download music '5FeiralfUEY' by 'SaucyDog'.
+2023-05-09 00:49:31,859 - root - INFO - Downloaded music 'm78lJuzftcc' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:50:02,165 - root - INFO - Downloaded music '98gYkQvDxQ8' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:50:02,809 - root - INFO - Downloaded music 'oC5leGsq-zg' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:50:02,830 - root - INFO - Downloaded music 'xe0krTnMUMM' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:50:02,833 - root - WARNING - Already exists 'xe0krTnMUMM' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:50:03,413 - root - INFO - Downloaded music '-FRsqZYX9dk' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:50:17,120 - root - INFO - Downloaded music 'FUmzjQPc6B4' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:50:20,933 - root - INFO - Downloaded music '2xEeDKJbaTo' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:50:52,560 - root - INFO - Downloaded music 'gMfp0giEKes' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:50:53,352 - root - WARNING - Already exists 'oC5leGsq-zg' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:50:53,353 - root - WARNING - Already exists '98gYkQvDxQ8' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:50:53,353 - root - WARNING - Already exists '-FRsqZYX9dk' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:50:53,358 - root - WARNING - Already exists 'FUmzjQPc6B4' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:50:53,359 - root - WARNING - Already exists '2xEeDKJbaTo' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:51:08,947 - root - INFO - Downloaded music 'OswWbP4qEso' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:51:09,685 - root - INFO - Downloaded music 'YtkKIEKmSbY' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:51:40,235 - root - ERROR - Failed to download music 'XIFtODE1TOk' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:52:28,900 - root - ERROR - Failed to download music 'C36OPxGs7O0' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:52:29,741 - root - ERROR - Failed to download music 'SdCiAtddqKM' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:52:31,178 - root - ERROR - Failed to download music 'K6TqvOsRYPU' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:52:33,883 - root - ERROR - Failed to download music 'AQCfHmal8WM' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:52:49,708 - root - INFO - Downloaded music 'qBRi-vC0HPg' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:52:55,736 - root - INFO - Downloaded music '6OJJhV8uCo0' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:53:11,976 - root - ERROR - Failed to download music 'M6brhS0zi-U' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:53:16,939 - root - ERROR - Failed to download music 'ta7qWxVlNRA' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:54:03,387 - root - ERROR - Failed to download music 'loBfQgOXf2g' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:54:04,827 - root - ERROR - Failed to download music 'G01YNxJLpbw' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:54:06,203 - root - ERROR - Failed to download music '5y36ywM2zvw' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:54:08,757 - root - ERROR - Failed to download music 'yYG0iQ3ldmM' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:54:23,705 - root - INFO - Downloaded music 'kAsSw70xR2Q' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:54:34,748 - root - INFO - Downloaded music 'oHoYrGGb-2s' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:54:36,430 - root - INFO - Downloaded music 'NC7e3S3rwV4' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:54:48,554 - root - ERROR - Failed to download music 'qPcG8ty8GUI' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:55:06,526 - root - INFO - Downloaded music 'YppBmbVVPe8' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:55:37,659 - root - ERROR - Failed to download music 'WyCsnn3woRg' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:55:38,323 - root - ERROR - Failed to download music '1CJ-pJqVwD0' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:55:47,364 - root - ERROR - Failed to download music 'qDzsVVpz-7s' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:55:52,701 - root - ERROR - Failed to download music 'LSsk5tnehEU' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:56:00,391 - root - INFO - Downloaded music '3wzhwgNCW1o' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:56:23,780 - root - ERROR - Failed to download music 'XKIhqS6cm0g' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:56:37,596 - root - ERROR - Failed to download music 'TTw9oqVUEEQ' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:56:59,363 - root - INFO - Downloaded music '6FMSHtcNXF4' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:56:59,773 - root - INFO - Downloaded music 'ej8O9Sfru2g' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:57:04,504 - root - INFO - Downloaded music 'kvxDONG0Se0' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:57:19,453 - root - INFO - Downloaded music 'G23mBv9hCgM' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:57:23,726 - root - ERROR - Failed to download music 'J6blB4NKXAc' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:57:23,802 - root - INFO - Downloaded music 'jw8Be_s_OSE' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:57:29,605 - root - INFO - Downloaded music '9tkDzCQ04IY' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:58:00,574 - root - INFO - Downloaded music 'uhjVC7Z7ZdA' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:58:01,399 - root - WARNING - Already exists 'oC5leGsq-zg' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:58:01,401 - root - WARNING - Already exists '98gYkQvDxQ8' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:58:01,401 - root - WARNING - Already exists 'FUmzjQPc6B4' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:58:01,402 - root - WARNING - Already exists '-FRsqZYX9dk' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:58:01,403 - root - WARNING - Already exists '2xEeDKJbaTo' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:58:01,406 - root - WARNING - Already exists 'OswWbP4qEso' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:58:17,403 - root - INFO - Downloaded music 'XIFtODE1TOk' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:58:47,045 - root - ERROR - Failed to download music 'sdmsWwObclo' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:59:05,169 - root - INFO - Downloaded music 'YPn2UwiBmnQ' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:59:19,924 - root - INFO - Downloaded music 'C36OPxGs7O0' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 00:59:34,832 - root - ERROR - Failed to download music 'GrttJga0uQo' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:59:35,728 - root - ERROR - Failed to download music 'YXcuZilZjPw' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:59:37,593 - root - ERROR - Failed to download music 'IkKzZFquczs' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 00:59:51,432 - root - INFO - Downloaded music 'mgXjWU96x5A' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:00:06,732 - root - ERROR - Failed to download music 'FybwqrsmkAw' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:00:11,133 - root - INFO - Downloaded music 'KMAWs9GhZFA' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:00:36,739 - root - INFO - Downloaded music 'J_HaRfB3gV0' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:00:52,280 - root - INFO - Downloaded music 'a1dxsIeuDK0' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:00:58,933 - root - ERROR - Failed to download music 'mWtGH9_AKT0' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:00:58,935 - root - WARNING - Already exists 'm78lJuzftcc' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:01:00,410 - root - ERROR - Failed to download music '0Yi4WAR-9hM' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:01:01,165 - root - ERROR - Failed to download music '2bIP88OYUUM' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:01:07,095 - root - INFO - Downloaded music 'AQCfHmal8WM' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:01:14,490 - root - INFO - Downloaded music '56z2jipIwSQ' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:01:15,209 - root - WARNING - Already exists 'oHoYrGGb-2s' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:01:15,213 - root - WARNING - Already exists 'NC7e3S3rwV4' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:01:33,199 - root - INFO - Downloaded music '4A3PxH7W74s' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:01:38,444 - root - INFO - Downloaded music 'qPcG8ty8GUI' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:02:03,013 - root - ERROR - Failed to download music 'yd3qLHYqFuc' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:02:04,060 - root - ERROR - Failed to download music 'GjcpFsBSw2Y' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:02:22,977 - root - ERROR - Failed to download music 'M6brhS0zi-U' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:02:24,587 - root - ERROR - Failed to download music 'sAhXkIqo82A' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:02:43,981 - root - INFO - Downloaded music 'ta7qWxVlNRA' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:02:43,983 - root - WARNING - Already exists 'qBRi-vC0HPg' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:02:44,355 - root - INFO - Downloaded music 'rD-T5pzH9b0' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:03:14,064 - root - INFO - Downloaded music 'iGYqwOYlLXc' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:03:14,569 - root - ERROR - Failed to download music 'RUOYaJgwzL8' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:03:14,934 - root - ERROR - Failed to download music 'aBng1okRsMQ' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:03:29,308 - root - INFO - Downloaded music 'AeyO-3kAwoQ' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:03:34,635 - root - ERROR - Failed to download music 'stQ_IfKJBCU' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:03:51,140 - root - INFO - Downloaded music 'hzAeZa7dJj4' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:04:01,436 - root - INFO - Downloaded music 'x2ej9VBaD0M' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:04:07,362 - root - INFO - Downloaded music 'Vfa7-qwyTTY' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:04:22,245 - root - ERROR - Failed to download music 'pBQK-Lwt1sA' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:04:22,759 - root - ERROR - Failed to download music 'RbJz8M7XwKA' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:04:27,409 - root - INFO - Downloaded music 'fWzmKHElUqY' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:04:53,288 - root - ERROR - Failed to download music 'nwMZSORP3pM' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:05:08,082 - root - ERROR - Failed to download music 'B8vdGsASiI0' by '添翼音樂TEAMEARMUSIC'.
+2023-05-09 01:05:24,450 - root - INFO - Downloaded music 'dKatg043PDU' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:05:25,380 - root - INFO - Downloaded music 'Cf2pDbqUqoQ' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:05:25,598 - root - INFO - Downloaded music 'ybfWYpYhTQQ' by '添翼音樂TEAMEARMUSIC' successfully.
+2023-05-09 01:50:54,244 - root - INFO - Downloaded music 'UM9XNpgrqVk' by 'Vaundy' successfully.
+2023-05-09 01:51:06,086 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:51:06,087 - root - WARNING - Already exists 'fJZrmX9oWj4' by 'Vaundy'.
+2023-05-09 01:51:06,088 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 01:51:06,088 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 01:51:06,090 - root - WARNING - Already exists 'WSoaa-Cmz9M' by 'Vaundy'.
+2023-05-09 01:51:06,091 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:51:06,092 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 01:51:06,092 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 01:51:06,608 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 01:51:06,609 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 01:51:06,609 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 01:51:06,610 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-09 01:51:06,610 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-09 01:51:06,611 - root - WARNING - Already exists '3SR57oeegws' by 'Vaundy'.
+2023-05-09 01:51:06,612 - root - WARNING - Already exists 'D0ATlLRLHzs' by 'Vaundy'.
+2023-05-09 01:51:06,612 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:51:07,130 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 01:51:07,130 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-09 01:51:07,131 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-09 01:51:07,131 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 01:51:07,131 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 01:51:07,133 - root - WARNING - Already exists '6h6AQbdTkaE' by 'Vaundy'.
+2023-05-09 01:51:07,134 - root - WARNING - Already exists '3Dy4EbMPkY0' by 'Vaundy'.
+2023-05-09 01:51:07,135 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:51:18,919 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:51:18,920 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 01:51:18,921 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 01:51:18,923 - root - WARNING - Already exists 'fJZrmX9oWj4' by 'Vaundy'.
+2023-05-09 01:51:18,925 - root - WARNING - Already exists 'WSoaa-Cmz9M' by 'Vaundy'.
+2023-05-09 01:51:18,927 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 01:51:18,928 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 01:51:18,928 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:51:19,471 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 01:51:19,472 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 01:51:19,473 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 01:51:19,474 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-09 01:51:19,477 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-09 01:51:19,478 - root - WARNING - Already exists 'D0ATlLRLHzs' by 'Vaundy'.
+2023-05-09 01:51:19,478 - root - WARNING - Already exists '3SR57oeegws' by 'Vaundy'.
+2023-05-09 01:51:19,479 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:51:19,999 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 01:51:20,000 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 01:51:20,001 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-09 01:51:20,002 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-09 01:51:20,005 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 01:51:20,008 - root - WARNING - Already exists '6h6AQbdTkaE' by 'Vaundy'.
+2023-05-09 01:51:20,009 - root - WARNING - Already exists '3Dy4EbMPkY0' by 'Vaundy'.
+2023-05-09 01:51:20,009 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:52:10,470 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:52:10,470 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 01:52:10,471 - root - WARNING - Already exists 'fJZrmX9oWj4' by 'Vaundy'.
+2023-05-09 01:52:10,472 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 01:52:10,477 - root - WARNING - Already exists 'WSoaa-Cmz9M' by 'Vaundy'.
+2023-05-09 01:52:10,477 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:52:10,477 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 01:52:10,479 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 01:52:11,040 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 01:52:11,041 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 01:52:11,041 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 01:52:11,042 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-09 01:52:11,043 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-09 01:52:11,043 - root - WARNING - Already exists 'D0ATlLRLHzs' by 'Vaundy'.
+2023-05-09 01:52:11,044 - root - WARNING - Already exists '3SR57oeegws' by 'Vaundy'.
+2023-05-09 01:52:11,044 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:52:11,578 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 01:52:11,579 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 01:52:11,580 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-09 01:52:11,580 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-09 01:52:11,580 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 01:52:11,582 - root - WARNING - Already exists '6h6AQbdTkaE' by 'Vaundy'.
+2023-05-09 01:52:11,582 - root - WARNING - Already exists '3Dy4EbMPkY0' by 'Vaundy'.
+2023-05-09 01:52:11,582 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:52:22,592 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:52:22,592 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 01:52:22,593 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 01:52:22,593 - root - WARNING - Already exists 'fJZrmX9oWj4' by 'Vaundy'.
+2023-05-09 01:52:22,594 - root - WARNING - Already exists 'WSoaa-Cmz9M' by 'Vaundy'.
+2023-05-09 01:52:22,594 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:52:22,595 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 01:52:22,595 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 01:52:23,151 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 01:52:23,152 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 01:52:23,154 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-09 01:52:23,155 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-09 01:52:23,155 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 01:52:23,157 - root - WARNING - Already exists 'D0ATlLRLHzs' by 'Vaundy'.
+2023-05-09 01:52:23,157 - root - WARNING - Already exists '3SR57oeegws' by 'Vaundy'.
+2023-05-09 01:52:23,158 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 01:52:23,665 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 01:52:23,665 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-09 01:52:23,666 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 01:52:23,666 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-09 01:52:23,667 - root - WARNING - Already exists '6h6AQbdTkaE' by 'Vaundy'.
+2023-05-09 01:52:23,667 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 01:52:23,668 - root - WARNING - Already exists '3Dy4EbMPkY0' by 'Vaundy'.
+2023-05-09 01:52:23,669 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.

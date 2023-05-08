@@ -95,10 +95,24 @@ export class WebAudio {
 
 
         // 新版
-        // 淡入效果
         $('.player-cover__item').fadeOut(250, function () {
             $(this).css('background-image', `url(${song_src})`).fadeIn(300);
         });
+
+        // $('.player-cover__item').fadeOut(200, function () {
+        //     $(this).css('background-image', `url(${song_src})`);
+        //     $(this).removeClass('scale-in-enter-active scale-in-leave-active scale-in-enter scale-in-leave-to');
+        //     $(this).addClass('scale-out-enter-active scale-out-leave-active scale-out-enter scale-out-leave-to');
+        //     $(this).fadeIn(200, function () {
+        //         $(this).removeClass('scale-out-enter-active scale-out-leave-active scale-out-enter scale-out-leave-to');
+        //         $(this).addClass('scale-in-enter-active scale-in-leave-active scale-in-enter scale-in-leave-to');
+        //         $(this).css({
+        //             'transform': 'scale(1)',
+        //             'pointer-events': 'auto',
+        //             'opacity': '1'
+        //         });
+        //     });
+        // });
 
 
         $('#myaudio').attr('data-music_ID', this.music_list[currentIndex].music_ID);

@@ -77,10 +77,10 @@ export class Control {
 
     let timeoutId;
 
-    $('#prevTrack').on('input', () => {
-      const currentTime = this.audio.duration * $('#progressBar').val() / 100;
+    $('#progressBar').on('change', () => {
+      const currentTime = this.audio.duration * ($('#progressBar').val() / 100);
+      console.log(currentTime);
       this.audio.currentTime = currentTime;
-
     });
 
 
@@ -163,6 +163,7 @@ export class Control {
       }
       this.isPlaying = !this.isPlaying;
     });
+
     navigator.mediaSession.setActionHandler('pause', () => {
       if (this.isPlaying) {
         this.play();
@@ -171,7 +172,9 @@ export class Control {
       }
       this.isPlaying = !this.isPlaying;
     });
+
     navigator.mediaSession.setActionHandler('stop', this.stop.bind(this));
+
     navigator.mediaSession.setActionHandler('nexttrack', () => {
       this.next();
     });

@@ -29,10 +29,8 @@ export class MediaPlayer {
 
 
     updateProgressBar() {
-        // 计算当前播放进度（以百分比为单位）
         var currentTime = (this.audio.currentTime / this.audio.duration) * 100;
-        // 更新进度条的值
-        $('#progressBar').val(currentTime);
+        $('.progress-bar').css('width', currentTime + '%'); // 更新进度条的宽度
     }
 
     update_my_music_list(music_ID, music_list = 1, favorite = true, method) {

@@ -1,5 +1,8 @@
 import { Control } from "../../../static/js/music_list/control.js";
 import { table_template } from "../../../static/js/table.js";
+import { fetch_dow_all_songs, fetch_dow_song, fetch_is_song_exit } from "../../../static/js/fetch.js";
+import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
+
 const audio = document.getElementById('myaudio');
 
 var isClickEventRegistered_web = false
@@ -48,45 +51,21 @@ function paush_web_data(music_list) {
   for (var i = 0; i < music_list.length; i++) {
     $('#table-body').append(table_template(music_list[i], i, true));
   }
-  $('tr td a.web-data').on('click', function () {
+  $('tr td a.web-data').on('click', async function () {
     loading(true);
     var index = $(this).attr('value');
-    // console.log('clicked on element with index:', index);
-    fetch(`/music/download?song_info=${encodeURIComponent(JSON.stringify(music_list[index]))}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          fetch_dow_all_songs(music_list[index].artist_url, music_list[index].artist);
-          console.log('success get music on db');
-          if (!isClickEventRegistered_web) {
-            control_web.register();
-            isClickEventRegistered_web = true;
-          }
-          control_web.insert(index)
-        } else {
-          alert('Error');
-        }
-        loading(false);
-      });
+    try {
+      const success = await fetch_dow_song(music_list[index]);
+      loading(false);
+      if (success) fetch_dow_all_songs(music_list[index].artist_url, music_list[index].artist);
+    } catch (error) {
+      console.error(error);
+    }
   });
   loading(false)
 }
 
-function fetch_dow_all_songs(artist_url, artist) {
 
-  fetch(`/music/download_songs?artist_url=${artist_url}&artist=${artist}`)
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        console.log('dow all songs on db');
-      }
-    });
-}
 
 function paush_db_data(music_list) {
   const control_db = new Control(audio, music_list, true, false, true);
@@ -116,97 +95,23 @@ spinners.forEach((spinner, index) => {
   }, index * 100);
 });
 
-function getCookie(name) {
-  let cookieValue = null;
-  if (document.cookie && document.cookie !== '') {
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i].trim();
-      if (cookie.substring(0, name.length + 1) === (name + '=')) {
-        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-        break;
-      }
-    }
-  }
-  return cookieValue;
-}
 
-
-$('#table-body').on('click', '.love-icon a', function () {
+$('#table-body').on('click', '.love-icon a', async function () {
   $(this).find('i').toggleClass('far fas');
-  fetch(`/user/isLogin/`)
-    .then(response => response.json())
-    .then(data => {
-      if (data.isLogin) {
-        var music_ID = $(this).attr('value');
-        const csrftoken = getCookie('csrftoken');
-        fetch('/user/get_user_music_list/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': csrftoken
-          },
-
-          body: JSON.stringify({
-            music_ID: music_ID,
-            method: 'insert'
-          })
-        }).then(response => {
-          if (response.ok) {
-            // 保存成功
-            console.log('保存成功');
-          } else {
-            // 保存失败
-            console.log('保存失败');
-          }
-        });
-        // .then(response => response.json())
-        // .then(data => {
-        //   alert(data)
-        // })
-        // .catch(error => console.error(error));
-      } else {
-        location.href = "/user/login/";
-      }
-    });
+  var music_ID = $(this).attr('value');
+  const isSongExist = await fetch_is_song_exit(music_ID);
+  if (isSongExist) {
+    await insert_my_music_list(music_ID, 1, true, 'insert');
+  }
 });
 
-$('#table-body').on('click', '.add', function () {
+
+$('#table-body').on('click', '.add', async function () {
   $(this).find('i').toggleClass('far fas');
-  fetch(`/user/isLogin/`)
-    .then(response => response.json())
-    .then(data => {
-      if (data.isLogin) {
-        var music_ID = $(this).attr('value');
-        const csrftoken = getCookie('csrftoken');
-        fetch('/user/get_user_music_list/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': csrftoken
-          },
-          body: JSON.stringify({
-            music_ID: music_ID,
-            music_list: 2,
-            method: 'insert'
-          })
-        }).then(response => {
-          if (response.ok) {
-            // 保存成功
-            console.log('保存成功');
-          } else {
-            // 保存失败
-            console.log('保存失败');
-          }
-        });
-        // .then(response => response.json())
-        // .then(data => {
-        //   alert(data)
-        // })
-        // .catch(error => console.error(error));
-      } else {
-        location.href = "/user/login/";
-      }
-    });
+  var music_ID = $(this).attr('value');
+  const isSongExist = await fetch_is_song_exit(music_ID);
+  if (isSongExist) {
+    await insert_my_music_list(music_ID, 2, false, 'insert');
+  }
 });
 
