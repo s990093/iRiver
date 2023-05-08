@@ -51,6 +51,7 @@ def music_list(request):
     return render(request, './music_list.html', context={'artist': artist, 'index': index})
 
 def my_music_list(request):
+    music_list = request.GET.get('music_list' , 1)
     url = 'http://127.0.0.1:8000/user/get_user_music_list/'
     csrftoken = request.COOKIES.get('csrftoken')
     session_id = request.COOKIES.get('sessionid')
@@ -62,10 +63,12 @@ def my_music_list(request):
     if response.status_code == 200:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         music_list_infos = mysql.get_music_list_infos(music_ID_list= [item[0] for item in json.loads(response.content)])
-        print(music_list_infos)
+        # print(music_list_infos)
         music_list_infos_json = json.dumps(music_list_infos)
         return render(request, './my_music_list.html', {'music_list_infos': music_list_infos, 
-                                                        'music_list_infos_json': music_list_infos_json})     
+                                                        'music_list_infos_json': music_list_infos_json,
+                                                        'music_list': music_list
+                                                        })     
    
 
 

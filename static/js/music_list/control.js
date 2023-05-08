@@ -110,21 +110,20 @@ export class Control {
     $('#table-body').on('click', '.love-icon a', () => {
       $(".love-icon a").find('i').toggleClass('far fas');
       var music_ID = $('.love-icon a').attr('value');
-      this.mediaPlayer.insert_my_music_list(music_ID, 1, true, 'insert');
+      this.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
     });
 
     $('#favorite').on('click', () => {
       var href = $('#favorite use').attr('href');
       var music_ID = $('#myaudio').attr('data-music_ID');
       this.webAudio.changFavoriteButton(href);
-      this.mediaPlayer.insert_my_music_list(music_ID, 1, true, 'insert');
+      this.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
     });
 
     $('#table-body').on('click', '.add', () => {
       var music_ID = $('.add').attr('value');
-      this.mediaPlayer.insert_my_music_list(music_ID, 2, false, 'insert');
+      this.mediaPlayer.update_my_music_list(music_ID, 2, false, 'insert');
     });
-
 
 
 

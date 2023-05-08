@@ -1,7 +1,25 @@
-export function table_template(song, i, isWeb) {
-    var icon = isWeb ? "language" : " database";
-    var className = isWeb ? "web-data" : "db-data";
-    var row = `
+export function table_template(song, i, isWeb, method = 'result', music_list = 1) {
+  var icon = isWeb ? "language" : " database";
+  var className = isWeb ? "web-data" : "db-data";
+  var icon_class = 'far fa-heart';
+  var icon_class_name = 'add';
+  
+  switch (method) {
+    case 'result':
+      icon_class = 'far fa-heart';
+      icon_class_name = 'add';
+      break;
+    case 'music_list':
+      icon_class = 'fa-light fa-trash';
+      icon_class_name = 'delete';
+      break;
+    default:
+      icon_class = 'far fa-heart';
+      icon_class_name = 'add';
+      break;
+  }
+
+  var row = `
     <tr>
       <td>
         <a href="#" class="${className}" value = ${i}>
@@ -15,7 +33,7 @@ export function table_template(song, i, isWeb) {
         </span>
       </td>
       <td>
-        <a href="#" class="add" value=${song.music_ID}><i class="bi bi-plus-lg"></i></a>
+        <a href="#" class="${icon_class_name}" value=${song.music_ID} data-music_list = "${music_list}"><i class="${icon_class}"></i></a>
       </td>
       <td style="text-align: right">
         <a href="/music/music_list/?artist=${song.artist}&index=${i}" style="margin-right: 20px">
@@ -26,5 +44,5 @@ export function table_template(song, i, isWeb) {
       </td>
     </tr>
       `
-    return row
+  return row
 }

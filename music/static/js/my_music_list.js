@@ -1,4 +1,6 @@
 import { Control } from "../../../static/js/music_list/control.js";
+import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
+
 
 var isClickEventRegistered = false;
 $('document').ready(function () {
@@ -15,3 +17,14 @@ $('document').ready(function () {
     });
 });
 
+// delete 
+$('.delete').on('click', async () => {
+    var music_ID = $('.delete a').attr('value');
+    var music_list = $('.delete').attr('data-music_list');
+    try {
+        await insert_my_music_list(music_ID, music_list, false, 'delete');
+        location.reload();
+    } catch (error) {
+        console.log('操作失敗');
+    }
+});

@@ -51,24 +51,32 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="/music/my_music_list?album=1"
-                >我的最愛</a
+              <a class="dropdown-item" href="/music/my_music_list?music_list=1">
+                <svg class="icon">
+                  <use
+                    href="{% static './svg/iocn.svg' %}#icon-record-vinyl-solid"
+                  ></use>
+                </svg>
+                <span class="text">我的最愛</span></a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="/music/my_music_list?album=2"
-                >自訂專輯2</a
-              >
+              <a class="dropdown-item" href="/music/my_music_list?music_list=2">
+                <svg class="icon">
+                  <use
+                    href="{% static './svg/iocn.svg' %}#icon-record-vinyl-solid"
+                  ></use>
+                </svg>
+                <span class="text">專輯2</span>
+              </a>
             </li>
             <li>
-              <a class="dropdown-item" href="/music/my_music_list?album=3"
+              <a class="dropdown-item" href="/music/my_music_list/"
                 >自訂專輯3</a
               >
             </li>
             <li>
-              <a class="dropdown-item" href="/music/my_music_list?album=4"
-                >自訂專輯</a
-              >
+              <a class="dropdown-item" href="/music/my_music_list/">自訂專輯</a>
             </li>
             <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" href="/iRiver/setting/">設定</a></li>

@@ -8,7 +8,6 @@ export class MediaPlayer {
 
     _register() {
         this.changeVolumeSlider();
-
     }
 
     changeVolumeSlider() {
@@ -39,7 +38,12 @@ export class MediaPlayer {
         $('#progressBar').val(currentTime);
     }
 
-    insert_my_music_list(music_ID, music_list = 1, favorite = true, method) {
+    update_my_music_list(music_ID, music_list = 1, favorite = true, method) {
+        insert_my_music_list(music_ID, music_list, favorite, method);
+    }
+}
+export function insert_my_music_list(music_ID, music_list = 1, favorite = true, method) {
+    return new Promise((resolve, reject) => {
         fetch(`/user/isLogin/`)
             .then(response => response.json())
             .then(data => {
@@ -60,15 +64,20 @@ export class MediaPlayer {
                     }).then(response => {
                         if (response.ok) {
                             // 保存成功
-                            console.log('保存成功');
+                            console.log('保存成功', method);
+                            resolve(true);
                         } else {
                             // 保存失败
-                            console.log('保存失败');
+                            console.log('保存失败', method);
+                            reject(false);
                         }
                     });
-                } else location.href = "/user/login/";
+                } else {
+                    location.href = "/user/login/";
+                    reject(false);
+                }
             });
-    }
+    });
 }
 
 
