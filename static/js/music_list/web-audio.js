@@ -78,7 +78,8 @@ export class WebAudio {
         $('.artist-img').attr('src', artist_src);
 
         //刷新  title 跑馬燈
-        $('.songTitle').text(this.music_list[currentIndex].title);
+        $('#songTitle').text(this.music_list[currentIndex].title);
+        $("#artistName").text(this.music_list[currentIndex].artist)
         // $('.songTitle').removeClass("marquee");
         // $('.songTitle')[0].offsetWidth;
         // $('.songTitle').addClass("marquee");
@@ -86,8 +87,13 @@ export class WebAudio {
 
         // artist
         var href = '/music_list/?artist=' + this.music_list[currentIndex].artist + '&index=' + currentIndex;
-        $('.artist a').attr('href', href);
-        $('.artist').find('.hover-link').text(this.music_list[currentIndex].artist)
+        // $('.artist a').attr('href', href);
+        // $('.artist').find('.hover-link').text(this.music_list[currentIndex].artist)
+
+
+
+        // 新版
+        $('.player-cover__item').css('background-image', `url(${song_src})`);
     }
 }
 

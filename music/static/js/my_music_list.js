@@ -3,7 +3,7 @@ import { Control } from "../../../static/js/music_list/control.js";
 var isClickEventRegistered = false;
 $('document').ready(function () {
     const audio = document.getElementById('myaudio');
-    const control = new Control(audio, music_list_infos, false, false, false);
+    const control = new Control(audio, music_list_infos, false, true, false);
     $('tr .play').on('click', function (e) {
         e.preventDefault();
         var index = $(this).attr('value');

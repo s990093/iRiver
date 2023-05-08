@@ -57,6 +57,7 @@ def crawl(music_ID , num_retries , max_retries):
             song_url = song_element.get_attribute('href')
 
             success = True
+            driver.quit()
         except:
             # 发生异常，继续尝试
             driver.quit()

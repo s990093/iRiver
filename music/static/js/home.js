@@ -101,6 +101,7 @@ function paush_db_data(music_list) {
     // console.log('clicked on element with index:', index);
     if (!isClickEventRegistered_db) {
       control_db.register();
+      console.log('control_db register !')
       isClickEventRegistered_db = true;
     }
     control_db.insert(index);

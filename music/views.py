@@ -62,7 +62,6 @@ def my_music_list(request):
     if response.status_code == 200:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         music_list_infos = mysql.get_music_list_infos(music_ID_list= [item[0] for item in json.loads(response.content)])
-        print(music_list_infos)
         music_list_infos_json = json.dumps(music_list_infos)
         return render(request, './my_music_list.html', {'music_list_infos': music_list_infos, 
                                                         'music_list_infos_json': music_list_infos_json})     
@@ -192,7 +191,7 @@ def download_songs(request):
     mysql = SQL(music.lib.sql.config.DB_CONFIG)
     artist_url = request.GET.get('artist_url')
     artist = request.GET.get('artist')
-    music_list_infos = query_music_list(url=artist_url)
+    music_list_infos = query_music_list(url=artist_url , artist= artist)
     music_list = []
 
     for song in music_list_infos:
@@ -208,13 +207,10 @@ def download_songs(request):
         })
 
     music_ID_list_chunks = [music_list[x:x+15] for x in range(0, len(music_list), 10)]
-    print("@"*20)
-    print(music_ID_list_chunks)
-
     for chunk in music_ID_list_chunks:
         success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                             artist=artist , 
-                            only_dow_song=True, max_thread= 5
+                            only_dow_song=True, max_thread= 4
                           )
         if success:
             mysql.save_data(song_infos=json.dumps(chunk, indent=4))

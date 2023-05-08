@@ -13,10 +13,9 @@ import re
 # 自製
 from .options import get_chrome_options
 from .options import get_available_port
+from music.lib.clear_str import clear_str
 
-
-
-def query_music_list(url :str) ->json:
+def query_music_list(url :str , artist :str) ->json:
     service = Service('chromedriver.exe')
     options = get_chrome_options(port=get_available_port() , is_headLess= True)
     driver = webdriver.Chrome(service = service, options=options) 
@@ -36,18 +35,20 @@ def query_music_list(url :str) ->json:
 
     # 獲取所有歌曲的 ID 和標題
     result = []
-    for item in driver.find_elements(By.CSS_SELECTOR, 'a#video-title'):
+    for item in driver.find_elements(By.CSS_SELECTOR, '#video-title'):
         url = item.get_attribute('href')
+        if url is None:
+            continue
         match  = re.search(r'(?<=v=)[^&]+',  url)
         if match:
             ID = match.group(0)[-11:]
         else:
             ID = re.search(r"shorts\/(\w{11})", url).group(1)
-        title = item.text
+        title = item.get_attribute('title')
         if title in result:
             continue
-        result.append({"music_ID": ID, "title": title})
-    
+        result.append({'music_ID': ID, 'title': clear_str(title= title , artist= artist)})
+
     driver.close()
     return result
 

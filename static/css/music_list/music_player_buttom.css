@@ -3,13 +3,13 @@
   bottom: 0;
   width: 100%;
 }
-.player {
+/* .player {
   background-color: #f5f5f5;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 20px;
   text-align: center;
-}
+} */
 
 /* #albumCover {
   margin-bottom: 20px;
@@ -31,11 +31,11 @@
   margin-top: 20px;
 }
 
-.player {
+/* .player {
   background-color: #f8f8f8;
   border: 1px solid #ccc;
   padding: 20px;
-}
+} */
 
 .title {
   font-size: 24px;
@@ -147,10 +147,9 @@ img {
   background-color: #777;
   border-radius: 20px;
 }
-.player {
+/* .player {
   border-radius: 20px;
-  /* 其他樣式設定 */
-}
+} */
 .btn:active {
   box-shadow: none;
   outline: none;

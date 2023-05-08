@@ -20,6 +20,7 @@ export class Control {
     }
 
     this.music_list = music_list;
+    // this.audio = new Audio();
     this.audio = audio;
 
     // bool
@@ -33,8 +34,7 @@ export class Control {
     this.currentIndex = currentIndex;
     this.music_length = music_list.length;
 
-    this.$playBtn = $('.playPauseButton');
-    this.$stopBtn = $('.stop-btn');
+    this.$playBtn = $('#play');
     this.$switchPlayer = $('.switchPlayer');
     this.$muteBtn = $('.muteButton');
 
@@ -66,16 +66,16 @@ export class Control {
       this.next();
     });
 
-    $('#nextButton').on('click', () => {
+    $('#nextTrack').on('click', () => {
       this.next();
     });
-    $('#previousButton').on('click', () => {
+    $('#prevTrack').on('click', () => {
       this.previous()
     });
 
     let timeoutId;
 
-    $('#progressBar').on('input', () => {
+    $('#prevTrack').on('input', () => {
       const currentTime = this.audio.duration * $('#progressBar').val() / 100;
       this.audio.currentTime = currentTime;
 
@@ -113,6 +113,8 @@ export class Control {
 
 
     // button
+
+    // play
     this.$playBtn.on('click', () => {
       if (this.isPlaying) {
         this.play();
@@ -122,8 +124,6 @@ export class Control {
       this.webAudio.changButtonIcon(this.isPlaying);
       this.isPlaying = !this.isPlaying;
     });
-
-    this.$stopBtn.on('click', this.stop.bind(this));
 
     // 撥放器
     this.$switchPlayer.on('click', () => {
@@ -251,8 +251,7 @@ export class Control {
     this.audio.pause();
     this.audio.currentTime = 0; // 重置播放進度
     this.audio.loop = false;
-
-
+    
     var address = '/media/' + this.music_list[this.currentIndex].artist + "/songs/" + this.music_list[this.currentIndex].music_ID + '.mp3';
     this.audio.src = address;
     this.audio.load();

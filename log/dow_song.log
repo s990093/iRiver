@@ -1891,3 +1891,1471 @@ Traceback (most recent call last):
     ^^^^^^
 UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
 2023-05-08 01:44:44,531 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py changed, reloading.
+2023-05-08 01:46:27,106 - root - WARNING - Already exists 'M2cckDmNLMI' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,107 - root - WARNING - Already exists 'Zhx1n6uvgUE' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,107 - root - WARNING - Already exists 'mHP6-D-yBEw' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,107 - root - WARNING - Already exists '7WZ1Kt3zraY' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,108 - root - WARNING - Already exists '8nxaZ69ElEc' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,108 - root - WARNING - Already exists 'JAMNqRBL_CY' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,109 - root - WARNING - Already exists 'AS4q9yaWJkI' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,109 - root - WARNING - Already exists 'HOz-9FzIDf0' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,109 - root - WARNING - Already exists '0RU_05zpETo' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,111 - root - WARNING - Already exists 'qnX2CdOBcDI' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,111 - root - WARNING - Already exists 'AKffZySqQts' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,111 - root - WARNING - Already exists 'hEyvYm2YRXQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,112 - root - WARNING - Already exists 'QeqbN1IZVpk' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,112 - root - WARNING - Already exists 'ly_4WV4rdts' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:27,112 - root - WARNING - Already exists 'K9RpXW97arA' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,077 - root - WARNING - Already exists 'AKffZySqQts' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,078 - root - WARNING - Already exists 'hEyvYm2YRXQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,078 - root - WARNING - Already exists 'QeqbN1IZVpk' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,082 - root - WARNING - Already exists 'ly_4WV4rdts' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,084 - root - WARNING - Already exists 'K9RpXW97arA' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,084 - root - WARNING - Already exists 'Cu8V1SGJZ_8' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,085 - root - WARNING - Already exists 'HSNWJbkIsmo' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,085 - root - WARNING - Already exists 'f0Z4hiPhlz4' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,086 - root - WARNING - Already exists 'A1BDQeRZv3Q' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,087 - root - WARNING - Already exists 'EnfuDqHZeaU' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,087 - root - WARNING - Already exists 'kGVKMBnilcM' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,090 - root - WARNING - Already exists '0t6TjQotSHw' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,090 - root - WARNING - Already exists 'HUKDl1MxxDQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:28,091 - root - WARNING - Already exists 'dFlDRhvM4L0' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:46,245 - root - INFO - Downloaded music 'R0kxCX_Edm8' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:46:47,212 - root - WARNING - Already exists 'EnfuDqHZeaU' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,212 - root - WARNING - Already exists '0t6TjQotSHw' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,213 - root - WARNING - Already exists 'kGVKMBnilcM' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,214 - root - WARNING - Already exists 'HUKDl1MxxDQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,214 - root - WARNING - Already exists 'dFlDRhvM4L0' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,215 - root - WARNING - Already exists 'Gtku_jsNgAA' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,215 - root - WARNING - Already exists 'qzwLLKD7ZIQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,216 - root - WARNING - Already exists 'uINfdDaZ1Ww' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,216 - root - WARNING - Already exists 'ETLT0WXFX1E' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,218 - root - WARNING - Already exists '7940nuwCEYA' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,219 - root - WARNING - Already exists 'wk_0Bej-myQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:46:47,220 - root - WARNING - Already exists '-tKVN2mAKRI' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:00,378 - root - INFO - Downloaded music 'toeThZQb8cw' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:01,043 - root - INFO - Downloaded music 'T0valuAksuo' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:01,254 - root - INFO - Downloaded music 'iBx4Wusc7aY' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:02,540 - root - WARNING - Already exists 'ETLT0WXFX1E' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,540 - root - WARNING - Already exists '7940nuwCEYA' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,541 - root - WARNING - Already exists 'wk_0Bej-myQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,541 - root - WARNING - Already exists 'T0valuAksuo' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,542 - root - WARNING - Already exists '-tKVN2mAKRI' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,542 - root - WARNING - Already exists 'M2cckDmNLMI' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,544 - root - WARNING - Already exists 'Zhx1n6uvgUE' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,544 - root - WARNING - Already exists '7WZ1Kt3zraY' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,546 - root - WARNING - Already exists '8nxaZ69ElEc' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,549 - root - WARNING - Already exists 'JAMNqRBL_CY' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:02,550 - root - WARNING - Already exists 'mHP6-D-yBEw' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:15,432 - root - INFO - Downloaded music 's582L3gujnw' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:15,763 - root - INFO - Downloaded music 'XeFQJ6-XoD0' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:16,034 - root - INFO - Downloaded music 'ptnYBctoexk' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:17,001 - root - INFO - Downloaded music 'UFQEttrn6CQ' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:18,079 - root - WARNING - Already exists 'JAMNqRBL_CY' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:18,079 - root - WARNING - Already exists 'UFQEttrn6CQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:18,080 - root - WARNING - Already exists 'XeFQJ6-XoD0' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:18,080 - root - WARNING - Already exists 'ptnYBctoexk' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:18,085 - root - WARNING - Already exists 's582L3gujnw' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:18,092 - root - WARNING - Already exists 'SX_ViT4Ra7k' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:18,096 - root - WARNING - Already exists 'gJX2iy6nhHc' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:47:31,269 - root - INFO - Downloaded music 'lwolyOIcCQg' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:32,050 - root - INFO - Downloaded music '1s84rIhPuhk' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:32,603 - root - INFO - Downloaded music 'zkNzxsaCunU' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:33,598 - root - INFO - Downloaded music '1oMxrHXzOsY' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:43,663 - root - INFO - Downloaded music '9aJVr5tTTWk' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:44,087 - root - INFO - Downloaded music 'Dx_fKPBPYUI' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:47:45,325 - root - INFO - Downloaded music 'lzAyrgSqeeE' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:02,536 - root - INFO - Downloaded music 'Uh6dkL1M9DM' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:03,779 - root - WARNING - Already exists 'gJX2iy6nhHc' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:03,780 - root - WARNING - Already exists '1oMxrHXzOsY' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:03,782 - root - WARNING - Already exists '9aJVr5tTTWk' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:03,782 - root - WARNING - Already exists 'lzAyrgSqeeE' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:03,783 - root - WARNING - Already exists 'Dx_fKPBPYUI' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:17,532 - root - INFO - Downloaded music 'Y4_vXzyOJHE' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:17,731 - root - INFO - Downloaded music '-EKxzId_Sj4' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:17,852 - root - INFO - Downloaded music 'naJcqMBbAn4' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:18,157 - root - INFO - Downloaded music 'Qa9PkDZkyHg' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:19,650 - root - INFO - Downloaded music 'WLEPU7DqLzg' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:29,677 - root - INFO - Downloaded music 'A2bFukH-TwA' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:29,685 - root - INFO - Downloaded music 'xCIJJ2Rb368' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:30,276 - root - INFO - Downloaded music 'QA_p90T6oy4' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:30,933 - root - INFO - Downloaded music 'pUDI2x5Y0Wo' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:31,851 - root - INFO - Downloaded music 'KR54fHpcxEQ' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:33,121 - root - WARNING - Already exists 'A2bFukH-TwA' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:33,121 - root - WARNING - Already exists 'QA_p90T6oy4' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:33,122 - root - WARNING - Already exists 'pUDI2x5Y0Wo' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:33,123 - root - WARNING - Already exists 'xCIJJ2Rb368' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:33,124 - root - WARNING - Already exists 'KR54fHpcxEQ' by 'KenshiYonezu米津玄師'.
+2023-05-08 01:48:44,656 - root - INFO - Downloaded music 'GiPdefbPa0k' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:45,665 - root - INFO - Downloaded music '2PqxOytUjz0' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:48:46,936 - root - INFO - Downloaded music 'W-Tun8O-Tjk' by 'KenshiYonezu米津玄師' successfully.
+2023-05-08 01:49:43,722 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py changed, reloading.
+2023-05-08 01:52:14,540 - root - INFO - Downloaded music 'E9Dru15yq9w' by 'yama' successfully.
+2023-05-08 01:52:27,535 - root - WARNING - Already exists 'E9Dru15yq9w' by 'yama'.
+2023-05-08 01:52:40,738 - root - INFO - Downloaded music 'wq1GacStaj4' by 'yama' successfully.
+2023-05-08 01:52:40,752 - root - INFO - Downloaded music 'w0JrZSqGZ5M' by 'yama' successfully.
+2023-05-08 01:52:41,518 - root - INFO - Downloaded music 'TeXWm3z1ECw' by 'yama' successfully.
+2023-05-08 01:52:41,519 - root - WARNING - Already exists 'ZaQPigOGdG4' by 'yama'.
+2023-05-08 01:52:42,449 - root - INFO - Downloaded music 'bbmOEiorMrg' by 'yama' successfully.
+2023-05-08 01:52:42,450 - root - WARNING - Already exists 'bbmOEiorMrg' by 'yama'.
+2023-05-08 01:52:43,072 - root - INFO - Downloaded music 'ZaQPigOGdG4' by 'yama' successfully.
+2023-05-08 01:52:52,116 - root - INFO - Downloaded music 'XrUCwI7xyhQ' by 'yama' successfully.
+2023-05-08 01:52:54,087 - root - INFO - Downloaded music 'BTvbo_UIs5A' by 'yama' successfully.
+2023-05-08 01:52:54,500 - root - INFO - Downloaded music '1Bthsl8SqhQ' by 'yama' successfully.
+2023-05-08 01:52:55,458 - root - INFO - Downloaded music 'Odv-zbpy-Y8' by 'yama' successfully.
+2023-05-08 01:52:55,910 - root - INFO - Downloaded music 'DC6JppqHkaM' by 'yama' successfully.
+2023-05-08 01:53:03,067 - root - INFO - Downloaded music '2By3feOVw20' by 'yama' successfully.
+2023-05-08 01:53:04,882 - root - INFO - Downloaded music '1KN4DhVXw-Y' by 'yama' successfully.
+2023-05-08 01:53:06,200 - root - WARNING - Already exists 'bbmOEiorMrg' by 'yama'.
+2023-05-08 01:53:06,203 - root - WARNING - Already exists 'Odv-zbpy-Y8' by 'yama'.
+2023-05-08 01:53:06,204 - root - WARNING - Already exists 'DC6JppqHkaM' by 'yama'.
+2023-05-08 01:53:06,205 - root - WARNING - Already exists '2By3feOVw20' by 'yama'.
+2023-05-08 01:53:06,206 - root - WARNING - Already exists '1KN4DhVXw-Y' by 'yama'.
+2023-05-08 01:53:06,208 - root - WARNING - Already exists 'Odv-zbpy-Y8' by 'yama'.
+2023-05-08 01:53:06,210 - root - WARNING - Already exists 'E9Dru15yq9w' by 'yama'.
+2023-05-08 01:53:17,742 - root - INFO - Downloaded music 'qhTkYIQQKYk' by 'yama' successfully.
+2023-05-08 01:53:18,335 - root - INFO - Downloaded music 'RcFBkhJuoiU' by 'yama' successfully.
+2023-05-08 01:53:19,731 - root - INFO - Downloaded music 'nRqTi-16l6o' by 'yama' successfully.
+2023-05-08 01:53:19,846 - root - INFO - Downloaded music 'rqBYsxixHo8' by 'yama' successfully.
+2023-05-08 01:53:20,762 - root - INFO - Downloaded music 'VAfg5HnAgew' by 'yama' successfully.
+2023-05-08 01:53:28,439 - root - INFO - Downloaded music '1hDPA00NceM' by 'yama' successfully.
+2023-05-08 01:53:29,047 - root - INFO - Downloaded music 'wakCtB5ONuo' by 'yama' successfully.
+2023-05-08 01:53:30,638 - root - INFO - Downloaded music '6bF1dPn1CDc' by 'yama' successfully.
+2023-05-08 01:53:31,807 - root - WARNING - Already exists 'VAfg5HnAgew' by 'yama'.
+2023-05-08 01:53:31,808 - root - WARNING - Already exists 'rqBYsxixHo8' by 'yama'.
+2023-05-08 01:53:31,808 - root - WARNING - Already exists '1hDPA00NceM' by 'yama'.
+2023-05-08 01:53:31,809 - root - WARNING - Already exists 'wakCtB5ONuo' by 'yama'.
+2023-05-08 01:53:31,812 - root - WARNING - Already exists '6bF1dPn1CDc' by 'yama'.
+2023-05-08 01:53:31,813 - root - WARNING - Already exists 'XrUCwI7xyhQ' by 'yama'.
+2023-05-08 01:53:31,814 - root - WARNING - Already exists 'Odv-zbpy-Y8' by 'yama'.
+2023-05-08 01:53:31,815 - root - WARNING - Already exists '2By3feOVw20' by 'yama'.
+2023-05-08 01:53:44,185 - root - INFO - Downloaded music 'DCFxibSc_FY' by 'yama' successfully.
+2023-05-08 01:53:45,441 - root - INFO - Downloaded music 'TXj6YvZlYsw' by 'yama' successfully.
+2023-05-08 01:53:45,460 - root - INFO - Downloaded music '-oa1N_aeQvs' by 'yama' successfully.
+2023-05-08 01:53:49,541 - root - INFO - Downloaded music '_ABe7rZw7pQ' by 'yama' successfully.
+2023-05-08 01:53:56,095 - root - INFO - Downloaded music 'xw3VuvLQFrk' by 'yama' successfully.
+2023-05-08 01:54:06,726 - root - INFO - Downloaded music '6WfNjo5GuSQ' by 'yama' successfully.
+2023-05-08 01:55:30,625 - django.request - WARNING - Not Found: /media/yama/img/-oa1N_aeQvs.jpg
+2023-05-08 01:55:30,643 - django.request - WARNING - Not Found: /media/yama/img/-oa1N_aeQvs.jpg
+2023-05-08 01:55:30,655 - django.request - WARNING - Not Found: /media/yama/img/-oa1N_aeQvs.jpg
+2023-05-08 01:55:43,063 - root - INFO - Downloaded music 'ouBJTXs66Qo' by 'yama' successfully.
+2023-05-08 01:55:44,232 - root - WARNING - Already exists 'TXj6YvZlYsw' by 'yama'.
+2023-05-08 01:55:44,232 - root - WARNING - Already exists 'DCFxibSc_FY' by 'yama'.
+2023-05-08 01:55:44,234 - root - WARNING - Already exists '-oa1N_aeQvs' by 'yama'.
+2023-05-08 01:55:44,234 - root - WARNING - Already exists '6WfNjo5GuSQ' by 'yama'.
+2023-05-08 01:55:44,235 - root - WARNING - Already exists 'DCFxibSc_FY' by 'yama'.
+2023-05-08 01:55:44,236 - root - WARNING - Already exists 'xw3VuvLQFrk' by 'yama'.
+2023-05-08 01:55:44,238 - root - WARNING - Already exists '-oa1N_aeQvs' by 'yama'.
+2023-05-08 01:55:44,240 - root - WARNING - Already exists 'nRqTi-16l6o' by 'yama'.
+2023-05-08 01:55:44,244 - root - WARNING - Already exists 'RcFBkhJuoiU' by 'yama'.
+2023-05-08 01:55:44,247 - root - WARNING - Already exists 'XrUCwI7xyhQ' by 'yama'.
+2023-05-08 01:55:44,250 - root - WARNING - Already exists 'nRqTi-16l6o' by 'yama'.
+2023-05-08 01:55:59,072 - root - INFO - Downloaded music 'jQf-_IPbi4s' by 'yama' successfully.
+2023-05-08 01:56:31,299 - root - ERROR - Failed to download music 'J-PIE2qGW_U' by 'yama'.
+2023-05-08 01:56:32,408 - root - ERROR - Failed to download music 'kTFLcvHDqgY' by 'yama'.
+2023-05-08 01:56:33,497 - root - ERROR - Failed to download music 'I3rn9j2Hy6U' by 'yama'.
+2023-05-08 01:56:34,636 - root - WARNING - Already exists 'jQf-_IPbi4s' by 'yama'.
+2023-05-08 01:56:34,637 - root - WARNING - Already exists 'RcFBkhJuoiU' by 'yama'.
+2023-05-08 01:56:34,638 - root - WARNING - Already exists 'XrUCwI7xyhQ' by 'yama'.
+2023-05-08 01:56:34,639 - root - WARNING - Already exists 'nRqTi-16l6o' by 'yama'.
+2023-05-08 01:56:34,640 - root - WARNING - Already exists '_ABe7rZw7pQ' by 'yama'.
+2023-05-08 01:56:34,641 - root - WARNING - Already exists 'E9Dru15yq9w' by 'yama'.
+2023-05-08 01:56:34,641 - root - WARNING - Already exists 'E9Dru15yq9w' by 'yama'.
+2023-05-08 01:56:34,643 - root - WARNING - Already exists 'TeXWm3z1ECw' by 'yama'.
+2023-05-08 01:56:34,644 - root - WARNING - Already exists 'w0JrZSqGZ5M' by 'yama'.
+2023-05-08 01:56:34,646 - root - WARNING - Already exists 'wq1GacStaj4' by 'yama'.
+2023-05-08 01:56:34,646 - root - WARNING - Already exists 'bbmOEiorMrg' by 'yama'.
+2023-05-08 01:56:34,647 - root - WARNING - Already exists 'ZaQPigOGdG4' by 'yama'.
+2023-05-08 01:56:34,649 - root - WARNING - Already exists 'XrUCwI7xyhQ' by 'yama'.
+2023-05-08 01:56:34,650 - root - WARNING - Already exists 'Odv-zbpy-Y8' by 'yama'.
+2023-05-08 01:56:41,559 - django.request - WARNING - Not Found: /media/Vaundy/img/7HgJIAUtICU.jpg
+2023-05-08 01:56:41,562 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 01:56:44,125 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 01:56:44,127 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 01:56:48,507 - root - INFO - Downloaded music 'kTFLcvHDqgY' by 'yama' successfully.
+2023-05-08 01:56:49,486 - root - WARNING - Already exists 'wq1GacStaj4' by 'yama'.
+2023-05-08 01:56:49,487 - root - WARNING - Already exists 'bbmOEiorMrg' by 'yama'.
+2023-05-08 01:56:49,488 - root - WARNING - Already exists 'ZaQPigOGdG4' by 'yama'.
+2023-05-08 01:56:49,490 - root - WARNING - Already exists 'Odv-zbpy-Y8' by 'yama'.
+2023-05-08 01:56:49,490 - root - WARNING - Already exists 'XrUCwI7xyhQ' by 'yama'.
+2023-05-08 01:56:49,491 - root - WARNING - Already exists '_ABe7rZw7pQ' by 'yama'.
+2023-05-08 01:56:49,492 - root - WARNING - Already exists '2By3feOVw20' by 'yama'.
+2023-05-08 01:57:02,057 - root - INFO - Downloaded music 'zIE8htt4HLg' by 'yama' successfully.
+2023-05-08 01:57:02,151 - root - INFO - Downloaded music 'quAkTWw8NPc' by 'yama' successfully.
+2023-05-08 01:57:04,198 - root - INFO - Downloaded music 'munngDZLwO4' by 'yama' successfully.
+2023-05-08 01:57:04,251 - root - INFO - Downloaded music 'ikqA7l2QHc4' by 'yama' successfully.
+2023-05-08 01:57:04,402 - root - INFO - Downloaded music '87HUWL9J_2Y' by 'yama' successfully.
+2023-05-08 01:57:13,659 - root - INFO - Downloaded music 'w8klWfstdII' by 'yama' successfully.
+2023-05-08 01:57:14,501 - root - INFO - Downloaded music 'lj64XpVS7dk' by 'yama' successfully.
+2023-05-08 01:57:15,798 - root - INFO - Downloaded music 'z4LfZpL_DRU' by 'yama' successfully.
+2023-05-08 01:57:17,011 - root - WARNING - Already exists 'zIE8htt4HLg' by 'yama'.
+2023-05-08 01:57:17,012 - root - WARNING - Already exists 'munngDZLwO4' by 'yama'.
+2023-05-08 01:57:17,013 - root - WARNING - Already exists 'w8klWfstdII' by 'yama'.
+2023-05-08 01:57:17,015 - root - WARNING - Already exists 'lj64XpVS7dk' by 'yama'.
+2023-05-08 01:57:17,016 - root - WARNING - Already exists 'z4LfZpL_DRU' by 'yama'.
+2023-05-08 01:57:17,016 - root - WARNING - Already exists '1KN4DhVXw-Y' by 'yama'.
+2023-05-08 01:57:17,019 - root - WARNING - Already exists 'DC6JppqHkaM' by 'yama'.
+2023-05-08 01:57:28,512 - root - INFO - Downloaded music 'n2aX8ZMxUIE' by 'yama' successfully.
+2023-05-08 01:57:28,951 - root - INFO - Downloaded music 'F0F1rrVI7cQ' by 'yama' successfully.
+2023-05-08 01:57:30,886 - root - INFO - Downloaded music 'Pr6_cy4o8yo' by 'yama' successfully.
+2023-05-08 02:10:32,736 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\web_scutter\music_list.py changed, reloading.
+2023-05-08 02:11:33,664 - root - INFO - Downloaded music 'gPpZJlE0Ca8' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:11:34,125 - django.request - WARNING - Not Found: /media/滾石唱片ROCKRECORDS/img/artist.jpg
+2023-05-08 02:12:01,724 - root - INFO - Downloaded music 'tu5I07YziH0' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:02,176 - root - INFO - Downloaded music '-8le4taxDZU' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:02,877 - root - INFO - Downloaded music 'Gbxx9IxajP4' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:04,791 - root - INFO - Downloaded music '32J1032XwHA' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:13,556 - root - INFO - Downloaded music 'Ygr1OOh8hvI' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:14,340 - root - INFO - Downloaded music 'SHrCg3mcTKM' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:17,026 - root - INFO - Downloaded music '_dsyAjwf620' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:25,912 - root - INFO - Downloaded music '2LjMdgNkP5w' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:26,248 - root - INFO - Downloaded music 'wUNThzrEZoI' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:36,970 - root - INFO - Downloaded music '_ly2bKHT_BU' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:37,593 - root - INFO - Downloaded music 'xHsSWiLsIRY' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:40,797 - root - ERROR - Failed to download music '_ly2bKHT_BU' by '滾石唱片ROCKRECORDS'.
+2023-05-08 02:12:47,728 - root - ERROR - Failed to download music 'HEBZu6GWOGU' by '滾石唱片ROCKRECORDS'.
+2023-05-08 02:12:56,661 - root - INFO - Downloaded music '8XlkDM4VUeo' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:12:57,108 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 48, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x007A8893+48451]
+	(No symbol) [0x0073B8A1]
+	(No symbol) [0x00645058]
+	(No symbol) [0x006479D6]
+	(No symbol) [0x00649631]
+	(No symbol) [0x006496D0]
+	(No symbol) [0x00691A58]
+	(No symbol) [0x0069047C]
+	(No symbol) [0x0068A0B6]
+	(No symbol) [0x00667E08]
+	(No symbol) [0x00668F2D]
+	GetHandleVerifier [0x00A08E3A+2540266]
+	GetHandleVerifier [0x00A48959+2801161]
+	GetHandleVerifier [0x00A4295C+2776588]
+	GetHandleVerifier [0x00832280+612144]
+	(No symbol) [0x00744F6C]
+	(No symbol) [0x007411D8]
+	(No symbol) [0x007412BB]
+	(No symbol) [0x00734857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 213, in download_songs
+    success = download( music_ID_list=[song['music_ID'] for song in chunk],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\dow.py", line 51, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 62, in crawl
+    driver.quit()
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+2023-05-08 02:14:39,518 - root - INFO - Downloaded music 'P8fqHvr82-o' by '滾石唱片ROCKRECORDS' successfully.
+2023-05-08 02:14:39,969 - django.request - WARNING - Not Found: /media/滾石唱片ROCKRECORDS/img/artist.jpg
+2023-05-08 02:14:47,677 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py changed, reloading.
+2023-05-08 02:15:47,034 - root - INFO - Downloaded music '7HgJIAUtICU' by 'Vaundy' successfully.
+2023-05-08 02:16:16,754 - root - INFO - Downloaded music 'lYLa6zyjhSI' by 'Vaundy' successfully.
+2023-05-08 02:16:16,776 - root - INFO - Downloaded music 'fJZrmX9oWj4' by 'Vaundy' successfully.
+2023-05-08 02:16:17,828 - root - INFO - Downloaded music 'nrLZ-vTiQa4' by 'Vaundy' successfully.
+2023-05-08 02:16:19,087 - root - INFO - Downloaded music 'WSoaa-Cmz9M' by 'Vaundy' successfully.
+2023-05-08 02:16:19,767 - root - INFO - Downloaded music 'V-gxqhWEbxI' by 'Vaundy' successfully.
+2023-05-08 02:16:31,042 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-08 02:16:33,478 - root - INFO - Downloaded music 'B50A9Nf5FCE' by 'Vaundy' successfully.
+2023-05-08 02:16:33,479 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-08 02:16:33,480 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-08 02:16:34,642 - root - INFO - Downloaded music 'tQq8C7irREk' by 'Vaundy' successfully.
+2023-05-08 02:16:35,311 - root - INFO - Downloaded music 'XEEXE8Ei5SA' by 'Vaundy' successfully.
+2023-05-08 02:16:39,152 - root - INFO - Downloaded music 'fjx_uy5eD8g' by 'Vaundy' successfully.
+2023-05-08 02:16:45,880 - root - INFO - Downloaded music 'FL1QjjkZVm4' by 'Vaundy' successfully.
+2023-05-08 02:16:48,131 - root - INFO - Downloaded music '1VxvaKbH-CU' by 'Vaundy' successfully.
+2023-05-08 02:16:49,675 - root - INFO - Downloaded music 'YWXKuZ0Oy2M' by 'Vaundy' successfully.
+2023-05-08 02:16:50,997 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-08 02:16:50,998 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-08 02:16:50,998 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-08 02:16:51,003 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-08 02:16:51,003 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-08 02:16:51,004 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-08 02:16:51,006 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-08 02:16:51,009 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-08 02:16:51,011 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-08 02:16:51,013 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-08 02:16:51,015 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-08 02:17:07,190 - root - INFO - Downloaded music 'FT0GKCuSaW0' by 'Vaundy' successfully.
+2023-05-08 02:17:07,939 - root - INFO - Downloaded music '3SR57oeegws' by 'Vaundy' successfully.
+2023-05-08 02:17:08,140 - root - INFO - Downloaded music 'RqGTtwGOw44' by 'Vaundy' successfully.
+2023-05-08 02:17:39,855 - root - ERROR - Failed to download music 'D0ATlLRLHzs' by 'Vaundy'.
+2023-05-08 02:17:40,935 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-08 02:17:40,936 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-08 02:17:40,939 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-08 02:17:40,940 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-08 02:17:40,941 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-08 02:17:40,942 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-08 02:17:56,148 - root - INFO - Downloaded music '6h6AQbdTkaE' by 'Vaundy' successfully.
+2023-05-08 02:17:56,493 - root - INFO - Downloaded music '3Dy4EbMPkY0' by 'Vaundy' successfully.
+2023-05-08 02:19:53,305 - django.request - WARNING - Not Found: /media/K0P1/songs/9Kr3PJ6DfcQ.mp3
+2023-05-08 02:19:53,306 - django.request - WARNING - Not Found: /media/K0P1/img/9Kr3PJ6DfcQ.jpg
+2023-05-08 02:19:53,309 - django.request - WARNING - Not Found: /media/K0P1/img/artist.jpg
+2023-05-08 02:20:21,243 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\web_scutter\music_list.py changed, reloading.
+2023-05-08 02:24:37,273 - root - INFO - Downloaded music 'KWlP4gHOvXo' by 'decajoins' successfully.
+2023-05-08 02:25:27,662 - root - INFO - Downloaded music '7txY0tW3X2I' by 'decajoins' successfully.
+2023-05-08 02:25:37,503 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 195, in download_songs
+    music_list_infos = query_music_list(url=artist_url)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\web_scutter\music_list.py", line 50, in query_music_list
+    result.append({'music_ID': ID, 'title': clear_str(title , )})
+                                            ^^^^^^^^^^^^^^^^^^^
+TypeError: clear_str() missing 1 required positional argument: 'artist'
+2023-05-08 02:26:17,183 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\web_scutter\music_list.py changed, reloading.
+2023-05-08 02:27:08,357 - root - INFO - Downloaded music 'O3r_2ulkuKY' by 'decajoins' successfully.
+2023-05-08 02:27:20,792 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:27:20,794 - root - WARNING - Already exists '7txY0tW3X2I' by 'decajoins'.
+2023-05-08 02:27:20,796 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:27:36,347 - root - INFO - Downloaded music 'SuFFfevTkyY' by 'decajoins' successfully.
+2023-05-08 02:27:37,276 - root - INFO - Downloaded music '4FFALDn1yGQ' by 'decajoins' successfully.
+2023-05-08 02:27:39,649 - root - INFO - Downloaded music 'a8ja-BFJ7eQ' by 'decajoins' successfully.
+2023-05-08 02:27:39,651 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:27:39,702 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:27:39,704 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:27:42,164 - root - INFO - Downloaded music 'FonjL7DQAUQ' by 'decajoins' successfully.
+2023-05-08 02:27:48,889 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:27:48,891 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:27:48,893 - root - WARNING - Already exists '4FFALDn1yGQ' by 'decajoins'.
+2023-05-08 02:27:48,893 - root - WARNING - Already exists '7txY0tW3X2I' by 'decajoins'.
+2023-05-08 02:27:48,894 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:27:48,895 - root - WARNING - Already exists 'SuFFfevTkyY' by 'decajoins'.
+2023-05-08 02:27:48,896 - root - WARNING - Already exists 'a8ja-BFJ7eQ' by 'decajoins'.
+2023-05-08 02:27:48,897 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:27:48,897 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:27:48,899 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:27:53,190 - root - INFO - Downloaded music 'OCzs0d9NT1A' by 'decajoins' successfully.
+2023-05-08 02:28:04,881 - root - INFO - Downloaded music 'bD12C-mGth4' by 'decajoins' successfully.
+2023-05-08 02:28:07,679 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BBAE84E810>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。')': /session/f28bf7fd62762b98003bee08957bca3c
+2023-05-08 02:28:07,912 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:28:08,310 - root - WARNING - Already exists 'OCzs0d9NT1A' by 'decajoins'.
+2023-05-08 02:28:08,369 - root - INFO - Downloaded music 'CnihjKTVKeg' by 'decajoins' successfully.
+2023-05-08 02:28:09,079 - root - INFO - Downloaded music 'UnOEGd3JpWM' by 'decajoins' successfully.
+2023-05-08 02:28:11,770 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BBAE454C90>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。')': /session/f28bf7fd62762b98003bee08957bca3c
+2023-05-08 02:28:14,747 - root - ERROR - Failed to download music 'CnihjKTVKeg' by 'decajoins'.
+2023-05-08 02:28:15,868 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BBAEE591D0>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。')': /session/f28bf7fd62762b98003bee08957bca3c
+2023-05-08 02:28:27,497 - root - ERROR - Failed to download music 'UnOEGd3JpWM' by 'decajoins'.
+2023-05-08 02:28:35,430 - root - INFO - Downloaded music 'puPnKgV9I6I' by 'decajoins' successfully.
+2023-05-08 02:28:36,650 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:28:36,651 - root - WARNING - Already exists 'puPnKgV9I6I' by 'decajoins'.
+2023-05-08 02:28:36,651 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:28:36,652 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:28:36,652 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:28:36,652 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:28:36,655 - root - WARNING - Already exists '7txY0tW3X2I' by 'decajoins'.
+2023-05-08 02:28:36,656 - root - WARNING - Already exists '7txY0tW3X2I' by 'decajoins'.
+2023-05-08 02:28:36,657 - root - WARNING - Already exists 'OCzs0d9NT1A' by 'decajoins'.
+2023-05-08 02:28:36,658 - root - WARNING - Already exists 'SuFFfevTkyY' by 'decajoins'.
+2023-05-08 02:28:36,660 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:28:36,848 - root - ERROR - Failed to download music 'puPnKgV9I6I' by 'decajoins'.
+2023-05-08 02:28:38,011 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:28:38,017 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:28:38,168 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:28:38,169 - root - WARNING - Already exists 'puPnKgV9I6I' by 'decajoins'.
+2023-05-08 02:28:38,169 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:28:38,355 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:28:38,356 - root - WARNING - Already exists '7txY0tW3X2I' by 'decajoins'.
+2023-05-08 02:28:38,357 - root - WARNING - Already exists '7txY0tW3X2I' by 'decajoins'.
+2023-05-08 02:28:38,394 - root - WARNING - Already exists 'OCzs0d9NT1A' by 'decajoins'.
+2023-05-08 02:28:38,396 - root - WARNING - Already exists 'SuFFfevTkyY' by 'decajoins'.
+2023-05-08 02:28:38,399 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:28:54,452 - root - INFO - Downloaded music 'ZtL4thfsxEU' by 'decajoins' successfully.
+2023-05-08 02:28:56,389 - root - INFO - Downloaded music 'MHgWOcznzms' by 'decajoins' successfully.
+2023-05-08 02:28:56,898 - root - WARNING - Already exists 'ZtL4thfsxEU' by 'decajoins'.
+2023-05-08 02:29:03,407 - root - WARNING - Already exists 'MHgWOcznzms' by 'decajoins'.
+2023-05-08 02:29:05,909 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 02:29:23,842 - root - ERROR - Failed to download music 'FkRIDAvJ57A' by 'decajoins'.
+2023-05-08 02:29:25,707 - root - ERROR - Failed to download music 'BVSRjbg3_0o' by 'decajoins'.
+2023-05-08 02:29:26,331 - root - ERROR - Failed to download music 'BVSRjbg3_0o' by 'decajoins'.
+2023-05-08 02:29:26,763 - root - WARNING - Already exists 'OCzs0d9NT1A' by 'decajoins'.
+2023-05-08 02:29:26,763 - root - WARNING - Already exists 'MHgWOcznzms' by 'decajoins'.
+2023-05-08 02:29:26,765 - root - WARNING - Already exists 'ZtL4thfsxEU' by 'decajoins'.
+2023-05-08 02:29:26,765 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:29:26,765 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:29:26,766 - root - WARNING - Already exists 'SuFFfevTkyY' by 'decajoins'.
+2023-05-08 02:29:27,045 - root - ERROR - Failed to download music 'FkRIDAvJ57A' by 'decajoins'.
+2023-05-08 02:29:28,293 - root - WARNING - Already exists 'MHgWOcznzms' by 'decajoins'.
+2023-05-08 02:29:28,294 - root - WARNING - Already exists 'OCzs0d9NT1A' by 'decajoins'.
+2023-05-08 02:29:28,295 - root - WARNING - Already exists 'ZtL4thfsxEU' by 'decajoins'.
+2023-05-08 02:29:28,296 - root - WARNING - Already exists 'SuFFfevTkyY' by 'decajoins'.
+2023-05-08 02:29:28,297 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:29:28,298 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:29:39,941 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 02:29:39,945 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 02:29:49,785 - root - INFO - Downloaded music 'MrxI-lW7adU' by 'decajoins' successfully.
+2023-05-08 02:29:52,809 - root - WARNING - Already exists 'MrxI-lW7adU' by 'decajoins'.
+2023-05-08 02:29:55,744 - root - INFO - Downloaded music 'ngysuGig_2Y' by 'decajoins' successfully.
+2023-05-08 02:29:55,746 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:29:55,747 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:29:55,749 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:30:29,462 - root - INFO - Downloaded music 'EYbnzXvHfU8' by 'decajoins' successfully.
+2023-05-08 02:30:29,472 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:30:29,476 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:30:29,479 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:30:36,414 - root - WARNING - Already exists 'EYbnzXvHfU8' by 'decajoins'.
+2023-05-08 02:30:40,322 - root - INFO - Downloaded music 'ikn3Drf3PpU' by 'decajoins' successfully.
+2023-05-08 02:30:42,884 - root - WARNING - Already exists 'ikn3Drf3PpU' by 'decajoins'.
+2023-05-08 02:30:45,876 - root - INFO - Downloaded music 'wHNsSxYtCpE' by 'decajoins' successfully.
+2023-05-08 02:31:01,865 - root - ERROR - Failed to download music 'X5R_Pym7Twk' by 'decajoins'.
+2023-05-08 02:31:02,581 - root - ERROR - Failed to download music 'wHNsSxYtCpE' by 'decajoins'.
+2023-05-08 02:31:03,690 - root - ERROR - Failed to download music 'ngysuGig_2Y' by 'decajoins'.
+2023-05-08 02:31:04,827 - root - WARNING - Already exists 'EYbnzXvHfU8' by 'decajoins'.
+2023-05-08 02:31:04,830 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:31:04,830 - root - WARNING - Already exists 'wHNsSxYtCpE' by 'decajoins'.
+2023-05-08 02:31:04,832 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:31:04,833 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:31:04,836 - root - WARNING - Already exists '4FFALDn1yGQ' by 'decajoins'.
+2023-05-08 02:31:04,837 - root - WARNING - Already exists '7txY0tW3X2I' by 'decajoins'.
+2023-05-08 02:31:04,841 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:31:04,841 - root - WARNING - Already exists 'SuFFfevTkyY' by 'decajoins'.
+2023-05-08 02:31:04,843 - root - WARNING - Already exists 'puPnKgV9I6I' by 'decajoins'.
+2023-05-08 02:31:04,844 - root - WARNING - Already exists 'MHgWOcznzms' by 'decajoins'.
+2023-05-08 02:31:04,848 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:31:09,859 - root - ERROR - Failed to download music 'X5R_Pym7Twk' by 'decajoins'.
+2023-05-08 02:31:10,790 - root - WARNING - Already exists 'wHNsSxYtCpE' by 'decajoins'.
+2023-05-08 02:31:10,790 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:31:10,791 - root - WARNING - Already exists 'FonjL7DQAUQ' by 'decajoins'.
+2023-05-08 02:31:10,791 - root - WARNING - Already exists 'EYbnzXvHfU8' by 'decajoins'.
+2023-05-08 02:31:10,793 - root - WARNING - Already exists 'KWlP4gHOvXo' by 'decajoins'.
+2023-05-08 02:31:10,794 - root - WARNING - Already exists '7txY0tW3X2I' by 'decajoins'.
+2023-05-08 02:31:10,795 - root - WARNING - Already exists 'SuFFfevTkyY' by 'decajoins'.
+2023-05-08 02:31:10,796 - root - WARNING - Already exists '4FFALDn1yGQ' by 'decajoins'.
+2023-05-08 02:31:10,796 - root - WARNING - Already exists 'O3r_2ulkuKY' by 'decajoins'.
+2023-05-08 02:31:10,799 - root - WARNING - Already exists 'puPnKgV9I6I' by 'decajoins'.
+2023-05-08 02:31:10,800 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:31:10,801 - root - WARNING - Already exists 'MHgWOcznzms' by 'decajoins'.
+2023-05-08 02:31:22,017 - root - INFO - Downloaded music 'IdvT_Tf1-AA' by 'decajoins' successfully.
+2023-05-08 02:31:22,820 - root - INFO - Downloaded music 's4pIMKEKd6k' by 'decajoins' successfully.
+2023-05-08 02:31:24,586 - root - WARNING - Already exists 'IdvT_Tf1-AA' by 'decajoins'.
+2023-05-08 02:31:25,026 - root - WARNING - Already exists 's4pIMKEKd6k' by 'decajoins'.
+2023-05-08 02:31:50,898 - root - ERROR - Failed to download music 'kZecE9AeELI' by 'decajoins'.
+2023-05-08 02:31:51,958 - root - WARNING - Already exists 'IdvT_Tf1-AA' by 'decajoins'.
+2023-05-08 02:31:51,961 - root - WARNING - Already exists 'MHgWOcznzms' by 'decajoins'.
+2023-05-08 02:31:51,962 - root - WARNING - Already exists 's4pIMKEKd6k' by 'decajoins'.
+2023-05-08 02:31:51,963 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:31:51,967 - root - WARNING - Already exists 'ikn3Drf3PpU' by 'decajoins'.
+2023-05-08 02:31:51,969 - root - WARNING - Already exists 'wHNsSxYtCpE' by 'decajoins'.
+2023-05-08 02:31:56,613 - root - ERROR - Failed to download music 'kZecE9AeELI' by 'decajoins'.
+2023-05-08 02:31:57,651 - root - WARNING - Already exists 'IdvT_Tf1-AA' by 'decajoins'.
+2023-05-08 02:31:57,651 - root - WARNING - Already exists 'MHgWOcznzms' by 'decajoins'.
+2023-05-08 02:31:57,657 - root - WARNING - Already exists 's4pIMKEKd6k' by 'decajoins'.
+2023-05-08 02:31:57,658 - root - WARNING - Already exists 'bD12C-mGth4' by 'decajoins'.
+2023-05-08 02:31:57,659 - root - WARNING - Already exists 'ikn3Drf3PpU' by 'decajoins'.
+2023-05-08 02:31:57,666 - root - WARNING - Already exists 'wHNsSxYtCpE' by 'decajoins'.
+2023-05-08 02:32:13,339 - root - INFO - Downloaded music 'FkRIDAvJ57A' by 'decajoins' successfully.
+2023-05-08 02:32:13,702 - root - INFO - Downloaded music 'XW6E2wuXzBg' by 'decajoins' successfully.
+2023-05-08 02:32:13,942 - root - INFO - Downloaded music 'nJfq8TpSpTo' by 'decajoins' successfully.
+2023-05-08 02:32:14,236 - root - WARNING - Already exists 'FkRIDAvJ57A' by 'decajoins'.
+2023-05-08 02:32:14,704 - root - WARNING - Already exists 'XW6E2wuXzBg' by 'decajoins'.
+2023-05-08 02:32:15,722 - root - INFO - Downloaded music 'kZecE9AeELI' by 'decajoins' successfully.
+2023-05-08 02:32:16,707 - root - WARNING - Already exists 'nJfq8TpSpTo' by 'decajoins'.
+2023-05-08 02:32:31,481 - root - INFO - Downloaded music 'BVSRjbg3_0o' by 'decajoins' successfully.
+2023-05-08 02:32:31,505 - root - INFO - Downloaded music 'yf8vHUSHumY' by 'decajoins' successfully.
+2023-05-08 02:32:31,561 - root - WARNING - Already exists 'BVSRjbg3_0o' by 'decajoins'.
+2023-05-08 02:32:42,052 - root - WARNING - Already exists 'yf8vHUSHumY' by 'decajoins'.
+2023-05-08 02:32:44,442 - root - ERROR - Failed to download music 'kZecE9AeELI' by 'decajoins'.
+2023-05-08 02:32:47,468 - root - ERROR - Failed to download music '75Kz2bY_zwU' by 'decajoins'.
+2023-05-08 02:32:59,220 - root - ERROR - Failed to download music '75Kz2bY_zwU' by 'decajoins'.
+2023-05-08 02:33:06,229 - root - ERROR - Failed to download music 'Vt0fgich384' by 'decajoins'.
+2023-05-08 02:33:10,287 - root - ERROR - Failed to download music '6Gn1l4xmyrg' by 'decajoins'.
+2023-05-08 02:33:11,440 - root - WARNING - Already exists 'nJfq8TpSpTo' by 'decajoins'.
+2023-05-08 02:33:11,442 - root - WARNING - Already exists 'BVSRjbg3_0o' by 'decajoins'.
+2023-05-08 02:33:11,443 - root - WARNING - Already exists 'Vt0fgich384' by 'decajoins'.
+2023-05-08 02:33:11,444 - root - WARNING - Already exists 'yf8vHUSHumY' by 'decajoins'.
+2023-05-08 02:33:11,444 - root - WARNING - Already exists '6Gn1l4xmyrg' by 'decajoins'.
+2023-05-08 02:33:11,448 - root - WARNING - Already exists 'OCzs0d9NT1A' by 'decajoins'.
+2023-05-08 02:33:11,450 - root - WARNING - Already exists 'a8ja-BFJ7eQ' by 'decajoins'.
+2023-05-08 02:33:11,452 - root - WARNING - Already exists 'MrxI-lW7adU' by 'decajoins'.
+2023-05-08 02:33:11,456 - root - WARNING - Already exists 'ZtL4thfsxEU' by 'decajoins'.
+2023-05-08 02:33:29,160 - root - INFO - Downloaded music '64epRCoFXt8' by 'decajoins' successfully.
+2023-05-08 02:33:29,294 - root - INFO - Downloaded music 't7VXOCxwLDg' by 'decajoins' successfully.
+2023-05-08 02:33:30,455 - root - INFO - Downloaded music 'X5R_Pym7Twk' by 'decajoins' successfully.
+2023-05-08 02:33:43,765 - root - INFO - Downloaded music 'kSfmsXSCJzA' by 'decajoins' successfully.
+2023-05-08 02:33:49,536 - root - INFO - Downloaded music 'vWObhkASup0' by 'decajoins' successfully.
+2023-05-08 02:33:59,618 - root - ERROR - Failed to download music 'AKJnNeAFI3w' by 'decajoins'.
+2023-05-08 02:34:00,707 - root - WARNING - Already exists 'MrxI-lW7adU' by 'decajoins'.
+2023-05-08 02:34:00,708 - root - WARNING - Already exists 'vWObhkASup0' by 'decajoins'.
+2023-05-08 02:34:00,709 - root - WARNING - Already exists 'X5R_Pym7Twk' by 'decajoins'.
+2023-05-08 02:34:00,710 - root - WARNING - Already exists 'ZtL4thfsxEU' by 'decajoins'.
+2023-05-08 02:34:00,711 - root - WARNING - Already exists 'kSfmsXSCJzA' by 'decajoins'.
+2023-05-08 02:34:00,714 - root - WARNING - Already exists 'UnOEGd3JpWM' by 'decajoins'.
+2023-05-08 02:34:00,715 - root - WARNING - Already exists 'ngysuGig_2Y' by 'decajoins'.
+2023-05-08 02:34:00,715 - root - WARNING - Already exists 'EYbnzXvHfU8' by 'decajoins'.
+2023-05-08 02:34:00,718 - root - WARNING - Already exists 'CnihjKTVKeg' by 'decajoins'.
+2023-05-08 02:34:18,823 - root - INFO - Downloaded music 'mXwOUAXC3X8' by 'decajoins' successfully.
+2023-05-08 02:34:40,508 - root - INFO - Downloaded music '6Gn1l4xmyrg' by 'decajoins' successfully.
+2023-05-08 02:34:42,650 - root - INFO - Downloaded music 'HXL17Y2uAIQ' by 'decajoins' successfully.
+2023-05-08 02:34:43,662 - root - INFO - Downloaded music 'msGQhujTIX0' by 'decajoins' successfully.
+2023-05-08 02:34:50,351 - root - ERROR - Failed to download music 'EG4ZS0Oo5m0' by 'decajoins'.
+2023-05-08 02:34:52,824 - root - ERROR - Failed to download music 'liBa2WUaAlw' by 'decajoins'.
+2023-05-08 02:34:55,603 - root - INFO - Downloaded music 'PD6V5pt9GRs' by 'decajoins' successfully.
+2023-05-08 02:34:56,783 - root - WARNING - Already exists 'EYbnzXvHfU8' by 'decajoins'.
+2023-05-08 02:34:56,785 - root - WARNING - Already exists 'CnihjKTVKeg' by 'decajoins'.
+2023-05-08 02:34:56,790 - root - WARNING - Already exists 'HXL17Y2uAIQ' by 'decajoins'.
+2023-05-08 02:34:56,791 - root - WARNING - Already exists 'PD6V5pt9GRs' by 'decajoins'.
+2023-05-08 02:35:06,217 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 02:35:06,218 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 02:35:13,409 - root - INFO - Downloaded music 'liBa2WUaAlw' by 'decajoins' successfully.
+2023-05-08 02:35:31,706 - root - INFO - Downloaded music '7KJqs-kgRyA' by 'decajoins' successfully.
+2023-05-08 02:35:32,843 - root - INFO - Downloaded music 'Vt0fgich384' by 'decajoins' successfully.
+2023-05-08 02:35:33,829 - root - WARNING - Already exists 'nJfq8TpSpTo' by 'decajoins'.
+2023-05-08 02:35:33,831 - root - WARNING - Already exists 'Vt0fgich384' by 'decajoins'.
+2023-05-08 02:35:33,834 - root - WARNING - Already exists 'BVSRjbg3_0o' by 'decajoins'.
+2023-05-08 02:35:33,839 - root - WARNING - Already exists 'yf8vHUSHumY' by 'decajoins'.
+2023-05-08 02:35:33,839 - root - WARNING - Already exists 'OCzs0d9NT1A' by 'decajoins'.
+2023-05-08 02:35:33,840 - root - WARNING - Already exists '6Gn1l4xmyrg' by 'decajoins'.
+2023-05-08 02:35:33,842 - root - WARNING - Already exists 'a8ja-BFJ7eQ' by 'decajoins'.
+2023-05-08 02:35:33,846 - root - WARNING - Already exists 'MrxI-lW7adU' by 'decajoins'.
+2023-05-08 02:35:33,847 - root - WARNING - Already exists 't7VXOCxwLDg' by 'decajoins'.
+2023-05-08 02:35:33,847 - root - WARNING - Already exists 'vWObhkASup0' by 'decajoins'.
+2023-05-08 02:35:33,848 - root - WARNING - Already exists '64epRCoFXt8' by 'decajoins'.
+2023-05-08 02:35:33,850 - root - WARNING - Already exists 'ZtL4thfsxEU' by 'decajoins'.
+2023-05-08 02:35:33,850 - root - WARNING - Already exists 'X5R_Pym7Twk' by 'decajoins'.
+2023-05-08 02:35:33,851 - root - WARNING - Already exists 'kSfmsXSCJzA' by 'decajoins'.
+2023-05-08 02:35:42,854 - root - ERROR - Failed to download music '2QbpzSccoMk' by 'decajoins'.
+2023-05-08 02:35:48,479 - root - INFO - Downloaded music 'AKJnNeAFI3w' by 'decajoins' successfully.
+2023-05-08 02:35:49,442 - root - WARNING - Already exists 'MrxI-lW7adU' by 'decajoins'.
+2023-05-08 02:35:49,443 - root - WARNING - Already exists 'X5R_Pym7Twk' by 'decajoins'.
+2023-05-08 02:35:49,443 - root - WARNING - Already exists 'ZtL4thfsxEU' by 'decajoins'.
+2023-05-08 02:35:49,443 - root - WARNING - Already exists 'vWObhkASup0' by 'decajoins'.
+2023-05-08 02:35:49,450 - root - WARNING - Already exists 'kSfmsXSCJzA' by 'decajoins'.
+2023-05-08 02:35:49,454 - root - WARNING - Already exists 'ngysuGig_2Y' by 'decajoins'.
+2023-05-08 02:35:49,455 - root - WARNING - Already exists 'msGQhujTIX0' by 'decajoins'.
+2023-05-08 02:35:49,458 - root - WARNING - Already exists 'UnOEGd3JpWM' by 'decajoins'.
+2023-05-08 02:35:49,460 - root - WARNING - Already exists 'CnihjKTVKeg' by 'decajoins'.
+2023-05-08 02:35:49,461 - root - WARNING - Already exists 'mXwOUAXC3X8' by 'decajoins'.
+2023-05-08 02:35:49,463 - root - WARNING - Already exists 'EYbnzXvHfU8' by 'decajoins'.
+2023-05-08 02:35:49,464 - root - WARNING - Already exists 'liBa2WUaAlw' by 'decajoins'.
+2023-05-08 02:35:49,464 - root - WARNING - Already exists 'PD6V5pt9GRs' by 'decajoins'.
+2023-05-08 02:35:49,464 - root - WARNING - Already exists 'HXL17Y2uAIQ' by 'decajoins'.
+2023-05-08 02:36:04,124 - root - INFO - Downloaded music 'EG4ZS0Oo5m0' by 'decajoins' successfully.
+2023-05-08 02:36:05,104 - root - WARNING - Already exists 'EYbnzXvHfU8' by 'decajoins'.
+2023-05-08 02:36:05,111 - root - WARNING - Already exists 'CnihjKTVKeg' by 'decajoins'.
+2023-05-08 02:36:05,117 - root - WARNING - Already exists '7KJqs-kgRyA' by 'decajoins'.
+2023-05-08 02:36:05,117 - root - WARNING - Already exists 'liBa2WUaAlw' by 'decajoins'.
+2023-05-08 02:36:05,117 - root - WARNING - Already exists 'HXL17Y2uAIQ' by 'decajoins'.
+2023-05-08 02:36:05,122 - root - WARNING - Already exists 'PD6V5pt9GRs' by 'decajoins'.
+2023-05-08 02:36:20,700 - root - INFO - Downloaded music '2QbpzSccoMk' by 'decajoins' successfully.
+2023-05-08 09:20:17,032 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py changed, reloading.
+2023-05-08 09:46:38,494 - root - INFO - Downloaded music '-_PKhPMXMDY' by 'Vaundy' successfully.
+2023-05-08 09:46:50,308 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-08 09:46:50,310 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-08 09:46:50,317 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-08 09:46:50,318 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-08 09:46:50,320 - root - WARNING - Already exists 'fJZrmX9oWj4' by 'Vaundy'.
+2023-05-08 09:46:50,375 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-08 09:46:50,379 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-08 09:46:50,383 - root - WARNING - Already exists 'WSoaa-Cmz9M' by 'Vaundy'.
+2023-05-08 09:46:50,384 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-08 09:46:50,385 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-08 09:46:50,385 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-08 09:46:50,423 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-08 09:46:50,431 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-08 09:46:50,432 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-08 09:46:50,435 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-08 09:46:51,483 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-08 09:46:51,484 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-08 09:46:51,486 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-08 09:46:51,486 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-08 09:46:51,488 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-08 09:46:51,490 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-08 09:46:51,553 - root - WARNING - Already exists 'FT0GKCuSaW0' by 'Vaundy'.
+2023-05-08 09:46:51,558 - root - WARNING - Already exists 'RqGTtwGOw44' by 'Vaundy'.
+2023-05-08 09:46:51,560 - root - WARNING - Already exists '3SR57oeegws' by 'Vaundy'.
+2023-05-08 09:46:51,560 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-08 09:46:51,562 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-08 09:46:51,564 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-08 09:46:51,564 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-08 09:46:51,565 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-08 09:47:07,127 - root - INFO - Downloaded music 'D0ATlLRLHzs' by 'Vaundy' successfully.
+2023-05-08 09:47:08,160 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-08 09:47:08,165 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-08 09:47:08,165 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-08 09:47:08,166 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-08 09:47:08,167 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-08 09:47:08,171 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-08 09:47:08,205 - root - WARNING - Already exists '6h6AQbdTkaE' by 'Vaundy'.
+2023-05-08 09:47:08,217 - root - WARNING - Already exists '3Dy4EbMPkY0' by 'Vaundy'.
+2023-05-08 10:40:18,942 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:41:00,292 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-08 10:41:39,316 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:44:29,004 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:44:42,157 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:49:10,823 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:49:18,512 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:49:39,220 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:50:12,973 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:50:12,982 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 10:51:33,365 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:52:17,503 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:52:19,657 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-08 10:53:12,399 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:53:48,055 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:54:07,985 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:55:48,319 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:56:24,874 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 10:56:35,483 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:12:35,426 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:12:35,428 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 11:30:13,139 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:30:28,405 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:30:37,342 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:32:35,244 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:33:17,064 - django.request - ERROR - Internal Server Error: /music/my_music_list/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: "include'./template/music_player/player_big.html'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 67, in my_music_list
+    return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 206, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'include'./template/music_player/player_big.html''. Did you forget to register or load this tag?
+2023-05-08 11:33:17,313 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-08 11:34:33,094 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:34:40,510 - django.request - ERROR - Internal Server Error: /music/my_music_list/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: "include'./template/music_player/player_big.html'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 67, in my_music_list
+    return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 206, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'include'./template/music_player/player_big.html''. Did you forget to register or load this tag?
+2023-05-08 11:34:40,727 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-08 11:34:58,502 - django.request - ERROR - Internal Server Error: /music/my_music_list/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: "include'./template/music_player/player_big.html'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 67, in my_music_list
+    return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 206, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'include'./template/music_player/player_big.html''. Did you forget to register or load this tag?
+2023-05-08 11:34:58,724 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-08 11:35:30,172 - django.request - ERROR - Internal Server Error: /music/my_music_list/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: "include'./template/music_player/player_big.html'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 67, in my_music_list
+    return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 206, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'include'./template/music_player/player_big.html''. Did you forget to register or load this tag?
+2023-05-08 11:36:19,282 - django.request - ERROR - Internal Server Error: /music/my_music_list/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\defaulttags.py", line 1026, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'any'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 67, in my_music_list
+    return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 206, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\defaulttags.py", line 1088, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\defaulttags.py", line 1028, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'any' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+2023-05-08 11:36:28,834 - django.request - ERROR - Internal Server Error: /music/my_music_list/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: "include'./template/music_player/player_big.html'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 67, in my_music_list
+    return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 206, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 36: 'include'./template/music_player/player_big.html''. Did you forget to register or load this tag?
+2023-05-08 11:36:46,070 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:37:50,142 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:38:11,154 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:38:23,398 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:39:01,696 - django.request - ERROR - Internal Server Error: /music/my_music_list/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: template/music_player/music_player_big.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 67, in my_music_list
+    return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: template/music_player/music_player_big.html
+2023-05-08 11:39:01,862 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-08 11:39:25,202 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:54:51,752 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 11:56:02,332 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:01:38,951 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:03:26,275 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:04:58,060 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:05:35,813 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:06:35,652 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:06:56,584 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:11:33,642 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:12:25,986 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:12:42,097 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:12:54,365 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:14:47,290 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:17:12,496 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:17:23,393 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:17:48,943 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:19:36,084 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:29:02,767 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:31:45,378 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:31:54,754 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:32:22,257 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:32:55,442 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:35:10,743 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:36:52,298 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:39:33,964 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:40:40,548 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:40:52,999 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:41:10,436 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:44:25,859 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:44:48,410 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:46:39,153 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:46:43,855 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:48:30,497 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:50:19,560 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:52:04,574 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:52:34,308 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:53:44,830 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:55:49,715 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 12:59:46,020 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:01:36,557 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:03:06,312 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:03:07,351 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:04:00,662 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:06:07,399 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:06:32,591 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:08:22,523 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:09:33,909 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:11:35,039 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:11:48,038 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:12:11,514 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:14:38,182 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:15:31,859 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:16:32,880 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:16:55,393 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:00,317 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:03,602 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:03,606 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:05,696 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:05,698 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:08,672 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:08,674 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:09,893 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:09,895 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:11,148 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:11,150 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:12,333 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:12,336 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:13,831 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:13,832 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:15,389 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:15,391 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:16,646 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:16,648 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:17,696 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:17,699 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:18,621 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:18,624 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:19,856 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:19,860 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:37,979 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:40,662 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:40,663 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:41,522 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:41,526 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:42,463 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3
+2023-05-08 13:19:42,466 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:49,625 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/img/WYB8xGSW-fk.jpg
+2023-05-08 13:19:49,626 - django.request - WARNING - Not Found: /media/台灣華納日韓官方頻道/songs/WYB8xGSW-fk.mp3

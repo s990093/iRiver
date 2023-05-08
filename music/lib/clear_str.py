@@ -2,7 +2,8 @@ import re
 
 
 def clear_str(title, artist):
-    title = re.sub(r'\s+', '', title)   #刪除格
+    if artist:
+        title = re.sub(r'\s+', '', title)   #刪除格
     # 英文
     title = re.sub(r'official|music|video|Audio|demo|Acoustic|version|MV|HD|Remix|live|4k|cover|OP', '', title, flags=re.IGNORECASE) # 刪除 official, music, video (忽略大小寫)
     # 中文

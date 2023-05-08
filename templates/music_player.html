@@ -5,6 +5,14 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link
       rel="stylesheet"
+      href="  {% static './css/music_list/music_player_buttom.css' %} "
+    />
+    <link
+      rel="stylesheet"
+      href="  {% static './css/music_list/muic_player_top/music_player_top.css' %} "
+    />
+    <link
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200"
     />
     <link
@@ -23,16 +31,19 @@
     </div>
 
     <!-- 大撥放介面 -->
-   
-      <div id="big-player" style="display: none">
-        {% include './template/music_player/music_player_top.html' %}
-      </div>
-  
-    <!-- 小撥放介面 -->
-    
-      <div id="small-player" style="display: none">
-        {% include './template/music_player/music_player_buttom.html' %}
-      </div>
 
+    <audio id="myaudio" preload="auto" tabindex="0" autoplay>
+      <source id="audio-source" src="" />
+    </audio>
+
+    <div id="big-player" style="display: none">
+      {% include './template/music_player/player_big.html' %}
+    </div>
+
+    <!-- 小撥放介面 -->
+
+    <div id="small-player" style="display: none">
+      {% include './template/music_player/music_player_buttom.html' %}
+    </div>
   </body>
 </html>
