@@ -49,7 +49,7 @@
   margin-bottom: 20px;
 }
 
-.progress-bar {
+.my-progress-bar {
   background-color: #333;
 }
 
@@ -66,12 +66,12 @@
   margin-left: 5px;
 }
 
-.progress {
+.my-progress {
   height: 5px;
   margin-top: 10px;
 }
 
-.progress-bar {
+.my-progress-bar {
   height: 100%;
 }
 .slider {
@@ -93,14 +93,14 @@
 #continueButton {
   margin-left: -1px;
 }
-s .progress {
+.my-progress {
   width: 500px;
   height: 20px;
   background-color: #eee;
   border-radius: 10px;
 }
 
-.progress-bar {
+.my-progress-bar {
   width: 620px;
   height: 100%;
   background-color: #007bff;
@@ -159,4 +159,3 @@ button:hover {
   background-color: #fff;
   color: #000;
 }
-

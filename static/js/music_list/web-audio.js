@@ -95,8 +95,12 @@ export class WebAudio {
 
 
         // 新版
-        $('.player-cover__item').css('background-image', `url(${song_src})`);
+        // 淡入效果
+        $('.player-cover__item').fadeOut(250, function () {
+            $(this).css('background-image', `url(${song_src})`).fadeIn(300);
+        });
+
+
         $('#myaudio').attr('data-music_ID', this.music_list[currentIndex].music_ID);
     }
 }
-

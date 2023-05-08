@@ -57,20 +57,21 @@
           </div>
         </div>
       </div>
+
       <div class="album-info">
         <div class="album-info__name" id="artistName">324</div>
         <div class="album-info__track" id="songTitle"></div>
       </div>
-      <div class="progress">
-        <div class="progress__top">
-          <div class="progress__duration" id="duration"></div>
-        </div>
-        <div class="progress__bar">
-          <div class="progress__current"></div>
-        </div>
-        <div class="progress__time" id="currentTime"></div>
+      <div
+        class="progress"
+        role="progressbar"
+        aria-label="Basic example"
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        <div class="progress-bar" style="width: 0%"></div>
       </div>
-      <div v-cloak></div>
     </div>
   </div>
 </div>

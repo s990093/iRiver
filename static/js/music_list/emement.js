@@ -1,12 +1,9 @@
 export class MediaPlayer {
     constructor(audio) {
         this.audio = audio;
-        this.$volumeSlider = $('#volumeSlider');
-
-        this._register()
     }
 
-    _register() {
+    register() {
         this.changeVolumeSlider();
     }
 

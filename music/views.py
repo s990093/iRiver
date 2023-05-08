@@ -210,7 +210,7 @@ def download_songs(request):
             'publish_time': '0',  # 歌曲發佈時間暫時設為 0
         })
 
-    music_ID_list_chunks = [music_list[x:x+15] for x in range(0, len(music_list), 10)]
+    music_ID_list_chunks = [music_list[x:x+8] for x in range(0, len(music_list), 10)]
     for chunk in music_ID_list_chunks:
         success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                             artist=artist , 

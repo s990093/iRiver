@@ -3375,3 +3375,155 @@ django.template.exceptions.TemplateDoesNotExist: template/music_player/music_pla
 2023-05-08 19:25:51,525 - django.request - WARNING - Not Found: /media/AcapellaTimes/songs/z2ueaL1EJCY.mp3
 2023-05-08 19:25:51,527 - django.request - WARNING - Not Found: /media/AcapellaTimes/img/artist.jpg
 2023-05-08 19:25:51,529 - django.request - WARNING - Not Found: /media/AcapellaTimes/img/z2ueaL1EJCY.jpg
+2023-05-08 22:51:59,644 - root - INFO - Downloaded music 'IVbY5edMfCA' by 'SaucyDog' successfully.
+2023-05-08 22:52:36,593 - root - INFO - Downloaded music '_MR9pbJ5__c' by 'SaucyDog' successfully.
+2023-05-08 22:52:48,507 - root - INFO - Downloaded music 'MP9RyTO50eY' by 'SaucyDog' successfully.
+2023-05-08 22:52:59,050 - root - INFO - Downloaded music 'alad5koOUco' by 'SaucyDog' successfully.
+2023-05-08 22:53:03,731 - root - ERROR - Failed to download music 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-08 22:53:03,898 - root - ERROR - Failed to download music 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-08 22:53:20,124 - root - INFO - Downloaded music 'WFEO5efToMc' by 'SaucyDog' successfully.
+2023-05-08 22:53:34,868 - root - INFO - Downloaded music '3Yq58d2rsRk' by 'SaucyDog' successfully.
+2023-05-08 22:53:34,896 - root - INFO - Downloaded music 'tbLMacyYZb8' by 'SaucyDog' successfully.
+2023-05-08 22:53:42,289 - root - ERROR - Failed to download music 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-08 22:53:50,309 - root - INFO - Downloaded music '8GmP3CQmHQ4' by 'SaucyDog' successfully.
+2023-05-08 22:54:04,537 - root - ERROR - Failed to download music 'TRToVdl_I7g' by 'SaucyDog'.
+2023-05-08 22:54:25,270 - root - ERROR - Failed to download music 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-08 22:54:28,302 - root - ERROR - Failed to download music 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-08 22:54:35,739 - root - ERROR - Failed to download music '772WgE7_bwI' by 'SaucyDog'.
+2023-05-08 22:54:36,406 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 48, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=113.0.5672.63)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00BC8893+48451]
+	(No symbol) [0x00B5B8A1]
+	(No symbol) [0x00A65058]
+	(No symbol) [0x00A679D6]
+	(No symbol) [0x00A69631]
+	(No symbol) [0x00A696D0]
+	(No symbol) [0x00AB1A58]
+	(No symbol) [0x00AB047C]
+	(No symbol) [0x00AAA0B6]
+	(No symbol) [0x00A87E08]
+	(No symbol) [0x00A88F2D]
+	GetHandleVerifier [0x00E28E3A+2540266]
+	GetHandleVerifier [0x00E68959+2801161]
+	GetHandleVerifier [0x00E6295C+2776588]
+	GetHandleVerifier [0x00C52280+612144]
+	(No symbol) [0x00B64F6C]
+	(No symbol) [0x00B611D8]
+	(No symbol) [0x00B612BB]
+	(No symbol) [0x00B54857]
+	BaseThreadInitThunk [0x75B87D49+25]
+	RtlInitializeExceptionChain [0x77EAB74B+107]
+	RtlClearBits [0x77EAB6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 215, in download_songs
+    success = download( music_ID_list=[song['music_ID'] for song in chunk],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 63, in crawl
+    driver.quit()
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+2023-05-08 22:55:30,640 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py changed, reloading.
+2023-05-08 22:56:07,752 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-08 22:56:07,754 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-08 22:56:07,757 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-08 22:56:07,760 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-08 22:56:07,764 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-08 22:56:22,896 - root - INFO - Downloaded music 'bc3yKQ8I7as' by 'SaucyDog' successfully.
+2023-05-08 22:56:24,483 - root - INFO - Downloaded music 'cOGAY6XBrX4' by 'SaucyDog' successfully.
+2023-05-08 22:56:24,713 - root - INFO - Downloaded music 'enrKXe3QRow' by 'SaucyDog' successfully.
+2023-05-08 22:56:25,546 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-08 22:56:43,180 - root - INFO - Downloaded music 'fD6FKK0lpTA' by 'SaucyDog' successfully.
+2023-05-08 22:56:46,455 - root - INFO - Downloaded music 'F7xTTkmGE1Y' by 'SaucyDog' successfully.
+2023-05-08 22:56:46,507 - root - INFO - Downloaded music 'ojL3TkEZWs4' by 'SaucyDog' successfully.
+2023-05-08 22:56:51,362 - root - INFO - Downloaded music '772WgE7_bwI' by 'SaucyDog' successfully.
+2023-05-08 22:57:30,522 - root - ERROR - Failed to download music 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-08 22:57:32,577 - root - ERROR - Failed to download music 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-08 22:57:33,636 - root - ERROR - Failed to download music 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-08 22:57:34,414 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-08 22:57:34,417 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-08 22:57:52,215 - root - INFO - Downloaded music '0lASG1aB5lE' by 'SaucyDog' successfully.
+2023-05-08 22:57:52,217 - root - INFO - Downloaded music 'U8pJgoOhiDs' by 'SaucyDog' successfully.
+2023-05-08 22:57:52,755 - root - INFO - Downloaded music '-llFD5pRf5g' by 'SaucyDog' successfully.
+2023-05-08 22:57:53,837 - root - INFO - Downloaded music 'WObVzphoLTY' by 'SaucyDog' successfully.
+2023-05-08 22:58:07,887 - root - INFO - Downloaded music 'GIqcUFQ8r4A' by 'SaucyDog' successfully.
+2023-05-08 22:58:21,303 - root - INFO - Downloaded music 'aST9jsNSigY' by 'SaucyDog' successfully.
+2023-05-08 22:58:22,105 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-08 22:58:22,106 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-08 22:58:39,245 - root - INFO - Downloaded music 'AG0plF6gjfY' by 'SaucyDog' successfully.
+2023-05-08 22:58:45,292 - root - INFO - Downloaded music 'ivK-2QCVwh0' by 'SaucyDog' successfully.
+2023-05-08 22:58:49,978 - root - INFO - Downloaded music 'Ce99C1btCuk' by 'SaucyDog' successfully.
+2023-05-08 22:59:13,360 - root - ERROR - Failed to download music 'ylXLDcP3cE0' by 'SaucyDog'.
+2023-05-08 22:59:28,380 - root - ERROR - Failed to download music 'W1lvOAu9elU' by 'SaucyDog'.
+2023-05-08 22:59:34,272 - root - ERROR - Failed to download music 'HrjdtTSwtTw' by 'SaucyDog'.
+2023-05-08 22:59:59,797 - root - INFO - Downloaded music 'TiuJ915AAcA' by 'SaucyDog' successfully.
+2023-05-08 23:00:00,123 - root - INFO - Downloaded music 'h542xpeXb68' by 'SaucyDog' successfully.
+2023-05-08 23:00:00,764 - root - INFO - Downloaded music 'HCtzGtji2y0' by 'SaucyDog' successfully.
+2023-05-08 23:00:00,765 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-08 23:00:00,768 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-08 23:00:19,831 - root - ERROR - Failed to download music 'sBgCIVv3mq8' by 'SaucyDog'.
+2023-05-08 23:00:40,142 - root - INFO - Downloaded music 'z_VrnIAJiUE' by 'SaucyDog' successfully.
+2023-05-08 23:00:43,440 - root - ERROR - Failed to download music '0uljHbyjBrU' by 'SaucyDog'.
+2023-05-08 23:00:44,155 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-08 23:00:44,157 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-08 23:01:06,041 - root - INFO - Downloaded music '0LrXuXD7O7c' by 'SaucyDog' successfully.
+2023-05-08 23:01:07,468 - root - INFO - Downloaded music 'R531RSEalJY' by 'SaucyDog' successfully.
+2023-05-08 23:01:21,026 - root - INFO - Downloaded music 'wOHDlmL1rv4' by 'SaucyDog' successfully.
+2023-05-08 23:01:22,831 - root - INFO - Downloaded music '1Ickywa4GBs' by 'SaucyDog' successfully.
+2023-05-08 23:01:35,095 - root - ERROR - Failed to download music 'Glnrx-OiewM' by 'SaucyDog'.
+2023-05-08 23:01:38,886 - root - ERROR - Failed to download music 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-08 23:01:57,501 - root - INFO - Downloaded music 'BLfVYC7th4I' by 'SaucyDog' successfully.
+2023-05-08 23:02:07,559 - root - INFO - Downloaded music 'u934F_tr1p4' by 'SaucyDog' successfully.
+2023-05-08 23:02:21,330 - root - INFO - Downloaded music 'Et7146ux4mc' by 'SaucyDog' successfully.
+2023-05-08 23:02:24,642 - root - ERROR - Failed to download music 'GVMR6JvLtG4' by 'SaucyDog'.
+2023-05-08 23:02:27,855 - root - ERROR - Failed to download music 'V_pfWIy7or0' by 'SaucyDog'.
+2023-05-08 23:02:33,956 - root - INFO - Downloaded music 'LHjpZ7I9uP4' by 'SaucyDog' successfully.
+2023-05-08 23:02:48,841 - root - INFO - Downloaded music 'm3jQCwjMS4Q' by 'SaucyDog' successfully.
+2023-05-08 23:03:10,003 - root - ERROR - Failed to download music '5FeiralfUEY' by 'SaucyDog'.

@@ -38,16 +38,17 @@ export class Control {
     this.$switchPlayer = $('.switchPlayer');
     this.$muteBtn = $('.muteButton');
 
-
+    //宣告物件
+    this.webAudio = new WebAudio(this.music_list);
+    this.mediaPlayer = new MediaPlayer(this.audio);
   }
 
   register() {
     //宣告物件
-    this.webAudio = new WebAudio(this.music_list);
     this.bgAudio = new bgAudio(this.music_list, this.currentIndex);
-    this.mediaPlayer = new MediaPlayer(this.audio);
+    this.mediaPlayer.register();
     this.eqController = new EqController(this.audio, this.test);
-    this.mediaPlayer = new MediaPlayer(this.audio);
+
 
     if ('mediaSession' in navigator)
       navigator.mediaSession.metadata = null;
@@ -61,6 +62,7 @@ export class Control {
 
 
   _lienter() {
+    var self = this;
     //audio
     this.audio.addEventListener('ended', () => {
       this.next();
@@ -110,20 +112,20 @@ export class Control {
     $('#table-body').on('click', '.love-icon a', function () {
       $(this).find('i').toggleClass('far fas');
       var music_ID = $(this).attr('value');
-      this.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
+      self.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
     });
 
     $('#favorite').on('click', function () {
       var href = $(this).find('use').attr('href');
       var music_ID = $('#myaudio').attr('data-music_ID');
-      this.webAudio.changFavoriteButton(href);
-      this.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
+      self.webAudio.changFavoriteButton(href);
+      self.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
     });
 
 
     $('#table-body').on('click', '.add', function () {
       var music_ID = $(this).attr('value');
-      this.mediaPlayer.update_my_music_list(music_ID, 2, false, 'insert');
+      self.mediaPlayer.update_my_music_list(music_ID, 2, false, 'insert');
     });
 
 
