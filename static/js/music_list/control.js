@@ -251,7 +251,7 @@ export class Control {
     this.audio.pause();
     this.audio.currentTime = 0; // 重置播放進度
     this.audio.loop = false;
-    
+
     var address = '/media/' + this.music_list[this.currentIndex].artist + "/songs/" + this.music_list[this.currentIndex].music_ID + '.mp3';
     this.audio.src = address;
     this.audio.load();
