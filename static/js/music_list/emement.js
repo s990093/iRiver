@@ -57,6 +57,14 @@ export class MediaPlayer {
                             music_list: music_list,
                             favorite: favorite
                         })
+                    }).then(response => {
+                        if (response.ok) {
+                            // 保存成功
+                            console.log('保存成功');
+                        } else {
+                            // 保存失败
+                            console.log('保存失败');
+                        }
                     });
                 } else location.href = "/user/login/";
             });
