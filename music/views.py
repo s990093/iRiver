@@ -224,3 +224,14 @@ def download_songs(request):
     
     return JsonResponse({'success': True})
 
+# function
+
+def is_song_exist(request):
+    music_ID = request.get('music_ID' , None)
+    if music_ID:
+        mysql = SQL(music.lib.sql.config.DB_CONFIG)
+        # mysql.query_song()
+        return JsonResponse({'success': True})
+    else:
+        return JsonResponse({'success': False})
+        

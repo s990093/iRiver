@@ -57,7 +57,15 @@ function paush_web_data(music_list) {
     try {
       const success = await fetch_dow_song(music_list[index]);
       loading(false);
-      if (success) fetch_dow_all_songs(music_list[index].artist_url, music_list[index].artist);
+      if (success) {
+        if (!isClickEventRegistered_web) {
+          control_web.register();
+          console.log('control_web register !')
+          isClickEventRegistered_web = true;
+        }
+        control_web.insert(index);
+        fetch_dow_all_songs(music_list[index].artist_url, music_list[index].artist);
+      }
     } catch (error) {
       console.error(error);
     }

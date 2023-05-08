@@ -3724,3 +3724,56 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-09 01:52:23,667 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
 2023-05-09 01:52:23,668 - root - WARNING - Already exists '3Dy4EbMPkY0' by 'Vaundy'.
 2023-05-09 01:52:23,669 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:00:23,543 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\орн▒\django\myproject\music\views.py changed, reloading.
+2023-05-09 02:07:56,769 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:07:56,770 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 02:07:56,770 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 02:07:56,772 - root - WARNING - Already exists 'WSoaa-Cmz9M' by 'Vaundy'.
+2023-05-09 02:07:56,773 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 02:07:56,773 - root - WARNING - Already exists 'fJZrmX9oWj4' by 'Vaundy'.
+2023-05-09 02:07:56,774 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:07:56,776 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 02:07:57,295 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 02:07:57,297 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 02:07:57,297 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 02:07:57,300 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-09 02:07:57,302 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-09 02:07:57,303 - root - WARNING - Already exists 'D0ATlLRLHzs' by 'Vaundy'.
+2023-05-09 02:07:57,304 - root - WARNING - Already exists '3SR57oeegws' by 'Vaundy'.
+2023-05-09 02:07:57,305 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:07:57,823 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 02:07:57,825 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-09 02:07:57,827 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-09 02:07:57,829 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 02:07:57,830 - root - WARNING - Already exists '6h6AQbdTkaE' by 'Vaundy'.
+2023-05-09 02:07:57,830 - root - WARNING - Already exists '3Dy4EbMPkY0' by 'Vaundy'.
+2023-05-09 02:07:57,832 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 02:07:57,833 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:08:11,915 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:08:11,916 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 02:08:11,916 - root - WARNING - Already exists 'fJZrmX9oWj4' by 'Vaundy'.
+2023-05-09 02:08:11,917 - root - WARNING - Already exists 'WSoaa-Cmz9M' by 'Vaundy'.
+2023-05-09 02:08:11,919 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 02:08:11,920 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:08:11,920 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 02:08:11,921 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 02:08:12,485 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 02:08:12,486 - root - WARNING - Already exists 'nrLZ-vTiQa4' by 'Vaundy'.
+2023-05-09 02:08:12,486 - root - WARNING - Already exists 'lYLa6zyjhSI' by 'Vaundy'.
+2023-05-09 02:08:12,488 - root - WARNING - Already exists '1VxvaKbH-CU' by 'Vaundy'.
+2023-05-09 02:08:12,489 - root - WARNING - Already exists 'YWXKuZ0Oy2M' by 'Vaundy'.
+2023-05-09 02:08:12,490 - root - WARNING - Already exists 'D0ATlLRLHzs' by 'Vaundy'.
+2023-05-09 02:08:12,491 - root - WARNING - Already exists '3SR57oeegws' by 'Vaundy'.
+2023-05-09 02:08:12,491 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:08:13,007 - root - WARNING - Already exists 'B50A9Nf5FCE' by 'Vaundy'.
+2023-05-09 02:08:13,007 - root - WARNING - Already exists 'fjx_uy5eD8g' by 'Vaundy'.
+2023-05-09 02:08:13,007 - root - WARNING - Already exists 'XEEXE8Ei5SA' by 'Vaundy'.
+2023-05-09 02:08:13,008 - root - WARNING - Already exists 'tQq8C7irREk' by 'Vaundy'.
+2023-05-09 02:08:13,010 - root - WARNING - Already exists 'FL1QjjkZVm4' by 'Vaundy'.
+2023-05-09 02:08:13,010 - root - WARNING - Already exists '6h6AQbdTkaE' by 'Vaundy'.
+2023-05-09 02:08:13,011 - root - WARNING - Already exists '3Dy4EbMPkY0' by 'Vaundy'.
+2023-05-09 02:08:13,011 - root - WARNING - Already exists 'V-gxqhWEbxI' by 'Vaundy'.
+2023-05-09 02:08:52,361 - django.request - WARNING - Not Found: /media/K0P1/songs/9Kr3PJ6DfcQ.mp3
+2023-05-09 02:08:52,363 - django.request - WARNING - Not Found: /media/K0P1/img/9Kr3PJ6DfcQ.jpg
+2023-05-09 02:08:52,364 - django.request - WARNING - Not Found: /media/K0P1/img/artist.jpg
+2023-05-09 02:08:52,603 - django.request - WARNING - Not Found: /media/K0P1/img/9Kr3PJ6DfcQ.jpg
