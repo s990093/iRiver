@@ -16,11 +16,7 @@
           <div class="player-cover__item" data-key=""></div>
         </div>
         <div class="player-controls">
-          <div
-            class="player-controls__item -favorite"
-            :class="{ active : currentTrack.favorited }"
-            @click="favorite"
-          >
+          <div class="player-controls__item -favorite">
             <!-- favorite -->
             <svg class="icon" id="favorite">
               <use href="{% static './svg/iocn.svg' %}#icon-heart-o"></use>
@@ -28,7 +24,12 @@
           </div>
 
           <!-- eq-->
-          <div class="player-controls__item" id="eqButton">
+          <div
+            class="player-controls__item"
+            id="eqButton"
+            data-bs-target="#exampleModalToggle"
+            data-bs-toggle="modal"
+          >
             <svg class="icon">
               <use href="{% static './svg/iocn.svg' %}#icon-eq"></use>
             </svg>

@@ -29,13 +29,12 @@
     <div>
       {% include './template/music_player/music_player_modal_eq.html' %}
     </div>
-
-    <!-- 大撥放介面 -->
-
-    <audio id="myaudio" preload="auto" tabindex="0" autoplay>
+    <!-- 音樂 -->
+    <audio id="myaudio" preload="auto" tabindex="0" autoplay data-music_ID="">
       <source id="audio-source" src="" />
     </audio>
 
+    <!-- 大撥放介面 -->
     <div id="big-player" style="display: none">
       {% include './template/music_player/player_big.html' %}
     </div>
