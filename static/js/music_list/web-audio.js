@@ -50,6 +50,9 @@ export class WebAudio {
             $('#loopButton').html('<span class="material-symbols-outlined">repeat_one</span>');
     }
 
+    changFavoriteButton(href) {
+    }
+
     //  音樂資訊
 
     changePlayer(isPlayerShow) {
@@ -93,6 +96,7 @@ export class WebAudio {
 
         // 新版
         $('.player-cover__item').css('background-image', `url(${song_src})`);
+        $('#myaudio').attr('data-music_ID', this.music_list[currentIndex].music_ID);
     }
 }
 
