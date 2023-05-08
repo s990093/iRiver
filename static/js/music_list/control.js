@@ -107,21 +107,22 @@ export class Control {
     });
 
     // 更新我的專輯
-    $('#table-body').on('click', '.love-icon a', () => {
-      $(".love-icon a").find('i').toggleClass('far fas');
-      var music_ID = $('.love-icon a').attr('value');
+    $('#table-body').on('click', '.love-icon a', function () {
+      $(this).find('i').toggleClass('far fas');
+      var music_ID = $(this).attr('value');
       this.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
     });
 
-    $('#favorite').on('click', () => {
-      var href = $('#favorite use').attr('href');
+    $('#favorite').on('click', function () {
+      var href = $(this).find('use').attr('href');
       var music_ID = $('#myaudio').attr('data-music_ID');
       this.webAudio.changFavoriteButton(href);
       this.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
     });
 
-    $('#table-body').on('click', '.add', () => {
-      var music_ID = $('.add').attr('value');
+
+    $('#table-body').on('click', '.add', function () {
+      var music_ID = $(this).attr('value');
       this.mediaPlayer.update_my_music_list(music_ID, 2, false, 'insert');
     });
 

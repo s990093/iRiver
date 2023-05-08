@@ -18,9 +18,10 @@ $('document').ready(function () {
 });
 
 // delete 
-$('.delete').on('click', async () => {
-    var music_ID = $('.delete a').attr('value');
-    var music_list = $('.delete').attr('data-music_list');
+$('.delete').on('click', async function () {
+    var music_ID = $(this).find('a').attr('value');
+    console.log(music_ID);
+    var music_list = $(this).attr('data-music_list');
     try {
         await insert_my_music_list(music_ID, music_list, false, 'delete');
         location.reload();
