@@ -71,6 +71,7 @@ def my_music_list(request):
     data = {'method': 'get' , 'music_list': music_list}
     headers['X-CSRFToken'] = csrftoken
     response = requests.post(url, headers=headers, data=json.dumps(data))
+    print(response.content)
 
     if response.status_code == 200:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)

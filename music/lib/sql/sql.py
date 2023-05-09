@@ -203,7 +203,7 @@ class SQL:
     def get_music_list_infos(self, music_ID_list):
         song_infos = []
         for music_ID in music_ID_list:
-            sql = 'SELECT * FROM songs WHERE art = %s'
+            sql = 'SELECT * FROM songs WHERE music_ID = %s'
             self.cursor.execute(sql , (music_ID, ))
             rows = self.cursor.fetchall()
             for row in rows:
