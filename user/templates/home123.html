@@ -1,0 +1,9 @@
+{% extends 'template.html' %}
+
+{% block body %}
+  <h1>{{ heading }}</h1>
+  <p>{{ content }}</p>
+  <p>{{ now }}</p>
+    <p> <a href="{% url 'user:logout'%}">登出
+    
+{% endblock %}

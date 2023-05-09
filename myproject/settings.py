@@ -44,9 +44,8 @@ INSTALLED_APPS = [
     'iRiver',
     'Podcast',
     'music',
-
-    'login',
-    'social_django',
+    'user',
+    'social_django'
 ]
 
 MIDDLEWARE = [

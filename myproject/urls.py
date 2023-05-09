@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from login import views as login_views
+from user import views as login_views
 from iRiver import views as iRiver_views
+from user import views as user
 from music  import views as music_views
 from django.conf.urls.static import static
 from django.conf import settings
@@ -27,9 +28,9 @@ urlpatterns = [
     path('', iRiver_views.iRiver, name='home'),
     path('iRiver/', include('iRiver.urls',namespace='iRiver')),
     path('music/', include('music.urls',namespace='music')),
-    path('user/', include('login.urls',namespace='login')),
+    path('user/', include('user.urls',namespace='user')),
     path('auth/', include('social_django.urls', namespace='auth')),
-    path('auth/complete/google-oauth2/user/data/', login_views.data),
+    path('auth/complete/google-oauth2/user/data/', user.data),
     path('admin/', admin.site.urls),        
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

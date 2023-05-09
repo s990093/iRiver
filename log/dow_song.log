@@ -3961,3 +3961,90 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-09 02:28:24,414 - root - ERROR - Failed to download music 'MXQ_Ar6sEwA' by '美秀集團AmazingShow'.
 2023-05-09 02:28:31,063 - root - ERROR - Failed to download music 'wuqkZWCeSBc' by '美秀集團AmazingShow'.
 2023-05-09 10:15:11,159 - django.request - WARNING - Not Found: /favicon.ico
+2023-05-09 20:40:18,350 - root - INFO - Downloaded music 'hm1na9R2uYA' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:40:32,940 - root - WARNING - Already exists 'C47K1TX9PAA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:32,941 - root - WARNING - Already exists 'M6gcoDN9jBc' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:32,942 - root - WARNING - Already exists 'hm1na9R2uYA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:33,015 - root - WARNING - Already exists 'n0QNaym0jDI' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:49,231 - root - INFO - Downloaded music 'ctQ5mSWV10E' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:40:49,261 - root - INFO - Downloaded music 'k7rHDHJG1jA' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:40:50,802 - root - INFO - Downloaded music 'g2GMVhVXdZs' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:40:51,749 - root - INFO - Downloaded music 'BOrdMrh4uKg' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:40:52,493 - root - WARNING - Already exists 'k7rHDHJG1jA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,494 - root - WARNING - Already exists 'BOrdMrh4uKg' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,494 - root - WARNING - Already exists 'C47K1TX9PAA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,495 - root - WARNING - Already exists 'M6gcoDN9jBc' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,499 - root - WARNING - Already exists 'n0QNaym0jDI' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,500 - root - WARNING - Already exists 'ctQ5mSWV10E' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,500 - root - WARNING - Already exists 'hm1na9R2uYA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,501 - root - WARNING - Already exists 'g2GMVhVXdZs' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,539 - root - WARNING - Already exists 'IPzOxKW3fSA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,542 - root - WARNING - Already exists 'k7rHDHJG1jA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:52,549 - root - WARNING - Already exists 'O3-6fHVB1Sg' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:53,125 - root - WARNING - Already exists 'IPzOxKW3fSA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:53,126 - root - WARNING - Already exists 'O3-6fHVB1Sg' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:40:53,130 - root - WARNING - Already exists 'k7rHDHJG1jA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:10,803 - root - WARNING - Already exists 'BDr3ySc-G9c' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:11,567 - root - INFO - Downloaded music 'BDr3ySc-G9c' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:41:12,605 - root - INFO - Downloaded music 'awRH_ALFjq8' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:41:13,001 - root - WARNING - Already exists 'awRH_ALFjq8' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:27,118 - root - INFO - Downloaded music 'XDiuwqJg8pU' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:41:27,870 - root - WARNING - Already exists 'XDiuwqJg8pU' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:46,187 - root - ERROR - Failed to download music 'I2QiyD5WvaQ' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:47,802 - root - INFO - Downloaded music 'I2QiyD5WvaQ' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:41:48,153 - root - ERROR - Failed to download music 'JNggadXtKFI' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:48,611 - root - ERROR - Failed to download music 'JNggadXtKFI' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,026 - root - WARNING - Already exists 'M6gcoDN9jBc' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,026 - root - WARNING - Already exists 'n0QNaym0jDI' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,027 - root - WARNING - Already exists 'hm1na9R2uYA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,030 - root - WARNING - Already exists 'k7rHDHJG1jA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,031 - root - WARNING - Already exists 'C47K1TX9PAA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,033 - root - WARNING - Already exists 'ctQ5mSWV10E' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,034 - root - WARNING - Already exists 'BOrdMrh4uKg' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,461 - root - WARNING - Already exists 'M6gcoDN9jBc' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,462 - root - WARNING - Already exists 'hm1na9R2uYA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,463 - root - WARNING - Already exists 'n0QNaym0jDI' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,467 - root - WARNING - Already exists 'C47K1TX9PAA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,467 - root - WARNING - Already exists 'k7rHDHJG1jA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,468 - root - WARNING - Already exists 'ctQ5mSWV10E' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:41:49,469 - root - WARNING - Already exists 'BOrdMrh4uKg' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:03,929 - root - WARNING - Already exists 'jSf6S6ny6-A' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:04,650 - root - WARNING - Already exists 'k7rHDHJG1jA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:04,651 - root - WARNING - Already exists 'C47K1TX9PAA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:04,653 - root - WARNING - Already exists 'BOrdMrh4uKg' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:04,653 - root - WARNING - Already exists 'M6gcoDN9jBc' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:04,655 - root - WARNING - Already exists 'hm1na9R2uYA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:04,656 - root - WARNING - Already exists 'n0QNaym0jDI' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:04,656 - root - WARNING - Already exists 'jSf6S6ny6-A' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:06,024 - root - INFO - Downloaded music 'jSf6S6ny6-A' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:42:06,665 - root - WARNING - Already exists 'k7rHDHJG1jA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:06,665 - root - WARNING - Already exists 'BOrdMrh4uKg' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:06,665 - root - WARNING - Already exists 'C47K1TX9PAA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:06,666 - root - WARNING - Already exists 'M6gcoDN9jBc' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:06,669 - root - WARNING - Already exists 'hm1na9R2uYA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:06,670 - root - WARNING - Already exists 'n0QNaym0jDI' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:06,670 - root - WARNING - Already exists 'jSf6S6ny6-A' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:19,976 - root - INFO - Downloaded music 'YOYeJn4mz8M' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:42:21,869 - root - WARNING - Already exists 'YOYeJn4mz8M' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:39,818 - root - INFO - Downloaded music 'BjI0HIn46l0' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:42:39,822 - root - WARNING - Already exists 'ony539T074w' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:40,412 - root - WARNING - Already exists 'MSv7NbfbtU8' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:40,704 - root - WARNING - Already exists 'XPUN-w543bc' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:40,706 - root - WARNING - Already exists 'ony539T074w' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:41,819 - root - INFO - Downloaded music 'MSv7NbfbtU8' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:42:42,452 - root - INFO - Downloaded music 'XPUN-w543bc' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:42:43,261 - root - INFO - Downloaded music 'g4_nRpHotMo' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:42:43,287 - root - WARNING - Already exists 'BjI0HIn46l0' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:56,423 - root - WARNING - Already exists 'C66yySFa48A' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:57,248 - root - INFO - Downloaded music 'C66yySFa48A' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:42:58,027 - root - INFO - Downloaded music 'JBmzU_qn_G8' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:42:58,418 - root - WARNING - Already exists 'JBmzU_qn_G8' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:42:59,954 - root - WARNING - Already exists 'L-Bzhpm8h0o' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:43:00,490 - root - INFO - Downloaded music 'L-Bzhpm8h0o' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:43:01,654 - root - WARNING - Already exists 'XDiuwqJg8pU' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:43:06,378 - root - ERROR - Failed to download music 'g4_nRpHotMo' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:43:07,270 - root - WARNING - Already exists 'XDiuwqJg8pU' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:43:18,986 - root - INFO - Downloaded music 'YeBt1NhOJtA' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:43:20,240 - root - INFO - Downloaded music 'RLAw8Ct9k48' by 'KingGnuofficialYouTubechannel' successfully.
+2023-05-09 20:43:22,531 - root - WARNING - Already exists 'YeBt1NhOJtA' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 20:43:23,216 - root - WARNING - Already exists 'RLAw8Ct9k48' by 'KingGnuofficialYouTubechannel'.

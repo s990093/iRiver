@@ -1,0 +1,79 @@
+{% extends 'template.html' %}
+
+{% block head %}
+{{ block.super }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="mt-5">個人資料</h1>
+        <form method="POST" class="mt-4">
+            {% csrf_token %}
+            {% if form.errors %}
+            <div class="alert alert-danger">
+                <ul>
+                    {% for field_errors in form.errors.values %}
+                        {% for error in field_errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="username">姓名</label>
+                        <input type="text" class="form-control" id="username" name="username" value="{{form.username.value}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">電郵</label>
+                        <input type="email" class="form-control" id="email" name="email" value="{{ form.email.value }}" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">電話</label>
+                        <input type="text" class="form-control" id="phone" name="phone" value="{{form.phone.value}}">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="country">國家</label>
+                        <select class="form-control" id="country" name="country">
+                            {% for choice in form.country.field.choices %}
+                                {% if choice.0 != '' %}
+                                    {% if form.country.value == choice.0 %}
+                                        <option value="{{ choice.0 }}" selected>{{ choice.1 }}</option>
+                                    {% else %}
+                                        <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthday">生日</label>
+                        <input type="date" class="form-control" id="birthday" name="birthday" value="{{ form.birthday.value|date:'Y-m-d' }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">性別</label>
+                        <select class="form-control" id="gender" name="gender">
+                            {% for choice in form.gender.field.choices %}
+                              {% if choice.0 != '' %}
+                                {% if form.gender.value == choice.0 %}
+                                  <option value="{{ choice.0 }}" selected>{{ choice.1 }}</option>
+                                {% else %}
+                                  <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                                {% endif %}
+                              {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">保存</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
