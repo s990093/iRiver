@@ -139,20 +139,15 @@ def log_out(request):
 
 #個人資料
 def profile(request):
-    user_profile, created = UserProfile.objects.get_or_create(mail=request.user.email)
+    user_profile, created = UserProfile.objects.get_or_create(email=request.user.email)
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
-            user = form.cleaned_data
-            email = user['mail']
-            username = user['user']
-            phone = user['phone']
-            country = user['country']
-            birthday = user['birthday']
+            user_data = form.cleaned_data
             sql = SQL_user(login.lib.sql.config.DB_CONFIG_user)
-            sql.create_tables("user") #建立資料表
-            sql.save_user_data(email, username, phone, country, birthday,0,0)
+            sql.create_tables("user") #建立資料表            
+            sql.save_user_data(**user_data)
             print("成功修改")
             return redirect('/user/data')
     else:
