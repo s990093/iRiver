@@ -4,12 +4,22 @@
 {{ block.super }}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 {% endblock %}
-
 {% block body %}
     <div class="container">
         <h1 class="mt-5">個人資料</h1>
         <form method="POST" class="mt-4">
             {% csrf_token %}
+            {% if form.errors %}
+            <div class="alert alert-danger">
+                <ul>
+                    {% for field_errors in form.errors.values %}
+                        {% for error in field_errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
