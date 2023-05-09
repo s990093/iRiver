@@ -10,15 +10,15 @@ from .models import UserProfile
 from django.contrib.auth.models import User
 import json
 # 自製
-import login.lib.sql.config
-from login.lib.sql.sql_user import SQL as SQL_user
-from login.lib.sql.sql_music_list import SQL as SQL_music_list
+import user.lib.sql.config
+from user.lib.sql.sql_user import SQL as SQL_user
+from user.lib.sql.sql_music_list import SQL as SQL_music_list
 
 #測試
 # def get_user_data(request):
 
 def get_user_music_list(request):
-    sql_user_music_list = SQL_music_list(login.lib.sql.config.DB_CONFIG_user_music_list,table_name= (request.session['email']).split("@")[0])
+    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= (request.session['email']).split("@")[0])
     sql_user_music_list.create_tables()
     if request.method != 'POST':
         return HttpResponse('error')
@@ -42,10 +42,10 @@ def hello(request):
 
     key = mail
     
-    sql_user = SQL_user(login.lib.sql.config.DB_CONFIG_user)
+    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     sql_user.create_tables(table_name= key)
 
-    sql_user_music_list = SQL_music_list(login.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
+    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
     sql_user_music_list.create_tables()
 
     music_ID_dict = {
@@ -140,12 +140,13 @@ def log_out(request):
 #個人資料
 def profile(request):
     user_profile, created = UserProfile.objects.get_or_create(email=request.user.email)
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
             user_data = form.cleaned_data
-            sql = SQL_user(login.lib.sql.config.DB_CONFIG_user)
+            sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
             sql.create_tables("user") #建立資料表            
             sql.save_user_data(**user_data)
             print("成功修改")

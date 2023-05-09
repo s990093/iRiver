@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('login', '0002_rename_address_userprofile_country_userprofile_mail'),
+        ('user', '0002_rename_address_userprofile_country_userprofile_mail'),
     ]
 
     operations = [
