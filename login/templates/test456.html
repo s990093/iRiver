@@ -1,35 +1,50 @@
 <h1>個人資料</h1>
 <form method="POST">
-  {% csrf_token %}
+    {% csrf_token %}
 
-  {% if form.errors %}
-  <div class="alert alert-danger">
-      <ul>
-          {% for field_errors in form.errors.values %}
-          {% for error in field_errors %}
-          <li>{{ error }}</li>
-          {% endfor %}
-          {% endfor %}
-      </ul>
-  </div>
-  {% endif %}
-  姓名
-  <input type="text" name="user" value="{{form.user.value}}">
-  電郵
-  <input type="email" name="mail" value="{{ form.mail.value }}" readonly>
-  電話
-  <input type="text" name="phone" value="{{form.phone.value}}">
-  國家
-  <select name="country">
-    {% for choice in form.country.field.choices %}
-        {% if form.country.value == choice.0 %}
-            <option value="{{ choice.0 }}" selected>{{ choice.1 }}</option>
-        {% else %}
-            <option value="{{ choice.0 }}">{{ choice.1 }}</option>
-        {% endif %}
-    {% endfor %}
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        <ul>
+            {% for field_errors in form.errors.values %}
+                {% for error in field_errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    姓名
+    <input type="text" name="user" value="{{form.user.value}}">
+    電郵
+    <input type="email" name="mail" value="{{ form.mail.value }}" readonly>
+    電話
+    <input type="text" name="phone" value="{{form.phone.value}}">
+    國家
+    <select name="country">
+        {% for choice in form.country.field.choices %}
+            {% if choice.0 != '' %}
+                {% if form.country.value == choice.0 %}
+                    <option value="{{ choice.0 }}" selected>{{ choice.1 }}</option>
+                {% else %}
+                    <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
     </select>
+    
     生日
     <input type="date" name="birthday" value="{{ form.birthday.value|date:'Y-m-d' }}">
+    性別
+    <select name="gender">
+        {% for choice in form.gender.field.choices %}
+          {% if choice.0 != '' %}
+            {% if form.gender.value == choice.0 %}
+              <option value="{{ choice.0 }}" selected>{{ choice.1 }}</option>
+            {% else %}
+              <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </select>
     <button type="submit">保存</button>
 </form>

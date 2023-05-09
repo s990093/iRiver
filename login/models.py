@@ -9,12 +9,26 @@ from django.core.validators import MaxLengthValidator
 
 #國家清單
 COUNTRY_CHOICES = (
+    ('NN', '不透露'),
     ('US', 'United States'),
     ('CA', 'Canada'),
     ('JP', 'Japan'),
     ('CN', 'China'),
     ('TW', 'Taiwan'),
+    ('KR', 'Korea'),
+    ('SG', 'Singapore'),
+    ('MY', 'Malaysia'),
+    ('TH', 'Thailand'),
+    ('PH', 'Philippines'),
+    ('ID', 'Indonesia'),
 )
+#性別清單
+GENDER ={
+    ('U', '不透露'),
+    ('M', '男'),
+    ('F', '女'),
+}
+
 #電話格式檢查
 phone_test = RegexValidator(
     regex=r'^\+?\d{9,15}$',
@@ -41,3 +55,4 @@ class UserProfile(models.Model):
     phone = models.CharField(max_length=20,validators=[phone_test])
     country = models.CharField(max_length=2, choices=COUNTRY_CHOICES)
     birthday = models.DateField(null=True, blank=True, validators=[validate_birthday])
+    gender = models.CharField(max_length=1, choices=GENDER)
