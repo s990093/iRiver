@@ -3777,3 +3777,187 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-09 02:08:52,363 - django.request - WARNING - Not Found: /media/K0P1/img/9Kr3PJ6DfcQ.jpg
 2023-05-09 02:08:52,364 - django.request - WARNING - Not Found: /media/K0P1/img/artist.jpg
 2023-05-09 02:08:52,603 - django.request - WARNING - Not Found: /media/K0P1/img/9Kr3PJ6DfcQ.jpg
+2023-05-09 02:20:45,857 - django.request - WARNING - Not Found: /media/¥xÆWµØ¯Ç¤éÁú©x¤èÀW¹D/img/Iq6MtiANS38.jpg
+2023-05-09 02:20:57,873 - django.request - WARNING - Not Found: /media/Ç¢Ç¥ÇOÇCn-bunaOfficial/img/Sw1Flgub9s8.jpg
+2023-05-09 02:20:57,889 - django.request - WARNING - Not Found: /media/Ç¢Ç¥ÇOÇCn-bunaOfficial/img/Sw1Flgub9s8.jpg
+2023-05-09 02:20:57,899 - django.request - WARNING - Not Found: /media/Ç¢Ç¥ÇOÇCn-bunaOfficial/img/Sw1Flgub9s8.jpg
+2023-05-09 02:21:06,396 - django.request - WARNING - Not Found: /media/Ç¢Ç¥ÇOÇCn-bunaOfficial/img/Sw1Flgub9s8.jpg
+2023-05-09 02:21:10,136 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,136 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,137 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,142 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,194 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,195 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,200 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,201 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,745 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,754 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,756 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,759 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,760 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,761 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,762 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:10,791 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,356 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,362 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,363 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,369 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,370 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,409 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,418 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,419 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,929 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,931 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,934 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,995 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,996 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,998 - root - WARNING - Already exists 'cEeTW4C2GA0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:11,998 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,075 - root - WARNING - Already exists 'GXf33fyxr1M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,631 - root - WARNING - Already exists 'JFFedRQpqg8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,643 - root - WARNING - Already exists 'ZgC5umCFkp0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,643 - root - WARNING - Already exists 'Y1K-ZD2bB8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,643 - root - WARNING - Already exists 'Ckk9IJwDhNI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,676 - root - WARNING - Already exists 'EpFxTXgElLA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,698 - root - WARNING - Already exists 'U2-K_eFGtJM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,699 - root - WARNING - Already exists 'POCs38Rputs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:12,699 - root - WARNING - Already exists '7JANm3jOb2k' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,212 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,212 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,213 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,215 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,218 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,222 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,273 - root - WARNING - Already exists 'm2xmJFdYfJw' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,283 - root - WARNING - Already exists 'OuSFM2l9OaI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,837 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,839 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,841 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,842 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,843 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,892 - root - WARNING - Already exists 'GVrRXhS0mLs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,902 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:13,902 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:14,404 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:14,406 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:14,407 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:14,408 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:14,409 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:14,410 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:14,412 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:14,412 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:26,783 - root - WARNING - Already exists 'pHdJmDFYqTU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:26,784 - root - WARNING - Already exists '_9_rUFrgLI8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:26,786 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:26,786 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:26,788 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:26,789 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:26,791 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:26,791 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,302 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,303 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,305 - root - WARNING - Already exists 'siNFnlqtd8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,305 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,307 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,307 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,309 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,309 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,812 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,813 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,814 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,814 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,815 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,818 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,819 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:27,820 - root - WARNING - Already exists 'DlyG6MAKUOA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,331 - root - WARNING - Already exists 'BCt9lS_Uv_Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,332 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,334 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,334 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,335 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,336 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,339 - root - WARNING - Already exists 'cEeTW4C2GA0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,339 - root - WARNING - Already exists 'GXf33fyxr1M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,880 - root - WARNING - Already exists 'JFFedRQpqg8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,882 - root - WARNING - Already exists 'Ckk9IJwDhNI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,882 - root - WARNING - Already exists 'Y1K-ZD2bB8M' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,884 - root - WARNING - Already exists 'ZgC5umCFkp0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,884 - root - WARNING - Already exists 'EpFxTXgElLA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,887 - root - WARNING - Already exists 'U2-K_eFGtJM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,887 - root - WARNING - Already exists '7JANm3jOb2k' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:28,888 - root - WARNING - Already exists 'POCs38Rputs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,376 - root - WARNING - Already exists 'RmYdZZLOYA8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,377 - root - WARNING - Already exists 'LTeROfwwtnA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,378 - root - WARNING - Already exists '1IlTeOMCNJU' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,379 - root - WARNING - Already exists 'Fq55MMfHoJg' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,381 - root - WARNING - Already exists 'm2xmJFdYfJw' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,382 - root - WARNING - Already exists 'oy6MDr6I6rM' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,383 - root - WARNING - Already exists 'wCN9WliV-ew' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,383 - root - WARNING - Already exists 'OuSFM2l9OaI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,882 - root - WARNING - Already exists 'Sw1Flgub9s8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,883 - root - WARNING - Already exists 'GVrRXhS0mLs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,884 - root - WARNING - Already exists 'CS4f3jawFxY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,888 - root - WARNING - Already exists 'F3cXxqgbx9Y' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,889 - root - WARNING - Already exists '9lVPAWLWtWc' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,891 - root - WARNING - Already exists 'MH5noJJfqDY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,892 - root - WARNING - Already exists 'ENcnYh79dUY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:29,893 - root - WARNING - Already exists 'j83OVgv6woA' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:30,406 - root - WARNING - Already exists 'KTZ-y85Erus' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:30,407 - root - WARNING - Already exists '4MoRLTAJY_0' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:30,408 - root - WARNING - Already exists 'ry3Tupx4BL4' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:30,411 - root - WARNING - Already exists 'JJaCwW4HyVs' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:30,412 - root - WARNING - Already exists 't7MBzMP4OzY' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:30,413 - root - WARNING - Already exists '-VKIqrvVOpo' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:30,414 - root - WARNING - Already exists '9ypEFXTakV8' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:30,415 - root - WARNING - Already exists 'F64yFFnZfkI' by 'Ç¢Ç¥ÇOÇCn-bunaOfficial'.
+2023-05-09 02:21:51,168 - django.request - WARNING - Not Found: /media/¥xÆWµØ¯Ç¤éÁú©x¤èÀW¹D/img/Iq6MtiANS38.jpg
+2023-05-09 02:22:48,257 - root - INFO - Downloaded music 'U-bXx_4Nwx8' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:23:00,734 - root - WARNING - Already exists 'U-bXx_4Nwx8' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:23:15,936 - root - INFO - Downloaded music 'ouQwJj1V2pE' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:23:16,468 - root - INFO - Downloaded music 'S4JLJVVjevI' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:23:16,469 - root - WARNING - Already exists 'U-bXx_4Nwx8' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:23:16,471 - root - WARNING - Already exists 'ouQwJj1V2pE' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:23:16,839 - root - INFO - Downloaded music '3_GFxZ9xA7o' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:23:28,351 - root - INFO - Downloaded music 'k1YQE3YeMyw' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:23:41,069 - root - INFO - Downloaded music 'Hw06iZa8KhQ' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:23:41,760 - root - WARNING - Already exists 'ouQwJj1V2pE' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:23:57,610 - root - INFO - Downloaded music 'TZ5jAb0nlwo' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:23:57,701 - root - INFO - Downloaded music 'SHrCg3mcTKM' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:23:57,704 - root - WARNING - Already exists 'U-bXx_4Nwx8' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:12,928 - root - INFO - Downloaded music 'nQpntZV-NUg' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:24:13,318 - root - INFO - Downloaded music 'B13RLYxcxGk' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:24:27,201 - root - ERROR - Failed to download music 'j1U1NLkx5XM' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:27,785 - root - ERROR - Failed to download music 'wBScjyf6qns' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:28,498 - root - WARNING - Already exists 'S4JLJVVjevI' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:28,500 - root - WARNING - Already exists 'k1YQE3YeMyw' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:28,500 - root - WARNING - Already exists 'U-bXx_4Nwx8' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:28,501 - root - WARNING - Already exists '3_GFxZ9xA7o' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:28,503 - root - WARNING - Already exists 'ouQwJj1V2pE' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:28,507 - root - WARNING - Already exists 'Hw06iZa8KhQ' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:24:44,688 - root - INFO - Downloaded music 'nVjVpX3gRWk' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:24:44,723 - root - INFO - Downloaded music 'Tt7vKpe_1NI' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:25:00,558 - root - INFO - Downloaded music 'p_fEh6dBAG0' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:25:01,366 - root - INFO - Downloaded music 'g7l61GEoM6M' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:25:01,693 - root - INFO - Downloaded music 'BuuIbTF0_b0' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:25:16,661 - root - INFO - Downloaded music 'GuRqyAx9yLA' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:25:31,710 - root - ERROR - Failed to download music 'Vs5271_7Fys' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:25:32,223 - root - INFO - Downloaded music 'jgbXe-9u10g' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:25:45,826 - root - ERROR - Failed to download music 'FxWe5kfB8-g' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:25:48,093 - root - ERROR - Failed to download music '0E_UWytH-6U' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:25:48,862 - root - WARNING - Already exists 'TZ5jAb0nlwo' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:26:04,603 - root - INFO - Downloaded music 'wBScjyf6qns' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:26:04,689 - root - INFO - Downloaded music 'HdpvHyUaIPg' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:26:35,340 - root - ERROR - Failed to download music 'PXa0P3lPSts' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:26:36,240 - root - ERROR - Failed to download music 'xrXtveuEZjs' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:26:50,709 - root - ERROR - Failed to download music 'PSB315ori0w' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:26:50,807 - root - INFO - Downloaded music 'j1U1NLkx5XM' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:26:50,844 - root - ERROR - Failed to download music 'QiaQY4oj24Y' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:27:37,472 - root - ERROR - Failed to download music 'Em2b25WER1A' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:27:38,757 - root - ERROR - Failed to download music '-qWSk3JdUOI' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:27:38,963 - root - ERROR - Failed to download music 'pS3vI3t9K8A' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:27:45,329 - root - ERROR - Failed to download music '6pGcWmHKaqE' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:28:03,465 - root - INFO - Downloaded music '7HUVMqcUpDU' by '¬ü¨q¶°¹ÎAmazingShow' successfully.
+2023-05-09 02:28:22,845 - root - ERROR - Failed to download music '5DaG0stQW-Y' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:28:24,414 - root - ERROR - Failed to download music 'MXQ_Ar6sEwA' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 02:28:31,063 - root - ERROR - Failed to download music 'wuqkZWCeSBc' by '¬ü¨q¶°¹ÎAmazingShow'.
+2023-05-09 10:15:11,159 - django.request - WARNING - Not Found: /favicon.ico
