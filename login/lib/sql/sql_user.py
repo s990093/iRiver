@@ -21,6 +21,7 @@ class SQL:
                 phone VARCHAR(20) NOT NULL,
                 country CHAR(2),
                 birthday DATE
+                
             )
         '''
         self.cursor.execute(sql)
