@@ -16,24 +16,26 @@ class SQL:
         # Create the artists table
         sql = f'''
             CREATE TABLE IF NOT EXISTS {table_name} (
-                email VARCHAR(100) NOT NULL PRIMARY KEY,
-                username VARCHAR(100) NOT NULL,
-                phone VARCHAR(20) NOT NULL,
+                email VARCHAR(32) NOT NULL PRIMARY KEY,
+                username VARCHAR(32) NOT NULL,
+                phone VARCHAR(16) NOT NULL,
                 country CHAR(2),
-                birthday DATE
-                
+                birthday DATE,
+                test TINYINT(2) UNSIGNED,
+                level TINYINT(2) UNSIGNED
             )
         '''
+
         self.cursor.execute(sql)
 
-    def save_user_data(self, email, username, phone, country, birthday):
+    def save_user_data(self, email, username, phone, country, birthday,test,level):
         self.cursor.execute(
-            f'INSERT IGNORE INTO user (email, username, phone, country, birthday) VALUES (%s, %s, %s, %s, %s)',
-            (email, username, phone, country, birthday)
+            f'INSERT IGNORE INTO user (email, username, phone, country, birthday, test, level) VALUES (%s, %s, %s, %s, %s, %s, %s)',
+            (email, username, phone, country, birthday, test,level)
         )
         self.cursor.execute(
-            f'UPDATE user SET username=%s, phone=%s, country=%s, birthday=%s WHERE email=%s',
-            (username, phone, country, birthday, email)
+            f'UPDATE user SET username=%s, phone=%s, country=%s, birthday=%s, test=%s, level=%s WHERE email=%s',
+            (username, phone, country, birthday, email,test,level)
         )
         self.db.commit()
 

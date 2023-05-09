@@ -151,8 +151,8 @@ def profile(request):
             country = user['country']
             birthday = user['birthday']
             sql = SQL_user(login.lib.sql.config.DB_CONFIG_user)
-            #sql.create_tables("user") #建立資料表
-            sql.save_user_data(email, username, phone, country, birthday)
+            sql.create_tables("user") #建立資料表
+            sql.save_user_data(email, username, phone, country, birthday,0,0)
             print("成功修改")
             return redirect('/user/data')
     else:
