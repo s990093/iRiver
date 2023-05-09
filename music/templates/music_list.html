@@ -40,18 +40,13 @@
       <div class="card-wrapper mb-3" style="max-width: 1000px">
         <div class="card mb-3 rounded-card">
           <img
-            src="https://icrvb3jy.xinmedia.com/solomo/article/181686/8F151751-5DBA-4064-2DE5-0B6438CB597A.jpeg"
+            src="/media/{{artist}}/img/cover.jpg"
             class="card-img-top img-fluid"
             alt="..."
           />
           <div class="card-body">
             <h5 class="card-title">{{artist}}</h5>
-            <p class="card-text">
-              康士坦的變化球（英語：KST），成立於2013年，團名來自希臘哲學家赫拉克利特（Heraclitus）的名言
-              「Change is the only constant in
-              life.」「唯一不變的就是永遠在變化」，也是佛說「無常」。
-              曲風融合後搖滾、情緒搖滾、硬核搖滾及全員主唱的元素，複雜鼓點加上吉他、貝斯音牆，VJ與合成器的編制，也以影像與音樂結合。歌曲擅長刻畫現實生活，引起廣大共鳴，被歌迷喻為「厭世樂團」代表之一。
-            </p>
+            <p class="card-text">{{summary}}</p>
             <p class="card-text">
               <small class="text-body-secondary">Last updated 3 mins ago</small>
             </p>
@@ -66,9 +61,43 @@
     </div>
 
     <!-- table -->
-    <div class="table-responsive">
+    <div class="">
       <table class="table table-hover">
-        <tbody id="table-body"></tbody>
+        <tbody>
+          {% for song in music_list_infos %}
+          <tr>
+            <td>
+              <a href="#" class="play" value="{{forloop.counter0}}">
+                <img
+                  src="{{ '/media/'|add:song.artist|add:'/img/'|add:song.music_ID|add:'.jpg' }}"
+                  alt="none"
+                  width="70"
+                  style="margin-right: 20px"
+                />
+                <span>{{ song.title }}</span>
+              </a>
+            </td>
+            <td>
+              <span
+                class=""
+                style="text-align: right"
+                data-music_list="{{music_list}}"
+              >
+                <a href="#" value="{{ song.music_ID }}"
+                  ><i class="far fa-heart"></i>
+                </a>
+              </span>
+            </td>
+            <td>
+              <a href="#" class="add"><i class="bi bi-plus-lg"></i></a>
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="3">沒有任何歌曲 該去聽了!</td>
+          </tr>
+          {% endfor %}
+        </tbody>
       </table>
     </div>
 
@@ -104,14 +133,14 @@
 
 {% block js %}
 <script>
-  let artist = "{{artist}}";
-  let index = "{{index}}";
-  // console.log(index);
+  const artist = "{{artist}}";
+  const index = "{{index}}";
+  const music_list_infos = JSON.parse("{{ music_list_infos_json|escapejs }}");
 </script>
 {% endblock js %}
 
 <!-- import_js -->
 
 {% block import_js %}
-<script type="module" src="{% static '/js/music_list.js' %}"></script>
+<script type="module" src="{% static '/js/artisrt_music_list.js' %}"></script>
 {% endblock import_js %}

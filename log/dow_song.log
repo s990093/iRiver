@@ -4048,3 +4048,636 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-09 20:43:20,240 - root - INFO - Downloaded music 'RLAw8Ct9k48' by 'KingGnuofficialYouTubechannel' successfully.
 2023-05-09 20:43:22,531 - root - WARNING - Already exists 'YeBt1NhOJtA' by 'KingGnuofficialYouTubechannel'.
 2023-05-09 20:43:23,216 - root - WARNING - Already exists 'RLAw8Ct9k48' by 'KingGnuofficialYouTubechannel'.
+2023-05-09 21:08:47,619 - root - ERROR - Failed to download music 'KAOCfU-KMFI' by 'BassPunch'.
+2023-05-09 21:10:11,005 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:10:11,006 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:11,007 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 21:10:11,008 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 21:10:11,011 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:10:11,012 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:10:11,013 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:10:11,014 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:10:11,602 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 21:10:11,603 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:10:11,604 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 21:10:11,605 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 21:10:11,607 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 21:10:13,370 - django.request - WARNING - Not Found: /media/SaucyDogFC/img/mGRD9iQhMbc.jpg
+2023-05-09 21:10:13,441 - django.request - WARNING - Not Found: /media/SaucyDogFC/img/artist.jpg
+2023-05-09 21:10:13,482 - django.request - WARNING - Not Found: /media/SaucyDogFC/songs/mGRD9iQhMbc.mp3
+2023-05-09 21:10:13,593 - django.request - WARNING - Not Found: /media/SaucyDogFC/img/mGRD9iQhMbc.jpg
+2023-05-09 21:10:28,295 - root - INFO - Downloaded music 'NAihask3rQQ' by 'SaucyDog' successfully.
+2023-05-09 21:10:29,827 - root - INFO - Downloaded music 'agQ23NdBROY' by 'SaucyDog' successfully.
+2023-05-09 21:10:30,008 - root - INFO - Downloaded music 'dD2PGU_pBPc' by 'SaucyDog' successfully.
+2023-05-09 21:10:31,259 - root - INFO - Downloaded music 'lRdGsh6MaWw' by 'SaucyDog' successfully.
+2023-05-09 21:10:31,790 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 21:10:31,794 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 21:10:31,794 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:10:31,796 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 21:10:31,798 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:10:31,799 - root - WARNING - Already exists '-llFD5pRf5g' by 'SaucyDog'.
+2023-05-09 21:10:31,799 - root - WARNING - Already exists 'GIqcUFQ8r4A' by 'SaucyDog'.
+2023-05-09 21:10:31,801 - root - WARNING - Already exists 'aST9jsNSigY' by 'SaucyDog'.
+2023-05-09 21:10:32,350 - root - WARNING - Already exists 'AG0plF6gjfY' by 'SaucyDog'.
+2023-05-09 21:10:32,351 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:32,352 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:10:32,354 - root - WARNING - Already exists 'ivK-2QCVwh0' by 'SaucyDog'.
+2023-05-09 21:10:32,357 - root - WARNING - Already exists 'Ce99C1btCuk' by 'SaucyDog'.
+2023-05-09 21:10:32,573 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:10:32,575 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:32,576 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 21:10:32,576 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 21:10:32,577 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:10:32,578 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:10:32,579 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:10:32,579 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:10:33,144 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 21:10:33,147 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:10:33,147 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 21:10:33,150 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 21:10:33,152 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 21:10:33,154 - root - WARNING - Already exists 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-09 21:10:33,155 - root - WARNING - Already exists 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-09 21:10:33,155 - root - WARNING - Already exists 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-09 21:10:34,751 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 21:10:34,926 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 21:10:34,975 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:10:34,992 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:10:35,028 - root - WARNING - Already exists '-llFD5pRf5g' by 'SaucyDog'.
+2023-05-09 21:10:35,032 - root - WARNING - Already exists 'GIqcUFQ8r4A' by 'SaucyDog'.
+2023-05-09 21:10:35,036 - root - WARNING - Already exists 'aST9jsNSigY' by 'SaucyDog'.
+2023-05-09 21:10:35,039 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 21:10:35,598 - root - WARNING - Already exists 'AG0plF6gjfY' by 'SaucyDog'.
+2023-05-09 21:10:35,599 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:35,600 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:10:35,600 - root - WARNING - Already exists 'ivK-2QCVwh0' by 'SaucyDog'.
+2023-05-09 21:10:35,602 - root - WARNING - Already exists 'Ce99C1btCuk' by 'SaucyDog'.
+2023-05-09 21:10:43,479 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:10:43,479 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:43,480 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 21:10:43,480 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 21:10:43,482 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:10:43,484 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:10:43,485 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:10:43,485 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:10:43,555 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:10:43,556 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:43,556 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 21:10:43,557 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 21:10:43,559 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:10:43,560 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:10:43,560 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:10:43,561 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:10:44,456 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 21:10:44,457 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 21:10:44,457 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:10:44,458 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 21:10:44,459 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 21:10:44,460 - root - WARNING - Already exists 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-09 21:10:44,461 - root - WARNING - Already exists 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-09 21:10:44,462 - root - WARNING - Already exists 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-09 21:10:44,483 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 21:10:44,484 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:10:44,484 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 21:10:44,485 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 21:10:44,486 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 21:10:44,488 - root - WARNING - Already exists 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-09 21:10:44,488 - root - WARNING - Already exists 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-09 21:10:44,488 - root - WARNING - Already exists 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-09 21:10:45,393 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 21:10:45,394 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 21:10:45,394 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 21:10:45,395 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:10:45,397 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:10:45,398 - root - WARNING - Already exists '-llFD5pRf5g' by 'SaucyDog'.
+2023-05-09 21:10:45,399 - root - WARNING - Already exists 'GIqcUFQ8r4A' by 'SaucyDog'.
+2023-05-09 21:10:45,399 - root - WARNING - Already exists 'aST9jsNSigY' by 'SaucyDog'.
+2023-05-09 21:10:45,405 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 21:10:45,405 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 21:10:45,407 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:10:45,407 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 21:10:45,408 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:10:45,409 - root - WARNING - Already exists '-llFD5pRf5g' by 'SaucyDog'.
+2023-05-09 21:10:45,411 - root - WARNING - Already exists 'GIqcUFQ8r4A' by 'SaucyDog'.
+2023-05-09 21:10:45,411 - root - WARNING - Already exists 'aST9jsNSigY' by 'SaucyDog'.
+2023-05-09 21:10:45,986 - root - WARNING - Already exists 'AG0plF6gjfY' by 'SaucyDog'.
+2023-05-09 21:10:45,989 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:45,990 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:10:45,992 - root - WARNING - Already exists 'ivK-2QCVwh0' by 'SaucyDog'.
+2023-05-09 21:10:45,994 - root - WARNING - Already exists 'Ce99C1btCuk' by 'SaucyDog'.
+2023-05-09 21:10:46,014 - root - WARNING - Already exists 'AG0plF6gjfY' by 'SaucyDog'.
+2023-05-09 21:10:46,016 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:46,018 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:10:46,023 - root - WARNING - Already exists 'ivK-2QCVwh0' by 'SaucyDog'.
+2023-05-09 21:10:46,027 - root - WARNING - Already exists 'Ce99C1btCuk' by 'SaucyDog'.
+2023-05-09 21:10:51,497 - root - WARNING - Already exists 'W1lvOAu9elU' by 'SaucyDog'.
+2023-05-09 21:10:51,790 - root - WARNING - Already exists 'ylXLDcP3cE0' by 'SaucyDog'.
+2023-05-09 21:10:52,432 - root - INFO - Downloaded music 'W1lvOAu9elU' by 'SaucyDog' successfully.
+2023-05-09 21:10:52,597 - root - WARNING - Already exists 'HrjdtTSwtTw' by 'SaucyDog'.
+2023-05-09 21:10:53,528 - root - WARNING - Already exists 'TiuJ915AAcA' by 'SaucyDog'.
+2023-05-09 21:10:53,529 - root - WARNING - Already exists 'HCtzGtji2y0' by 'SaucyDog'.
+2023-05-09 21:10:53,531 - root - WARNING - Already exists 'h542xpeXb68' by 'SaucyDog'.
+2023-05-09 21:10:53,534 - root - WARNING - Already exists 'z_VrnIAJiUE' by 'SaucyDog'.
+2023-05-09 21:10:53,535 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:10:53,536 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:10:56,027 - root - INFO - Downloaded music 'HrjdtTSwtTw' by 'SaucyDog' successfully.
+2023-05-09 21:10:58,389 - root - INFO - Downloaded music 'ylXLDcP3cE0' by 'SaucyDog' successfully.
+2023-05-09 21:10:59,050 - root - WARNING - Already exists 'TiuJ915AAcA' by 'SaucyDog'.
+2023-05-09 21:10:59,050 - root - WARNING - Already exists 'HCtzGtji2y0' by 'SaucyDog'.
+2023-05-09 21:10:59,053 - root - WARNING - Already exists 'h542xpeXb68' by 'SaucyDog'.
+2023-05-09 21:10:59,055 - root - WARNING - Already exists 'z_VrnIAJiUE' by 'SaucyDog'.
+2023-05-09 21:10:59,056 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:10:59,059 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:11:02,094 - root - WARNING - Already exists 'W1lvOAu9elU' by 'SaucyDog'.
+2023-05-09 21:11:02,299 - root - WARNING - Already exists 'W1lvOAu9elU' by 'SaucyDog'.
+2023-05-09 21:11:02,726 - root - WARNING - Already exists 'ylXLDcP3cE0' by 'SaucyDog'.
+2023-05-09 21:11:02,842 - root - WARNING - Already exists 'HrjdtTSwtTw' by 'SaucyDog'.
+2023-05-09 21:11:03,428 - root - WARNING - Already exists 'HCtzGtji2y0' by 'SaucyDog'.
+2023-05-09 21:11:03,429 - root - WARNING - Already exists 'TiuJ915AAcA' by 'SaucyDog'.
+2023-05-09 21:11:03,429 - root - WARNING - Already exists 'h542xpeXb68' by 'SaucyDog'.
+2023-05-09 21:11:03,432 - root - WARNING - Already exists 'z_VrnIAJiUE' by 'SaucyDog'.
+2023-05-09 21:11:03,432 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:11:03,436 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:11:03,536 - root - WARNING - Already exists 'HrjdtTSwtTw' by 'SaucyDog'.
+2023-05-09 21:11:03,742 - root - WARNING - Already exists 'ylXLDcP3cE0' by 'SaucyDog'.
+2023-05-09 21:11:04,415 - root - WARNING - Already exists 'TiuJ915AAcA' by 'SaucyDog'.
+2023-05-09 21:11:04,417 - root - WARNING - Already exists 'HCtzGtji2y0' by 'SaucyDog'.
+2023-05-09 21:11:04,418 - root - WARNING - Already exists 'h542xpeXb68' by 'SaucyDog'.
+2023-05-09 21:11:04,419 - root - WARNING - Already exists 'z_VrnIAJiUE' by 'SaucyDog'.
+2023-05-09 21:11:04,425 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:11:04,426 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:11:12,795 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:11:12,797 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:11:12,797 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 21:11:12,799 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:11:12,799 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 21:11:12,801 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:11:12,801 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:11:12,804 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:11:13,629 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 21:11:13,631 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:11:13,632 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 21:11:13,632 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 21:11:13,634 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 21:11:13,635 - root - WARNING - Already exists 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-09 21:11:13,635 - root - WARNING - Already exists 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-09 21:11:13,637 - root - WARNING - Already exists 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-09 21:11:14,263 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 21:11:14,264 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 21:11:14,264 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:11:14,266 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 21:11:14,279 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:11:14,280 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:11:14,282 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 21:11:14,283 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 21:11:14,497 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:11:14,499 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:11:14,501 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 21:11:14,501 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 21:11:14,515 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:11:14,517 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:11:14,517 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:11:14,519 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:11:15,004 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 21:11:15,023 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 21:11:15,121 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 21:11:15,125 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 21:11:15,747 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:11:15,748 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 21:11:15,749 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 21:11:15,751 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 21:11:15,766 - root - WARNING - Already exists 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-09 21:11:15,766 - root - WARNING - Already exists 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-09 21:11:15,767 - root - WARNING - Already exists 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-09 21:11:15,789 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 21:11:16,723 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 21:11:16,725 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 21:11:16,725 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 21:11:16,726 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 21:11:16,727 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 21:11:16,728 - root - WARNING - Already exists '-llFD5pRf5g' by 'SaucyDog'.
+2023-05-09 21:11:16,729 - root - WARNING - Already exists 'GIqcUFQ8r4A' by 'SaucyDog'.
+2023-05-09 21:11:16,729 - root - WARNING - Already exists 'aST9jsNSigY' by 'SaucyDog'.
+2023-05-09 21:11:17,471 - root - WARNING - Already exists 'AG0plF6gjfY' by 'SaucyDog'.
+2023-05-09 21:11:17,473 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:11:17,480 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 21:11:17,483 - root - WARNING - Already exists 'ivK-2QCVwh0' by 'SaucyDog'.
+2023-05-09 21:11:17,488 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 21:11:17,491 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 21:11:17,492 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 21:11:17,493 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 21:11:18,812 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 21:11:18,817 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 21:11:18,819 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 21:11:18,843 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 21:11:23,743 - root - WARNING - Already exists '0uljHbyjBrU' by 'SaucyDog'.
+2023-05-09 21:11:24,525 - root - WARNING - Already exists 'sBgCIVv3mq8' by 'SaucyDog'.
+2023-05-09 21:11:24,526 - root - WARNING - Already exists 'sBgCIVv3mq8' by 'SaucyDog'.
+2023-05-09 21:11:25,118 - root - INFO - Downloaded music 'sBgCIVv3mq8' by 'SaucyDog' successfully.
+2023-05-09 21:11:25,132 - root - INFO - Downloaded music '0uljHbyjBrU' by 'SaucyDog' successfully.
+2023-05-09 21:11:26,269 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:11:26,271 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:11:26,272 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 21:11:26,274 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 21:11:26,274 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 21:11:26,277 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 21:11:26,433 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:11:26,435 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:11:26,439 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 21:11:26,440 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 21:11:26,442 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 21:11:26,443 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 21:11:27,569 - root - WARNING - Already exists '0uljHbyjBrU' by 'SaucyDog'.
+2023-05-09 21:11:28,911 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:11:28,913 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:11:28,921 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 21:11:28,921 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 21:11:30,270 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 21:11:30,329 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 21:11:41,854 - root - INFO - Downloaded music 'Glnrx-OiewM' by 'SaucyDog' successfully.
+2023-05-09 21:11:45,487 - root - INFO - Downloaded music 'nmyxWejUtTc' by 'SaucyDog' successfully.
+2023-05-09 21:11:48,254 - root - WARNING - Already exists 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-09 21:11:49,093 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 48, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: loader has changed while resolving nodes
+  (Session info: chrome=113.0.5672.92)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x01008893+48451]
+	(No symbol) [0x00F9B8A1]
+	(No symbol) [0x00EA5058]
+	(No symbol) [0x00EA79D6]
+	(No symbol) [0x00EA9631]
+	(No symbol) [0x00EA96D0]
+	(No symbol) [0x00EF1A58]
+	(No symbol) [0x00EF047C]
+	(No symbol) [0x00EEA0B6]
+	(No symbol) [0x00EC7E08]
+	(No symbol) [0x00EC8F2D]
+	GetHandleVerifier [0x01268E3A+2540266]
+	GetHandleVerifier [0x012A8959+2801161]
+	GetHandleVerifier [0x012A295C+2776588]
+	GetHandleVerifier [0x01092280+612144]
+	(No symbol) [0x00FA4F6C]
+	(No symbol) [0x00FA11D8]
+	(No symbol) [0x00FA12BB]
+	(No symbol) [0x00F94857]
+	BaseThreadInitThunk [0x76837D49+25]
+	RtlInitializeExceptionChain [0x7793B74B+107]
+	RtlClearBits [0x7793B6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 215, in download_songs
+    success = download( music_ID_list=[song['music_ID'] for song in chunk],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 63, in crawl
+    driver.quit()
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+2023-05-09 21:11:50,073 - root - INFO - Downloaded music 'jPZUSIv1sdg' by 'SaucyDog' successfully.
+2023-05-09 21:11:55,119 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BDA48140D0>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。')': /session/cdcf01f66306dad4a523ddcfc8d1db7f
+2023-05-09 21:11:55,677 - root - ERROR - Failed to download music '0uljHbyjBrU' by 'SaucyDog'.
+2023-05-09 21:11:56,168 - root - WARNING - Already exists 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-09 21:11:56,389 - root - WARNING - Already exists 'Glnrx-OiewM' by 'SaucyDog'.
+2023-05-09 21:11:56,608 - root - ERROR - Failed to download music 'sBgCIVv3mq8' by 'SaucyDog'.
+2023-05-09 21:11:56,897 - root - WARNING - Already exists 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-09 21:11:57,150 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 21:11:57,151 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 21:11:57,152 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 21:11:57,153 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 21:11:57,155 - root - WARNING - Already exists 'Glnrx-OiewM' by 'SaucyDog'.
+2023-05-09 21:11:57,155 - root - WARNING - Already exists 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-09 21:11:57,155 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 21:11:57,156 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 21:11:57,706 - root - WARNING - Already exists 'BLfVYC7th4I' by 'SaucyDog'.
+2023-05-09 21:11:57,707 - root - WARNING - Already exists 'u934F_tr1p4' by 'SaucyDog'.
+2023-05-09 21:11:57,709 - root - WARNING - Already exists 'Et7146ux4mc' by 'SaucyDog'.
+2023-05-09 21:11:57,710 - root - WARNING - Already exists 'LHjpZ7I9uP4' by 'SaucyDog'.
+2023-05-09 21:11:57,712 - root - WARNING - Already exists 'm3jQCwjMS4Q' by 'SaucyDog'.
+2023-05-09 21:11:57,731 - root - WARNING - Already exists 'BLfVYC7th4I' by 'SaucyDog'.
+2023-05-09 21:11:57,732 - root - WARNING - Already exists 'u934F_tr1p4' by 'SaucyDog'.
+2023-05-09 21:11:57,734 - root - WARNING - Already exists 'LHjpZ7I9uP4' by 'SaucyDog'.
+2023-05-09 21:11:57,736 - root - WARNING - Already exists 'Et7146ux4mc' by 'SaucyDog'.
+2023-05-09 21:11:57,739 - root - WARNING - Already exists 'm3jQCwjMS4Q' by 'SaucyDog'.
+2023-05-09 21:11:59,190 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BDA501B2D0>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。')': /session/cdcf01f66306dad4a523ddcfc8d1db7f
+2023-05-09 21:12:03,263 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BDA472C190>: Failed to establish a new connection: [WinError 10061] 無法連線，因為目標電腦拒絕連線。')': /session/cdcf01f66306dad4a523ddcfc8d1db7f
+2023-05-09 21:12:12,734 - root - ERROR - Failed to download music 'O36mSgU81Fw' by 'SaucyDog'.
+2023-05-09 21:12:13,645 - root - WARNING - Already exists 'u934F_tr1p4' by 'SaucyDog'.
+2023-05-09 21:12:13,646 - root - WARNING - Already exists 'LHjpZ7I9uP4' by 'SaucyDog'.
+2023-05-09 21:12:13,646 - root - WARNING - Already exists 'Et7146ux4mc' by 'SaucyDog'.
+2023-05-09 21:12:13,649 - root - WARNING - Already exists 'm3jQCwjMS4Q' by 'SaucyDog'.
+2023-05-09 21:12:18,303 - root - WARNING - Already exists 'V_pfWIy7or0' by 'SaucyDog'.
+2023-05-09 21:12:19,356 - root - WARNING - Already exists '5FeiralfUEY' by 'SaucyDog'.
+2023-05-09 21:12:20,027 - root - INFO - Downloaded music 'V_pfWIy7or0' by 'SaucyDog' successfully.
+2023-05-09 21:12:21,150 - root - INFO - Downloaded music '5FeiralfUEY' by 'SaucyDog' successfully.
+2023-05-09 21:12:26,308 - root - WARNING - Already exists 'Glnrx-OiewM' by 'SaucyDog'.
+2023-05-09 21:12:38,677 - root - ERROR - Failed to download music 'O36mSgU81Fw' by 'SaucyDog'.
+2023-05-09 21:12:40,240 - root - WARNING - Already exists 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-09 21:12:41,090 - root - WARNING - Already exists 'BLfVYC7th4I' by 'SaucyDog'.
+2023-05-09 21:12:41,090 - root - WARNING - Already exists 'V_pfWIy7or0' by 'SaucyDog'.
+2023-05-09 21:12:41,090 - root - WARNING - Already exists 'u934F_tr1p4' by 'SaucyDog'.
+2023-05-09 21:12:41,092 - root - WARNING - Already exists 'm3jQCwjMS4Q' by 'SaucyDog'.
+2023-05-09 21:12:41,093 - root - WARNING - Already exists 'Et7146ux4mc' by 'SaucyDog'.
+2023-05-09 21:12:41,093 - root - WARNING - Already exists 'LHjpZ7I9uP4' by 'SaucyDog'.
+2023-05-09 21:12:41,096 - root - WARNING - Already exists '5FeiralfUEY' by 'SaucyDog'.
+2023-05-09 21:12:43,576 - root - ERROR - Failed to download music 'jPZUSIv1sdg' by 'SaucyDog'.
+2023-05-09 21:12:47,036 - django.request - ERROR - Internal Server Error: /music/download_songs/
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 48, in crawl
+    driver = webdriver.Chrome(service=service, options=options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 80, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 104, in __init__
+    super().__init__(
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 378, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created
+from no such execution context: uniqueContextId not found
+  (Session info: chrome=113.0.5672.92)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x01008893+48451]
+	(No symbol) [0x00F9B8A1]
+	(No symbol) [0x00EA5058]
+	(No symbol) [0x00E987D0]
+	(No symbol) [0x00E96F58]
+	(No symbol) [0x00E975CA]
+	(No symbol) [0x00EA8067]
+	(No symbol) [0x00EA9631]
+	(No symbol) [0x00EA96D0]
+	(No symbol) [0x00EF1A58]
+	(No symbol) [0x00EF047C]
+	(No symbol) [0x00EEA0B6]
+	(No symbol) [0x00EC7E08]
+	(No symbol) [0x00EC8F2D]
+	GetHandleVerifier [0x01268E3A+2540266]
+	GetHandleVerifier [0x012A8959+2801161]
+	GetHandleVerifier [0x012A295C+2776588]
+	GetHandleVerifier [0x01092280+612144]
+	(No symbol) [0x00FA4F6C]
+	(No symbol) [0x00FA11D8]
+	(No symbol) [0x00FA12BB]
+	(No symbol) [0x00F94857]
+	BaseThreadInitThunk [0x76837D49+25]
+	RtlInitializeExceptionChain [0x7793B74B+107]
+	RtlClearBits [0x7793B6CF+191]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py", line 215, in download_songs
+    success = download( music_ID_list=[song['music_ID'] for song in chunk],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\dow.py", line 50, in download
+    results.append(future.result())
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\s9900\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\dow.py", line 31, in run
+    self.result = y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 31, in download_audio
+    song_url = crawl(music_ID= music_ID,  num_retries= num_retries , max_retries= max_retries)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\s9900\OneDrive\桌面\django\myproject\music\lib\download\y2mate.py", line 63, in crawl
+    driver.quit()
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'driver' where it is not associated with a value
+2023-05-09 21:12:51,374 - root - INFO - Downloaded music 'GVMR6JvLtG4' by 'SaucyDog' successfully.
+2023-05-09 21:13:06,704 - root - WARNING - Already exists 'V_pfWIy7or0' by 'SaucyDog'.
+2023-05-09 21:13:08,523 - root - ERROR - Failed to download music 'GVMR6JvLtG4' by 'SaucyDog'.
+2023-05-09 21:13:18,725 - root - ERROR - Failed to download music '5FeiralfUEY' by 'SaucyDog'.
+2023-05-09 21:13:41,205 - root - ERROR - Failed to download music 'GVMR6JvLtG4' by 'SaucyDog'.
+2023-05-09 22:00:42,927 - django.utils.autoreload - INFO - C:\Users\s9900\OneDrive\桌面\django\myproject\music\views.py changed, reloading.
+2023-05-09 22:35:09,038 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 22:35:09,039 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:35:09,040 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 22:35:09,041 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 22:35:09,043 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 22:35:09,047 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 22:35:09,048 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 22:35:09,050 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 22:35:09,673 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 22:35:09,674 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 22:35:09,674 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 22:35:09,676 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 22:35:09,678 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 22:35:09,680 - root - WARNING - Already exists 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-09 22:35:09,680 - root - WARNING - Already exists 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-09 22:35:09,681 - root - WARNING - Already exists 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-09 22:35:10,349 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 22:35:10,350 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 22:35:10,352 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 22:35:10,352 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 22:35:10,355 - root - WARNING - Already exists '-llFD5pRf5g' by 'SaucyDog'.
+2023-05-09 22:35:10,356 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 22:35:10,356 - root - WARNING - Already exists 'GIqcUFQ8r4A' by 'SaucyDog'.
+2023-05-09 22:35:10,358 - root - WARNING - Already exists 'aST9jsNSigY' by 'SaucyDog'.
+2023-05-09 22:35:11,011 - root - WARNING - Already exists 'AG0plF6gjfY' by 'SaucyDog'.
+2023-05-09 22:35:11,012 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:35:11,012 - root - WARNING - Already exists 'ivK-2QCVwh0' by 'SaucyDog'.
+2023-05-09 22:35:11,013 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 22:35:11,015 - root - WARNING - Already exists 'Ce99C1btCuk' by 'SaucyDog'.
+2023-05-09 22:35:11,016 - root - WARNING - Already exists 'ylXLDcP3cE0' by 'SaucyDog'.
+2023-05-09 22:35:11,018 - root - WARNING - Already exists 'W1lvOAu9elU' by 'SaucyDog'.
+2023-05-09 22:35:11,019 - root - WARNING - Already exists 'HrjdtTSwtTw' by 'SaucyDog'.
+2023-05-09 22:35:11,683 - root - WARNING - Already exists 'TiuJ915AAcA' by 'SaucyDog'.
+2023-05-09 22:35:11,684 - root - WARNING - Already exists 'HCtzGtji2y0' by 'SaucyDog'.
+2023-05-09 22:35:11,685 - root - WARNING - Already exists 'h542xpeXb68' by 'SaucyDog'.
+2023-05-09 22:35:11,686 - root - WARNING - Already exists 'sBgCIVv3mq8' by 'SaucyDog'.
+2023-05-09 22:35:11,689 - root - WARNING - Already exists '0uljHbyjBrU' by 'SaucyDog'.
+2023-05-09 22:35:11,691 - root - WARNING - Already exists 'z_VrnIAJiUE' by 'SaucyDog'.
+2023-05-09 22:35:11,692 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 22:35:11,693 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:35:12,392 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 22:35:12,394 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 22:35:12,395 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 22:35:12,395 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 22:35:12,397 - root - WARNING - Already exists 'Glnrx-OiewM' by 'SaucyDog'.
+2023-05-09 22:35:12,399 - root - WARNING - Already exists 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-09 22:35:12,400 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 22:35:12,401 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 22:35:13,073 - root - WARNING - Already exists 'GVMR6JvLtG4' by 'SaucyDog'.
+2023-05-09 22:35:13,074 - root - WARNING - Already exists 'BLfVYC7th4I' by 'SaucyDog'.
+2023-05-09 22:35:13,075 - root - WARNING - Already exists 'u934F_tr1p4' by 'SaucyDog'.
+2023-05-09 22:35:13,076 - root - WARNING - Already exists 'V_pfWIy7or0' by 'SaucyDog'.
+2023-05-09 22:35:13,079 - root - WARNING - Already exists 'Et7146ux4mc' by 'SaucyDog'.
+2023-05-09 22:35:13,080 - root - WARNING - Already exists 'LHjpZ7I9uP4' by 'SaucyDog'.
+2023-05-09 22:35:13,080 - root - WARNING - Already exists 'm3jQCwjMS4Q' by 'SaucyDog'.
+2023-05-09 22:35:13,082 - root - WARNING - Already exists '5FeiralfUEY' by 'SaucyDog'.
+2023-05-09 22:35:28,431 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 22:35:28,431 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:35:28,432 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 22:35:28,433 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 22:35:28,435 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 22:35:28,435 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 22:35:28,436 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 22:35:28,436 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 22:35:29,171 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 22:35:29,172 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 22:35:29,173 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 22:35:29,175 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 22:35:29,176 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 22:35:29,179 - root - WARNING - Already exists 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-09 22:35:29,179 - root - WARNING - Already exists 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-09 22:35:29,180 - root - WARNING - Already exists 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-09 22:35:30,083 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 22:35:30,084 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 22:35:30,085 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 22:35:30,086 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 22:35:30,088 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 22:35:30,089 - root - WARNING - Already exists '-llFD5pRf5g' by 'SaucyDog'.
+2023-05-09 22:35:30,089 - root - WARNING - Already exists 'GIqcUFQ8r4A' by 'SaucyDog'.
+2023-05-09 22:35:30,090 - root - WARNING - Already exists 'aST9jsNSigY' by 'SaucyDog'.
+2023-05-09 22:35:30,702 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:35:30,704 - root - WARNING - Already exists 'AG0plF6gjfY' by 'SaucyDog'.
+2023-05-09 22:35:30,704 - root - WARNING - Already exists 'ivK-2QCVwh0' by 'SaucyDog'.
+2023-05-09 22:35:30,705 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 22:35:30,708 - root - WARNING - Already exists 'Ce99C1btCuk' by 'SaucyDog'.
+2023-05-09 22:35:30,709 - root - WARNING - Already exists 'ylXLDcP3cE0' by 'SaucyDog'.
+2023-05-09 22:35:30,709 - root - WARNING - Already exists 'W1lvOAu9elU' by 'SaucyDog'.
+2023-05-09 22:35:30,710 - root - WARNING - Already exists 'HrjdtTSwtTw' by 'SaucyDog'.
+2023-05-09 22:35:31,427 - root - WARNING - Already exists 'TiuJ915AAcA' by 'SaucyDog'.
+2023-05-09 22:35:31,428 - root - WARNING - Already exists 'HCtzGtji2y0' by 'SaucyDog'.
+2023-05-09 22:35:31,428 - root - WARNING - Already exists 'h542xpeXb68' by 'SaucyDog'.
+2023-05-09 22:35:31,429 - root - WARNING - Already exists 'sBgCIVv3mq8' by 'SaucyDog'.
+2023-05-09 22:35:31,431 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 22:35:31,432 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:35:31,433 - root - WARNING - Already exists '0uljHbyjBrU' by 'SaucyDog'.
+2023-05-09 22:35:31,433 - root - WARNING - Already exists 'z_VrnIAJiUE' by 'SaucyDog'.
+2023-05-09 22:35:32,479 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 22:35:32,480 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 22:35:32,480 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 22:35:32,481 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 22:35:32,482 - root - WARNING - Already exists 'Glnrx-OiewM' by 'SaucyDog'.
+2023-05-09 22:35:32,483 - root - WARNING - Already exists 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-09 22:35:32,485 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 22:35:32,485 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 22:35:33,243 - root - WARNING - Already exists 'GVMR6JvLtG4' by 'SaucyDog'.
+2023-05-09 22:35:33,247 - root - WARNING - Already exists 'BLfVYC7th4I' by 'SaucyDog'.
+2023-05-09 22:35:33,247 - root - WARNING - Already exists 'u934F_tr1p4' by 'SaucyDog'.
+2023-05-09 22:35:33,248 - root - WARNING - Already exists 'V_pfWIy7or0' by 'SaucyDog'.
+2023-05-09 22:35:33,248 - root - WARNING - Already exists 'Et7146ux4mc' by 'SaucyDog'.
+2023-05-09 22:35:33,252 - root - WARNING - Already exists 'm3jQCwjMS4Q' by 'SaucyDog'.
+2023-05-09 22:35:33,253 - root - WARNING - Already exists '5FeiralfUEY' by 'SaucyDog'.
+2023-05-09 22:35:33,253 - root - WARNING - Already exists 'LHjpZ7I9uP4' by 'SaucyDog'.
+2023-05-09 22:40:50,218 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 22:40:50,219 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:40:50,220 - root - WARNING - Already exists 'MP9RyTO50eY' by 'SaucyDog'.
+2023-05-09 22:40:50,221 - root - WARNING - Already exists 'enrKXe3QRow' by 'SaucyDog'.
+2023-05-09 22:40:50,223 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 22:40:50,224 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 22:40:50,226 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 22:40:50,227 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 22:40:50,890 - root - WARNING - Already exists 'F7xTTkmGE1Y' by 'SaucyDog'.
+2023-05-09 22:40:50,892 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 22:40:50,892 - root - WARNING - Already exists 'ojL3TkEZWs4' by 'SaucyDog'.
+2023-05-09 22:40:50,896 - root - WARNING - Already exists 'fD6FKK0lpTA' by 'SaucyDog'.
+2023-05-09 22:40:50,897 - root - WARNING - Already exists '772WgE7_bwI' by 'SaucyDog'.
+2023-05-09 22:40:50,898 - root - WARNING - Already exists 'lRdGsh6MaWw' by 'SaucyDog'.
+2023-05-09 22:40:50,900 - root - WARNING - Already exists 'NAihask3rQQ' by 'SaucyDog'.
+2023-05-09 22:40:50,900 - root - WARNING - Already exists 'dD2PGU_pBPc' by 'SaucyDog'.
+2023-05-09 22:40:51,517 - root - WARNING - Already exists 'WObVzphoLTY' by 'SaucyDog'.
+2023-05-09 22:40:51,518 - root - WARNING - Already exists '0lASG1aB5lE' by 'SaucyDog'.
+2023-05-09 22:40:51,520 - root - WARNING - Already exists '8GmP3CQmHQ4' by 'SaucyDog'.
+2023-05-09 22:40:51,521 - root - WARNING - Already exists 'U8pJgoOhiDs' by 'SaucyDog'.
+2023-05-09 22:40:51,524 - root - WARNING - Already exists '-llFD5pRf5g' by 'SaucyDog'.
+2023-05-09 22:40:51,524 - root - WARNING - Already exists 'WFEO5efToMc' by 'SaucyDog'.
+2023-05-09 22:40:51,525 - root - WARNING - Already exists 'GIqcUFQ8r4A' by 'SaucyDog'.
+2023-05-09 22:40:51,527 - root - WARNING - Already exists 'aST9jsNSigY' by 'SaucyDog'.
+2023-05-09 22:40:52,381 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:40:52,382 - root - WARNING - Already exists 'AG0plF6gjfY' by 'SaucyDog'.
+2023-05-09 22:40:52,383 - root - WARNING - Already exists 'tbLMacyYZb8' by 'SaucyDog'.
+2023-05-09 22:40:52,384 - root - WARNING - Already exists 'ivK-2QCVwh0' by 'SaucyDog'.
+2023-05-09 22:40:52,385 - root - WARNING - Already exists 'Ce99C1btCuk' by 'SaucyDog'.
+2023-05-09 22:40:52,386 - root - WARNING - Already exists 'ylXLDcP3cE0' by 'SaucyDog'.
+2023-05-09 22:40:52,388 - root - WARNING - Already exists 'HrjdtTSwtTw' by 'SaucyDog'.
+2023-05-09 22:40:52,388 - root - WARNING - Already exists 'W1lvOAu9elU' by 'SaucyDog'.
+2023-05-09 22:40:53,000 - root - WARNING - Already exists 'TiuJ915AAcA' by 'SaucyDog'.
+2023-05-09 22:40:53,003 - root - WARNING - Already exists 'HCtzGtji2y0' by 'SaucyDog'.
+2023-05-09 22:40:53,004 - root - WARNING - Already exists 'sBgCIVv3mq8' by 'SaucyDog'.
+2023-05-09 22:40:53,005 - root - WARNING - Already exists 'h542xpeXb68' by 'SaucyDog'.
+2023-05-09 22:40:53,007 - root - WARNING - Already exists 'z_VrnIAJiUE' by 'SaucyDog'.
+2023-05-09 22:40:53,008 - root - WARNING - Already exists '0uljHbyjBrU' by 'SaucyDog'.
+2023-05-09 22:40:53,008 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
+2023-05-09 22:40:53,010 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
+2023-05-09 22:40:53,615 - root - WARNING - Already exists 'alad5koOUco' by 'SaucyDog'.
+2023-05-09 22:40:53,616 - root - WARNING - Already exists 'bc3yKQ8I7as' by 'SaucyDog'.
+2023-05-09 22:40:53,617 - root - WARNING - Already exists 'R531RSEalJY' by 'SaucyDog'.
+2023-05-09 22:40:53,619 - root - WARNING - Already exists '0LrXuXD7O7c' by 'SaucyDog'.
+2023-05-09 22:40:53,620 - root - WARNING - Already exists 'Glnrx-OiewM' by 'SaucyDog'.
+2023-05-09 22:40:53,621 - root - WARNING - Already exists 'nmyxWejUtTc' by 'SaucyDog'.
+2023-05-09 22:40:53,622 - root - WARNING - Already exists 'wOHDlmL1rv4' by 'SaucyDog'.
+2023-05-09 22:40:53,623 - root - WARNING - Already exists '1Ickywa4GBs' by 'SaucyDog'.
+2023-05-09 22:40:54,216 - root - WARNING - Already exists 'GVMR6JvLtG4' by 'SaucyDog'.
+2023-05-09 22:40:54,217 - root - WARNING - Already exists 'BLfVYC7th4I' by 'SaucyDog'.
+2023-05-09 22:40:54,219 - root - WARNING - Already exists 'u934F_tr1p4' by 'SaucyDog'.
+2023-05-09 22:40:54,220 - root - WARNING - Already exists 'V_pfWIy7or0' by 'SaucyDog'.
+2023-05-09 22:40:54,221 - root - WARNING - Already exists 'Et7146ux4mc' by 'SaucyDog'.
+2023-05-09 22:40:54,223 - root - WARNING - Already exists 'LHjpZ7I9uP4' by 'SaucyDog'.
+2023-05-09 22:40:54,224 - root - WARNING - Already exists 'm3jQCwjMS4Q' by 'SaucyDog'.
+2023-05-09 22:40:54,225 - root - WARNING - Already exists '5FeiralfUEY' by 'SaucyDog'.

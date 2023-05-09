@@ -41,14 +41,26 @@ def discover(request):
 def search(request):
     query = request.GET.get('query', '')
     context = {'query': query}
+
     return render(request, './serach_reault.html' , context)
 
 
 def music_list(request):
     artist = request.GET.get('artist', '')
     index = request.GET.get('index', '')
-
-    return render(request, './music_list.html', context={'artist': artist, 'index': index})
+    mysql = SQL(music.lib.sql.config.DB_CONFIG)
+    music_list_infos = mysql.get_all_artist_song(artist= artist)
+    music_list_infos_json = json.dumps(music_list_infos)
+    summary_str = (mysql.get_artist_summary(artist= artist))
+    summary = ""
+    for item in summary_str:
+        summary += item[0]
+        
+    return render(request, './music_list.html', context={'artist': artist, 'index': index , 
+                                                         'music_list_infos': music_list_infos,
+                                                         'music_list_infos_json': music_list_infos_json,
+                                                         'summary': summary
+                                                         })
 
 def my_music_list(request):
     music_list = request.GET.get('music_list'  , 1)
@@ -69,11 +81,6 @@ def my_music_list(request):
                                                         'music_list_infos_json': music_list_infos_json,
                                                         'music_list': music_list
                                                         })     
-   
-
-
-
-
 def get_music_list(request):
     artist = request.GET.get('artist')
     mysql = SQL(music.lib.sql.config.DB_CONFIG)
