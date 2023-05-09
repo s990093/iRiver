@@ -107,19 +107,19 @@ spinners.forEach((spinner, index) => {
 $('#table-body').on('click', '.love-icon a', async function () {
   $(this).find('i').toggleClass('far fas');
   var music_ID = $(this).attr('value');
-  const isSongExist = await fetch_is_song_exit(music_ID);
-  if (isSongExist) {
+  // const isSongExist = await fetch_is_song_exit(music_ID);
+  // if (isSongExist) 
     await insert_my_music_list(music_ID, 1, true, 'insert');
-  }
+  
 });
 
 
 $('#table-body').on('click', '.add', async function () {
   $(this).find('i').toggleClass('far fas');
   var music_ID = $(this).attr('value');
-  const isSongExist = await fetch_is_song_exit(music_ID);
-  if (isSongExist) {
+  // const isSongExist = await fetch_is_song_exit(music_ID);
+  // if (isSongExist) 
     await insert_my_music_list(music_ID, 2, false, 'insert');
-  }
+  
 });
 
