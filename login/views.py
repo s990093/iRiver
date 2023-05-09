@@ -25,8 +25,6 @@ def get_user_music_list(request):
     # 解析 JSON 数据
     data = json.loads(request.body)
     method = data.get('method')
-    # print('%'*20)
-    # print(method)
     if method == 'insert':
         return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')],indent=4) , music_list= data.get('music_list' , 1),)}), safe=False)
     elif method == 'get':
