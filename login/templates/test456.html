@@ -1,3 +1,6 @@
+{% extends 'template.html' %}
+
+{% block body %}
 <h1>個人資料</h1>
 <form method="POST">
     {% csrf_token %}
@@ -13,12 +16,16 @@
         </ul>
     </div>
     {% endif %}
+    <br>
     姓名
     <input type="text" name="user" value="{{form.user.value}}">
+    <br>
     電郵
     <input type="email" name="mail" value="{{ form.mail.value }}" readonly>
+    <br>
     電話
     <input type="text" name="phone" value="{{form.phone.value}}">
+    <br>
     國家
     <select name="country">
         {% for choice in form.country.field.choices %}
@@ -31,9 +38,10 @@
             {% endif %}
         {% endfor %}
     </select>
-    
+    <br>
     生日
     <input type="date" name="birthday" value="{{ form.birthday.value|date:'Y-m-d' }}">
+    <br>
     性別
     <select name="gender">
         {% for choice in form.gender.field.choices %}
@@ -46,5 +54,7 @@
           {% endif %}
         {% endfor %}
       </select>
+    <br>
     <button type="submit">保存</button>
 </form>
+{% endblock %}
