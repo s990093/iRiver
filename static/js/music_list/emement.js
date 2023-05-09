@@ -37,6 +37,8 @@ export class MediaPlayer {
         insert_my_music_list(music_ID, music_list, favorite, method);
     }
 }
+
+
 export function insert_my_music_list(music_ID, music_list = 1, favorite = true, method) {
     return new Promise((resolve, reject) => {
         fetch(`/user/isLogin/`)
@@ -91,3 +93,5 @@ function getCookie(name) {
     return cookieValue;
 }
 
+// // export function
+// export { insert_my_music_list };
