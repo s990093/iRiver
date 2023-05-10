@@ -7128,3 +7128,4 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-10 08:34:00,335 - root - INFO - Downloaded music 'LLWZOF7DiVg' by 'BLACKPINK' successfully.
 2023-05-10 08:34:00,369 - root - INFO - Downloaded music 'AUwWAdBUo5U' by 'BLACKPINK' successfully.
 2023-05-10 08:34:44,219 - root - ERROR - Failed to download music 'XYjVwg63Z7U' by 'BLACKPINK'.
+2023-05-10 10:37:10,512 - django.utils.autoreload - INFO - C:\Users\user\Desktop\django\iRiver\music\lib\sql\sql.py changed, reloading.
