@@ -10,6 +10,9 @@ import lib.sql.sql as sql
 import lib.sql.config as config
 from lib.web_scutter.music_list import query_music_list
 from lib.web_scutter.music_ID_info import get_music_ID_info
+from lib.web_scutter.iocn import query_artist_iocn_src
+from lib.web_scutter.summary import query_summary
+import lib.download.img as img
 
 class Controller: 
     def __init__(self , artist_list: str, params , max_thread: int =2):
@@ -27,17 +30,29 @@ class Controller:
 
     def run(self):
         for artist in self.artist_list:
-          music_list_infos, artist = query_youtube(artist= artist)
-          self.download_songs(music_list_infos= music_list_infos , artist= artist)
+          music_list_infos, artist , artist_img_url= query_youtube(artist= artist)
+          self.download_songs(music_list_infos= music_list_infos , artist= artist , artist_img_url= artist_img_url)
     
 
     def query(artist: str):
         statistics = json.loads(query_youtube(artist= artist))
         artist_url = statistics["most_common_artist_url"]
         artist = statistics["most_common_artist"]
-        return query_music_list(url= artist_url, artist=  artist) , artist 
+        artist_img_url = statistics["most_common_artist_img_url"]
+        return query_music_list(url= artist_url, artist=  artist) , artist  , artist_img_url
      
-    def download_songs(self , music_list_infos : list , artist: str):
+    def download_songs(self , music_list_infos : list , artist: str , artist_img_url: str):
+        # 下在cover artist
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            # 下載artist 小圖
+            executor.submit(img.download_img(url= artist_img_url, file_name='artist.jpg',
+                                            file_dir=f"media/{artist}/img/"))
+
+            # 下載 封面
+            executor.submit(img.download_img_base64(url= executor.submit(query_artist_iocn_src, artist).result() ,
+                                    file_name='cover.jpg', file_dir=f"media/{artist}/img/"))
+            # summary
+            self.mysql.save_summary(summary= executor.submit(query_summary , artist).result())
         download_song_infos =[]
         # 組合
         for song in music_list_infos:
@@ -53,12 +68,12 @@ class Controller:
                 'publish_time': music_ID_info['publish_time'],  
             })
         # 分割
-        music_ID_list_chunks = [ download_song_infos[x:x+8] for x in range(0, len(   download_song_infos), 10)]
+        music_ID_list_chunks = [ download_song_infos[x:x+8] for x in range(0, len(download_song_infos), 10)]
 
         for chunk in music_ID_list_chunks:
             success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                                 artist=artist , 
-                                only_dow_song=True, max_thread= 3
+                                only_dow_song=True, max_thread= 4
                             )
             if success:
                 self.push_data( music_list_infos = chunk)
