@@ -55,12 +55,12 @@ class SQL:
         """push data"""
         # Load song_infos into a list
         song_infos_list = json.loads(song_infos)
-        style = self.get_style(music_ID= song_infos_list[0]['music_ID'])
+        # style = self.get_style(music_ID= song_infos_list[0]['music_ID'])
 
-        if not song_infos_list[0]['style'] == "null" or None or "":
-            style += f",{song_infos_list[0]['style']}"
-        else :
-            style = f"{song_infos_list[0]['style']}"
+        # if not song_infos_list[0]['style'] == "null" or None or "":
+        #     style += f",{song_infos_list[0]['style']}"
+        # else :
+        #     style = f",{song_infos_list[0]['style']}"
         
         # Iterate through the list of song infos
         for song_info in song_infos_list:
@@ -96,8 +96,8 @@ class SQL:
                                 song_info['label'],
                                 song_info['artist_url'],
                                 song_info['sources'],
-                                song_info['download_status'],
-                                style,
+                                song_info['downloads_status'],
+                                song_info['style'],
                                 song_info['country'],
                                 song_info['language'],
                                 song_info['description'],

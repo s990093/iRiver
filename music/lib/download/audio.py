@@ -48,8 +48,8 @@ class downloader:
                  return False
     
     def check_path(self):
-        if os.path.isfile(os.path.join(self.path, f"{self.music_ID}.mp4")):
-               os.remove(os.path.join(self.path,  f"{self.music_ID}.mp4"))
+        # if os.path.isfile(os.path.join(self.path, f"{self.music_ID}.mp4")):
+        #        os.remove(os.path.join(self.path,  f"{self.music_ID}.mp4"))
 
         if os.path.isfile(os.path.join(self.path, f"{self.music_ID}.mp3")):
             print(f"{self.music_ID}.mp3 already exists in {self.path}")
