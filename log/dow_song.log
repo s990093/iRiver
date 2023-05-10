@@ -7261,3 +7261,4 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-10 11:08:00,971 - django.request - WARNING - Not Found: /media/Self-HealingCollective/img/3v_8VwGEjus.jpg
 2023-05-10 11:08:01,036 - django.request - WARNING - Not Found: /media/Self-HealingCollective/img/artist.jpg
 2023-05-10 11:08:01,085 - django.request - WARNING - Not Found: /media/Self-HealingCollective/songs/3v_8VwGEjus.mp3
+2023-05-10 11:10:51,845 - django.utils.autoreload - INFO - C:\Users\user\Desktop\django\iRiver\music\views.py changed, reloading.
