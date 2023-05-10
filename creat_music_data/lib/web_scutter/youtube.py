@@ -11,17 +11,14 @@ import json
 import re
 from collections import Counter
 # 自製
-from .options import get_chrome_options
-from  .options import get_available_port
-from .clear_str import clear_str
+from options import get_chrome_options
+from  options import get_available_port
+from clear_str import clear_str
 
 def query_youtube(query : str) ->json:
     service = Service('chromedriver.exe')
     options = get_chrome_options(port = get_available_port() , is_headLess= True)
-    # driver = webdriver.Chrome(service = service, options=options) 
     driver = webdriver.Chrome(service = service, options=options) 
-    # driver = webdriver.Chrome() 
-    start_time = time.time()
     driver.get(f"https://www.youtube.com/results?search_query={query}&sp=EgIQAQ%253D%253D&t=0s-7m")
     music_list = []
     video_elements = WebDriverWait(driver, 2).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#contents #video-title")))
@@ -39,10 +36,13 @@ def query_youtube(query : str) ->json:
                 artist_img_url = ''
             
             match  = re.search(r'(?<=v=)[^&]+',  url.get_attribute('href'))
-            if match:
-                ID = match.group(0)[-11:]
-            else:
-                ID = re.search(r"shorts\/(\w{11})", url.get_attribute('href')).group(1)
+            try:
+                if match:
+                    ID = match.group(0)[-11:]
+                else:
+                    ID = re.search(r"shorts\/(\w{11})", url.get_attribute('href')).group(1)
+            except:
+                continue
             video = {}
             video["title"] = title=title.text
             video["music_ID"] = ID
@@ -80,17 +80,13 @@ def query_youtube(query : str) ->json:
     'most_common_artist_img_url': most_common_artist_img_url,
     }
     # 合併
-    result = {
-    'music_list': music_list,
-    'statistics': statistics,
-    }
+    # result = {
+    # 'music_list': music_list,
+    # 'statistics': statistics,
+    # }
 
-    end_time = time.time()
-    print(f"程序运行时间：{end_time - start_time}秒")
-    # driver.close()
-
-    json_str = json.dumps(result, indent=4)
+    json_str = json.dumps(statistics, indent=4)
     return json_str
 
-# r = query_youtube('比悲傷更悲傷')
+# r = json.loads(query_youtube('比悲傷更悲傷'))
 # print(r)

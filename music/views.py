@@ -207,6 +207,7 @@ def download_song(request):
             'release_year': '0',
             'publish_time': music_ID_info['publish_time'],  
         }] 
+    
     if success is not None:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         mysql.create_tables()  # 建立資料庫表格
