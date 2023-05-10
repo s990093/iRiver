@@ -31,7 +31,6 @@ def get_music_ID_info(music_ID):
         if english_captions:
             english_lyrics = english_captions.generate_srt_captions()
 
-
     except Exception as e:
         print(f"on web_scutter get_mysic_ID_datail {e}")
 
@@ -41,7 +40,7 @@ def get_music_ID_info(music_ID):
         'description': description,
         'publish_time': publish_time,
         'views': views,
-        'rating' :rating,
+        'rating': rating,
         'ch_lyrics': chinese_lyrics,
         'en_lyrics': english_lyrics
     }

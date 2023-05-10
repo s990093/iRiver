@@ -4049,6 +4049,7 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-09 20:43:22,531 - root - WARNING - Already exists 'YeBt1NhOJtA' by 'KingGnuofficialYouTubechannel'.
 2023-05-09 20:43:23,216 - root - WARNING - Already exists 'RLAw8Ct9k48' by 'KingGnuofficialYouTubechannel'.
 <<<<<<< HEAD
+<<<<<<< HEAD
 2023-05-09 21:08:47,619 - root - ERROR - Failed to download music 'KAOCfU-KMFI' by 'BassPunch'.
 2023-05-09 21:10:11,005 - root - WARNING - Already exists '_MR9pbJ5__c' by 'SaucyDog'.
 2023-05-09 21:10:11,006 - root - WARNING - Already exists 'cOGAY6XBrX4' by 'SaucyDog'.
@@ -4344,6 +4345,8 @@ Backtrace:
 	RtlInitializeExceptionChain [0x7793B74B+107]
 	RtlClearBits [0x7793B6CF+191]
 =======
+=======
+>>>>>>> 7ae6c1039b56dd4f5559cc5c550320b82b70f98e
 2023-05-09 22:57:25,297 - root - INFO - Downloaded music 'HQ_mU73VhEQ' by '添翼音樂TEAMEARMUSIC' successfully.
 2023-05-09 23:04:40,871 - root - INFO - Downloaded music 'PwkTnaQv7Jo' by 'EdSheeran' successfully.
 2023-05-09 23:05:08,582 - root - WARNING - Already exists 'L1nf1kXGRLA' by 'KpopBattle'.
@@ -5239,12 +5242,16 @@ Backtrace:
 	BaseThreadInitThunk [0x77670099+25]
 	RtlGetAppContainerNamedObjectPath [0x77B37B6E+286]
 	RtlGetAppContainerNamedObjectPath [0x77B37B3E+238]
+<<<<<<< HEAD
 >>>>>>> 65fb5c7796544c5f290a2c1d984df3bff4f66455
+=======
+>>>>>>> 7ae6c1039b56dd4f5559cc5c550320b82b70f98e
 
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
 <<<<<<< HEAD
   File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -5372,6 +5379,8 @@ Backtrace:
 	RtlInitializeExceptionChain [0x7793B74B+107]
 	RtlClearBits [0x7793B6CF+191]
 =======
+=======
+>>>>>>> 7ae6c1039b56dd4f5559cc5c550320b82b70f98e
   File "C:\Users\user\Desktop\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
@@ -5444,12 +5453,16 @@ Backtrace:
 	BaseThreadInitThunk [0x77670099+25]
 	RtlGetAppContainerNamedObjectPath [0x77B37B6E+286]
 	RtlGetAppContainerNamedObjectPath [0x77B37B3E+238]
+<<<<<<< HEAD
 >>>>>>> 65fb5c7796544c5f290a2c1d984df3bff4f66455
+=======
+>>>>>>> 7ae6c1039b56dd4f5559cc5c550320b82b70f98e
 
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
 <<<<<<< HEAD
   File "C:\Users\s9900\OneDrive\桌面\django\.env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -5656,6 +5669,8 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-09 22:40:54,224 - root - WARNING - Already exists 'm3jQCwjMS4Q' by 'SaucyDog'.
 2023-05-09 22:40:54,225 - root - WARNING - Already exists '5FeiralfUEY' by 'SaucyDog'.
 =======
+=======
+>>>>>>> 7ae6c1039b56dd4f5559cc5c550320b82b70f98e
   File "C:\Users\user\Desktop\django\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
                ^^^^^^^^^^^^^^^^^^^^^
@@ -7760,4 +7775,140 @@ UnboundLocalError: cannot access local variable 'driver' where it is not associa
 2023-05-10 08:34:00,369 - root - INFO - Downloaded music 'AUwWAdBUo5U' by 'BLACKPINK' successfully.
 2023-05-10 08:34:44,219 - root - ERROR - Failed to download music 'XYjVwg63Z7U' by 'BLACKPINK'.
 2023-05-10 10:37:10,512 - django.utils.autoreload - INFO - C:\Users\user\Desktop\django\iRiver\music\lib\sql\sql.py changed, reloading.
+<<<<<<< HEAD
 >>>>>>> 65fb5c7796544c5f290a2c1d984df3bff4f66455
+=======
+2023-05-10 10:40:19,028 - root - ERROR - Failed to download music 'z2ueaL1EJCY' by 'AcapellaTimes'.
+2023-05-10 10:40:19,382 - django.request - WARNING - Not Found: /media/AcapellaTimes/img/artist.jpg
+2023-05-10 10:40:58,577 - django.request - WARNING - Not Found: /media/AcapellaTimes/songs/z2ueaL1EJCY.mp3
+2023-05-10 10:41:05,768 - django.utils.autoreload - INFO - C:\Users\user\Desktop\django\iRiver\music\views.py changed, reloading.
+2023-05-10 10:55:38,715 - root - INFO - Downloaded music '7RREsx9lnNI' by 'VanceJoy' successfully.
+2023-05-10 10:56:07,181 - root - INFO - Downloaded music 'atka_0TUTLM' by 'VanceJoy' successfully.
+2023-05-10 10:56:07,238 - root - INFO - Downloaded music '-p4WUhq7Kus' by 'VanceJoy' successfully.
+2023-05-10 10:56:12,778 - root - WARNING - Already exists '-p4WUhq7Kus' by 'VanceJoy'.
+2023-05-10 10:56:12,795 - root - WARNING - Already exists 'atka_0TUTLM' by 'VanceJoy'.
+2023-05-10 10:56:22,770 - root - INFO - Downloaded music 'v292NtGMt18' by 'VanceJoy' successfully.
+2023-05-10 10:56:22,771 - root - WARNING - Already exists '7RREsx9lnNI' by 'VanceJoy'.
+2023-05-10 10:56:26,878 - root - WARNING - Already exists 'v292NtGMt18' by 'VanceJoy'.
+2023-05-10 10:56:26,878 - root - WARNING - Already exists '7RREsx9lnNI' by 'VanceJoy'.
+2023-05-10 10:56:28,554 - root - INFO - Downloaded music 'EWe595qZEhw' by 'VanceJoy' successfully.
+2023-05-10 10:56:29,481 - root - INFO - Downloaded music 'fhtzBjwfak0' by 'VanceJoy' successfully.
+2023-05-10 10:56:36,417 - root - ERROR - Failed to download music 'fhtzBjwfak0' by 'VanceJoy'.
+2023-05-10 10:56:39,506 - root - ERROR - Failed to download music 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 10:56:53,816 - root - ERROR - Failed to download music 'jVIXKH5YNN8' by 'VanceJoy'.
+2023-05-10 10:57:02,116 - root - ERROR - Failed to download music 'jVIXKH5YNN8' by 'VanceJoy'.
+2023-05-10 10:57:09,933 - root - ERROR - Failed to download music 'NFRsWWQCw3A' by 'VanceJoy'.
+2023-05-10 10:57:10,005 - root - WARNING - Already exists 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 10:57:10,006 - root - WARNING - Already exists 'v292NtGMt18' by 'VanceJoy'.
+2023-05-10 10:57:13,647 - root - ERROR - Failed to download music 'NFRsWWQCw3A' by 'VanceJoy'.
+2023-05-10 10:57:13,687 - root - WARNING - Already exists 'v292NtGMt18' by 'VanceJoy'.
+2023-05-10 10:57:13,688 - root - WARNING - Already exists 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 10:57:28,522 - root - INFO - Downloaded music 'b5jZW5RK7So' by 'VanceJoy' successfully.
+2023-05-10 10:57:54,254 - root - ERROR - Failed to download music 'b5jZW5RK7So' by 'VanceJoy'.
+2023-05-10 10:57:59,665 - root - ERROR - Failed to download music 'tX1R4PLjy30' by 'VanceJoy'.
+2023-05-10 10:58:00,624 - root - ERROR - Failed to download music 'XUAbO2OIAEg' by 'VanceJoy'.
+2023-05-10 10:58:03,060 - root - ERROR - Failed to download music 'NmiAtO1dvIQ' by 'VanceJoy'.
+2023-05-10 10:58:06,665 - root - ERROR - Failed to download music 'tX1R4PLjy30' by 'VanceJoy'.
+2023-05-10 10:58:06,680 - root - ERROR - Failed to download music 'XUAbO2OIAEg' by 'VanceJoy'.
+2023-05-10 10:58:07,218 - root - ERROR - Failed to download music 'NmiAtO1dvIQ' by 'VanceJoy'.
+2023-05-10 10:58:12,568 - root - INFO - Downloaded music 'kG37uVXMlTU' by 'VanceJoy' successfully.
+2023-05-10 10:58:28,156 - root - ERROR - Failed to download music 'kG37uVXMlTU' by 'VanceJoy'.
+2023-05-10 10:58:46,199 - root - ERROR - Failed to download music '8Y12S-8H6fw' by 'VanceJoy'.
+2023-05-10 10:58:52,445 - root - ERROR - Failed to download music '8Y12S-8H6fw' by 'VanceJoy'.
+2023-05-10 10:59:22,842 - root - INFO - Downloaded music 'VSaAg4Pg9qM' by 'VanceJoy' successfully.
+2023-05-10 10:59:24,750 - root - INFO - Downloaded music 'woBgZJQd4ps' by 'VanceJoy' successfully.
+2023-05-10 10:59:24,758 - root - INFO - Downloaded music 'yFEAIYUiGw8' by 'VanceJoy' successfully.
+2023-05-10 10:59:39,958 - root - ERROR - Failed to download music '8Elg0iF4qqQ' by 'VanceJoy'.
+2023-05-10 10:59:40,975 - root - ERROR - Failed to download music 'VSaAg4Pg9qM' by 'VanceJoy'.
+2023-05-10 10:59:44,564 - root - ERROR - Failed to download music 'woBgZJQd4ps' by 'VanceJoy'.
+2023-05-10 10:59:45,876 - root - INFO - Downloaded music 'jAgghTgR73w' by 'VanceJoy' successfully.
+2023-05-10 10:59:46,163 - root - ERROR - Failed to download music 'yFEAIYUiGw8' by 'VanceJoy'.
+2023-05-10 10:59:47,399 - root - ERROR - Failed to download music '8Elg0iF4qqQ' by 'VanceJoy'.
+2023-05-10 10:59:47,960 - root - INFO - Downloaded music 'Z8cFdhTp2eI' by 'VanceJoy' successfully.
+2023-05-10 10:59:49,431 - root - INFO - Downloaded music 'geDZTJK2XHs' by 'VanceJoy' successfully.
+2023-05-10 10:59:54,426 - root - WARNING - Already exists 'geDZTJK2XHs' by 'VanceJoy'.
+2023-05-10 10:59:54,804 - root - WARNING - Already exists 'jAgghTgR73w' by 'VanceJoy'.
+2023-05-10 10:59:58,875 - root - WARNING - Already exists 'Z8cFdhTp2eI' by 'VanceJoy'.
+2023-05-10 11:00:01,037 - root - INFO - Downloaded music 'KRMVOj1cJmo' by 'VanceJoy' successfully.
+2023-05-10 11:00:01,038 - root - WARNING - Already exists 'KRMVOj1cJmo' by 'VanceJoy'.
+2023-05-10 11:00:23,649 - root - INFO - Downloaded music 'DisP-khQSEk' by 'VanceJoy' successfully.
+2023-05-10 11:00:25,188 - root - WARNING - Already exists 'zoXta5ztPQc' by 'VanceJoy'.
+2023-05-10 11:00:25,318 - root - INFO - Downloaded music 'zoXta5ztPQc' by 'VanceJoy' successfully.
+2023-05-10 11:00:25,714 - root - INFO - Downloaded music 'f_ES8jBxlmM' by 'VanceJoy' successfully.
+2023-05-10 11:00:25,717 - root - WARNING - Already exists 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 11:00:26,330 - root - INFO - Downloaded music 'so6iZqkmrzA' by 'VanceJoy' successfully.
+2023-05-10 11:00:46,610 - root - WARNING - Already exists 'A2sln8TFsNo' by 'VanceJoy'.
+2023-05-10 11:00:46,612 - root - WARNING - Already exists 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 11:00:47,004 - root - INFO - Downloaded music 'A2sln8TFsNo' by 'VanceJoy' successfully.
+2023-05-10 11:00:47,685 - root - INFO - Downloaded music 's_GgiIvcgys' by 'VanceJoy' successfully.
+2023-05-10 11:00:52,924 - root - ERROR - Failed to download music 'f_ES8jBxlmM' by 'VanceJoy'.
+2023-05-10 11:00:55,369 - root - ERROR - Failed to download music 'DisP-khQSEk' by 'VanceJoy'.
+2023-05-10 11:00:59,505 - root - ERROR - Failed to download music 'so6iZqkmrzA' by 'VanceJoy'.
+2023-05-10 11:01:04,546 - root - ERROR - Failed to download music 'dQjTQFRZsD4' by 'VanceJoy'.
+2023-05-10 11:01:05,677 - root - ERROR - Failed to download music 's_GgiIvcgys' by 'VanceJoy'.
+2023-05-10 11:01:05,733 - root - WARNING - Already exists 'v292NtGMt18' by 'VanceJoy'.
+2023-05-10 11:01:05,735 - root - WARNING - Already exists '7RREsx9lnNI' by 'VanceJoy'.
+2023-05-10 11:01:05,737 - root - WARNING - Already exists 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 11:01:27,667 - root - INFO - Downloaded music 'bNl-dgYR3n8' by 'VanceJoy' successfully.
+2023-05-10 11:01:33,770 - root - ERROR - Failed to download music 'dQjTQFRZsD4' by 'VanceJoy'.
+2023-05-10 11:01:33,813 - root - WARNING - Already exists 'v292NtGMt18' by 'VanceJoy'.
+2023-05-10 11:01:33,816 - root - WARNING - Already exists '7RREsx9lnNI' by 'VanceJoy'.
+2023-05-10 11:01:33,817 - root - WARNING - Already exists 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 11:01:33,818 - root - WARNING - Already exists 'bNl-dgYR3n8' by 'VanceJoy'.
+2023-05-10 11:01:42,620 - root - INFO - Downloaded music '1C816p-KTNk' by 'VanceJoy' successfully.
+2023-05-10 11:01:47,784 - root - WARNING - Already exists '1C816p-KTNk' by 'VanceJoy'.
+2023-05-10 11:01:51,308 - root - INFO - Downloaded music '52V9JEs6Apc' by 'VanceJoy' successfully.
+2023-05-10 11:01:51,485 - root - INFO - Downloaded music '0euUB634SHo' by 'VanceJoy' successfully.
+2023-05-10 11:01:54,430 - root - ERROR - Failed to download music '0euUB634SHo' by 'VanceJoy'.
+2023-05-10 11:01:54,525 - root - ERROR - Failed to download music 'rsaK8uUwSyg' by 'VanceJoy'.
+2023-05-10 11:01:56,058 - root - ERROR - Failed to download music '52V9JEs6Apc' by 'VanceJoy'.
+2023-05-10 11:01:56,117 - root - WARNING - Already exists 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 11:01:56,117 - root - WARNING - Already exists '-p4WUhq7Kus' by 'VanceJoy'.
+2023-05-10 11:01:56,118 - root - WARNING - Already exists 'atka_0TUTLM' by 'VanceJoy'.
+2023-05-10 11:01:56,119 - root - WARNING - Already exists 'fhtzBjwfak0' by 'VanceJoy'.
+2023-05-10 11:01:56,120 - root - WARNING - Already exists 'v292NtGMt18' by 'VanceJoy'.
+2023-05-10 11:02:10,395 - root - INFO - Downloaded music 'jVIXKH5YNN8' by 'VanceJoy' successfully.
+2023-05-10 11:02:22,855 - root - ERROR - Failed to download music 'rsaK8uUwSyg' by 'VanceJoy'.
+2023-05-10 11:02:22,898 - root - WARNING - Already exists 'EWe595qZEhw' by 'VanceJoy'.
+2023-05-10 11:02:22,899 - root - WARNING - Already exists '-p4WUhq7Kus' by 'VanceJoy'.
+2023-05-10 11:02:22,900 - root - WARNING - Already exists 'atka_0TUTLM' by 'VanceJoy'.
+2023-05-10 11:02:22,900 - root - WARNING - Already exists 'fhtzBjwfak0' by 'VanceJoy'.
+2023-05-10 11:02:22,902 - root - WARNING - Already exists 'jVIXKH5YNN8' by 'VanceJoy'.
+2023-05-10 11:02:22,903 - root - WARNING - Already exists 'v292NtGMt18' by 'VanceJoy'.
+2023-05-10 11:02:36,862 - root - INFO - Downloaded music 'X4a2ixsBDhk' by 'VanceJoy' successfully.
+2023-05-10 11:02:38,072 - root - INFO - Downloaded music 'Dr-bQEMlN7M' by 'VanceJoy' successfully.
+2023-05-10 11:02:41,889 - root - ERROR - Failed to download music 'Dr-bQEMlN7M' by 'VanceJoy'.
+2023-05-10 11:02:42,443 - root - ERROR - Failed to download music 'X4a2ixsBDhk' by 'VanceJoy'.
+2023-05-10 11:02:53,769 - root - INFO - Downloaded music '4cdRmIlOLXM' by 'VanceJoy' successfully.
+2023-05-10 11:02:54,136 - root - INFO - Downloaded music 'NFRsWWQCw3A' by 'VanceJoy' successfully.
+2023-05-10 11:02:54,494 - root - INFO - Downloaded music 'jINwuFHFA3U' by 'VanceJoy' successfully.
+2023-05-10 11:02:55,819 - root - WARNING - Already exists 'NFRsWWQCw3A' by 'VanceJoy'.
+2023-05-10 11:02:56,494 - root - WARNING - Already exists 'jINwuFHFA3U' by 'VanceJoy'.
+2023-05-10 11:02:56,926 - root - WARNING - Already exists '4cdRmIlOLXM' by 'VanceJoy'.
+2023-05-10 11:03:10,466 - root - INFO - Downloaded music 'JYn_4zEJs08' by 'VanceJoy' successfully.
+2023-05-10 11:03:11,604 - root - WARNING - Already exists 'JYn_4zEJs08' by 'VanceJoy'.
+2023-05-10 11:03:24,627 - root - ERROR - Failed to download music 'Sxw1lqlu_gY' by 'VanceJoy'.
+2023-05-10 11:03:25,767 - root - WARNING - Already exists 'YxfPfr3aZqU' by 'VanceJoy'.
+2023-05-10 11:03:26,974 - root - INFO - Downloaded music 'YxfPfr3aZqU' by 'VanceJoy' successfully.
+2023-05-10 11:03:33,574 - root - ERROR - Failed to download music 'Sxw1lqlu_gY' by 'VanceJoy'.
+2023-05-10 11:03:34,571 - root - ERROR - Failed to download music '0Ffj7BNHMWM' by 'VanceJoy'.
+2023-05-10 11:03:43,214 - root - ERROR - Failed to download music 'SH6NBqL7LJY' by 'VanceJoy'.
+2023-05-10 11:03:43,428 - root - ERROR - Failed to download music '0Ffj7BNHMWM' by 'VanceJoy'.
+2023-05-10 11:03:43,586 - root - ERROR - Failed to download music 'SH6NBqL7LJY' by 'VanceJoy'.
+2023-05-10 11:04:01,414 - root - WARNING - Already exists 'uSSRvPxmoSU' by 'VanceJoy'.
+2023-05-10 11:04:01,629 - root - INFO - Downloaded music 'uSSRvPxmoSU' by 'VanceJoy' successfully.
+2023-05-10 11:04:16,389 - root - WARNING - Already exists 'yEJ1cglCiTs' by 'VanceJoy'.
+2023-05-10 11:04:17,769 - root - INFO - Downloaded music 'yEJ1cglCiTs' by 'VanceJoy' successfully.
+2023-05-10 11:04:23,122 - root - ERROR - Failed to download music 'jiZU8WhGegs' by 'VanceJoy'.
+2023-05-10 11:04:27,331 - root - ERROR - Failed to download music 'b3cgal7N1-E' by 'VanceJoy'.
+2023-05-10 11:04:29,359 - root - ERROR - Failed to download music 'jiZU8WhGegs' by 'VanceJoy'.
+2023-05-10 11:04:36,735 - root - ERROR - Failed to download music 'b3cgal7N1-E' by 'VanceJoy'.
+2023-05-10 11:04:38,362 - root - ERROR - Failed to download music 'p34jUngdhoU' by 'VanceJoy'.
+2023-05-10 11:04:38,519 - root - ERROR - Failed to download music 'p34jUngdhoU' by 'VanceJoy'.
+2023-05-10 11:05:02,243 - root - ERROR - Failed to download music 'DVxRD_ieVX4' by 'VanceJoy'.
+2023-05-10 11:05:04,153 - root - ERROR - Failed to download music 'DVxRD_ieVX4' by 'VanceJoy'.
+2023-05-10 11:08:00,971 - django.request - WARNING - Not Found: /media/Self-HealingCollective/img/3v_8VwGEjus.jpg
+2023-05-10 11:08:01,036 - django.request - WARNING - Not Found: /media/Self-HealingCollective/img/artist.jpg
+2023-05-10 11:08:01,085 - django.request - WARNING - Not Found: /media/Self-HealingCollective/songs/3v_8VwGEjus.mp3
+2023-05-10 11:10:51,845 - django.utils.autoreload - INFO - C:\Users\user\Desktop\django\iRiver\music\views.py changed, reloading.
+>>>>>>> 7ae6c1039b56dd4f5559cc5c550320b82b70f98e

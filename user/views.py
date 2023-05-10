@@ -36,7 +36,6 @@ def get_user_music_list(request):
 
 
 def hello(request):
-    #temp = request.user.email
     temp = request.session['email']
     mail = temp.split("@")[0]
 
@@ -140,7 +139,6 @@ def log_out(request):
 #個人資料
 def profile(request):
     user_profile, created = UserProfile.objects.get_or_create(email=request.user.email)
-
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
