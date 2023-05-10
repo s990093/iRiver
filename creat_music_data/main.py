@@ -5,7 +5,7 @@ from file import File
 from control import Controller
 
 if __name__ == "__main__":
-    file = File()
+    file = File(test= True)
     while True:
         counters = 0
         max_counters = file.get_max_counters()
@@ -16,6 +16,7 @@ if __name__ == "__main__":
             if counters == max_counters:
                 break
             counters +=1
+        
 
     print("DONE!!!")
    

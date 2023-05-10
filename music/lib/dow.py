@@ -52,7 +52,7 @@ def download(music_ID_list: List[str], artist: str, img_url: str = None,
         for future in concurrent.futures.as_completed(futures):
             results.append(future.result())
     
-    return results
+    return True
 
 
 

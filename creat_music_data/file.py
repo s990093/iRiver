@@ -4,16 +4,19 @@ import csv
 
 
 class File:
-    def __init__(self):
+    def __init__(self, test=False):
         super().__init__()
         self.csv_files = []
         self.processed_counters = 0
         self.max_counters = 0
+        self.test = test
         self._registr()
+        print(f"file register file path {self.csv_files }  , max counters = {self.max_counters}")
 
     def _registr(self):
         self.csv_files = self.get_all_file_names()
-        len(self.csv_files )
+        print(self.csv_files)
+        len(self.csv_files)
 
     def get_now_rocessed_counters(self):
         return self.processed_counters
@@ -22,9 +25,13 @@ class File:
         return self.max_counters
 
     def get_all_file_names(self):
-        for file_path in glob.glob(os.path.join('artist', '*.csv')):
-            self.csv_files.append(file_path)
-        
+        if not self.test:
+            for file_path in glob.glob(os.path.join('artist', '*.csv')):
+                self.csv_files.append(file_path)
+        else:
+            print(123)
+            for file_path in glob.glob(os.path.join('test', '*.csv')):
+                self.csv_files.append(file_path)
 
     def get_csv_data(self, processed_counters=0):
         self.processed_counters = processed_counters

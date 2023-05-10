@@ -12,7 +12,8 @@ from tqdm import tqdm   #進度條
 import os
 import logging
 # 自製
-import options as option
+from .options import get_chrome_options
+from .options import get_available_port
 
 def download_audio(music_ID: str , artist: str ,  num_retries: int =0 ,  max_retries: int = 3) ->bool: 
     '''
@@ -44,7 +45,7 @@ def crawl(music_ID , num_retries , max_retries):
             # display = Display(visible=0, size=(800, 600))
             # display.start()
             service = Service('chromedriver.exe')  
-            options =  option.get_chrome_options(port=option.get_available_port() , is_headLess= False)
+            options =  get_chrome_options(port= get_available_port() , is_headLess= False)
             driver = webdriver.Chrome(service=service, options=options)
             driver.get(f"https://www.youtubepp.com/watch?v={music_ID}")
 
