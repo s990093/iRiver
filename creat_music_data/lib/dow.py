@@ -5,9 +5,9 @@ import concurrent.futures
 import threading
 from typing import List
 # 自製
-import music.lib.download.img as img
-import music.lib.download.y2mate as y2mate
-from  music.lib.download.audio import downloader
+import lib.download.img as img
+import lib.download.y2mate as y2mate
+from  lib.download.audio import downloader
 # import sql
 
 

@@ -32,7 +32,7 @@ def get_music_ID_info(music_ID):
             english_lyrics = english_captions.generate_srt_captions()
 
     except Exception as e:
-        print(f"on web_scutter get_mysic_ID_datail {e}")
+        print(f"on web_scutter get_mysic_ID_info  error {e}")
 
     # Create a dictionary with the extracted data
     video_info = {
