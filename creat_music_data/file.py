@@ -11,12 +11,11 @@ class File:
         self.max_counters = 0
         self.test = test
         self._registr()
-        print(f"file register file path {self.csv_files }  , max counters = {self.max_counters}")
+        print(
+            f"file register file path {self.csv_files }  , max counters = {self.max_counters}")
 
     def _registr(self):
-        self.csv_files = self.get_all_file_names()
-        print(self.csv_files)
-        len(self.csv_files)
+        self.get_all_file_names()
 
     def get_now_rocessed_counters(self):
         return self.processed_counters
@@ -29,9 +28,9 @@ class File:
             for file_path in glob.glob(os.path.join('artist', '*.csv')):
                 self.csv_files.append(file_path)
         else:
-            print(123)
             for file_path in glob.glob(os.path.join('test', '*.csv')):
                 self.csv_files.append(file_path)
+            self.max_counters = len(self.csv_files)
 
     def get_csv_data(self, processed_counters=0):
         self.processed_counters = processed_counters

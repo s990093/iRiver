@@ -20,22 +20,24 @@ class Controller:
         super().__init__()
         self.artist_list = artist_list
         self.max_thread = max_thread
-        self.local =  params['local']
+        self.sources =  params['sources']
         self.style = params['style']
         self.country = params['country']
         self.language = params['language']
 
         self.mysql = sql.SQL(config= config.DB_CONFIG)
         self.mysql.create_tables()
+        print("@"*30)
+        print("register controller")
 
     def run(self):
-        for artist in self.artist_list:
-          music_list_infos, artist , artist_img_url= query_youtube(artist= artist)
+        for query in self.artist_list:
+          music_list_infos, artist , artist_img_url= self.query(query= query)
           self.download_songs(music_list_infos= music_list_infos , artist= artist , artist_img_url= artist_img_url)
     
 
-    def query(artist: str):
-        statistics = json.loads(query_youtube(artist= artist))
+    def query(self , query: str):
+        statistics = json.loads(query_youtube(query= query))
         artist_url = statistics["most_common_artist_url"]
         artist = statistics["most_common_artist"]
         artist_img_url = statistics["most_common_artist_img_url"]
@@ -52,7 +54,7 @@ class Controller:
             executor.submit(img.download_img_base64(url= executor.submit(query_artist_iocn_src, artist).result() ,
                                     file_name='cover.jpg', file_dir=f"media/{artist}/img/"))
             # summary
-            self.mysql.save_summary(summary= executor.submit(query_summary , artist).result())
+            self.mysql.save_summary(artist= artist,summary= executor.submit(query_summary , artist).result())
         download_song_infos =[]
         # 組合
         for song in music_list_infos:
@@ -88,7 +90,7 @@ class Controller:
                 'album': 'null',
                 'label': 'null',
                 'artist_url': song_info['artist_url'],
-                'sources': self.local,
+                'sources': self.sources,
                 'download_status': success,
                 'style': self.style,
                 'country': self.country,
