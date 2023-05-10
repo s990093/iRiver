@@ -1,3 +1,4 @@
+"""main fun download song and get info in music list"""
 import os
 import time
 import datetime
@@ -6,38 +7,70 @@ from pytube import YouTube
 from retrying import retry
 from tqdm import tqdm
 import threading
+import urllib
+from pydub import AudioSegment
+from pytube import Playlist
+from pytube.cli import on_progress
+# 自製
+import music.lib.download.y2mate as y2mate
 
 
 class downloader:
-    def __init__(self, music_ID, artist):
-        self.music_ID = music_ID
+    def __init__(self, music_ID :str, artist :str):
+        super().__init__()
+        self.music_ID = music_ID 
         self.artist = artist
-        self.path = os.path.join("media", artist, "songs")
+        self.url = f"https://www.youtube.com/watch?v={self.music_ID}"
+        self.path =  f"media/{self.artist}/songs"
+        self.mp4_path = f"media/{self.artist}/songs/{self.music_ID}.mp4"
+        self.mp3_path = f"media/{self.artist}/songs/{self.music_ID}.mp3"
 
-    def download(self):
+    def download_audio(self):
+        """dow method"""
         if self.check_path():
             return True
-        yt = YouTube(f"https://www.youtube.com/watch?v={self.music_ID}")
+        yt = YouTube(url= self.url , on_progress_callback= on_progress)
         try:
             audio_stream = yt.streams.filter(only_audio=True).first()
-            audio_stream.download(
-                output_path=self.path, filename=f"{self.music_ID}.mp3")
-            yt.register_on_progress_callback(
-                lambda stream, chunk, bytes_remaining: None)
+            file_path = os.path.join(self.path, f"{self.music_ID}.mp4")
+            audio_stream.download(filename= file_path)
 
-            print(self.path)
+            self.convert_to_mp3()
+         
             return True
         except Exception as e:
-            print(e)
-            return False
-
+            print(f"download audio {e}")
+            try:
+                # change download method
+                return y2mate.download_audio(music_ID= self.music_ID, artist= self.artist)
+            except Exception as e:
+                 print(f' y2mate {e}')
+                 return False
+    
     def check_path(self):
-        if os.path.exists(os.path.join(self.path, self.music_ID)):
-            print(f"{self.music_ID} already exists in {self.path}")
+        if os.path.isfile(os.path.join(self.path, f"{self.music_ID}.mp4")):
+               os.remove(os.path.join(self.path,  f"{self.music_ID}.mp4"))
+
+        if os.path.isfile(os.path.join(self.path, f"{self.music_ID}.mp3")):
+            print(f"{self.music_ID}.mp3 already exists in {self.path}")
             return True
         else:
+            os.makedirs(self.path, exist_ok=True)
             return False
+    
+    def convert_to_mp3(self):
+            # if os.path.isfile(self.mp4_path):
+            #      print('234')
+            audio = AudioSegment.from_file(self.mp4_path)
+            audio.export(self.mp3_path, format="mp3")
+            os.remove(self.mp4_path)
 
 
-dow = downloader(music_ID="n5YS6Fo_bZ0", artist='12312')
-dow.download()
+def get_play_list( artist_url):
+        "get list music information"
+        playlist = Playlist(artist_url)
+        return playlist
+
+# dow = downloader(music_ID="n5YS6Fo_bZ0", artist='htllo')
+# print(dow.download_audio())
+# # dow.download_all_song(artist_url= "https://www.youtube.com/playlist?list=PLkZYq_B674dBCKNtGC-8226T6jpBGilso")

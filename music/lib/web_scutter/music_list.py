@@ -1,12 +1,8 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException
-from urllib.parse import urljoin
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import json
 import time
 import re
@@ -40,10 +36,14 @@ def query_music_list(url :str , artist :str) ->json:
         if url is None:
             continue
         match  = re.search(r'(?<=v=)[^&]+',  url)
-        if match:
-            ID = match.group(0)[-11:]
-        else:
-            ID = re.search(r"shorts\/(\w{11})", url).group(1)
+        try:
+            if match:
+                ID = match.group(0)[-11:]
+            else:
+                ID = re.search(r"shorts\/(\w{11})", url).group(1)
+        except Exception as e:
+            print(e)
+            continue
         title = item.get_attribute('title')
         if title in result:
             continue
