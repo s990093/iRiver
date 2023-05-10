@@ -8,55 +8,36 @@ from tqdm import tqdm
 import threading
 
 
-def download_audio(params):
-    def _download_with_retry():
-        retry_count = 0
-        while True:
-            try:
-                yt = YouTube(params['url'])
-                break
-            except Exception as e:
-                retry_count += 1
-                if retry_count > params.get('max_retry', 3):
-                    raise e
-                print(f"Error: {e}. Retrying in 2 seconds...")
-                time.sleep(2)
+class downloader:
+    def __init__(self, music_ID, artist):
+        self.music_ID = music_ID
+        self.artist = artist
+        self.path = os.path.join("media", artist, "songs")
 
-        mp3_filename = f"{params['ID']}.mp3"
-        mp3_path = os.path.join(params['output_path'], mp3_filename)
-        if os.path.exists(mp3_path):
-            print(f"{mp3_filename} already exists in {params['output_path']}")
-            return None
+    def download(self):
+        if self.check_path():
+            return True
+        yt = YouTube(f"https://www.youtube.com/watch?v={self.music_ID}")
+        try:
+            audio_stream = yt.streams.filter(only_audio=True).first()
+            audio_stream.download(
+                output_path=self.path, filename=f"{self.music_ID}.mp3")
+            yt.register_on_progress_callback(
+                lambda stream, chunk, bytes_remaining: None)
 
-        audio_stream = yt.streams.filter(only_audio=True).first()
-        if not audio_stream:
-            print("Error: No audio stream found for the video.")
-            return None
+            print(self.path)
+            return True
+        except Exception as e:
+            print(e)
+            return False
 
-        # Download the audio stream
-        audio_stream.download(
-            output_path=params['output_path'], filename=mp3_filename)
+    def check_path(self):
+        if os.path.exists(os.path.join(self.path, self.music_ID)):
+            print(f"{self.music_ID} already exists in {self.path}")
+            return True
+        else:
+            return False
 
-        # Update the metadata
-        yt.register_on_progress_callback(
-            lambda stream, chunk, bytes_remaining: None)  # Disable the progress bar
-        song_info = {
-            "artist": params['original_artist'],
-            "title": params['title'],
-            "music_ID": params['ID'],
-            "artist_url": params['artist_url'],
-            "keywords": yt.keywords,
-            "views": yt.views,
-            "publish_time": yt.publish_date.isoformat(),
-        }
-        print(f"Download complete! MP3 file saved in {mp3_path}")
-        return song_info
 
-    try:
-        song_info = _download_with_retry()
-        return song_info
-
-    except Exception as e:
-        # print(f"Error downloading video {params['title']}. Skipping...")
-        print(e)
-        return None
+dow = downloader(music_ID="n5YS6Fo_bZ0", artist='12312')
+dow.download()
