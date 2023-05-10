@@ -23,17 +23,18 @@ def get_music_ID_info(music_ID):
 
         rating = yt.rating
 
-        chinese_captions = yt.captions.get_by_language_code('zh-Hans')
-        if chinese_captions:
-            chinese_lyrics = chinese_captions.generate_srt_captions()
+        # chinese_captions = yt.captions.get_by_language_code('zh-Hans')
+        # if chinese_captions:
+        #     chinese_lyrics = chinese_captions.generate_srt_captions()
 
-        english_captions = yt.captions.get_by_language_code('en')
-        if english_captions:
-            english_lyrics = english_captions.generate_srt_captions()
-
+        # english_captions = yt.captions.get_by_language_code('en')
+        # if english_captions:
+        #     english_lyrics = english_captions.generate_srt_captions()
 
     except Exception as e:
-        print(f"on web_scutter get_mysic_ID_datail {e}")
+        print(f"on web_scutter get_mysic_ID_info  error {e}")
+    
+
 
     # Create a dictionary with the extracted data
     video_info = {
@@ -41,7 +42,7 @@ def get_music_ID_info(music_ID):
         'description': description,
         'publish_time': publish_time,
         'views': views,
-        'rating' :rating,
+        'rating': rating,
         'ch_lyrics': chinese_lyrics,
         'en_lyrics': english_lyrics
     }

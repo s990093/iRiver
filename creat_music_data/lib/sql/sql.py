@@ -55,10 +55,12 @@ class SQL:
         """push data"""
         # Load song_infos into a list
         song_infos_list = json.loads(song_infos)
-        style = self.get_style(music_ID= song_infos_list[0]['style'])
-        
-        if not song_infos_list[0]['style'] == "null" or None:
+        style = self.get_style(music_ID= song_infos_list[0]['music_ID'])
+
+        if not song_infos_list[0]['style'] == "null" or None or "":
             style += f",{song_infos_list[0]['style']}"
+        else :
+            style = f"{song_infos_list[0]['style']}"
         
         # Iterate through the list of song infos
         for song_info in song_infos_list:
@@ -112,10 +114,20 @@ class SQL:
         print('=' * 30)
         print('save data')
 
-    def get_style(self , music_ID):
-        sql = 'SELECT style FROM songs WHERE music_ID = %s'
-        self.cursor.execute(sql , (music_ID, ))
-        return self.cursor.fetchone()
+    def get_style(self, music_ID):
+        try:
+            sql = 'SELECT style FROM songs WHERE music_ID = %s'
+            self.cursor.execute(sql, (music_ID,))
+            result = self.cursor.fetchone()
+            if result is None or result[0] == "":
+                return "null"
+            else:
+                return result[0]
+        except Exception as e:
+            print(f"sql get_style error: {e}")
+            return "null"
+      
+
         
     def save_summary(self, artist: str, summary: str):
         update_sql = 'UPDATE artists SET summary = %s WHERE artist = %s'

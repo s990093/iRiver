@@ -1,6 +1,7 @@
 import json
 import concurrent.futures
 import threading
+import time
 # 自製
 from lib.web_scutter.youtube import query_youtube
 from lib.web_scutter.music_list import query_music_list
@@ -15,11 +16,12 @@ from lib.web_scutter.summary import query_summary
 import lib.download.img as img
 
 class Controller: 
-    def __init__(self , artist_list: str, params , max_thread: int =2):
+    def __init__(self , artist_list: str, params , max_thread: int =2 , max_retries: int =2):
         """控制下在 跟上傳資料庫  回傳bool """
         super().__init__()
         self.artist_list = artist_list
         self.max_thread = max_thread
+        self.max_retries = max_retries
         self.sources =  params['sources']
         self.style = params['style']
         self.country = params['country']
@@ -32,8 +34,11 @@ class Controller:
 
     def run(self):
         for query in self.artist_list:
-          music_list_infos, artist , artist_img_url= self.query(query= query)
-          self.download_songs(music_list_infos= music_list_infos , artist= artist , artist_img_url= artist_img_url)
+            print(f"Downloading {query}")
+            music_list_infos, artist , artist_img_url , artist_url= self.query(query= query)
+            self.download_songs(music_list_infos= music_list_infos , artist= artist , 
+                                artist_img_url= artist_img_url , artist_url= artist_url)
+        return True
     
 
     def query(self , query: str):
@@ -41,9 +46,9 @@ class Controller:
         artist_url = statistics["most_common_artist_url"]
         artist = statistics["most_common_artist"]
         artist_img_url = statistics["most_common_artist_img_url"]
-        return query_music_list(url= artist_url, artist=  artist) , artist  , artist_img_url
+        return query_music_list(url= artist_url, artist=  artist) , artist  , artist_img_url , artist_url
      
-    def download_songs(self , music_list_infos : list , artist: str , artist_img_url: str):
+    def download_songs(self , music_list_infos : list , artist: str , artist_img_url: str , artist_url: str):
         # 下在cover artist
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
             # 下載artist 小圖
@@ -61,7 +66,9 @@ class Controller:
             music_ID_info = get_music_ID_info(music_ID= song['music_ID'])
             download_song_infos.append({
                 "artist": artist,
+                'title': song['title'],
                 "music_ID": song["music_ID"],
+                'artist_url': artist_url,
                 'description': music_ID_info['description'],
                 'keywords':  music_ID_info['keywords'],  
                 'ch_lyrics': music_ID_info['ch_lyrics'],
@@ -78,7 +85,10 @@ class Controller:
                                 only_dow_song=True, max_thread= 4
                             )
             if success:
+                # print(chunk)
                 self.push_data( music_list_infos = chunk)
+        
+        return True
 
     def push_data(self ,  music_list_infos : list , success: bool = True):
         params = []
@@ -103,7 +113,19 @@ class Controller:
                 'release_year': '0',
                 'publish_time': song_info['publish_time'],  
             })
-        self.mysql.save_data(song_infos=json.dumps(params, indent=4))
+        def save():
+            self.mysql.save_data(song_infos=json.dumps(params, indent=4))
+        count = 0
+        while True:
+            try:
+                save()
+                break
+            except  Exception as e:
+                if count == self.max_retries:
+                    break
+                time.sleep(1)
+                save()
+                count +=1
         self.mysql.close()
 
         
