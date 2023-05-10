@@ -28,7 +28,8 @@ from music.lib.web_scutter.summary import query_summary
 from music.lib.web_scutter.music_list import query_music_list
 
 from music.lib.dow import download
-
+import  music.lib.download.img as img
+from music.lib.web_scutter.music_ID_info import get_music_ID_info
 
 # test bool
 
@@ -165,34 +166,51 @@ def download_song(request):
     if os.path.exists(path=path) :
         return JsonResponse({"success": True})
     
+    music_ID_list = [song_info['music_ID']]
     # 使用 ThreadPoolExecutor 讓下載封面圖片和維基百科摘要的工作可以同時進行
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-        src = executor.submit(query_artist_iocn_src, song_info['artist'])  # 取得歌手圖片的來源 URL
+        # 下載artist 小圖
+        executor.submit(img.download_img(url= song_info['artist_img_url'], file_name='artist.jpg',
+                                        file_dir=f"media/{song_info['artist']}/img/"))
+
+        # 下載 封面
+        executor.submit(img.download_img_base64(url= executor.submit(query_artist_iocn_src, song_info['artist']).result() ,
+                                file_name='cover.jpg', file_dir=f"media/{song_info['artist']}/img/"))
+        # music_ID info 
+        music_ID_info = executor.submit(get_music_ID_info , song_info['music_ID']).result()
+    
+        #dow summary
         summary = executor.submit(query_summary , song_info['artist'])  # 取得歌手維基百科摘要
 
-    music_ID_list = [song_info['music_ID']]
-    # 呼叫 download 函式進行歌曲下載，將歌曲 ID、圖片 URL 和歌手圖片 URL 傳入
-    success =  download(music_ID_list= music_ID_list , 
+        #dow song
+        success =  download(music_ID_list= music_ID_list , 
                         artist= song_info['artist'],
-                        img_url= song_info['img_url'],
-                        cover_img_url= src.result(),
-                        artist_img_url= song_info['artist_img_url']
-                        )
+                        only_dow_song= True)
+
     params = [{
             'artist': song_info['artist'],
             'title': song_info['title'],
             'music_ID': song_info['music_ID'],
+            'album': 'null',
+            'label': 'null',
             'artist_url': song_info['artist_url'],
-            # TODO remove this null parameter
-            'keywords' :  'null',  # 關鍵字暫時設為 null
-            'views': '0',  # 歌曲觀看次數暫時設為 0
-            'publish_time': '0',  # 歌曲發佈時間暫時設為 0
-        }]
+            'sources': 'pytube',
+            'download_status': success,
+            'style': 'null',
+            'country': 'null',
+            'language': 'null',
+            'description': music_ID_info['description'],
+            'keywords':  music_ID_info['keywords'],  
+            'ch_lyrics': music_ID_info['ch_lyrics'],
+            'en_lyrics': music_ID_info['en_lyrics'],
+            'views': music_ID_info['views'],
+            'release_year': '0',
+            'publish_time': music_ID_info['publish_time'],  
+        }] 
     if success is not None:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         mysql.create_tables()  # 建立資料庫表格
-        mysql.save_data(song_infos=json.dumps(params))  # 儲存歌曲資訊
-        mysql.save_summary(artist=song_info['artist'] , summary=summary.result())  # 儲存歌手摘要
+        mysql.save_data(song_infos=json.dumps(params) , summary=summary.result())  # 儲存歌曲資訊
         mysql.close()  # 關閉資料庫連線
         return JsonResponse({"success": True})
     else: 
@@ -205,24 +223,34 @@ def download_songs(request):
     artist = request.GET.get('artist')
     music_list_infos = query_music_list(url=artist_url , artist= artist)
     music_list = []
-
     for song in music_list_infos:
+        music_ID_info = get_music_ID_info(music_ID= song['music_ID'])
         music_list.append({
             'artist': artist,
-            'title':  song['title'],
-            'music_ID':  song['music_ID'],
-            'artist_url':  artist_url ,
-            # TODO remove this null parameter
-            'keywords' :  'null',  # 關鍵字暫時設為 null
-            'views': '0',  # 歌曲觀看次數暫時設為 0
-            'publish_time': '0',  # 歌曲發佈時間暫時設為 0
+            'title':song['title'],
+            'music_ID': song['music_ID'],
+            'album': 'null',
+            'label': 'null',
+            'artist_url': artist_url,
+            'sources': 'pytube',
+            'download_status': True,
+            'style': 'null',
+            'country': 'null',
+            'language': 'null',
+            'description': music_ID_info['description'],
+            'keywords':  music_ID_info['keywords'],  
+            'ch_lyrics': music_ID_info['ch_lyrics'],
+            'en_lyrics': music_ID_info['en_lyrics'],
+            'views': music_ID_info['views'],
+            'release_year': '0',
+            'publish_time': music_ID_info['publish_time'],  
         })
 
     music_ID_list_chunks = [music_list[x:x+8] for x in range(0, len(music_list), 10)]
     for chunk in music_ID_list_chunks:
         success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                             artist=artist , 
-                            only_dow_song=True, max_thread= 4
+                            only_dow_song=True, max_thread= 3
                           )
         if success:
             mysql.save_data(song_infos=json.dumps(chunk, indent=4))

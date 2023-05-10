@@ -1,3 +1,4 @@
+"""main fun download song and get info in music list"""
 import os
 import time
 import datetime
@@ -6,57 +7,70 @@ from pytube import YouTube
 from retrying import retry
 from tqdm import tqdm
 import threading
+import urllib
+from pydub import AudioSegment
+from pytube import Playlist
+from pytube.cli import on_progress
+# 自製
+import music.lib.download.y2mate as y2mate
 
 
-def download_audio(params):
-    def _download_with_retry():
-        retry_count = 0
-        while True:
+class downloader:
+    def __init__(self, music_ID :str, artist :str):
+        super().__init__()
+        self.music_ID = music_ID 
+        self.artist = artist
+        self.url = f"https://www.youtube.com/watch?v={self.music_ID}"
+        self.path =  f"media/{self.artist}/songs"
+        self.mp4_path = f"media/{self.artist}/songs/{self.music_ID}.mp4"
+        self.mp3_path = f"media/{self.artist}/songs/{self.music_ID}.mp3"
+
+    def download_audio(self):
+        """dow method"""
+        if self.check_path():
+            return True
+        yt = YouTube(url= self.url , on_progress_callback= on_progress)
+        try:
+            audio_stream = yt.streams.filter(only_audio=True).first()
+            file_path = os.path.join(self.path, f"{self.music_ID}.mp4")
+            audio_stream.download(filename= file_path)
+
+            self.convert_to_mp3()
+         
+            return True
+        except Exception as e:
+            print(f"download audio {e}")
             try:
-                yt = YouTube(params['url'])
-                break
+                # change download method
+                return y2mate.download_audio(music_ID= self.music_ID, artist= self.artist)
             except Exception as e:
-                retry_count += 1
-                if retry_count > params.get('max_retry', 3):
-                    raise e
-                print(f"Error: {e}. Retrying in 2 seconds...")
-                time.sleep(2)
+                 print(f' y2mate {e}')
+                 return False
+    
+    def check_path(self):
+        if os.path.isfile(os.path.join(self.path, f"{self.music_ID}.mp4")):
+               os.remove(os.path.join(self.path,  f"{self.music_ID}.mp4"))
 
-        mp3_filename = f"{params['ID']}.mp3"
-        mp3_path = os.path.join(params['output_path'], mp3_filename)
-        if os.path.exists(mp3_path):
-            print(f"{mp3_filename} already exists in {params['output_path']}")
-            return None
+        if os.path.isfile(os.path.join(self.path, f"{self.music_ID}.mp3")):
+            print(f"{self.music_ID}.mp3 already exists in {self.path}")
+            return True
+        else:
+            os.makedirs(self.path, exist_ok=True)
+            return False
+    
+    def convert_to_mp3(self):
+            # if os.path.isfile(self.mp4_path):
+            #      print('234')
+            audio = AudioSegment.from_file(self.mp4_path)
+            audio.export(self.mp3_path, format="mp3")
+            os.remove(self.mp4_path)
 
-        audio_stream = yt.streams.filter(only_audio=True).first()
-        if not audio_stream:
-            print("Error: No audio stream found for the video.")
-            return None
 
-        # Download the audio stream
-        audio_stream.download(
-            output_path=params['output_path'], filename=mp3_filename)
+def get_play_list( artist_url):
+        "get list music information"
+        playlist = Playlist(artist_url)
+        return playlist
 
-        # Update the metadata
-        yt.register_on_progress_callback(
-            lambda stream, chunk, bytes_remaining: None)  # Disable the progress bar
-        song_info = {
-            "artist": params['original_artist'],
-            "title": params['title'],
-            "music_ID": params['ID'],
-            "artist_url": params['artist_url'],
-            "keywords": yt.keywords,
-            "views": yt.views,
-            "publish_time": yt.publish_date.isoformat(),
-        }
-        print(f"Download complete! MP3 file saved in {mp3_path}")
-        return song_info
-
-    try:
-        song_info = _download_with_retry()
-        return song_info
-
-    except Exception as e:
-        # print(f"Error downloading video {params['title']}. Skipping...")
-        print(e)
-        return None
+# dow = downloader(music_ID="n5YS6Fo_bZ0", artist='htllo')
+# print(dow.download_audio())
+# # dow.download_all_song(artist_url= "https://www.youtube.com/playlist?list=PLkZYq_B674dBCKNtGC-8226T6jpBGilso")
