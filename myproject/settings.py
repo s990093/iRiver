@@ -168,6 +168,7 @@ LOGIN_REDIRECT_URL = 'user/data'
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.line.LineOAuth2',
 ]
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '60738528554-o9lnntflac84aa0giq9kq9uajsku2pgt.apps.googleusercontent.com'
@@ -179,9 +180,16 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
 #SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = 'http://127.0.0.1:8000/auth/complete/google-oauth2/'
 SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = 'http://server0000.ddns.net:8000/auth/complete/google-oauth2/'
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+
+
+#test
+SOCIAL_AUTH_LINE_KEY = '1661104279'
+SOCIAL_AUTH_LINE_SECRET = 'cfdbaa0a60c466ab86aa6939c80f09c8'
+SOCIAL_AUTH_LINE_SCOPE = [
+    'profile', 
+    'openid', 
+    'email', 
+    'phone'
+]
+SOCIAL_AUTH_LINE_REDIRECT_URI = 'http://127.0.0.1:8000/auth/complete/line/'
+#SOCIAL_AUTH_LINE_REDIRECT_URI = 'http://server0000.ddns.net:8000/auth/line_login/callback'

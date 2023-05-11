@@ -9,6 +9,8 @@ from .forms import LoginForm, RegisterForm,UserProfileForm
 from .models import UserProfile
 from django.contrib.auth.models import User
 import json
+# line
+
 # 自製
 import user.lib.sql.config
 from user.lib.sql.sql_user import SQL as SQL_user
@@ -153,3 +155,7 @@ def profile(request):
         print("修改錯誤")
         form = UserProfileForm(instance=user_profile)
     return render(request, 'test456.html', {'form': form})
+
+#line
+
+ 
