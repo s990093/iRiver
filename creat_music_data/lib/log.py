@@ -1,8 +1,9 @@
 import os
 import logging
+import re
 
 
-def log(path: str, success: bool):
+def wrtie(path: str, success: bool):
     log_dir = './log'
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
@@ -21,3 +22,12 @@ def log(path: str, success: bool):
         logging.error(f"Downloaded folder on ({path})")
     elif success is None:
         logging.warning(f"Downloaded folder on ({path})")
+
+
+def get_last_n_process_folders(n):
+    with open('log/creat_data.log', 'r') as file:
+        lines = file.readlines()
+        last_n_lines = lines[-n:]
+        folders = [re.search('\((.*?)\)', line).group(1)
+                   for line in last_n_lines]
+    return folders
