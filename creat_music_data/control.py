@@ -1,6 +1,5 @@
 import json
 import concurrent.futures
-import threading
 import time
 # 自製
 from lib.web_scutter.youtube import query_youtube
@@ -16,12 +15,13 @@ from lib.web_scutter.summary import query_summary
 import lib.download.img as img
 
 class Controller: 
-    def __init__(self , artist_list: str, params , max_thread: int = 4 , max_retries: int = 2):
+    def __init__(self , artist_list: str, params , max_thread: int = 2,  max_dow_thread: int = 4,  max_retries: int = 2):
         """控制下在 跟上傳資料庫  回傳bool """
         super().__init__()
         self.artist_list = artist_list
         self.max_thread = max_thread
         self.max_retries = max_retries
+        self.max_dow_thread = max_dow_thread
         self.sources =  params['sources']
         self.style = params['style']
         self.country = params['country']
@@ -33,14 +33,23 @@ class Controller:
         print("register controller")
 
     def run(self):
+      with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_thread) as executor:
+        futures = []
         for query in self.artist_list:
-            print(f"Downloading {query}")
-            music_list_infos, artist , artist_img_url , artist_url= self.query(query= query)
-            self.download_songs(music_list_infos= music_list_infos , artist= artist , 
-                                artist_img_url= artist_img_url , artist_url= artist_url)
+            future = executor.submit(self.one_cycle,query)
+            futures.append(future)
+        # 等待所有 future 物件完成
+        for future in concurrent.futures.as_completed(futures):
+            result = future.result()
         self.mysql.close()
         return True
     
+    def one_cycle(self , query : str):
+        print(f"Downloading {query}")
+        music_list_infos, artist , artist_img_url , artist_url= self.query(query= query)
+        self.download_songs(music_list_infos= music_list_infos , artist= artist , 
+                                artist_img_url= artist_img_url , artist_url= artist_url)
+        return True
 
     def query(self , query: str):
         statistics = json.loads(query_youtube(query= query))
@@ -99,7 +108,7 @@ class Controller:
             success = False
             success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                                 artist=artist , 
-                                only_dow_song=True, max_thread= self.max_thread
+                                only_dow_song=True, max_thread= self.max_dow_thread
                             )
             
             if success:
