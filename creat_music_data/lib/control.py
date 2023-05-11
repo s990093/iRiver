@@ -29,21 +29,28 @@ class Controller:
         self.country = params['country']
         self.language = params['language']
 
-        self.mysql = sql.SQL(config= config.DB_CONFIG)
+        self.mysql = sql.SQL(config= config.DB_CONFIG_music)
         self.mysql.create_tables()
         print("@"*30)
         print("register controller")
 
     def run(self):
-      with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_thread) as executor:
-        futures = []
-        for query in self.artist_list:
-            future = executor.submit(self.one_cycle,query)
-            futures.append(future)
-        # 等待所有 future 物件完成
-        for future in concurrent.futures.as_completed(futures):
-            result = future.result()
-        self.mysql.close()
+        query_list =[]
+        for artist in self.artist_list:
+            if artist is not None:
+                query_list.append(artist)
+
+      
+        with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_thread) as executor:
+            futures = []
+            for query in query_list:
+                future = executor.submit(self.one_cycle,query)
+                futures.append(future)
+            # 等待所有 future 物件完成
+            for future in concurrent.futures.as_completed(futures):
+                result = future.result()
+            self.mysql.close()
+
         return True
     
     def one_cycle(self , query : str):

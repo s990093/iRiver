@@ -16,8 +16,8 @@ def log(path: str, success: bool):
     logging.basicConfig(level=logging.INFO, handlers=[file_handler])
 
     if success:
-        logging.info(f"Downloaded artist '{artist}' on '{path}'")
+        logging.info(f"Downloaded folder on ({path})")
     elif success is False:
-        logging.error(f"Downloaded artist '{artist}' on '{path}'")
+        logging.error(f"Downloaded folder on ({path})")
     elif success is None:
-        logging.warning(f"Downloaded artist '{artist}' on '{path}'")
+        logging.warning(f"Downloaded folder on ({path})")
