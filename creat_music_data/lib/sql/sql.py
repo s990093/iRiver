@@ -43,8 +43,9 @@ class SQL:
                 keywords VARCHAR(255),
                 ch_lyrics TEXT,
                 en_lyrics TEXT,
+                rating VARCHAR(255),
                 views INT(20),
-                release_year INT(4),
+                release_year INT(10),
                 publish_time INT(10),
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
@@ -53,79 +54,78 @@ class SQL:
         
     def save_data(self, song_infos , summary = None):
         """push data"""
-        # Load song_infos into a list
+        song_infos_list = [] 
         song_infos_list = json.loads(song_infos)
-        # style = self.get_style(music_ID= song_infos_list[0]['music_ID'])
+        style = self.get_style(music_ID= song_infos_list[0]['music_ID'])
 
-        # if not song_infos_list[0]['style'] == "null" or None or "":
-        #     style += f",{song_infos_list[0]['style']}"
-        # else :
-        #     style = f",{song_infos_list[0]['style']}"
+        if not song_infos_list[0]['style'] == "null" or None or "":
+            style += f",{song_infos_list[0]['style']}"
+        else :
+            style = f",{song_infos_list[0]['style']}"
         
+        # Start a transaction
+        # self.cursor.execute('START TRANSACTION')
+
         # Iterate through the list of song infos
+      
         for song_info in song_infos_list:
             # Skip the current iteration if song_infos_list[i] is empty
             if not song_info:
                 continue
+
+            # Check if the artist already exists in the artists table
+            select_sql = 'SELECT * FROM artists WHERE artist = %s'
+            select_values = (song_info['artist'], )
+            self.cursor.execute(select_sql, select_values)
+            result = self.cursor.fetchone()
+
+            if not result:
+                # Insert data into the artists table if it doesn't exist
+                artist_sql = 'INSERT INTO artists (artist , summary) VALUES (%s , %s)'
+                artist_values = (song_info['artist'], summary)
+                self.cursor.execute(artist_sql, artist_values)
+                self.db.commit()
+
+            # Check if the song already exists in the songs table
+            select_sql = 'SELECT * FROM songs WHERE music_ID = %s'
+            select_values = (song_info['music_ID'], )
+            self.cursor.execute(select_sql, select_values)
+            result = self.cursor.fetchone()
             
-            try:
-                # Start a transaction
-                self.cursor.execute('START TRANSACTION')
 
-                # Check if the artist already exists in the artists table
-                select_sql = 'SELECT * FROM artists WHERE artist = %s'
-                select_values = (song_info['artist'], )
-                self.cursor.execute(select_sql, select_values)
-                result = self.cursor.fetchone()
+            if not result:
+                # Insert data into the songs table if it doesn't exist
+                song_sql = ('INSERT INTO songs '
+                            '(artist, title, music_ID, album, label, artist_url, sources, download_status, style, country, language, description, keywords, ch_lyrics, en_lyrics,  rating, views, release_year, publish_time) '
+                            'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)') 
+                song_values = ( song_info['artist'],
+                                song_info['title'],
+                                song_info['music_ID'],
+                                song_info['album'],
+                                song_info['label'],
+                                song_info['artist_url'],
+                                song_info['sources'],
+                                song_info['download_status'],
+                                song_info['style'],
+                                song_info['country'],
+                                song_info['language'],
+                                song_info['description'],
+                                song_info['keywords'],
+                                song_info['ch_lyrics'],
+                                song_info['en_lyrics'],  
+                                song_info['rating'],  
+                                song_info['views'],
+                                song_info['release_year'],
+                                song_info['publish_time']
+                                )
+                self.cursor.execute(song_sql, song_values)
+                print('Data saved successfully!')
+                print('=' * 30)
 
-                if not result:
-                    # Insert data into the artists table if it doesn't exist
-                    artist_sql = 'INSERT INTO artists (artist , summary) VALUES (%s , %s)'
-                    artist_values = (song_info['artist'], summary)
-                    self.cursor.execute(artist_sql, artist_values)
+        self.db.commit()
+        print('All data saved successfully!')
 
-                # Check if the song already exists in the songs table
-                select_sql = 'SELECT * FROM songs WHERE music_ID = %s'
-                select_values = (song_info['music_ID'], )
-                self.cursor.execute(select_sql, select_values)
-                result = self.cursor.fetchone()
-
-                if not result:
-                    # Insert data into the songs table if it doesn't exist
-                    song_sql = ('INSERT INTO songs '
-                                '(artist, title, music_ID, album, label, artist_url, sources, download_status, style, country, language, description, keywords, ch_lyrics, en_lyrics, release_year, publish_time) '
-                                'VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)')
-                    song_values = ( song_info['artist'],
-                                    song_info['title'],
-                                    song_info['music_ID'],
-                                    song_info['album'],
-                                    song_info['label'],
-                                    song_info['artist_url'],
-                                    song_info['sources'],
-                                    song_info['download_status'],
-                                    song_info['style'],
-                                    song_info['country'],
-                                    song_info['language'],
-                                    song_info['description'],
-                                    song_info['keywords'],
-                                    song_info['ch_lyrics'],
-                                    song_info['en_lyrics'],
-                                    song_info['release_year'],
-                                    song_info['publish_time']
-                                    )
-                    self.cursor.execute(song_sql, song_values)
-                    print('Inserted:', self.cursor.rowcount, 'rows')
-
-            except Exception as e:  
-                # Rollback the transaction if an error occurs
-                self.db.rollback()
-                print(f"Error: {str(e)}")
-                print("Transaction rolled back.")
-
-            # Commit the transaction
-            self.db.commit()
-            print('Data saved successfully!')
-            print('=' * 30)
+      
 
     def get_style(self, music_ID):
         try:
