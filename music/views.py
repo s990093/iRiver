@@ -194,7 +194,7 @@ def download_song(request):
             'album': 'null',
             'label': 'null',
             'artist_url': song_info['artist_url'],
-            'sources': 'pytube',
+            'sources': 'web',
             'download_status': success,
             'style': 'null',
             'country': 'null',
@@ -233,7 +233,7 @@ def download_songs(request):
             'album': 'null',
             'label': 'null',
             'artist_url': artist_url,
-            'sources': 'pytube',
+            'sources': 'web',
             'download_status': True,
             'style': 'null',
             'country': 'null',
@@ -271,4 +271,6 @@ def is_song_exist(request):
         return JsonResponse({'success': True})
     else:
         return JsonResponse({'success': False})
-        
+
+
+# def push_data(song_infos , music_ID_info , success):

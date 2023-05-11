@@ -60,6 +60,7 @@ class Controller:
                                     file_name='cover.jpg', file_dir=f"media/{artist}/img/"))
             # summary
             self.mysql.save_summary(artist= artist,summary= executor.submit(query_summary , artist).result())
+            
         download_song_infos =[]
         # 組合
         for song in music_list_infos:
