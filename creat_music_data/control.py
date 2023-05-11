@@ -16,7 +16,7 @@ from lib.web_scutter.summary import query_summary
 import lib.download.img as img
 
 class Controller: 
-    def __init__(self , artist_list: str, params , max_thread: int =2 , max_retries: int =2):
+    def __init__(self , artist_list: str, params , max_thread: int = 4 , max_retries: int = 2):
         """控制下在 跟上傳資料庫  回傳bool """
         super().__init__()
         self.artist_list = artist_list
@@ -38,6 +38,7 @@ class Controller:
             music_list_infos, artist , artist_img_url , artist_url= self.query(query= query)
             self.download_songs(music_list_infos= music_list_infos , artist= artist , 
                                 artist_img_url= artist_img_url , artist_url= artist_url)
+        self.mysql.close()
         return True
     
 
@@ -46,11 +47,24 @@ class Controller:
         artist_url = statistics["most_common_artist_url"]
         artist = statistics["most_common_artist"]
         artist_img_url = statistics["most_common_artist_img_url"]
-        return query_music_list(url= artist_url, artist=  artist) , artist  , artist_img_url , artist_url
+        def get():
+            return query_music_list(url= artist_url, artist=  artist) 
+        count =0
+        while True:
+            try:
+                music_list_infos = get()
+                break
+            except Exception as e:
+                print( f"getting music list error: %s" % e)
+                count +=1
+                if count == self.max_retries:
+                    return False
+                time.sleep(1) 
+        return music_list_infos , artist  , artist_img_url , artist_url
      
     def download_songs(self , music_list_infos : list , artist: str , artist_img_url: str , artist_url: str):
         # 下在cover artist
-        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_thread) as executor:
             # 下載artist 小圖
             executor.submit(img.download_img(url= artist_img_url, file_name='artist.jpg',
                                             file_dir=f"media/{artist}/img/"))
@@ -74,19 +88,23 @@ class Controller:
                 'keywords':  music_ID_info['keywords'],  
                 'ch_lyrics': music_ID_info['ch_lyrics'],
                 'en_lyrics': music_ID_info['en_lyrics'],
+                'rating': music_ID_info['rating'],
                 'views': music_ID_info['views'],
                 'publish_time': music_ID_info['publish_time'],  
             })
         # 分割
-        music_ID_list_chunks = [ download_song_infos[x:x+8] for x in range(0, len(download_song_infos), 10)]
+        music_ID_list_chunks = [ download_song_infos[x:x+16] for x in range(0, len(download_song_infos), 10)]
 
         for chunk in music_ID_list_chunks:
+            success = False
             success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                                 artist=artist , 
-                                only_dow_song=True, max_thread= 4
+                                only_dow_song=True, max_thread= self.max_thread
                             )
+            
             if success:
                 # print(chunk)
+                print("push data")
                 self.push_data( music_list_infos = chunk)
         
         return True
@@ -110,25 +128,24 @@ class Controller:
                 'keywords':  song_info['keywords'],  
                 'ch_lyrics': song_info['ch_lyrics'],
                 'en_lyrics': song_info['en_lyrics'],
+                'rating': song_info['rating'],
                 'views': song_info['views'],
-                'release_year': '0',
+                'release_year': 0,
                 'publish_time': song_info['publish_time'],  
             })
+
         def save():
             self.mysql.save_data(song_infos=json.dumps(params, indent=4))
-        count = 0
-        # save()
-
         while True:
             try:
                 save()
                 break
             except  Exception as e:
+                print(f"save data error {e}")
+                count +=1
                 if count == self.max_retries:
                     break
                 time.sleep(1)
                 save()
-                count +=1
-        self.mysql.close()
 
         

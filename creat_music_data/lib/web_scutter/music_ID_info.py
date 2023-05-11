@@ -4,24 +4,16 @@ from pytube import YouTube
 def get_music_ID_info(music_ID):
     url = f"https://www.youtube.com/watch?v={music_ID}"
     yt = YouTube(url)
-    keywords = None
-    description = None
-    views = 0
-    rating = None
-    publish_time = 0
-    chinese_lyrics = None
-    english_lyrics = None
-
     try:
-        keywords = yt.keywords
+        keywords = yt.keywords if yt.keywords else 'null'
 
-        description = yt.description
+        description = yt.description if yt.description else 'null'
 
-        views = yt.views
+        views = yt.views or 0
 
-        publish_time = yt.publish_date.year
+        publish_time = yt.publish_date.year or 0
 
-        rating = yt.rating
+        rating = yt.rating if yt.rating else 'null'
 
         # chinese_captions = yt.captions.get_by_language_code('zh-Hans')
         # if chinese_captions:
@@ -33,8 +25,6 @@ def get_music_ID_info(music_ID):
 
     except Exception as e:
         print(f"on web_scutter get_mysic_ID_info  error {e}")
-    
-
 
     # Create a dictionary with the extracted data
     video_info = {
@@ -43,8 +33,8 @@ def get_music_ID_info(music_ID):
         'publish_time': publish_time,
         'views': views,
         'rating': rating,
-        'ch_lyrics': chinese_lyrics,
-        'en_lyrics': english_lyrics
+        'ch_lyrics': "chinese_lyrics",
+        'en_lyrics': "english_lyric"
     }
 
     return video_info

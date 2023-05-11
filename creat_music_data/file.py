@@ -22,6 +22,9 @@ class File:
 
     def get_max_counters(self):
         return self.max_counters
+    
+    def get_now_processed_file_path(self):
+        return  self.csv_files[self.processed_counters]
 
     def get_all_file_names(self):
         if not self.test:

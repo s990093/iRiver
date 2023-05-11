@@ -13,9 +13,10 @@ if __name__ == "__main__":
         controller = Controller(artist_list= artsit_list , params= params)
         success = controller.run()
         if success: 
+            counters +=1
             if counters == max_counters:
                 break
-            counters +=1
+            print(f"next file on {file.get_now_processed_file_path()}")
 
     print("DONE!!!")
    

@@ -5,5 +5,5 @@ DB_CONFIG = {
     'password': 'JABmQsQhpj05F6WI',
     'db': 'music_db',
     'charset': 'utf8mb4',
+    'connect_timeout': 60
 }
-
