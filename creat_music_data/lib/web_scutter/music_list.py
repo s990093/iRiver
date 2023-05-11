@@ -13,7 +13,7 @@ from .clear_str import clear_str
 
 def query_music_list(url :str , artist :str) ->json:
     service = Service('chromedriver.exe')
-    options = get_chrome_options(port=get_available_port() , is_headLess= False)
+    options = get_chrome_options(port=get_available_port() , is_headLess= True)
     driver = webdriver.Chrome(service = service, options=options) 
     driver.get(url)
     wait = WebDriverWait(driver, 10)

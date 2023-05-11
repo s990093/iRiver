@@ -117,6 +117,8 @@ class Controller:
         def save():
             self.mysql.save_data(song_infos=json.dumps(params, indent=4))
         count = 0
+        # save()
+
         while True:
             try:
                 save()
