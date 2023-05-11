@@ -29,7 +29,7 @@ class Controller:
         self.country = params['country']
         self.language = params['language']
 
-        self.mysql = sql.SQL(config= config.DB_CONFIG)
+        self.mysql = sql.SQL(config= config.DB_CONFIG_music)
         self.mysql.create_tables()
         print("@"*30)
         print("register controller")
