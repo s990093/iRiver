@@ -8,6 +8,7 @@ from django.http import JsonResponse
 from .forms import LoginForm, RegisterForm,UserProfileForm
 from .models import UserProfile
 from django.contrib.auth.models import User
+from social_django.models import UserSocialAuth
 import json
 # line
 
@@ -74,10 +75,18 @@ def check_login(request):
 def data(request):
     if request.user.is_authenticated:
         print("已登入")
-        request.session['email'] = request.user.email
-        request.session['isLogin'] = True
+        user = request.user
+        social = UserSocialAuth.objects.get(provider='line', user=user)
+        extra_data = social.extra_data
+        if(extra_data.get('email')):
+            email = extra_data.get('email')
+            print(email)
+            
+        else:
+            email = request.user.email
         name = request.user.username
-        email = request.user.email
+        request.session['isLogin'] = True
+        request.session['email'] = email
     else:
         del request.session['email']
         request.session['isLogin'] = False
