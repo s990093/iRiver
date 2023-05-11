@@ -4,7 +4,7 @@ import json
 from lib.file import File
 import lib.file as file
 from lib.control import Controller
-from lib.log import log
+import lib.log as log
    
 def run(folder :str , config):
      while True:
@@ -26,8 +26,13 @@ def run(folder :str , config):
 if __name__ == "__main__":
     with open('main_config.json') as f:
         config = json.load(f)
+
+    last_process_folders = log.get_last_n_process_folders(10)
     folders = file.get_all_folder(directory=  config["directory"])
     for folder in folders:
-        success = run(folder= folder , config= config)
-        log(path= f"{folder}" , success= success)
+        if folder in last_process_folders:
+            print(f"{folder} has already been processed, skipping...")
+            continue
+        log.write(path=f"{folder}", success= run(folder=folder, config=config))
+
     print("DONE!!!")
