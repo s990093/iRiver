@@ -30,6 +30,7 @@ urlpatterns = [
     path('music/', include('music.urls',namespace='music')),
     path('user/', include('user.urls',namespace='user')),
     path('auth/', include('social_django.urls', namespace='auth')),
+    path('auth/complete/line/user/data', user.data),
     path('auth/complete/google-oauth2/user/data/', user.data),
     path('admin/', admin.site.urls),        
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
