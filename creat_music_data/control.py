@@ -1,6 +1,8 @@
 import json
 import concurrent.futures
 import time
+import logging
+import os
 # 自製
 from lib.web_scutter.youtube import query_youtube
 from lib.web_scutter.music_list import query_music_list
@@ -45,10 +47,23 @@ class Controller:
         return True
     
     def one_cycle(self , query : str):
-        print(f"Downloading {query}")
-        music_list_infos, artist , artist_img_url , artist_url= self.query(query= query)
-        self.download_songs(music_list_infos= music_list_infos , artist= artist , 
-                                artist_img_url= artist_img_url , artist_url= artist_url)
+        def run():
+            print(f"Downloading {query}")
+            music_list_infos, artist , artist_img_url , artist_url= self.query(query= query)
+            self.download_songs(music_list_infos= music_list_infos , artist= artist , 
+                                    artist_img_url= artist_img_url , artist_url= artist_url)
+        count = 0
+        while True:
+            try:
+                run()
+                break
+            except  Exception as e:
+                print(f"one cycle error {e}")
+                count +=1
+                if count == self.max_retries:
+                    break
+                time.sleep(1)
+                run()
         return True
 
     def query(self , query: str):
@@ -145,6 +160,7 @@ class Controller:
 
         def save():
             self.mysql.save_data(song_infos=json.dumps(params, indent=4))
+        count = 0
         while True:
             try:
                 save()
@@ -156,5 +172,4 @@ class Controller:
                     break
                 time.sleep(1)
                 save()
-
-        
+   

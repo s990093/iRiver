@@ -4,6 +4,7 @@ import re
 from file import File
 import file
 from control import Controller
+from log import log
    
 def run(folder :str , directory :str):
      while True:
@@ -23,5 +24,6 @@ def run(folder :str , directory :str):
 if __name__ == "__main__":
     folders = file.get_all_folder(directory= "test")
     for folder in folders:
-        run(folder= folder , directory= "test")
+        success = run(folder= folder , directory= "test")
+        log(path= f"{folder}" , success= success)
     print("DONE!!!")
