@@ -22,10 +22,14 @@ export class WebAudio {
     //change Button
 
     changButtonIcon(isplaying) {
-        if (isplaying)
+        if (isplaying) {
+            $('#.playPauseButton').html('<i class="fa fa-pause"></i>');
             $('#play .icon use').attr('href', '/static/svg/iocn.svg#icon-pause');
-        else
+        }
+        else {
+            $('#.playPauseButton').html('<i class="fa fa-play"></i>');
             $('#play .icon use').attr('href', '/static/svg/iocn.svg#icon-play');
+        }
     }
 
     changMuteButton(isMute) {
@@ -51,11 +55,12 @@ export class WebAudio {
     }
 
     changFavoriteButton(href) {
-    }
+    } s
 
     //  音樂資訊
 
     changePlayer(isPlayerShow) {
+        console.log('changePlayer', isPlayerShow);
         //1 大 0小
         if (isPlayerShow) {
             $('.main-content').hide();

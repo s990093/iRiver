@@ -71,6 +71,7 @@ class Controller:
                     break
                 time.sleep(1)
                 run()
+                
         return True
 
     def query(self , query: str):
