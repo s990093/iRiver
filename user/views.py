@@ -21,11 +21,12 @@ from user.lib.sql.sql_music_list import SQL as SQL_music_list
 # def get_user_data(request):
 
 def get_user_music_list(request):
-    key = request.session['email']
-    if key.startswith('#'):
-        Key = key[1:]
+    tkey = request.session['email']
+    key = None;
+    if tkey.startswith('#'):
+        key = tkey[1:]
     else:
-        Key.split("@")[0]
+        key = tkey.split("@")[0]
     sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
     sql_user_music_list.create_tables()
     if request.method != 'POST':
@@ -44,11 +45,11 @@ def get_user_music_list(request):
 
 
 def hello(request):
-    key = request.session['email']
-    if key.startswith('#'):
+    tkey = request.session['email']
+    if tkey.startswith('#'):
         key = key[1:]
     else:
-        key.split("@")[0]    
+        key = tkey.split("@")[0]    
     sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
     #查詢結果
     music_ID_list = sql_user_music_list.get_music_list()
