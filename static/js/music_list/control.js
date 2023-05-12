@@ -71,6 +71,8 @@ export class Control {
     $('#nextTrack').on('click', () => {
       this.next();
     });
+
+
     $('#prevTrack').on('click', () => {
       this.previous()
     });
@@ -133,6 +135,16 @@ export class Control {
     // button
     // play
     this.$playBtn.on('click', () => {
+      if (this.isPlaying) {
+        this.play();
+      } else {
+        this.pause();
+      }
+      this.webAudio.changButtonIcon(this.isPlaying);
+      this.isPlaying = !this.isPlaying;
+    });
+
+    (".playPauseButton").on('click', () => {
       if (this.isPlaying) {
         this.play();
       } else {

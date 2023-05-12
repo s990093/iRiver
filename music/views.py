@@ -203,6 +203,7 @@ def download_song(request):
             'keywords':  music_ID_info['keywords'],  
             'ch_lyrics': music_ID_info['ch_lyrics'],
             'en_lyrics': music_ID_info['en_lyrics'],
+            'rating': music_ID_info['rating'],
             'views': music_ID_info['views'],
             'release_year': '0',
             'publish_time': music_ID_info['publish_time'],  
@@ -242,6 +243,7 @@ def download_songs(request):
             'keywords':  music_ID_info['keywords'],  
             'ch_lyrics': music_ID_info['ch_lyrics'],
             'en_lyrics': music_ID_info['en_lyrics'],
+            'rating': music_ID_info['rating'],
             'views': music_ID_info['views'],
             'release_year': '0',
             'publish_time': music_ID_info['publish_time'],  
@@ -251,7 +253,7 @@ def download_songs(request):
     for chunk in music_ID_list_chunks:
         success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                             artist=artist , 
-                            only_dow_song=True, max_thread= 3
+                            only_dow_song=True, max_thread= 4
                           )
         if success:
             mysql.save_data(song_infos=json.dumps(chunk, indent=4))
