@@ -81,7 +81,7 @@ def data(request):
         if(extra_data.get('email')):
             email = extra_data.get('email')
             print(email)
-            
+
         else:
             email = request.user.email
         name = request.user.username
@@ -149,7 +149,7 @@ def log_out(request):
 
 #個人資料
 def profile(request):
-    user_profile, created = UserProfile.objects.get_or_create(email=request.user.email)
+    user_profile, created = UserProfile.objects.get_or_create(email=request.session['email'])
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
