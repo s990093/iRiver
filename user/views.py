@@ -75,17 +75,12 @@ def check_login(request):
 def data(request):
     if request.user.is_authenticated:
         print("已登入")
-        user = request.user
-        social = UserSocialAuth.objects.get(provider='line', user=user)
-        extra_data = social.extra_data
-        if(extra_data.get('email')):
-            email = extra_data.get('email')
-            print(email)
-
-        else:
-            email = request.user.email
+        email = request.user.email
         name = request.user.username
         request.session['isLogin'] = True
+        if (email == ""):
+            email = name
+            name = None
         request.session['email'] = email
     else:
         del request.session['email']
