@@ -21,7 +21,12 @@ from user.lib.sql.sql_music_list import SQL as SQL_music_list
 # def get_user_data(request):
 
 def get_user_music_list(request):
-    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= (request.session['email']).split("@")[0])
+    key = request.session['email']
+    if key.startswith('#'):
+        Key = key[1:]
+    else:
+        Key.split("@")[0]
+    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
     sql_user_music_list.create_tables()
     if request.method != 'POST':
         return HttpResponse('error')
@@ -39,29 +44,14 @@ def get_user_music_list(request):
 
 
 def hello(request):
-    temp = request.session['email']
-    mail = temp.split("@")[0]
-
-    key = mail
-    
-    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-    sql_user.create_tables(table_name= key)
-
+    key = request.session['email']
+    if key.startswith('#'):
+        key = key[1:]
+    else:
+        key.split("@")[0]    
     sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
-    sql_user_music_list.create_tables()
-
-    music_ID_dict = {
-        '111',
-        '222',
-    }
-    music_ID_list = [music for music in music_ID_dict]
-    #sql_user_music_list.save_data(music_ID_list= json.dumps( music_ID_list , indent=4))
-    #sql_user_music_list.delete_data(music_ID_list= json.dumps( music_ID_list , indent=4))
-
     #查詢結果
     music_ID_list = sql_user_music_list.get_music_list()
-    #return json.dumps(music_ID_list, indent=4)
-    
     return HttpResponse(music_ID_list)
 
 
@@ -77,10 +67,11 @@ def data(request):
         print("已登入")
         email = request.user.email
         name = request.user.username
-        request.session['isLogin'] = True
         if (email == ""):
-            email = name
+            print("line登入")
+            email = "#" + name
             name = None
+        request.session['isLogin'] = True
         request.session['email'] = email
     else:
         del request.session['email']
@@ -159,6 +150,7 @@ def profile(request):
         print("修改錯誤")
         form = UserProfileForm(instance=user_profile)
     return render(request, 'test456.html', {'form': form})
+
 
 #line
 
