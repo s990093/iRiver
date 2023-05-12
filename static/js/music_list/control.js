@@ -144,21 +144,28 @@ export class Control {
       this.isPlaying = !this.isPlaying;
     });
 
-    (".playPauseButton").on('click', () => {
-      if (this.isPlaying) {
-        this.play();
+    $(".playPauseButton").on('click', () => {
+      if (self.isPlaying) {
+        self.play();
       } else {
-        this.pause();
+        self.pause();
       }
-      this.webAudio.changButtonIcon(this.isPlaying);
-      this.isPlaying = !this.isPlaying;
+      self.webAudio.changButtonIcon(self.isPlaying);
+      self.isPlaying = !self.isPlaying;
     });
 
     // 撥放器
-    this.$switchPlayer.on('click', () => {
-      this.isPlayerShow = !this.isPlayerShow;
-      this.webAudio.changePlayer(this.isPlayerShow);
+
+  
+
+    $(document).on('click', '.small-player, .player', (event) => {
+      console.log($(event.target).hasClass('small-player'))
+      if ($(event.currentTarget).hasClass('small-player') || $(event.target).hasClass('player')) {
+        this.isPlayerShow = !this.isPlayerShow;
+        this.webAudio.changePlayer(this.isPlayerShow);
+      }
     });
+
 
     // 靜音按鈕
     this.$muteBtn.on('click', () => {
@@ -292,5 +299,13 @@ export class Control {
     //change information 
     this.webAudio.update_music(this.currentIndex);
     this.bgAudio.updateMediaSessionMetadata(this.currentIndex);
+  }
+
+  add_music_list(music_list) {
+  }
+
+
+  update_music(music_list) {
+
   }
 }

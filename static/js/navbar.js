@@ -10,6 +10,6 @@ $('.login').on('click', function () {
 $('document').ready(function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    console.log(urlParams.get('query'))
+    // console.log(urlParams.get('query'))
     $('#query').val(urlParams.get('query'));
 });

@@ -23,11 +23,11 @@ export class WebAudio {
 
     changButtonIcon(isplaying) {
         if (isplaying) {
-            $('#.playPauseButton').html('<i class="fa fa-pause"></i>');
+            $('.playPauseButton').html('<i class="fa fa-pause"></i>');
             $('#play .icon use').attr('href', '/static/svg/iocn.svg#icon-pause');
         }
         else {
-            $('#.playPauseButton').html('<i class="fa fa-play"></i>');
+            $('.playPauseButton').html('<i class="fa fa-play"></i>');
             $('#play .icon use').attr('href', '/static/svg/iocn.svg#icon-play');
         }
     }
@@ -60,16 +60,16 @@ export class WebAudio {
     //  音樂資訊
 
     changePlayer(isPlayerShow) {
-        console.log('changePlayer', isPlayerShow);
+        // console.log('changePlayer', isPlayerShow);
         //1 大 0小
         if (isPlayerShow) {
-            $('.main-content').hide();
+            // $('.main-content').hide();
             $('.switchPlayer').html('<i class="fa fa-compress"></i>');
             $('#big-player').css('display', !isPlayerShow ? 'none' : 'block');
             $('#small-player').css('display', !isPlayerShow ? 'block' : 'none');
 
         } else {
-            $('.main-content').show();
+            // $('.main-content').show();
             $('.switchPlayer').html('<i class="fa fa-arrows-alt"></i>');
             $('#big-player').css('display', !isPlayerShow ? 'none' : 'block');
             $('#small-player').css('display', !isPlayerShow ? 'block' : 'none');
@@ -85,15 +85,15 @@ export class WebAudio {
         $('.artist-img').attr('src', artist_src);
 
         //刷新  title 跑馬燈
-        $('#songTitle').text(this.music_list[currentIndex].title);
-        $("#artistName").text(this.music_list[currentIndex].artist)
+        $('.songTitle').text(this.music_list[currentIndex].title);
+        $(".artistName").text(this.music_list[currentIndex].artist)
         // $('.songTitle').removeClass("marquee");
         // $('.songTitle')[0].offsetWidth;
         // $('.songTitle').addClass("marquee");
 
 
         // artist
-        var href = '/music_list/?artist=' + this.music_list[currentIndex].artist + '&index=' + currentIndex;
+        var href = '/music/music_list/?artist=' + this.music_list[currentIndex].artist + '&index=' + currentIndex;
         $('.artist a').attr('href', href);
         $('.artist').find('.hover-link').text(this.music_list[currentIndex].artist)
 

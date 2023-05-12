@@ -6,7 +6,7 @@ export function table_template(song, i, isWeb, method = 'result', music_list = 1
   
   switch (method) {
     case 'result':
-      icon_class = 'far fa-heart';
+      icon_class = 'far fa-plus';
       icon_class_name = 'add';
       break;
     case 'music_list':
@@ -14,7 +14,7 @@ export function table_template(song, i, isWeb, method = 'result', music_list = 1
       icon_class_name = 'delete';
       break;
     default:
-      icon_class = 'far fa-heart';
+      icon_class = 'far fa-plus';
       icon_class_name = 'add';
       break;
   }

@@ -4,7 +4,6 @@ import { fetch_dow_all_songs, fetch_dow_song, fetch_is_song_exit } from "../../.
 import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
 
 const audio = document.getElementById('myaudio');
-
 var isClickEventRegistered_web = false
 var isClickEventRegistered_db = false
 var length = 0
@@ -109,8 +108,8 @@ $('#table-body').on('click', '.love-icon a', async function () {
   var music_ID = $(this).attr('value');
   // const isSongExist = await fetch_is_song_exit(music_ID);
   // if (isSongExist) 
-    await insert_my_music_list(music_ID, 1, true, 'insert');
-  
+  await insert_my_music_list(music_ID, 1, true, 'insert');
+
 });
 
 
@@ -119,7 +118,6 @@ $('#table-body').on('click', '.add', async function () {
   var music_ID = $(this).attr('value');
   // const isSongExist = await fetch_is_song_exit(music_ID);
   // if (isSongExist) 
-    await insert_my_music_list(music_ID, 2, false, 'insert');
-  
+  await insert_my_music_list(music_ID, 2, false, 'insert');
 });
 

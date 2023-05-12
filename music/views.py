@@ -69,11 +69,9 @@ def my_music_list(request):
     csrftoken = request.COOKIES.get('csrftoken')
     session_id = request.COOKIES.get('sessionid')
     headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
-    data = {'method': 'get'}
+    data = {'method': 'get' , "music_list": music_list}
     headers['X-CSRFToken'] = csrftoken
     response = requests.post(url, headers=headers, data=json.dumps(data))
-    print(response.content)
-
     if response.status_code == 200:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         music_list_infos = mysql.get_music_list_infos(music_ID_list= [item[0] for item in json.loads(response.content)])
