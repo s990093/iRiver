@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'Podcast',
     'music',
     'user',
+    'developer',
     'social_django'
 ]
 

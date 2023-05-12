@@ -27,7 +27,7 @@ if __name__ == "__main__":
     with open('main_config.json') as f:
         config = json.load(f)
 
-    last_process_folders = log.get_last_n_process_folders(10)
+    last_process_folders = log.get_last_n_process_folders(20)
     folders = file.get_all_folder(directory=  config["directory"])
     for folder in folders:
         if folder in last_process_folders:

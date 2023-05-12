@@ -22,6 +22,7 @@ $('.delete').on('click', async function () {
     var music_ID = $(this).find('a').attr('value');
     // console.log(music_ID);
     var music_list = $(this).attr('data-music_list');
+    // console.log(music_list);
     try {
         await insert_my_music_list(music_ID, music_list, false, 'delete');
         location.reload();

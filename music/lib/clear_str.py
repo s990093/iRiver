@@ -2,6 +2,7 @@ import re
 
 
 def clear_str(title, artist):
+    artist = re.compile(re.escape(artist), flags=re.IGNORECASE)
     if artist:
         title = re.sub(r'\s+', '', title)   #刪除格
     # 英文

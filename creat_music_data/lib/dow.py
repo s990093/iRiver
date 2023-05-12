@@ -55,22 +55,3 @@ def download(music_ID_list: List[str], artist: str, img_url: str = None,
     return True
 
 
-
-def log(music_ID, artist, success):
-    log_dir = './log'
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
-
-    log_file_path = os.path.join(log_dir, 'dow_song.log')
-    print(log_file_path)
-    file_handler = logging.FileHandler(log_file_path)
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    file_handler.setFormatter(formatter)
-    logging.basicConfig(level=logging.INFO, handlers=[file_handler])
-
-    if success:
-        logging.info(f"Downloaded music '{music_ID}' by '{artist}' successfully.")
-    elif success is False:  
-        logging.error(f"Failed to download music '{music_ID}' by '{artist}'.")
-    elif success is None:
-        logging.warning(f"Already exists '{music_ID}' by '{artist}'.")

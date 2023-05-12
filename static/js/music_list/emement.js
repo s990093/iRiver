@@ -30,7 +30,7 @@ export class MediaPlayer {
 
     updateProgressBar() {
         var currentTime = (this.audio.currentTime / this.audio.duration) * 100;
-        $('.progress-bar').css('width', currentTime + '%'); // 更新进度条的宽度
+        $('.progress-bar').css('width', currentTime + '%'); 
     }
 
     update_my_music_list(music_ID, music_list = 1, favorite = true, method) {
