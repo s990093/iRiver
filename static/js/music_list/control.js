@@ -3,15 +3,28 @@ import { bgAudio } from './bg-audio.js';
 import { MediaPlayer } from "./emement.js";
 import { EqController } from "./eq_control.js";
 
-
 /**
- * @param {HTMLAudioElement} audio - the audio element
- * @param {JSON} current_info - information about the currently selected music
- * 
+ * @typedef {Object} ControlParams
+ * @property {Audio} audio - The audio object
+ * @property {boolean} [isPlaying=false] - Indicates if the audio is currently playing
+ * @property {boolean} [isPlayerShow=false] - Indicates if the audio player is visible
+ * @property {number} [currentIndex=0] - The index of the current song in the list
+ * @property {string} [currentList="org"] - The name of the current music list
+ * @property {boolean} [test=false] - Indicates if it is a test mode
  */
-
 export class Control {
-  constructor(audio, music_list, isPlaying = false, isPlayerShow = false, test = false, currentIndex = 0) {
+  /**
+  * Constructor for Control class
+  * @param {ControlParams} params - The parameters object
+  */
+  constructor({
+    audio,
+    isPlaying = false,
+    isPlayerShow = false,
+    currentIndex = 0,
+    currentList = "org",
+    test = false,
+  }) {
     this.test = test;
 
     if (this.test) {
@@ -19,7 +32,7 @@ export class Control {
       // console.log(isPlayerShow);
     }
 
-    this.music_list = music_list;
+    this.music_list_list = {};
     // this.audio = new Audio();
     this.audio = audio;
 
@@ -32,29 +45,27 @@ export class Control {
 
 
     this.currentIndex = currentIndex;
-    this.music_length = music_list.length;
+    this.currentList = currentList;
+    this.music_length = 0;
 
     this.$playBtn = $('#play');
     this.$switchPlayer = $('.switchPlayer');
     this.$muteBtn = $('.muteButton');
 
     //宣告物件
-    this.webAudio = new WebAudio(this.music_list);
+    this.webAudio = new WebAudio();
     this.mediaPlayer = new MediaPlayer(this.audio);
   }
 
   register() {
     //宣告物件
-    this.bgAudio = new bgAudio(this.music_list, this.currentIndex);
+    this.bgAudio = new bgAudio(this.test);
     this.mediaPlayer.register();
     this.eqController = new EqController(this.audio, this.test);
-
-
-    if ('mediaSession' in navigator)
-      navigator.mediaSession.metadata = null;
     this.webAudio.changePlayer(this.isPlayerShow);
-    // this.insert();
-
+    // if ('mediaSession' in navigator)
+    //   navigator.mediaSession.metadata = null;
+    // // this.insert();
     //監聽
     this._lienter();
   }
@@ -154,10 +165,7 @@ export class Control {
       self.isPlaying = !self.isPlaying;
     });
 
-    // 撥放器
-
-  
-
+    // 撥放器大小
     $(document).on('click', '.small-player, .player', (event) => {
       console.log($(event.target).hasClass('small-player'))
       if ($(event.currentTarget).hasClass('small-player') || $(event.target).hasClass('player')) {
@@ -224,6 +232,7 @@ export class Control {
     });
   }
 
+
   unregister() {
 
   }
@@ -265,7 +274,9 @@ export class Control {
       console.log('prev');
   }
 
-  insert(insertIndex = this.currentIndex) {
+  insert(insertIndex = this.currentIndex, list) {
+    this.currentList = list;
+    this.music_length = this.music_list_list[this.currentList].length;
     this.currentIndex = insertIndex - 1;
     this.next();
   }
@@ -287,25 +298,27 @@ export class Control {
   }
 
   update_song() {
+    var music_list = this.music_list_list[this.currentList][this.currentIndex];
     this.audio.pause();
-    this.audio.currentTime = 0; // 重置播放進度
+    this.audio.currentTime = 0;
     this.audio.loop = false;
 
-    var address = '/media/' + this.music_list[this.currentIndex].artist + "/songs/" + this.music_list[this.currentIndex].music_ID + '.mp3';
+    var address = '/media/' + music_list.artist + "/songs/" + music_list.music_ID + '.mp3';
     this.audio.src = address;
     this.audio.load();
     this.audio.play();
 
     //change information 
-    this.webAudio.update_music(this.currentIndex);
-    this.bgAudio.updateMediaSessionMetadata(this.currentIndex);
+    this.webAudio.update_music(music_list);
+    this.bgAudio.updateMediaSessionMetadata(music_list);
   }
 
-  add_music_list(music_list) {
+  add_music_list(music_list, list = "org") {
+    const newList = { [list]: music_list };
+    this.music_list_list = { ...this.music_list_list, ...newList };
   }
 
-
-  update_music(music_list) {
-
+  update_music(music_list, list = "org") {
+    this.music_list_list[list] = music_list;
   }
 }

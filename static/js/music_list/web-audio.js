@@ -1,12 +1,12 @@
 export class WebAudio {
-    constructor(music_list, test = false) {
+    constructor(test = false) {
         this.test = test = false;
-        this.music_list = music_list;
+
 
         this._register();
 
         if (this.test) {
-            console.log(music_list);
+            console.log(music_list_list);
         }
     }
 
@@ -16,7 +16,7 @@ export class WebAudio {
     }
 
     update_music(currentIndex) {
-        this._changeMusic(currentIndex);
+        this._changeMusic(currentIndex, this.list);
     }
 
     //change Button
@@ -55,7 +55,7 @@ export class WebAudio {
     }
 
     changFavoriteButton(href) {
-    } s
+    }
 
     //  音樂資訊
 
@@ -76,26 +76,26 @@ export class WebAudio {
         }
     }
 
-    _changeMusic(currentIndex) {
-        var song_src = '/media/' + this.music_list[currentIndex].artist + '/img/' + this.music_list[currentIndex].music_ID + '.jpg';
-        var artist_src = '/media/' + this.music_list[currentIndex].artist + '/img/artist.jpg';
+    _changeMusic(music_list) {
+        var song_src = '/media/' + music_list.artist + '/img/' + music_list.music_ID + '.jpg';
+        var artist_src = '/media/' + music_list.artist + '/img/artist.jpg';
 
         // 照片
         $('.albumCover').attr('src', song_src);
         $('.artist-img').attr('src', artist_src);
 
         //刷新  title 跑馬燈
-        $('.songTitle').text(this.music_list[currentIndex].title);
-        $(".artistName").text(this.music_list[currentIndex].artist)
+        $('.songTitle').text(music_list.title);
+        $(".artistName").text(music_list.artist)
         // $('.songTitle').removeClass("marquee");
         // $('.songTitle')[0].offsetWidth;
         // $('.songTitle').addClass("marquee");
 
 
         // artist
-        var href = '/music/music_list/?artist=' + this.music_list[currentIndex].artist + '&index=' + currentIndex;
+        var href = '/music/music_list/?artist=' + music_list.artist;
         $('.artist a').attr('href', href);
-        $('.artist').find('.hover-link').text(this.music_list[currentIndex].artist)
+        $('.artist').find('.hover-link').text(music_list.artist)
 
 
 
@@ -120,6 +120,6 @@ export class WebAudio {
         // });
 
 
-        $('#myaudio').attr('data-music_ID', this.music_list[currentIndex].music_ID);
+        $('#myaudio').attr('data-music_ID', music_list.music_ID);
     }
 }

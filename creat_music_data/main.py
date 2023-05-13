@@ -1,9 +1,10 @@
 """建立資料庫!!!!!"""
 import json
+
 # 自製
 from lib.file import File
 import lib.file as file
-from lib.control import Controller
+from .lib.control import Controller
 import lib.log as log
    
 def run(folder :str , config):
@@ -14,7 +15,7 @@ def run(folder :str , config):
         params  , artsit_list = file.get_csv_data(processed_counters= counters)
         controller = Controller(artist_list= artsit_list , params= params ,  
                                 max_thread= config["max_thread"], max_dow_thread= config["max_dow_thread"],
-                                max_retries= config["max_retries"])
+                                max_retries= config["max_retries"] , relative= config["relative"])
         success = controller.run()
         if success: 
             counters +=1

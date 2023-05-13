@@ -1,7 +1,7 @@
+"""countrol one runs in dow and push data"""
 import json
 import concurrent.futures
 import time
-import logging
 import os
 # 自製
 from lib.web_scutter.youtube import query_youtube
@@ -17,12 +17,14 @@ from lib.web_scutter.summary import query_summary
 import lib.download.img as img
 
 class Controller: 
-    def __init__(self , artist_list: str, params , max_thread: int = 2,  max_dow_thread: int = 4,  max_retries: int = 2):
+    def __init__(self , artist_list: str, params , max_thread: int = 2, 
+                  max_dow_thread: int = 4,  max_retries: int = 2 , relative = str = "media"):
         """控制下在 跟上傳資料庫  回傳bool """
         super().__init__()
         self.artist_list = artist_list
         self.max_thread = max_thread
         self.max_retries = max_retries
+        self.relative = relative
         self.max_dow_thread = max_dow_thread
         self.sources =  params['sources']
         self.style = params['style']
@@ -99,11 +101,11 @@ class Controller:
         with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_thread) as executor:
             # 下載artist 小圖
             executor.submit(img.download_img(url= artist_img_url, file_name='artist.jpg',
-                                            file_dir=f"media/{artist}/img/"))
+                                            file_dir= os.path.join(self.relative_path, artist , img)))
 
             # 下載 封面
             executor.submit(img.download_img_base64(url= executor.submit(query_artist_iocn_src, artist).result() ,
-                                    file_name='cover.jpg', file_dir=f"media/{artist}/img/"))
+                                    file_name='cover.jpg', file_dir= os.path.join(self.relative_path, artist , img)))
             # summary
             self.mysql.save_summary(artist= artist,summary= executor.submit(query_summary , artist).result())
             

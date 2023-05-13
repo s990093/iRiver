@@ -19,11 +19,12 @@ from typing import List
 
 def download(music_ID_list: List[str], artist: str, img_url: str = None, 
              cover_img_url: str = None, artist_img_url: str = None,  
-             only_dow_song: bool = False, max_thread: int = 10) -> List[str]:
+             only_dow_song: bool = False, max_thread: int = 10 , relative: str = "media") -> List[str]:
     
     class WorkerThread(threading.Thread):
         def __init__(self, music_ID, artist, only_dow_song):
             super().__init__()
+            self.relative = relative
             self.music_ID = music_ID
             self.artist = artist
             self.only_dow_song = only_dow_song
@@ -33,14 +34,7 @@ def download(music_ID_list: List[str], artist: str, img_url: str = None,
         def run(self):
             self.result = self.audio.download_audio()
             img.download_img(url= f"https://i.ytimg.com/vi/{self.music_ID}/hqdefault.jpg?" ,
-                                      file_name=f"{self.music_ID}.jpg", file_dir=f"media/{self.artist}/img/")
-            # log(music_ID= self.music_ID, artist=self.artist , success= self.result)
-            if not self.only_dow_song:
-                if cover_img_url:
-                    img.download_img_base64(url=cover_img_url, file_name='cover.jpg', file_dir=f"media/{self.artist}/img/")
-                if artist_img_url:
-                    img.download_img(url=artist_img_url, file_name='artist.jpg', file_dir=f"media/{self.artist}/img/")
-
+                                      file_name=f"{self.music_ID}.jpg", file_dir= os.path.join(self.relative , self.artist , "img"))
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_thread) as executor:
         futures = []
         for music_ID in music_ID_list:

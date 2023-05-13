@@ -1,18 +1,10 @@
 export class bgAudio {
-	constructor(music_list, currentIndex = 0) {
-		this.musicList = music_list;
-		this.currentIndex = currentIndex;
-
-		this._register(this.currentIndex);
+	constructor(isTets = false) {
+		this.isTets = isTets;
 	}
 
-	_register(currentIndex = 0) {
-		// this.updateMediaSessionMetadata(currentIndex);
-	}
-
-	updateMediaSessionMetadata(currentIndex = 0) {
-		this.currentIndex = currentIndex;
-		this.currentSong = this.musicList[currentIndex];
+	updateMediaSessionMetadata(music_list) {
+		this.currentSong = music_list;
 		if ('mediaSession' in navigator) {
 			const metadata = new MediaMetadata({
 				title: this.currentSong.title,
@@ -34,7 +26,10 @@ export class bgAudio {
 			// }
 
 			navigator.mediaSession.metadata = metadata;
-			console.log(navigator.mediaSession.metadata);
+
+			if (this.isTets) {
+				console.log(navigator.mediaSession.metadata);
+			}
 		}
 	}
 

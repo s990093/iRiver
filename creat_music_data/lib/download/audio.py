@@ -16,14 +16,16 @@ from . import y2mate
 
 
 class downloader:
-    def __init__(self, music_ID :str, artist :str):
+    def __init__(self, music_ID :str, artist :str , relative: str = "media"):
         super().__init__()
+        self.relative = relative
         self.music_ID = music_ID 
         self.artist = artist
         self.url = f"https://www.youtube.com/watch?v={self.music_ID}"
-        self.path =  f"media/{self.artist}/songs"
-        self.mp4_path = f"media/{self.artist}/songs/{self.music_ID}.mp4"
-        self.mp3_path = f"media/{self.artist}/songs/{self.music_ID}.mp3"
+        self.path =     os.path.join(self.relative, self.artist, "songs")
+        self.mp4_path = os.path.join(self.relative, self.artist, "songs", f"{self.music_ID}.mp4")
+        self.mp3_path = os.path.join(self.relative, self.artist, "songs", f"{self.music_ID}.mp3")
+
 
     def download_audio(self):
         """dow method"""
