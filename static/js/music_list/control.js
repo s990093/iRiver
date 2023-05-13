@@ -25,12 +25,8 @@ export class Control {
     currentList = "org",
     test = false,
   }) {
+    console.log(audio)
     this.test = test;
-
-    if (this.test) {
-      console.log('control ok');
-      // console.log(isPlayerShow);
-    }
 
     this.music_list_list = {};
     // this.audio = new Audio();
@@ -167,7 +163,6 @@ export class Control {
 
     // 撥放器大小
     $(document).on('click', '.small-player, .player', (event) => {
-      console.log($(event.target).hasClass('small-player'))
       if ($(event.currentTarget).hasClass('small-player') || $(event.target).hasClass('player')) {
         this.isPlayerShow = !this.isPlayerShow;
         this.webAudio.changePlayer(this.isPlayerShow);
@@ -274,7 +269,8 @@ export class Control {
       console.log('prev');
   }
 
-  insert(insertIndex = this.currentIndex, list) {
+  insert(insertIndex = this.currentIndex, list = "org") {
+    console.log(this.music_list_list)
     this.currentList = list;
     this.music_length = this.music_list_list[this.currentList].length;
     this.currentIndex = insertIndex - 1;

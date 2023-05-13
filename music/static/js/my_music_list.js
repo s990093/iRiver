@@ -5,7 +5,12 @@ import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
 var isClickEventRegistered = false;
 $('document').ready(function () {
     const audio = document.getElementById('myaudio');
-    const control = new Control(audio, music_list_infos, false, true, false);
+    console.log(audio, music_list_infos);
+    const control = new Control({
+        audio: audio
+    });
+    control.add_music_list(music_list_infos);
+
     $('tr .play').on('click', function (e) {
         e.preventDefault();
         var index = $(this).attr('value');

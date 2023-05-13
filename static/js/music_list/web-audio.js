@@ -95,7 +95,7 @@ export class WebAudio {
         // artist
         var href = '/music/music_list/?artist=' + music_list.artist;
         $('.artist a').attr('href', href);
-        $('.artist').find('.hover-link').text(music_list.artist)
+        // $('.artist').find('.hover-link').text(music_list.artist)
 
 
 
