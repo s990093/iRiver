@@ -178,8 +178,11 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
     'https://www.googleapis.com/auth/userinfo.email',
     'https://www.googleapis.com/auth/userinfo.profile',
 ]
-#SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = 'http://127.0.0.1:8000/auth/complete/google-oauth2/'
-SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = 'http://server0000.ddns.net:8000/auth/complete/google-oauth2/'
+SOCIAL_AUTH_GOOGLE_OAUTH2_REDIRECT_URI = [
+    'http://127.0.0.1:8000/auth/complete/google-oauth2/',
+    'http://server0000.ddns.net:8000/auth/complete/google-oauth2/',
+    'http://iriver.ddns.net/auth/complete/google-oauth2/',
+]
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 
@@ -191,6 +194,11 @@ SOCIAL_AUTH_LINE_SCOPE = [
     'openid', 
     'email', 
     'phone'
+]
+SOCIAL_AUTH_LINE_REDIRECT_URI = [
+    'http://127.0.0.1:8000/auth/complete/line/',
+    'http://server0000.ddns.net:8000/auth/line_login/callback',
+    'http://iriver.ddns.net/auth/complete/google-oauth2/',
 ]
 SOCIAL_AUTH_LINE_REDIRECT_URI = 'http://127.0.0.1:8000/auth/complete/line/'
 #SOCIAL_AUTH_LINE_REDIRECT_URI = 'http://server0000.ddns.net:8000/auth/line_login/callback'
