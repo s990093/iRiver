@@ -14,8 +14,8 @@ class SQL:
     def create_tables(self, table_name):
         sql = f'''
             CREATE TABLE IF NOT EXISTS {table_name} (
-                email VARCHAR(32) NOT NULL PRIMARY KEY,
-                username VARCHAR(32) NOT NULL,
+                email VARCHAR(36) NOT NULL PRIMARY KEY,
+                username VARCHAR(36) NOT NULL,
                 phone VARCHAR(16) NOT NULL,
                 country CHAR(2),
                 birthday DATE,

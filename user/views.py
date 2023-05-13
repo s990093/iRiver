@@ -8,6 +8,7 @@ from django.http import JsonResponse
 from .forms import LoginForm, RegisterForm,UserProfileForm
 from .models import UserProfile
 from django.contrib.auth.models import User
+from social_django.models import UserSocialAuth
 import json
 # line
 
@@ -20,7 +21,13 @@ from user.lib.sql.sql_music_list import SQL as SQL_music_list
 # def get_user_data(request):
 
 def get_user_music_list(request):
-    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= (request.session['email']).split("@")[0])
+    tkey = request.session['email']
+    key = None;
+    if tkey.startswith('#'):
+        key = tkey[1:]
+    else:
+        key = tkey.split("@")[0]
+    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
     sql_user_music_list.create_tables()
     if request.method != 'POST':
         return HttpResponse('error')
@@ -38,29 +45,14 @@ def get_user_music_list(request):
 
 
 def hello(request):
-    temp = request.session['email']
-    mail = temp.split("@")[0]
-
-    key = mail
-    
-    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-    sql_user.create_tables(table_name= key)
-
+    tkey = request.session['email']
+    if tkey.startswith('#'):
+        key = key[1:]
+    else:
+        key = tkey.split("@")[0]    
     sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
-    sql_user_music_list.create_tables()
-
-    music_ID_dict = {
-        '111',
-        '222',
-    }
-    music_ID_list = [music for music in music_ID_dict]
-    #sql_user_music_list.save_data(music_ID_list= json.dumps( music_ID_list , indent=4))
-    #sql_user_music_list.delete_data(music_ID_list= json.dumps( music_ID_list , indent=4))
-
     #查詢結果
     music_ID_list = sql_user_music_list.get_music_list()
-    #return json.dumps(music_ID_list, indent=4)
-    
     return HttpResponse(music_ID_list)
 
 
@@ -74,10 +66,14 @@ def check_login(request):
 def data(request):
     if request.user.is_authenticated:
         print("已登入")
-        request.session['email'] = request.user.email
-        request.session['isLogin'] = True
-        name = request.user.username
         email = request.user.email
+        name = request.user.username
+        if (email == ""):
+            print("line登入")
+            email = "#" + name
+            name = None
+        request.session['isLogin'] = True
+        request.session['email'] = email
     else:
         del request.session['email']
         request.session['isLogin'] = False
@@ -140,7 +136,7 @@ def log_out(request):
 
 #個人資料
 def profile(request):
-    user_profile, created = UserProfile.objects.get_or_create(email=request.user.email)
+    user_profile, created = UserProfile.objects.get_or_create(email=request.session['email'])
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
@@ -155,6 +151,7 @@ def profile(request):
         print("修改錯誤")
         form = UserProfileForm(instance=user_profile)
     return render(request, 'test456.html', {'form': form})
+
 
 #line
 
