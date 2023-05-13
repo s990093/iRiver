@@ -197,8 +197,6 @@ SOCIAL_AUTH_LINE_SCOPE = [
 ]
 SOCIAL_AUTH_LINE_REDIRECT_URI = [
     'http://127.0.0.1:8000/auth/complete/line/',
-    'http://server0000.ddns.net:8000/auth/line_login/callback',
-    'http://iriver.ddns.net/auth/complete/google-oauth2/',
+    'http://server0000.ddns.net:8000/complete/line/',
+    'http://iriver.ddns.net/auth/complete/line/',
 ]
-SOCIAL_AUTH_LINE_REDIRECT_URI = 'http://127.0.0.1:8000/auth/complete/line/'
-#SOCIAL_AUTH_LINE_REDIRECT_URI = 'http://server0000.ddns.net:8000/auth/line_login/callback'
