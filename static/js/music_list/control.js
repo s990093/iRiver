@@ -2,6 +2,7 @@ import { WebAudio } from './web-audio.js';
 import { bgAudio } from './bg-audio.js';
 import { MediaPlayer } from "./emement.js";
 import { EqController } from "./eq_control.js";
+import { FaController } from "./add-favorite.js";
 
 /**
  * @typedef {Object} ControlParams
@@ -25,7 +26,6 @@ export class Control {
     currentList = "org",
     test = false,
   }) {
-    console.log(audio)
     this.test = test;
 
     this.music_list_list = {};
@@ -119,6 +119,7 @@ export class Control {
 
     // 更新我的專輯
     $('#table-body').on('click', '.love-icon a', function () {
+      $(this).toggleClass('active');
       $(this).find('i').toggleClass('far fas');
       var music_ID = $(this).attr('value');
       self.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');

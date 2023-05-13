@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link
       rel="stylesheet"
       href="  {% static './css/music_list/music_player.css' %} "
@@ -38,7 +37,7 @@
     <div>{% include './template/music_player/add_my_favorite.html' %}</div>
 
     <!-- 音樂 -->
-    <audio id="myaudio" preload="auto" tabindex="0" autoplay data-music_ID="">
+    <audio id="myaudio" preload="auto" tabindex="0" data-music_ID="">
       <source id="audio-source" src="" />
     </audio>
 

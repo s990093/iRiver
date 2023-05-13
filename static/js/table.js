@@ -51,15 +51,15 @@ export function table_template({
         </a>
       </td>
       <td>
-        <span class="love-icon" style="text-align: right">
+        <span class="love-icon font" style="text-align: right">
           <a href="#" value=${song.music_ID}><i class="far fa-heart"></i></a>
         </span>
       </td>
       <td>
-        <a href="#" class="${icon_class_name}" value=${song.music_ID} data-music_list = "${music_list}"><i class="${icon_class}"></i></a>
+        <a href="#" class="${icon_class_name} font" value=${song.music_ID} data-music_list = "${music_list}"><i class="${icon_class}"></i></a>
       </td>
       <td style="text-align: right">
-        <a href="/music/music_list/?artist=${song.artist}&index=${i}" style="margin-right: 20px">
+        <a href="/music/music_list/?artist=${song.artist}&index=${i}" class="icon" style="margin-right: 20px">
           <span class="artist-text" style="margin-left: 20px; margin-right: 20px">${song.artist}</span>
           <img src="${song.artist_img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}" alt="none" width="30" />
         </a>

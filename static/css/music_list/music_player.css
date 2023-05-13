@@ -1,8 +1,78 @@
+#table-body tr:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+}
 .artist a {
   color: black;
   text-decoration: none;
 }
+.songTitle {
+  color: black;
+}
 
-/* .artistName {
-  
+/* #table-body .bi-plus-lg {
+  display: none;
 } */
+
+#table-body .font {
+  display: none;
+}
+
+#table-body tr:hover .font {
+  display: block;
+}
+
+#table-body .material-symbols-outlined {
+  display: none;
+}
+#table-body tr:hover .bi-plus-lg {
+  display: block;
+}
+#table-body tr:hover .material-symbols-outlined {
+  display: block;
+}
+
+#music-player {
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+}
+
+#music-player audio {
+  margin-right: 20px;
+  width: 300px;
+}
+
+#big-player {
+  margin-top: 40px;
+  animation-name: slide-down;
+  animation-duration: 0.5s;
+}
+
+#small-player {
+  animation-name: slide-up;
+  animation-duration: 0.5s;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}

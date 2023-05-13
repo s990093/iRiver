@@ -18,8 +18,13 @@
         <div class="player-controls">
           <div class="player-controls__item -favorite">
             <!-- favorite -->
-            <svg class="icon" id="favorite">
-              <use href="{% static './svg/iocn.svg' %}#icon-heart-o"></use>
+            <svg
+              class="icon"
+              id="favorite"
+              data-favorite="fa"
+              data-bs-target="#add-favorite"
+            >
+              <use href="{% static './svg/icon.svg' %}#icon-heart"></use>
             </svg>
           </div>
 
@@ -31,28 +36,28 @@
             data-bs-toggle="modal"
           >
             <svg class="icon">
-              <use href="{% static './svg/iocn.svg' %}#icon-eq"></use>
+              <use href="{% static './svg/icon.svg' %}#icon-eq"></use>
             </svg>
           </div>
 
           <!-- prev -->
           <div class="player-controls__item" id="prevTrack">
             <svg class="icon">
-              <use href="{% static './svg/iocn.svg' %}#icon-prev"></use>
+              <use href="{% static './svg/icon.svg' %}#icon-prev"></use>
             </svg>
           </div>
 
           <!-- next -->
           <div class="player-controls__item" id="nextTrack">
             <svg class="icon">
-              <use href="{% static './svg/iocn.svg' %}#icon-next"></use>
+              <use href="{% static './svg/icon.svg' %}#icon-next"></use>
             </svg>
           </div>
 
           <!-- play -->
           <div class="player-controls__item -xl js-play" id="play">
             <svg class="icon">
-              <use href="{% static './svg/iocn.svg' %}#icon-pause"></use>
+              <use href="{% static './svg/icon.svg' %}#icon-pause"></use>
             </svg>
           </div>
         </div>
@@ -67,7 +72,7 @@
             </a>
           </div>
         </div>
-        <div class="album-info__track">
+        <div class="album-info__track overflow-text">
           <div class="songTitle"></div>
         </div>
       </div>

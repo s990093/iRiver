@@ -5,7 +5,6 @@ import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
 var isClickEventRegistered = false;
 $('document').ready(function () {
     const audio = document.getElementById('myaudio');
-    console.log(audio, music_list_infos);
     const control = new Control({
         audio: audio
     });

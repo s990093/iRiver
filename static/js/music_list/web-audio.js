@@ -24,11 +24,11 @@ export class WebAudio {
     changButtonIcon(isplaying) {
         if (isplaying) {
             $('.playPauseButton').html('<i class="fa fa-pause"></i>');
-            $('#play .icon use').attr('href', '/static/svg/iocn.svg#icon-pause');
+            $('#play .icon use').attr('href', '/static/svg/icon.svg#icon-pause');
         }
         else {
             $('.playPauseButton').html('<i class="fa fa-play"></i>');
-            $('#play .icon use').attr('href', '/static/svg/iocn.svg#icon-play');
+            $('#play .icon use').attr('href', '/static/svg/icon.svg#icon-play');
         }
     }
 
@@ -47,14 +47,18 @@ export class WebAudio {
     }
 
     changLoopButton(isLoop) {
-        if (isLoop)
-            $('#loopButton').html('<span class="material-symbols-outlined">repeat</span>');
-
-        else
-            $('#loopButton').html('<span class="material-symbols-outlined">repeat_one</span>');
+        var symbol = isLoop ? 'repeat' : 'repeat_one';
+        $('#loopButton').html(`<span class="material-symbols-outlined">${symbol}</span>`);
     }
 
     changFavoriteButton(href) {
+        const path = "/static/svg/icon.svg";
+        const iconHeart = `${path}#icon-heart`;
+        const iconHeartO = `${path}#icon-heart-o`;
+        if (href == "/static/svg/icon.svg#icon-heart-o")
+            $('#favorite use').attr('href', iconHeart);
+        else
+            $('#favorite use').attr('href', iconHeartO);
     }
 
     //  音樂資訊
