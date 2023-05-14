@@ -232,6 +232,7 @@ export class Control {
   unregister() {
 
   }
+  
   play() {
     if (this.test)
       console.log('play');

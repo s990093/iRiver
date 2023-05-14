@@ -28,6 +28,7 @@ def get_user_music_list(request):
     else:
         key = tkey.split("@")[0]
     sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
+    # 建立個人表單
     sql_user_music_list.create_tables()
     if request.method != 'POST':
         return HttpResponse('error')
@@ -68,6 +69,13 @@ def data(request):
         print("已登入")
         email = request.user.email
         name = request.user.username
+        if email.startswith('#'):
+                key = email[1:]
+        else:
+              email = email.split("@")[0]
+        sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
+        # 建立個人表單
+        sql_user_music_list.create_tables()
         if (email == ""):
             print("line登入")
             email = "#" + name
