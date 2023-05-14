@@ -1,4 +1,3 @@
-import { Fetch } from "../../ts/fetch.js";
 /**
  * FaController class for managing Fa functionality.
  * @class
@@ -9,7 +8,7 @@ export class FaController {
      * @constructor
      * @param {HTMLElement} element - The target element.
      */
-    constructor({ isTest = false }) {
+    constructor(isTest = false) {
         this.isTest = isTest;
         this._register();
     }
@@ -23,10 +22,8 @@ export class FaController {
 
     _listener() {
         $(".add").on("click", function () {
-
+            $("#add-favorite").modal("show");
         });
-        $("#add-favorite").modal("show");
-
     }
     /**
      * show fa model

@@ -1,7 +1,9 @@
 import { Control } from "../../../static/js/music_list/control.js";
 import { table_template } from "../../../static/js/table.js";
-import { fetch_dow_all_songs, fetch_dow_song, fetch_is_song_exit } from "../../../static/js/fetch.js";
+import { fetch_dow_all_songs, fetch_dow_song } from "../../../static/js/fetch.js";
 import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
+// import { fetch_dow_all_songs, fetch_dow_song, fetch_is_song_exit } from "../../../static/ts/fetch.ts";
+
 
 const audio = document.getElementById('myaudio');
 var isClickEventRegistered = false;
