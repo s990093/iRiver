@@ -89,7 +89,7 @@ class SQL:
 
     def check_ID_in_1(self, music_ID):
         sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s AND music_list = 1'
-        self.cursor.execute(sql, (music_ID,))
+        self.cursor.execute(sql, (music_ID ,))
         result = self.cursor.fetchone()
         if result:
             return True
@@ -101,6 +101,12 @@ class SQL:
         sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
         self.cursor.execute(sql, (value, music_id))
         self.db.commit()
+    
+    def get_playlists(self , email):
+        sql = f'SELECT COUNT(*) FROM {email}'
+        self.cursor.execute(sql, (email ,))
+        return self.cursor.fetchall() 
+
 
 
     def close(self):
