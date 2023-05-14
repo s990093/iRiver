@@ -1,7 +1,9 @@
+import { Fetch } from "../../js/fetch.js";
 /**
  * FaController class for managing Fa functionality.
  * @class
  */
+
 export class FaController {
     /**
      * Create a new instance of FaController.
@@ -10,6 +12,9 @@ export class FaController {
      */
     constructor(isTest = false) {
         this.isTest = isTest;
+        this.playlist = [];
+        // 宣告物件
+        this.fetch = new Fetch();
         this._register();
     }
 
@@ -18,13 +23,23 @@ export class FaController {
      */
     _register() {
         this._listener();
+        this.playlist = this._get_playlist();
     }
 
     _listener() {
         $(".add").on("click", function () {
-            $("#add-favorite").modal("show");
+            $("#favoriteModal").modal("show");
         });
     }
+
+    async _get_playlist() {
+        return this.fetch.get_playlist();
+    }
+
+    playlist_template(playlist) {
+
+    }
+
     /**
      * show fa model
      * @method

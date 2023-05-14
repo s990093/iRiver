@@ -3,7 +3,6 @@ DB_CONFIG = {
     'port': 3306,
     'user': 'gWvPZkyaanAP5cXQqE8hkX5hnmYYhcMr',
     'password': 'JABmQsQhpj05F6WI',
-    'db': 'music',
+    'db': 'music_db',
     'charset': 'utf8mb4',
 }
-

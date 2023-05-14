@@ -3,10 +3,11 @@ import re
 
 def clear_str(title, artist):
     artist = re.compile(re.escape(artist), flags=re.IGNORECASE)
+    artist = delete_tag(artist)
     if artist:
         title = re.sub(r'\s+', '', title)   #刪除格
     # 英文
-    title = re.sub(r'official|music|video|Audio|demo|Acoustic|version|MV|HD|Remix|live|4k|cover|OP', '', title, flags=re.IGNORECASE) # 刪除 official, music, video (忽略大小寫)
+    title = delete_tag(title)
     # 中文
     title = re.sub(r'主題|歌|《純粹中翻》|中日詞|電影', '', title, flags=re.IGNORECASE) # 刪除 official, music, video (忽略大小寫)
     title = re.sub(f'{artist}', '', title, flags=re.IGNORECASE) # 替換 artist 名稱
@@ -22,3 +23,7 @@ def clear_str(title, artist):
     title = re.sub(r'\d{5,}', '', title) #配5個或更多的連續數字
     title = title.strip()  # 刪除前後空格
     return title
+
+
+def  delete_tag(name):
+    return re.sub(r'official|music|video|Audio|demo|Acoustic|version|MV|HD|Remix|live|4k|cover|OP|OfficialYouTubeChannel', '', name, flags=re.IGNORECASE) # 刪除 official, music, video (忽略大小寫
