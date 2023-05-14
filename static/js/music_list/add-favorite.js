@@ -23,18 +23,21 @@ export class FaController {
      */
     _register() {
         this._listener();
-        this._get_playlist();
-
+        this.playlist = this._get_playlist();
     }
 
     _listener() {
         $(".add").on("click", function () {
-            $("#add-favorite").modal("show");
+            $("#favoriteModal").modal("show");
         });
     }
 
-    _get_playlist() {
-        this.fetch
+    async _get_playlist() {
+        return this.fetch.get_playlist();
+    }
+
+    playlist_template(playlist) {
+
     }
 
     /**

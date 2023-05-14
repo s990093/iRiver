@@ -44,9 +44,19 @@ export function fetch_dow_all_songs(artist_url, artist) {
  * @class Fetch class for performing HTTP requests.
  */
 export class Fetch {
+    constructor() {
+        this.session = this._get_cookie();
+        this.cookie = this._get_cookie();
+    }
+
     /**
-     * GET_template - 发送 GET 请求并带有参数
-     * @param {string} target - 目标 URL
+     * @method GET_template - 发送 GET 请求并带有参
+     * @param {string} target - params = {
+                                param1: 'value1',
+                                param2: 'value2',
+                                param3: 'value3'
+                                };
+     * 
      * @param {Object} params - 参数对象
      * @returns {Promise<Response>} - 返回包含响应数据的 Promise 对象
      */
@@ -59,9 +69,16 @@ export class Fetch {
         const data = await fetch(url);
         return data;
     }
-    
+
+    _get_seesion() {
+        return "test";
+    }
+    _get_cookie() {
+        return "test";
+    }
+
     get_playlist() {
-        var playlist = ["專輯1", "專輯2"]
+        var playlist = ["專輯1", "專輯2"];
         return playlist;
     }
 }
