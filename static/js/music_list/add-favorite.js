@@ -1,3 +1,4 @@
+import { Fetch } from "../../ts/fetch.js";
 /**
  * FaController class for managing Fa functionality.
  * @class
@@ -8,18 +9,39 @@ export class FaController {
      * @constructor
      * @param {HTMLElement} element - The target element.
      */
-    constructor(element) {
-        this.element = element;
+    constructor({ isTest = false }) {
+        this.isTest = isTest;
+        this._register();
     }
 
     /**
-     * Toggle the Fa functionality.
-     * @method
+     * @method register the favortiet  mmodel 
      */
-    toggleFa() {
-        // Code to toggle Fa functionality
+    _register() {
+        this._listener();
     }
 
+    _listener() {
+        $(".add").on("click", function () {
+
+        });
+        $("#add-favorite").modal("show");
+
+    }
+    /**
+     * show fa model
+     * @method
+     */
+    showFa() {
+        // Code to toggle Fa functionality
+    }
+    /**
+    * show fa model
+    * @method
+    */
+    creatFa() {
+        // Code to toggle Fa functionality
+    }
     /**
      * Enable the Fa functionality.
      * @method
