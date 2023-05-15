@@ -118,29 +118,6 @@ export class Control {
       }
     });
 
-    // 更新我的專輯
-    $('#table-body').on('click', '.love-icon a', function () {
-      $(this).toggleClass('active');
-      $(this).find('i').toggleClass('far fas');
-      var music_ID = $(this).attr('value');
-      self.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
-    });
-
-    $('#favorite').on('click', function () {
-      var href = $(this).find('use').attr('href');
-      var music_ID = $('#myaudio').attr('data-music_ID');
-      self.webAudio.changFavoriteButton(href);
-      self.mediaPlayer.update_my_music_list(music_ID, 1, true, 'insert');
-    });
-
-
-    $('#table-body').on('click', '.add', function () {
-      var music_ID = $(this).attr('value');
-      self.mediaPlayer.update_my_music_list(music_ID, 2, false, 'insert');
-    });
-
-
-
     // button
     // play
     this.$playBtn.on('click', () => {

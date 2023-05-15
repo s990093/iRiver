@@ -6,7 +6,7 @@
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered fa-modal">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">加入專輯</h1>
@@ -17,12 +17,19 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body">目前的專輯</div>
+      <div class="modal-body">
+        <!-- check box -->
+        <div class="btn-group" data-toggle="buttons">
+          <div class="fa-body"></div>
+        </div>
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           取消
         </button>
-        <button type="button" class="btn btn-primary">儲存</button>
+        <button type="button" class="btn btn-primary" id="fa-insert">
+          儲存
+        </button>
       </div>
     </div>
   </div>

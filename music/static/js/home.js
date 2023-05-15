@@ -22,6 +22,7 @@ if (query) {
       if (data.success) {
         console.log('search data', data.music_list)
         paush_web_data(data.music_list);
+        const fa = new FaController();
       } else {
         alert('web search error', data.music_list);
       }
@@ -30,13 +31,16 @@ if (query) {
     .then(response => response.json())
     .then(data => {
       if (data.success) {
-        console.log('db_data', data.music_list)
-        paush_db_data(data.music_list)
+        console.log('db_data', data.music_list);
+        paush_db_data(data.music_list);
+        const fa = new FaController();
         length = data.music_list.length;
       }
     });
   query = null
 }
+
+
 
 
 
@@ -50,7 +54,6 @@ function paush_web_data(music_list) {
       list: "web"
     }));
   }
-
   control.add_music_list(music_list, "web");
 
 
@@ -88,7 +91,6 @@ function paush_db_data(music_list) {
       isWeb: false,
       list: "db"
     }));
-    const fa = new FaController();
     loading(false);
   }
   control.add_music_list(music_list, "db");
@@ -103,7 +105,6 @@ function paush_db_data(music_list) {
     }
     control.insert(index, list);
   });
-  const fa = new FaController();
   loading(false)
 }
 
@@ -128,22 +129,22 @@ function loading(isLoading) {
 }
 
 
-$('#table-body').on('click', '.love-icon a', async function () {
-  $(this).find('i').toggleClass('far fas');
-  var music_ID = $(this).attr('value');
-  // const isSongExist = await fetch_is_songisClickEventRegistered_web _exit(music_ID);
-  // if (isSongExist) 
-  await insert_my_music_list(music_ID, 1, true, 'insert');
+// $('#table-body').on('click', '.love-icon a', async function () {
+//   $(this).find('i').toggleClass('far fas');
+//   var music_ID = $(this).attr('value');
+//   // const isSongExist = await fetch_is_songisClickEventRegistered_web _exit(music_ID);
+//   // if (isSongExist)
+//   await insert_my_music_list(music_ID, 1, true, 'insert');
 
-});
+// });
 
-$('#table-body').on('click', '.add', async function () {
-  $(this).find('i').toggleClass('far fas');
-  var music_ID = $(this).attr('value');
-  // const isSongExist = await fetch_is_song_exit(music_ID);
-  // if (isSongExist) 
-  await insert_my_music_list(music_ID, 2, false, 'insert');
-});
+// $('#table-body').on('click', '.add', async function () {
+//   $(this).find('i').toggleClass('far fas');
+//   var music_ID = $(this).attr('value');
+//   // const isSongExist = await fetch_is_song_exit(music_ID);
+//   // if (isSongExist)
+//   await insert_my_music_list(music_ID, 2, false, 'insert');
+// });
 
 
 
