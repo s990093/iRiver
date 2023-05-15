@@ -86,8 +86,8 @@ def data(request):
     else:
         request.session['key'] = tkey.split("@")[0]  
 
-    sql = SQL_music_list(user.lib.sql.config.SQL_music_list,request.session['key'])
-    sql.create_tables("user") #建立資料表     
+    sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user,request.session['key'])
+    sql.create_tables() #建立資料表     
     now = timezone.now()
     context = {
         'heading': name ,

@@ -4,7 +4,7 @@ import difflib
 
 
 class SQL:
-    def __init__(self, config, table_name):
+    def __init__(self, config, table_name :str):
         '''table'''
         self.table_name = table_name
         self.config = config
