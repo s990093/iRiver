@@ -13,7 +13,7 @@ export class FaController {
      */
     constructor(isTest = false) {
         this.isTest = isTest;
-        this.playlist = {};
+        this.playlist = [];
         this.insert_song_infos = {};
         // 宣告物件
         this.fetch = new Fetch();
@@ -91,15 +91,14 @@ export class FaController {
 
         // 添加到哪個專輯
         $(".playlist").on("click", function () {
-            console.log(self.insert_song_infos.music_ID);
-            $(".playlist").on("click", function () {
-                self.insert_song_infos = {
-                    "playlist": $(this).data('playlist'),
-                    "music_ID": self.insert_song_infos.music_ID,
-                    "favorite": self.insert_song_infos.favorite
-                }
-            });
             console.log(self.insert_song_infos);
+            self.insert_song_infos = {
+                "playlist": $(this).data('playlist'),
+                "music_ID": self.insert_song_infos.music_ID,
+                "favorite": self.insert_song_infos.favorite
+            }
+            console.log(self.insert_song_infos);
+
         });
 
         // 送出
