@@ -4,7 +4,7 @@ import difflib
 
 
 class SQL:
-    def __init__(self, config, table_name):
+    def __init__(self, config, table_name :str):
         '''table'''
         self.table_name = table_name
         self.config = config
@@ -89,9 +89,9 @@ class SQL:
 
     def check_ID_in_1(self, music_ID):
         sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s AND music_list = 1'
-        self.cursor.execute(sql, (music_ID,))
+        self.cursor.execute(sql, (music_ID ,))
         result = self.cursor.fetchone()
-        if result:
+        if result: 
             return True
         else:
             return False
@@ -101,6 +101,12 @@ class SQL:
         sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
         self.cursor.execute(sql, (value, music_id))
         self.db.commit()
+    
+    def get_playlists(self , email):
+        sql = f'SELECT COUNT(*) FROM {email}'
+        self.cursor.execute(sql, (email ,))
+        return self.cursor.fetchall() 
+
 
 
     def close(self):

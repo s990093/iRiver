@@ -2,17 +2,18 @@
   transform: translateY(-2px);
   transition: all 0.2s ease-in-out;
 }
+
+.modal {
+  color: black !important;
+}
 .artist a {
   color: black;
   text-decoration: none;
 }
+
 .songTitle {
   color: black;
 }
-
-/* #table-body .bi-plus-lg {
-  display: none;
-} */
 
 #table-body .font {
   display: none;
@@ -22,9 +23,9 @@
   display: block;
 }
 
-#table-body .material-symbols-outlined {
+/* #table-body .material-symbols-outlined {
   display: none;
-}
+} */
 #table-body tr:hover .bi-plus-lg {
   display: block;
 }

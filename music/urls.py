@@ -13,6 +13,7 @@ urlpatterns = [
     path('download_songs/', views.download_songs, name='download_songs'),
     path('get_music_list/', views.get_music_list, name='get_music_list'),
     path('music_list/', views.music_list, name='music_list'),
+    path('test/', views.test, name='test'),
     # # 下載
     # path('download/', views.download, name='download'),
     # path('download_songs/', views.download_songs, name='download_songs'),

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>背景音樂播放器</title>
+  </head>
+  <body>
+    <h1>背景音樂播放器</h1>
+
+    <button id="playButton">播放音樂</button>
+
+    <audio id="backgroundMusic" loop>
+      <source src="{% static 'test.mp3' %}" type="audio/mpeg" />
+      <!-- 如果支援其他音訊格式，可以在這裡新增其他 <source> 元素 -->
+      <!-- 例如：<source src="your-audio-file.ogg" type="audio/ogg"> -->
+      <!-- 以提供額外的格式支援 -->
+      你的瀏覽器不支援 HTML5 音訊。
+    </audio>
+
+    <script>
+      var playButton = document.getElementById("playButton");
+      var audio = document.getElementById("backgroundMusic");
+
+      playButton.addEventListener("click", function () {
+        audio.play().catch(function (error) {
+          // 如果播放失敗，顯示錯誤訊息並將播放按鈕禁用
+          console.error("無法播放音樂:", error);
+          playButton.disabled = true;
+        });
+      });
+    </script>
+  </body>
+</html>

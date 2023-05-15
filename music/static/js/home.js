@@ -1,7 +1,9 @@
 import { Control } from "../../../static/js/music_list/control.js";
 import { table_template } from "../../../static/js/table.js";
-import { fetch_dow_all_songs, fetch_dow_song, fetch_is_song_exit } from "../../../static/js/fetch.js";
+import { fetch_dow_all_songs, fetch_dow_song } from "../../../static/js/fetch.js";
 import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
+// import { fetch_dow_all_songs, fetch_dow_song, fetch_is_song_exit } from "../../../static/ts/fetch.ts";
+
 
 const audio = document.getElementById('myaudio');
 var isClickEventRegistered = false;
@@ -61,7 +63,7 @@ function paush_web_data(music_list) {
       if (success) {
         if (!isClickEventRegistered) {
           control.register();
-          isClickEventRegistered_web = true;
+          isClickEventRegistered = true;
         }
         control.insert(index, list);
         fetch_dow_all_songs(music_list[index].artist_url, music_list[index].artist);
@@ -125,7 +127,7 @@ function loading(isLoading) {
 $('#table-body').on('click', '.love-icon a', async function () {
   $(this).find('i').toggleClass('far fas');
   var music_ID = $(this).attr('value');
-  // const isSongExist = await fetch_is_song_exit(music_ID);
+  // const isSongExist = await fetch_is_songisClickEventRegistered_web _exit(music_ID);
   // if (isSongExist) 
   await insert_my_music_list(music_ID, 1, true, 'insert');
 

@@ -1,25 +1,59 @@
+import { Fetch } from "../../js/fetch.js";
 /**
  * FaController class for managing Fa functionality.
  * @class
  */
+
 export class FaController {
     /**
      * Create a new instance of FaController.
      * @constructor
      * @param {HTMLElement} element - The target element.
      */
-    constructor(element) {
-        this.element = element;
+    constructor(isTest = false) {
+        this.isTest = isTest;
+        this.playlist = [];
+        // 宣告物件
+        this.fetch = new Fetch();
+        this._register();
     }
 
     /**
-     * Toggle the Fa functionality.
-     * @method
+     * @method register the favortiet  mmodel 
      */
-    toggleFa() {
-        // Code to toggle Fa functionality
+    _register() {
+        this._listener();
+        this.playlist = this._get_playlist();
     }
 
+    _listener() {
+        $(".add").on("click", function () {
+            $("#favoriteModal").modal("show");
+        });
+    }
+
+    async _get_playlist() {
+        return this.fetch.get_playlist();
+    }
+
+    playlist_template(playlist) {
+
+    }
+
+    /**
+     * show fa model
+     * @method
+     */
+    showFa() {
+        // Code to toggle Fa functionality
+    }
+    /**
+    * show fa model
+    * @method
+    */
+    creatFa() {
+        // Code to toggle Fa functionality
+    }
     /**
      * Enable the Fa functionality.
      * @method

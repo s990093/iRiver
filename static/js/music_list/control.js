@@ -51,6 +51,7 @@ export class Control {
     //宣告物件
     this.webAudio = new WebAudio();
     this.mediaPlayer = new MediaPlayer(this.audio);
+    this.faController = new FaController({ isTest: false });
   }
 
   register() {
@@ -232,7 +233,7 @@ export class Control {
   unregister() {
 
   }
-  
+
   play() {
     if (this.test)
       console.log('play');

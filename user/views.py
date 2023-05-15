@@ -52,7 +52,6 @@ def hello(request):
     else:
         key = tkey.split("@")[0]    
     sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
-    #查詢結果
     music_ID_list = sql_user_music_list.get_music_list()
     return HttpResponse(music_ID_list)
 
@@ -69,26 +68,29 @@ def data(request):
         print("已登入")
         email = request.user.email
         name = request.user.username
-        if email.startswith('#'):
-                key = email[1:]
-        else:
-              email = email.split("@")[0]
-        sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
-        # 建立個人表單
-        sql_user_music_list.create_tables()
-        if (email == ""):
-            print("line登入")
+        request.session['isLogin'] = True
+        if(email==''):
             email = "#" + name
             name = None
-        request.session['isLogin'] = True
-        request.session['email'] = email
     else:
-        del request.session['email']
-        request.session['isLogin'] = False
         print("未登入")
         name = None
         email = None
-        
+        del request.session['email']
+        request.session['isLogin'] = False
+
+    request.session['email'] = email
+    tkey = request.session['email']
+    if tkey.startswith('#'):
+        request.session['key'] = tkey[1:]
+    else:
+        request.session['key'] = tkey.split("@")[0]  
+    # 建立個專輯
+    sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,request.session['key'])
+    sql.create_tables() #建立資料表     
+    # 建立個人資料
+    sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+    sql.create_tables() #建立資料表     
     now = timezone.now()
     context = {
         'heading': name ,
@@ -151,8 +153,9 @@ def profile(request):
             form.save()
             user_data = form.cleaned_data
             sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-            sql.create_tables("user") #建立資料表            
-            sql.save_user_data(**user_data)
+            sql.create_tables() #建立資料表        
+            user_data.update({"key": request.session['key']})
+            sql.save_user_profile(**user_data)
             print("成功修改")
             return redirect('/user/data')
     else:
