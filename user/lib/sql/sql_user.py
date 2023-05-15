@@ -1,7 +1,7 @@
 import MySQLdb
 import json
 import difflib
-
+#123132
 class SQL:
     def __init__(self, config):
         self.config = config
@@ -14,7 +14,8 @@ class SQL:
     def create_tables(self, table_name):
         sql = f'''
             CREATE TABLE IF NOT EXISTS {table_name} (
-                email VARCHAR(36) NOT NULL PRIMARY KEY,
+                key VARCHAR(36) NOT NULL PRIMARY KEY,
+                email VARCHAR(36) NOT NULL,
                 username VARCHAR(36) NOT NULL,
                 phone VARCHAR(16) NOT NULL,
                 country CHAR(2),
@@ -27,6 +28,7 @@ class SQL:
 
 
     def save_user_data(self, **user_data):
+        key = user_data.get('key')
         email = user_data.get('email')
         username = user_data.get('username')
         phone = user_data.get('phone')
@@ -35,12 +37,12 @@ class SQL:
         test = user_data.get('test', 0)
         level = user_data.get('level', 0)
         self.cursor.execute(
-            'INSERT IGNORE INTO user (email, username, phone, country, birthday, test, level) VALUES (%s, %s, %s, %s, %s, %s, %s)',
-            (email, username, phone, country, birthday, test, level)
+            'INSERT IGNORE INTO user (key, email, username, phone, country, birthday, test, level) VALUES (%s, %s, %s, %s, %s, %s, %s)',
+            (key, email, username, phone, country, birthday, test, level)
         )
         self.cursor.execute(
-            'UPDATE user SET username=%s, phone=%s, country=%s, birthday=%s, test=%s, level=%s WHERE email=%s',
-            (username, phone, country, birthday, test, level, email)
+            'UPDATE user SET email=%s, username=%s, phone=%s, country=%s, birthday=%s, test=%s, level=%s WHERE key=%s',
+            (email, username, phone, country, birthday, test, level, key)
         )
         self.db.commit()
 
