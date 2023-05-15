@@ -91,7 +91,7 @@ class SQL:
         sql = f'SELECT * FROM {self.table_name} WHERE music_ID = %s AND music_list = 1'
         self.cursor.execute(sql, (music_ID ,))
         result = self.cursor.fetchone()
-        if result:
+        if result: 
             return True
         else:
             return False
