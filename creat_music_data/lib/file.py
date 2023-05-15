@@ -1,7 +1,6 @@
 import os
 import glob
 import csv
-import codecs
 
 
 class File:
@@ -36,7 +35,7 @@ class File:
 
     def get_csv_data(self, processed_counters=0):
         self.processed_counters = processed_counters
-        with codecs.open(self.csv_files[self.processed_counters], newline='', encoding='utf-8') as csvfile:
+        with open(self.csv_files[self.processed_counters], newline='', encoding='utf-8') as csvfile:
             reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             header = next(reader)
             params = {

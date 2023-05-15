@@ -3,7 +3,7 @@ DB_CONFIG_user = {
     'port': 3306,
     'user': 'gWvPZkyaanAP5cXQqE8hkX5hnmYYhcMr',
     'password': 'JABmQsQhpj05F6WI',
-    'db': 'iRiver_user',
+    'db': 'iRiver_user_data',
     'charset': 'utf8mb4',
 }
 DB_CONFIG_user_music_list = {
