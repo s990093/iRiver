@@ -145,14 +145,13 @@ def query_web_song(request):
     # 網路
     if test:
         print('='*50)
-        print(f'get  {query} !!')
+        print(f'get  {query}  !!')
     try:
         youtube_result = json.loads(future_youtube.result())
         music_list =  youtube_result['music_list']
         statistics =  youtube_result['statistics']
     except Exception as e:
         print(e)
-
     return JsonResponse({'success': True , 'music_list' : music_list}, safe=False)
 
 
