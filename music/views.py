@@ -35,6 +35,8 @@ from music.lib.web_scutter.music_ID_info import get_music_ID_info
 
 test =  True
 
+def test(request):
+    return render(request, './test_music.html' )
 
 def discover(request):
     return render(request, './discover.html' )
