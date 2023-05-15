@@ -153,7 +153,6 @@ def profile(request):
             form.save()
             user_data = form.cleaned_data
             sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-            sql.create_tables() #建立資料表        
             user_data.update({"key": request.session['key']})
             sql.save_user_profile(**user_data)
             print("成功修改")
