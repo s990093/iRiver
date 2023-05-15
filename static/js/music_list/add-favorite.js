@@ -27,6 +27,8 @@ export class FaController {
     }
 
     _listener() {
+        var a = document.getElementById("#add");
+        console.log($(".add"))
         $(".add").on("click", function () {
             $("#favoriteModal").modal("show");
         });

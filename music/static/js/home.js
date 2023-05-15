@@ -2,6 +2,7 @@ import { Control } from "../../../static/js/music_list/control.js";
 import { table_template } from "../../../static/js/table.js";
 import { fetch_dow_all_songs, fetch_dow_song } from "../../../static/js/fetch.js";
 import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
+import { FaController } from "../../../static/js/music_list/add-favorite.js";
 // import { fetch_dow_all_songs, fetch_dow_song, fetch_is_song_exit } from "../../../static/ts/fetch.ts";
 
 
@@ -87,6 +88,8 @@ function paush_db_data(music_list) {
       isWeb: false,
       list: "db"
     }));
+    const fa = new FaController();
+    loading(false);
   }
   control.add_music_list(music_list, "db");
 
@@ -100,6 +103,7 @@ function paush_db_data(music_list) {
     }
     control.insert(index, list);
   });
+  const fa = new FaController();
   loading(false)
 }
 
