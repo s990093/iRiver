@@ -85,8 +85,11 @@ def data(request):
         request.session['key'] = tkey[1:]
     else:
         request.session['key'] = tkey.split("@")[0]  
-
-    sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user,request.session['key'])
+    # 建立個專輯
+    sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,request.session['key'])
+    sql.create_tables() #建立資料表     
+    # 建立個人資料
+    sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     sql.create_tables() #建立資料表     
     now = timezone.now()
     context = {
@@ -150,8 +153,9 @@ def profile(request):
             form.save()
             user_data = form.cleaned_data
             sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-            sql.create_tables("user_profile") #建立資料表            
-            sql.save_user_data(**user_data)
+            sql.create_tables() #建立資料表        
+            user_data.update({"key": request.session['key']})
+            sql.save_user_profile(**user_data)
             print("成功修改")
             return redirect('/user/data')
     else:
