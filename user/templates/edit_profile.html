@@ -6,7 +6,7 @@
 <body>
     <h1>Edit Profile</h1>
 
-    <form method="post" action="{% url 'profile2' %}">
+    <form method="post" action="/user/profile2">
         {% csrf_token %}
         
         <label for="username">Username:</label>
