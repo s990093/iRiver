@@ -21,13 +21,7 @@ from user.lib.sql.sql_music_list import SQL as SQL_music_list
 # def get_user_data(request):
 
 def get_user_music_list(request):
-    tkey = request.session['email']
-    key = None;
-    if tkey.startswith('#'):
-        key = tkey[1:]
-    else:
-        key = tkey.split("@")[0]
-    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
+    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name=request.session['key'])
     # 建立個人表單
     sql_user_music_list.create_tables()
     if request.method != 'POST':
@@ -86,7 +80,7 @@ def data(request):
     else:
         request.session['key'] = tkey.split("@")[0]  
     # 建立個專輯
-    sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,request.session['key'])
+    sql = SQL_music_list(config= user.lib.sql.config.DB_CONFIG_user_music_list,table_name= request.session['key'])
     sql.create_tables() #建立資料表     
     # 建立個人資料
     sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
