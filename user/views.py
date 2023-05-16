@@ -5,6 +5,8 @@ from django.shortcuts import redirect, render
 from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
+from .forms import LoginForm, RegisterForm,UserProfileForm
+from .models import UserProfile
 from django.contrib.auth.models import User
 from social_django.models import UserSocialAuth
 import json
@@ -19,6 +21,7 @@ from user.lib.sql.sql_music_list import SQL as SQL_music_list
 # def get_user_data(request):
 
 def get_user_music_list(request):
+    PLAYLIST = "我的最愛"
     tkey = request.session['email']
     key = None;
     if tkey.startswith('#'):
@@ -88,7 +91,7 @@ def data(request):
     else:
         request.session['key'] = tkey.split("@")[0]  
     # 建立個專輯
-    sql = SQL_music_list(config= user.lib.sql.config.DB_CONFIG_user_music_list,table_name= request.session['key'])
+    sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,request.session['key'])
     sql.create_tables() #建立資料表     
     # 建立個人資料
     sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
@@ -148,23 +151,22 @@ def log_out(request):
 
 #個人資料
 def profile(request):
-    # user_profile, created = UserProfile.objects.get_or_create(email=request.session['email'])
-    # if request.method == 'POST':
-    #     form = UserProfileForm(request.POST, instance=user_profile)
-    #     if form.is_valid():
-    #         form.save()
-    #         user_data = form.cleaned_data
-    #         sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-    #         sql.create_tables() #建立資料表
-    #         user_data.update({"key": request.session['key']})
-    #         sql.save_user_profile(**user_data)
-    #         print("成功修改")
-    #         return redirect('/user/data')
-    # else:
-    #     print("修改錯誤")
-    #     form = UserProfileForm(instance=user_profile)
-    # return render(request, 'test456.html', {'form': form})
-    return HttpResponse("profile")
+    user_profile, created = UserProfile.objects.get_or_create(email=request.session['email'])
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=user_profile)
+        if form.is_valid():
+            form.save()
+            user_data = form.cleaned_data
+            sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+            user_data.update({"key": request.session['key']})
+            sql.save_user_profile(**user_data)
+            print("成功修改")
+            return redirect('/user/data')
+    else:
+        print("修改錯誤")
+        form = UserProfileForm(instance=user_profile)
+    return render(request, 'test456.html', {'form': form})
+
 
 #line
 

@@ -68,10 +68,13 @@ export class FaController {
             const params = { method: "get_playlists" };
             const target = "/user/get_user_music_list/";
             const response = await this.fetch.POST(target, params);
+            console.log(response);
             if (response.statusCode === 200) {
-                console.log(response.success);
                 this.playlist = response.success;
             }
+            console.log(this.playlist)
+        } else {
+            location.href = "/user/login/";
         }
     }
 
