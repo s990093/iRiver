@@ -50,9 +50,9 @@ def validate_birthday(value):
         )
 #使用者資料表    
 class UserProfile(models.Model):
-    username = models.CharField(max_length=100, validators=[user_test])
-    email = models.CharField(max_length=100, primary_key=True)
-    phone = models.CharField(max_length=20,validators=[phone_test])
-    country = models.CharField(max_length=2, choices=COUNTRY_CHOICES)
+    username = models.CharField(max_length=32, validators=[user_test])
+    email = models.CharField(max_length=32, primary_key=True)
+    phone = models.CharField(max_length=32,validators=[phone_test])
+    country = models.CharField(max_length=32, choices=COUNTRY_CHOICES)
     birthday = models.DateField(null=True, blank=True, validators=[validate_birthday])
-    gender = models.CharField(max_length=1, choices=GENDER)
+    gender = models.CharField(max_length=32, choices=GENDER)

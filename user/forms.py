@@ -40,7 +40,5 @@ class LoginForm(forms.Form):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ['username', 'email', 'phone', 'country', 'birthday', 'gender']
-        class Meta:
-            model = UserProfile
-            fields = '__all__'
+        fields ='__all__'
+

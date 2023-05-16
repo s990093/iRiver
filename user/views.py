@@ -44,9 +44,7 @@ def get_user_music_list(request):
     elif method == 'favorite':
         return JsonResponse(json.dumps({'success': sql_user_music_list.setfavorite(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
     elif method == 'get_playlists':
-        res = sql_user_music_list.get_playlists()
-        print(res)
-        return JsonResponse({"success": True, "data": res})
+        return JsonResponse({"success": True, "data": sql_user_music_list.get_playlists()})
     
     sql_user_music_list.close()
         
@@ -160,7 +158,7 @@ def profile(request):
             user_data = form.cleaned_data
             sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
             sql.create_tables() #建立資料表        
-            user_data.update({"key": request.session['key']})
+            user_data.update({"id": request.session['key']})
             sql.save_user_profile(**user_data)
             print("成功修改")
             return redirect('/user/data')
@@ -171,9 +169,8 @@ def profile(request):
 
 def profile2(request):
     if request.method == 'POST':
-        # 将表单数据保存到字典
         form_data = {
-            'uid': request.session['uid'],
+            'id': request.session['key'],
             'username': request.POST.get('username'),
             'email': request.POST.get('email'),
             'phone': request.POST.get('phone'),
@@ -181,12 +178,12 @@ def profile2(request):
             'birthday': request.POST.get('birthday'),
             'gender': request.POST.get('gender'),
         }
-        print(form_data)
-        # 在这里进行进一步的处理，例如保存到数据库或使用表单数据
-        
-        # 重定向到另一个页面或返回成功消息
-        return redirect('')
+        sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+        old_data = sql.get_user_data(request.session['key'])
+        sql.save_user_profile(**form_data)
+        print("成功修改")
+        return redirect('/user/data/')
+    sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+    old_data = sql.get_user_data(uid=request.session['key'])
     
-    return render(request, 'edit_profile.html')
-
- 
+    return render(request, 'edit_profile.html', {'form': old_data})

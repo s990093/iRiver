@@ -70,10 +70,13 @@ export class FaController {
             const params = { method: "get_playlists" };
             const target = "/user/get_user_music_list/";
             const response = await this.fetch.POST(target, params);
-            console.log(response.data);
             if (response.data != null) {
-                // console.log(response.data);
-                this.playlist = response.data;
+                this.playlist = [];
+                for (var i = 0; i < response.data.length; i++) {
+                    this.playlist.push(response.data[0][i])
+                }
+            } else {
+                this.playlist = [];
             }
             // console.log(this.playlist)
         } else {
@@ -110,7 +113,8 @@ export class FaController {
         const self = this;
         $(".fa-body").html("");
         $(".fa-body").append(self.playlist_template("我的最愛", true));
-        if (self.playlist == undefined)
+
+        if (self.playlist != undefined)
             $('.fa-body').append(this.playlist.map(function (playlist) {
                 return self.playlist_template(playlist);
             }));
@@ -138,7 +142,14 @@ export class FaController {
     }
 
     createFa(playlist) {
-        console.log(playlist);
+        console.log(this.playlist)
+        const isDuplicate = this.playlist.some((existingPlaylist) => existingPlaylist === playlist);
+        if (isDuplicate) {
+            this.errorFa("錯誤", "該專輯已經存在!")
+            return;
+        }
+
+        // 将播放列表添加到 this.playlist
         this.playlist.push(playlist);
         $(".fa-body").append(this.playlist_template(playlist));
     }
@@ -148,4 +159,11 @@ export class FaController {
         const success = await this.fetch.POST(this.target, this.insert_song_infos);
         console.log(success);
     }
+
+    errorFa(title, body) {
+        $("#errorModal").modal("show");
+        $("#errorModal").find(".modal-title").html(title);
+        $("#errorModal").find(".modal-body").html(body);
+    }
 }
+
