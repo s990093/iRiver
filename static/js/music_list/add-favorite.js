@@ -18,6 +18,7 @@ export class FaController {
         // 宣告物件
         this.fetch = new Fetch();
         this._register();
+        this.target = "/user/get_user_music_list/";
     }
 
     /**
@@ -53,6 +54,7 @@ export class FaController {
             $(this).find('i').toggleClass('far fas');
             var music_ID = $(this).attr('value');
             // 送出
+            self.pushFa();
             insert_my_music_list({
                 music_ID: music_ID,
                 playlist: "我的最愛",
@@ -68,11 +70,12 @@ export class FaController {
             const params = { method: "get_playlists" };
             const target = "/user/get_user_music_list/";
             const response = await this.fetch.POST(target, params);
-            console.log(response);
-            if (response.statusCode === 200) {
-                this.playlist = response.success;
+            console.log(response.data);
+            if (response.data != null) {
+                // console.log(response.data);
+                this.playlist = response.data;
             }
-            console.log(this.playlist)
+            // console.log(this.playlist)
         } else {
             location.href = "/user/login/";
         }
@@ -84,11 +87,11 @@ export class FaController {
             <div class="col">
                 <label class="playlist mb-3" data-playlist="${playlist}">
                     <input 
-                    type="radio" 
-                    name="playlist" 
-                    id="${playlist}"
-                    autocomplete="off" 
-                    ${isChecked ? "checked" : ""}
+                        type="radio" 
+                        name="playlist" 
+                        id="${playlist}"
+                        autocomplete="off" 
+                        ${isChecked ? "checked" : ""}
                     >
                     ${playlist}
                 </label>
@@ -107,9 +110,10 @@ export class FaController {
         const self = this;
         $(".fa-body").html("");
         $(".fa-body").append(self.playlist_template("我的最愛", true));
-        $('.fa-body').append(this.playlist.map(function (playlist) {
-            return self.playlist_template(playlist);
-        }));
+        if (self.playlist == undefined)
+            $('.fa-body').append(this.playlist.map(function (playlist) {
+                return self.playlist_template(playlist);
+            }));
 
 
         // 添加到哪個專輯
@@ -120,13 +124,12 @@ export class FaController {
                 "favorite": self.insert_song_infos.favorite,
                 method: "insert"
             }
-            console.log(self.insert_song_infos);
+            // console.log(self.insert_song_infos);
         });
 
         // 送出
         $("#favoriteModal").on("click", ".fa-insert", async function () {
-            const success = await insert_my_music_list(self.insert_song_infos);
-            console.log(success);
+            self.pushFa();
         });
 
         $(".creat-playlist").on("click", function () {
@@ -135,8 +138,14 @@ export class FaController {
     }
 
     createFa(playlist) {
-        this.fetch.push_playlist(playlist);
+        console.log(playlist);
         this.playlist.push(playlist);
         $(".fa-body").append(this.playlist_template(playlist));
+    }
+
+    async pushFa() {
+        // console.log(this.insert_song_infos);
+        const success = await this.fetch.POST(this.target, this.insert_song_infos);
+        console.log(success);
     }
 }

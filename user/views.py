@@ -25,6 +25,7 @@ def get_user_music_list(request):
         key = tkey[1:]
     else:
         key = tkey.split("@")[0]
+
     sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
     # 建立個人表單
     sql_user_music_list.create_tables()
@@ -33,16 +34,19 @@ def get_user_music_list(request):
     # 解析 JSON 数据
     data = json.loads(request.body)
     method = data.get('method')
+
     if method == 'insert':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')],indent=4) , music_list= data.get('music_list' , PLAYLIST),)}), safe=False)
+        return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')],indent=4) , music_list= data.get('playlist' , PLAYLIST),)}), safe=False)
     elif method == 'get':
-        return JsonResponse(list(sql_user_music_list.get_music_list(music_list= data.get('music_list' , 1))), safe=False)
+        return JsonResponse(list(sql_user_music_list.get_music_list(music_list= data.get('playlist' , PLAYLIST))), safe=False)
     elif method == 'delete':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4) , music_list=  data.get('music_list' , PLAYLIST))}), safe=False)
+        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4) , music_list=  data.get('playlist' , PLAYLIST))}), safe=False)
     elif method == 'favorite':
         return JsonResponse(json.dumps({'success': sql_user_music_list.setfavorite(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
     elif method == 'get_playlists':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.get_playlists()}))
+        res = sql_user_music_list.get_playlists()
+        print(res)
+        return JsonResponse({"success": True, "data": res})
     
     sql_user_music_list.close()
         

@@ -87,6 +87,7 @@ export class Fetch {
     }
 
     async POST(target, params = null) {
+        console.log(params);
         return new Promise(async (resolve, reject) => {
             try {
                 const csrftoken = this._get_cookie('csrftoken');
@@ -102,8 +103,8 @@ export class Fetch {
                 if (!response.ok) {
                     throw new Error('Failed with status code: ' + response.status);
                 }
-
-                resolve(response);
+                const data = await response.json();
+                resolve(data);
             } catch (error) {
                 reject(new Error(error.message));
             }
