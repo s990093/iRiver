@@ -18,6 +18,7 @@ from user.lib.sql.sql_music_list import SQL as SQL_music_list
 
 
 def get_user_music_list(request):
+    PLAYLIST = "我的最愛"
     tkey = request.session['email']
     key = None
     if tkey.startswith('#'):
@@ -33,15 +34,18 @@ def get_user_music_list(request):
     data = json.loads(request.body)
     method = data.get('method')
     if method == 'insert':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')],indent=4) , music_list= data.get('music_list' , 1),)}), safe=False)
+        return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')],indent=4) , music_list= data.get('music_list' , PLAYLIST),)}), safe=False)
     elif method == 'get':
         return JsonResponse(list(sql_user_music_list.get_music_list(music_list= data.get('music_list' , 1))), safe=False)
     elif method == 'delete':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4) , music_list=  data.get('music_list' , 1))}), safe=False)
+        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4) , music_list=  data.get('music_list' , PLAYLIST))}), safe=False)
     elif method == 'favorite':
         return JsonResponse(json.dumps({'success': sql_user_music_list.setfavorite(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
-
-
+    elif method == 'get_playlists':
+        return JsonResponse(json.dumps({'success': sql_user_music_list.get_playlists()}))
+    
+    sql_user_music_list.close()
+        
 def hello(request):
     tkey = request.session['email']
     if tkey.startswith('#'):
