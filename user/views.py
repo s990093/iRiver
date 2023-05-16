@@ -169,7 +169,7 @@ def profile2(request):
     if request.method == 'POST':
         # 将表单数据保存到字典
         form_data = {
-            'uid': request.session['uid'],
+            'uid': request.session['key'],
             'username': request.POST.get('username'),
             'email': request.POST.get('email'),
             'phone': request.POST.get('phone'),
@@ -181,7 +181,7 @@ def profile2(request):
         # 在这里进行进一步的处理，例如保存到数据库或使用表单数据
         
         # 重定向到另一个页面或返回成功消息
-        return redirect('')
+        return redirect('/user/data/')
     
     return render(request, 'edit_profile.html')
 
