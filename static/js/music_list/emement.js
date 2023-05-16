@@ -30,7 +30,7 @@ export class MediaPlayer {
 
     updateProgressBar() {
         var currentTime = (this.audio.currentTime / this.audio.duration) * 100;
-        $('.progress-bar').css('width', currentTime + '%'); 
+        $('.progress-bar').css('width', currentTime + '%');
     }
 
     update_my_music_list(music_ID, music_list = 1, favorite = true, method) {
@@ -39,7 +39,7 @@ export class MediaPlayer {
 }
 
 
-export function insert_my_music_list(music_ID, music_list = 1, favorite = true, method) {
+export function insert_my_music_list({ music_ID, music_list = 1, favorite = true, method }) {
     return new Promise((resolve, reject) => {
         fetch(`/user/isLogin/`)
             .then(response => response.json())

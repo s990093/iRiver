@@ -67,5 +67,5 @@ export function table_template({
       </td>
     </tr>
       `
-  return row
+  return row;
 }
