@@ -18,14 +18,9 @@ from user.lib.sql.sql_music_list import SQL as SQL_music_list
 
 
 def get_user_music_list(request):
-<<<<<<< Updated upstream
     PLAYLIST = "我的最愛"
     tkey = request.session['email']
     key = None
-=======
-    tkey = request.session['email']
-    key = None;
->>>>>>> Stashed changes
     if tkey.startswith('#'):
         key = tkey[1:]
     else:
@@ -169,10 +164,6 @@ def profile(request):
         print("修改錯誤")
         form = UserProfileForm(instance=user_profile)
     return render(request, 'test456.html', {'form': form})
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 def profile2(request):
     if request.method == 'POST':
