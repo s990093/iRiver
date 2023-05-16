@@ -15,18 +15,22 @@ import json
 import user.lib.sql.config
 from user.lib.sql.sql_user import SQL as SQL_user
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
+from user.lib.switch_key import switch_key
 
 
+def save_session(request):
+    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+    user_data = sql_user.get_user_data(switch_key(request.session['email']))
+    request.session['user_data'] = user_data
+    sql_user_music_list = SQL_music_list(config= user.lib.sql.config.DB_CONFIG_user_music_list, table_name= switch_key(request.session['email']))
+    user_playlist = sql_user_music_list.get_playlists();
+    request.session['user_playlist'] = user_playlist
+    request.session.save() 
+
+    
 def get_user_music_list(request):
     PLAYLIST = "我的最愛"
-    tkey = request.session['email']
-    key = None
-    if tkey.startswith('#'):
-        key = tkey[1:]
-    else:
-        key = tkey.split("@")[0]
-
-    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
+    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= switch_key(request.session['email']))
     # 建立個人表單
     sql_user_music_list.create_tables()
     if request.method != 'POST':
@@ -47,7 +51,12 @@ def get_user_music_list(request):
         return JsonResponse({"success": True, "data": sql_user_music_list.get_playlists()})
     
     sql_user_music_list.close()
-        
+
+def get_user_show_data(request):
+        if request.method != 'POST':
+            return HttpResponse('error')
+        return HttpResponse(json.dumps({"success": True , "user_data": request.session['user_data'], "user_playlist": request.session['user_playlist']}))
+
 def hello(request):
     tkey = request.session['email']
     if tkey.startswith('#'):
@@ -72,6 +81,7 @@ def data(request):
         email = request.user.email
         name = request.user.username
         request.session['isLogin'] = True
+       
         if(email==''):
             email = "#" + name
             name = None
@@ -81,7 +91,7 @@ def data(request):
         email = None
         del request.session['email']
         request.session['isLogin'] = False
-
+    
     request.session['email'] = email
     tkey = request.session['email']
     if tkey.startswith('#'):
@@ -101,6 +111,8 @@ def data(request):
         'now': now
     }
     request.session.save() 
+    # 存各資
+    save_session(request= request)
     return render(request, 'home123.html', context)
 
 #註冊

@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-#123456
+# 123456
 app_name = 'user'
 urlpatterns = [
     path('world/', views.hello, name='hello'),
@@ -11,5 +11,8 @@ urlpatterns = [
     path('isLogin/', views.check_login, name='testuser'),
     path('profile/', views.profile, name='profile'),
     path('profile2/', views.profile2, name='profile2'),
-    path('get_user_music_list/', views.get_user_music_list,name='get_user_music_list'),
+    path('get_user_show_data/', views.get_user_show_data,
+         name='get_user_show_data'),
+    path('get_user_music_list/', views.get_user_music_list,
+         name='get_user_music_list'),
 ]
