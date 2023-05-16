@@ -5,8 +5,6 @@ from django.shortcuts import redirect, render
 from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
-from .forms import LoginForm, RegisterForm,UserProfileForm
-from .models import UserProfile
 from django.contrib.auth.models import User
 from social_django.models import UserSocialAuth
 import json
@@ -140,22 +138,23 @@ def log_out(request):
 
 #個人資料
 def profile(request):
-    user_profile, created = UserProfile.objects.get_or_create(email=request.session['email'])
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=user_profile)
-        if form.is_valid():
-            form.save()
-            user_data = form.cleaned_data
-            sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-            user_data.update({"key": request.session['key']})
-            sql.save_user_profile(**user_data)
-            print("成功修改")
-            return redirect('/user/data')
-    else:
-        print("修改錯誤")
-        form = UserProfileForm(instance=user_profile)
-    return render(request, 'test456.html', {'form': form})
-
+    # user_profile, created = UserProfile.objects.get_or_create(email=request.session['email'])
+    # if request.method == 'POST':
+    #     form = UserProfileForm(request.POST, instance=user_profile)
+    #     if form.is_valid():
+    #         form.save()
+    #         user_data = form.cleaned_data
+    #         sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+    #         sql.create_tables() #建立資料表
+    #         user_data.update({"key": request.session['key']})
+    #         sql.save_user_profile(**user_data)
+    #         print("成功修改")
+    #         return redirect('/user/data')
+    # else:
+    #     print("修改錯誤")
+    #     form = UserProfileForm(instance=user_profile)
+    # return render(request, 'test456.html', {'form': form})
+    return HttpResponse("profile")
 
 #line
 
