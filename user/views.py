@@ -5,25 +5,21 @@ from django.shortcuts import redirect, render
 from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
+from .forms import LoginForm
 from .forms import LoginForm, RegisterForm,UserProfileForm
 from .models import UserProfile
 from django.contrib.auth.models import User
 from social_django.models import UserSocialAuth
 import json
-# line
-
 # 自製
 import user.lib.sql.config
 from user.lib.sql.sql_user import SQL as SQL_user
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
 
-#測試
-# def get_user_data(request):
 
 def get_user_music_list(request):
-    PLAYLIST = "我的最愛"
     tkey = request.session['email']
-    key = None;
+    key = None
     if tkey.startswith('#'):
         key = tkey[1:]
     else:
@@ -37,18 +33,14 @@ def get_user_music_list(request):
     data = json.loads(request.body)
     method = data.get('method')
     if method == 'insert':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')],indent=4) , music_list= data.get('playlist' , PLAYLIST),)}), safe=False)
+        return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')],indent=4) , music_list= data.get('music_list' , 1),)}), safe=False)
     elif method == 'get':
-        return JsonResponse(list(sql_user_music_list.get_music_list(music_list= data.get('playlist' , PLAYLIST))), safe=False)
+        return JsonResponse(list(sql_user_music_list.get_music_list(music_list= data.get('music_list' , 1))), safe=False)
     elif method == 'delete':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4) , music_list=  data.get('playlist' , 1))}), safe=False)
+        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4) , music_list=  data.get('music_list' , 1))}), safe=False)
     elif method == 'favorite':
         return JsonResponse(json.dumps({'success': sql_user_music_list.setfavorite(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
-    elif method == 'get_playlists':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.get_playlists()}))
-    
-    sql_user_music_list.close()
-        
+
 
 def hello(request):
     tkey = request.session['email']
@@ -90,7 +82,7 @@ def data(request):
         request.session['key'] = tkey[1:]
     else:
         request.session['key'] = tkey.split("@")[0]  
-    # 建立個專輯
+    # 建立個人專輯
     sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,request.session['key'])
     sql.create_tables() #建立資料表     
     # 建立個人資料
@@ -158,6 +150,7 @@ def profile(request):
             form.save()
             user_data = form.cleaned_data
             sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+            sql.create_tables() #建立資料表        
             user_data.update({"key": request.session['key']})
             sql.save_user_profile(**user_data)
             print("成功修改")
@@ -167,7 +160,24 @@ def profile(request):
         form = UserProfileForm(instance=user_profile)
     return render(request, 'test456.html', {'form': form})
 
-
-#line
+def profile2(request):
+    if request.method == 'POST':
+        # 将表单数据保存到字典
+        form_data = {
+            'uid': request.session['uid'],
+            'username': request.POST.get('username'),
+            'email': request.POST.get('email'),
+            'phone': request.POST.get('phone'),
+            'country': request.POST.get('country'),
+            'birthday': request.POST.get('birthday'),
+            'gender': request.POST.get('gender'),
+        }
+        print(form_data)
+        # 在这里进行进一步的处理，例如保存到数据库或使用表单数据
+        
+        # 重定向到另一个页面或返回成功消息
+        return redirect('')
+    
+    return render(request, 'edit_profile.html')
 
  
