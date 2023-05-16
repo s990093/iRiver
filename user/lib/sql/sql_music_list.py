@@ -105,12 +105,16 @@ class SQL:
         sql = f'UPDATE {self.table_name} SET favorite = %s WHERE music_ID = %s'
         self.cursor.execute(sql, (value, music_id))
         self.db.commit()
-    
+
     def get_playlists(self):
-        sql = f'SELECT DISTINCT playlist FROM {self.table_name}'
-        self.cursor.execute(sql )
-        print(self.cursor.fetchall())
-        return self.cursor.fetchall() 
+        sql = f"SELECT DISTINCT playlist FROM {self.table_name} WHERE playlist != '我的最愛'"
+        self.cursor.execute(sql)
+        res = self.cursor.fetchall()
+        if res:
+            return res
+        else:
+            return None
+
     
     def close(self):
         self.db.close()

@@ -102,8 +102,8 @@ export class Fetch {
                 if (!response.ok) {
                     throw new Error('Failed with status code: ' + response.status);
                 }
-
-                resolve(response);
+                const data = await response.json();
+                resolve(data);
             } catch (error) {
                 reject(new Error(error.message));
             }
