@@ -80,18 +80,16 @@
               </a>
             </td>
             <td>
-              <span
-                class=""
-                style="text-align: right"
-                data-music_list="{{music_list}}"
-              >
-                <a href="#" value="{{ song.music_ID }}"
-                  ><i class="far fa-heart"></i>
-                </a>
+              <span class="love-icon font" style="text-align: right">
+                <a href="#" value="{{song.music_ID}}"
+                  ><i class="far fa-heart"></i
+                ></a>
               </span>
             </td>
             <td>
-              <a href="#" class="add"><i class="bi bi-plus-lg"></i></a>
+              <a href="#" class="add" vaule=" {{song.music_ID}}"
+                ><i class="bi bi-plus-lg"></i
+              ></a>
             </td>
           </tr>
           {% empty %}

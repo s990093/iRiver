@@ -32,29 +32,47 @@ export class FaController {
     _listener() {
         const self = this;
         // 加入個人專輯
+
         $(".add").on("click", function () {
             $("#favoriteModal").modal("show");
-            self.insert_song_infos = { "music_ID": $(this).attr('value'), "favorite": false };
+
+            self.insert_song_infos = {
+                playlist: "我的最愛",
+                music_ID: $(this).attr('vaule'),
+                favorite: false,
+                method: "insert"
+            };
+
             console.log(self.insert_song_infos);
             self.showFa()
         });
 
 
         // 我的最愛
-        $('#table-body').on('click', '.love-icon a', async function () {
+        $('.love-icon a').on('click', async function () {
             $(this).find('i').toggleClass('far fas');
             var music_ID = $(this).attr('value');
             // 送出
             insert_my_music_list({
                 music_ID: music_ID,
-                music_list: "我的最愛",
-                favorite: true
+                playlist: "我的最愛",
+                favorite: true,
+                method: "insert"
             });
         });
     }
 
-    _get_playlist() {
-        return this.fetch.get_playlist();
+    async _get_playlist() {
+        const isLogin = await this.fetch.GET("/user/isLogin/");
+        if (isLogin) {
+            const params = { method: "get_playlists" };
+            const target = "/user/get_user_music_list/";
+            const response = await this.fetch.POST(target, params);
+            if (response.statusCode === 200) {
+                console.log(response.success);
+                this.playlist = response.success;
+            }
+        }
     }
 
     playlist_template(playlist, isChecked = false) {
@@ -85,31 +103,37 @@ export class FaController {
     showFa = () => {
         const self = this;
         $(".fa-body").html("");
-        $(".fa-body").html(self.playlist_template("我的最愛", true));
-        $('.fa-body').html(this.playlist.map(function (playlist) {
+        $(".fa-body").append(self.playlist_template("我的最愛", true));
+        $('.fa-body').append(this.playlist.map(function (playlist) {
             return self.playlist_template(playlist);
         }));
 
 
         // 添加到哪個專輯
-        $(".fa-body").on("click", ".playlist", function () {
+        $("#favoriteModal").on("click", ".playlist", function () {
             self.insert_song_infos = {
                 "playlist": $(this).data('playlist'),
                 "music_ID": self.insert_song_infos.music_ID,
-                "favorite": self.insert_song_infos.favorite
+                "favorite": self.insert_song_infos.favorite,
+                method: "insert"
             }
-            // console.log(self.insert_song_infos);
+            console.log(self.insert_song_infos);
         });
 
         // 送出
-        $(".fa-body").on("click", ".fa-insert", async function () {
+        $("#favoriteModal").on("click", ".fa-insert", async function () {
             const success = await insert_my_music_list(self.insert_song_infos);
             console.log(success);
         });
+
+        $(".creat-playlist").on("click", function () {
+            self.createFa($('.new-playlist').val());
+        });
     }
 
-    createFa = (playlist) => {
-        this.playlist = [...playlist];
-        $(".fa-body").on("click", () => { this.playlist_template4(playlist); });
+    createFa(playlist) {
+        this.fetch.push_playlist(playlist);
+        this.playlist.push(playlist);
+        $(".fa-body").append(this.playlist_template(playlist));
     }
 }

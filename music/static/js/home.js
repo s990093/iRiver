@@ -22,7 +22,6 @@ if (query) {
       if (data.success) {
         console.log('search data', data.music_list)
         paush_web_data(data.music_list);
-        const fa = new FaController();
       } else {
         alert('web search error', data.music_list);
       }
@@ -33,11 +32,11 @@ if (query) {
       if (data.success) {
         console.log('db_data', data.music_list);
         paush_db_data(data.music_list);
-        const fa = new FaController();
         length = data.music_list.length;
       }
     });
   query = null
+  const fa = new FaController();
 }
 
 

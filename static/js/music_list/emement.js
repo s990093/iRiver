@@ -34,12 +34,17 @@ export class MediaPlayer {
     }
 
     update_my_music_list(music_ID, music_list = 1, favorite = true, method) {
-        insert_my_music_list(music_ID, music_list, favorite, method);
+        insert_my_music_list({
+            music_ID: music_ID,
+            playlist: music_list,
+            favorite: favorite,
+            method: method
+        });
     }
 }
 
 
-export function insert_my_music_list({ music_ID, music_list = 1, favorite = true, method }) {
+export function insert_my_music_list({ music_ID, playlist = "我的最愛", favorite = true, method }) {
     return new Promise((resolve, reject) => {
         fetch(`/user/isLogin/`)
             .then(response => response.json())
@@ -55,7 +60,7 @@ export function insert_my_music_list({ music_ID, music_list = 1, favorite = true
                         body: JSON.stringify({
                             music_ID: music_ID,
                             method: method,
-                            music_list: music_list,
+                            playlist: playlist,
                             favorite: favorite
                         })
                     }).then(response => {

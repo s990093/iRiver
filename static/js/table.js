@@ -56,7 +56,12 @@ export function table_template({
         </span>
       </td>
       <td>
-        <a href="#" class="${icon_class_name} font" value=${song.music_ID} data-music_list = "${music_list}"><i class="${icon_class}"></i></a>
+        <a href="#"
+          class="${icon_class_name} font"
+          vaule="${song.music_ID}" 
+          data-music_list = "${music_list}">
+            <i class="${icon_class}"></i>
+          </a>
       </td>
       <td style="text-align: right">
         <a href="/music/music_list/?artist=${song.artist}&index=${i}" class="icon" style="margin-right: 20px">
