@@ -43,6 +43,7 @@ def query_youtube(query : str) ->json:
                 ID = match.group(0)[-11:]
             else:
                 ID = re.search(r"shorts\/(\w{11})", url.get_attribute('href')).group(1)
+
             video = {}
             video["title"] = title=title.text
             video["music_ID"] = ID
@@ -54,7 +55,6 @@ def query_youtube(query : str) ->json:
             video["artist_img_url"] =  artist_img_url
             music_list.append(video)
         except NoSuchElementException as e:
-            print(e)
             pass
     # 统计所有艺术家的出现次数
     artists = [ video["artist"] for video in music_list]
@@ -72,7 +72,7 @@ def query_youtube(query : str) ->json:
                     break
     # clear
     for video in music_list:
-        video['title'] = clear_str(title=video['title'] , artist=video['artist'])
+        video['title'] = clear_str(title= video['title'] , artist= video['artist'])
     
     statistics = {
     'most_common_artist': most_common_artist,
@@ -84,11 +84,9 @@ def query_youtube(query : str) ->json:
     'music_list': music_list,
     'statistics': statistics,
     }
-
     end_time = time.time()
     print(f"程序运行时间：{end_time - start_time}秒")
     # driver.close()
-
     json_str = json.dumps(result, indent=4)
     return json_str
 

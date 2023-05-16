@@ -77,7 +77,6 @@ def my_music_list(request):
     if response.status_code == 200:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         music_list_infos = mysql.get_music_list_infos(music_ID_list= [item[0] for item in json.loads(response.content)])
-        # print(music_list_infos)
         music_list_infos_json = json.dumps(music_list_infos)
         return render(request, './my_music_list.html', {'music_list_infos': music_list_infos, 
                                                         'music_list_infos_json': music_list_infos_json,
@@ -145,14 +144,13 @@ def query_web_song(request):
     # 網路
     if test:
         print('='*50)
-        print(f'get  {query} !!')
+        print(f'get  {query}  !!')
     try:
         youtube_result = json.loads(future_youtube.result())
         music_list =  youtube_result['music_list']
         statistics =  youtube_result['statistics']
     except Exception as e:
         print(e)
-
     return JsonResponse({'success': True , 'music_list' : music_list}, safe=False)
 
 

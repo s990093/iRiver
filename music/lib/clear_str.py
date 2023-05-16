@@ -2,7 +2,9 @@ import re
 
 
 def clear_str(title, artist):
-    artist = re.compile(re.escape(artist), flags=re.IGNORECASE)
+    artist_escaped = re.escape(artist)
+    artist_regex = re.compile(artist_escaped, flags=re.IGNORECASE)
+    title = artist_regex.sub("", title)
     artist = delete_tag(artist)
     if artist:
         title = re.sub(r'\s+', '', title)   #刪除格
