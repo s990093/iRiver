@@ -1,37 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Edit Profile</title>
-</head>
-<body>
-  <h1>Edit Profile</h1>
+{% extends 'template.html' %}
+{% block body %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <form method="post" action="/user/profile2/" class="form">
+          {% csrf_token %}
+          <input type="hidden" name="id" id="id" value="{{ form.id }}">
 
-  <form method="post" action="/user/profile2/">
-    {% csrf_token %}
-    <input type="hidden" name="id" id="id" value="{{ form.id }}">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required value="{{ form.username }}" class="form-control" />
+          </div>
 
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required value="{{ form.username }}" />
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required value="{{ form.email }}" class="form-control" />
+          </div>
 
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" required value="{{ form.email }}" />
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" required value="{{ form.phone }}" class="form-control" />
+          </div>
 
-    <label for="phone">Phone:</label>
-    <input type="tel" name="phone" id="phone" required value="{{ form.phone }}" />
+          <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" name="country" id="country" required value="{{ form.country }}" class="form-control" />
+          </div>
 
-    <label for="country">Country:</label>
-    <input type="text" name="country" id="country" required value="{{ form.country }}" />
+          <div class="form-group">
+            <label for="birthday">Birthday:</label>
+            <input type="date" name="birthday" id="birthday" required value="{{ form.birthday }}" class="form-control" />
+          </div>
 
-    <label for="birthday">Birthday:</label>
-    <input type="date" name="birthday" id="birthday" required value="{{ form.birthday }}" />
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender" required class="form-control">
+              <option value="male" {% if form.gender.value == 'male' %}selected{% endif %}>Male</option>
+              <option value="female" {% if form.gender.value == 'female' %}selected{% endif %}>Female</option>
+            </select>
+          </div>
 
-    <label for="gender">Gender:</label>
-    <select name="gender" id="gender" required>
-      <option value="male" {% if form.gender.value == 'male' %}selected{% endif %}>Male</option>
-      <option value="female" {% if form.gender.value == 'female' %}selected{% endif %}>Female</option>
-    </select>
-
-    <button type="submit">Save</button>
-  </form>
-</body>
-</html>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
