@@ -55,7 +55,7 @@ def get_user_music_list(request):
 def get_user_show_data(request):
         if request.method != 'POST':
             return HttpResponse('error')
-        return HttpResponse({"success": True , "user_data": request.session['user_data'], "user_playlist": request.session['user_playlist']})
+        return HttpResponse(json.dumps({"success": True , "user_data": request.session['user_data'], "user_playlist": request.session['user_playlist']}))
 
 def hello(request):
     tkey = request.session['email']
