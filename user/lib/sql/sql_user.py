@@ -31,7 +31,7 @@ class SQL:
     def save_user_profile(self, **user_profile):
         print("*"*30)
         print(user_profile)
-        key = user_profile.get('key')
+        id = user_profile.get('id')
         email = user_profile.get('email')
         username = user_profile.get('username')
         phone = user_profile.get('phone')
@@ -40,14 +40,37 @@ class SQL:
         test = user_profile.get('test', 0)
         level = user_profile.get('level', 0)
         self.cursor.execute(
-            'INSERT IGNORE INTO user_profile (id, email, username, phone, country, birthday, test, level) VALUES (%s, %s, %s, %s, %s, %s, %s , %s)',
-            (key, email, username, phone, country, birthday, test, level)
+            'INSERT IGNORE INTO user_profile (id, email, username, phone, country, birthday, test, level) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)',
+            (id, email, username, phone, country, birthday, test, level)
         )
         self.cursor.execute(
             'UPDATE user_profile SET email=%s, username=%s, phone=%s, country=%s, birthday=%s, test=%s, level=%s WHERE id=%s',
-            (email, username, phone, country, birthday, test, level, key)
+            (email, username, phone, country, birthday, test, level, id)
         )
         self.db.commit()
 
+    def get_user_data(self,uid):
+        self.cursor.execute(
+            'SELECT * FROM user_profile WHERE id=%s',
+            (uid,)
+        )
+        result = self.cursor.fetchone()
+        if result:
+            data = {
+                'id': result[0],
+                'email': result[1],
+                'username': result[2],
+                'phone': result[3],
+                'country': result[4],
+                'birthday': result[5],
+                'test': result[6],
+                'level': result[7],
+            }
+            print("$"*30)
+            print(data)
+            return data
+        else:
+            return None
+        
     def close(self):
         self.db.close()
