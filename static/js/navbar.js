@@ -4,6 +4,9 @@ class NvabarContorller {
         // 宣告物件
         this.fetch = new Fetch();
         this._register();
+
+        this.user_data;
+        this.user_playlists;
     }
 
     async _register() {
@@ -28,27 +31,31 @@ class NvabarContorller {
         // console.log(urlParams.get('query'))
         $('#query').val(urlParams.get('query'));
 
-        $('#logout').on("click", function () {
-            sessionStorage.removeItem("user_data");
-            sessionStorage.removeItem("user_playlist");
-            sessionStorage.setItem("isData", false);
+        // $('#logout').on("click", function () {
+        //     // sessionStorage.removeItem("user_data");
+        //     // sessionStorage.removeItem("user_playlist");
+        //     // sessionStorage.setItem("isData", false);
+        // });
+
+        $('.navbar .navbar-playlist').on("click", async function () {
+            self._get_show_data();
         });
+
     }
 
     async _get_show_data() {
-        const self = this;
-        var isData = sessionStorage.getItem('isData');
-        // isData = false
-        if ((isData !== undefined) && (isData)) {
-            this.show();
-        } else {
-            const getUserDataResponse = await self.fetch.POST("/user/get_user_show_data/");
-            console.log(getUserDataResponse);
-            sessionStorage.setItem("isData", true);
-            sessionStorage.setItem("user_data", JSON.stringify(getUserDataResponse.user_data));
-            sessionStorage.setItem("user_playlists", JSON.stringify(getUserDataResponse.user_playlists));
-            // console.log(sessionStorage.getItem('user_data'));
-        }
+        const getUserDataResponse = await this.fetch.POST("/user/get_user_show_data/");
+        console.log(getUserDataResponse);
+        this.user_data = getUserDataResponse.user_data;
+        this.user_playlists = getUserDataResponse.user_playlists;
+
+        // sessionStorage.setItem("isData", true);
+        // sessionStorage.setItem("user_data", JSON.stringify(getUserDataResponse.user_data));
+        // sessionStorage.setItem("user_playlists", JSON.stringify(getUserDataResponse.user_playlists));
+        // console.log(sessionStorage.getItem('user_data'));
+
+        // show
+        this.show();
     }
 
 
@@ -65,22 +72,21 @@ class NvabarContorller {
     }
 
     show = () => {
+        $('.navbar .navbar-user .dropdown-item').removeClass('disabled');
+        $('.navbar .navbar-playlist .dropdown-item').removeClass('disabled');
         const self = this;
 
         // playlist
-        const playlists = JSON.parse(sessionStorage.getItem('user_playlists'));
-        $('.navbar .navbar-playlist .navbar-body').append(playlists.map(function (playlist) {
+        // const playlists = JSON.parse(sessionStorage.getItem('user_playlists'));
+        $('.navbar .navbar-playlist .navbar-body').html("");
+        $('.navbar .navbar-playlist .navbar-body').append(self.user_playlists.map(function (playlist) {
             return self._navbar_tmplate(playlist, playlist, "fa-solid fa-record-vinyl");
         }));
 
         // user
-        const user_data = JSON.parse(sessionStorage.getItem('user_data'));
-        console.log(user_data);
-        $('.navbar .navbar-user .username').html(user_data.username);
-        $('.navbar .navbar-user .dropdown-item').removeClass('disabled');
-
-
-
+        // const user_data = JSON.parse(sessionStorage.getItem('user_data'));
+        // console.log(user_data);
+        $('.navbar .navbar-user .username').html(self.user_data.username);
     }
 
     notLoggedIn = () => {
