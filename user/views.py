@@ -22,9 +22,11 @@ def save_session(request):
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     user_data = sql_user.get_user_data(switch_key(request.session['email']))
     request.session['user_data'] = user_data
+
     sql_user_music_list = SQL_music_list(config= user.lib.sql.config.DB_CONFIG_user_music_list, table_name= switch_key(request.session['email']))
     user_playlist = sql_user_music_list.get_playlists();
     request.session['user_playlist'] = user_playlist
+    
     request.session.save() 
 
     
@@ -53,6 +55,11 @@ def get_user_music_list(request):
     sql_user_music_list.close()
 
 def get_user_show_data(request):
+        sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+        user_data = sql_user.get_user_data(switch_key(request.session['email']))
+        print("#"*30)
+        print(switch_key(request.session['email']))
+        print(user_data)
         if request.method != 'POST':
             return HttpResponse('error')
         return HttpResponse(json.dumps({"success": True , "user_data": request.session['user_data'], "user_playlist": request.session['user_playlist']}))
@@ -93,24 +100,34 @@ def data(request):
         request.session['isLogin'] = False
     
     request.session['email'] = email
-    tkey = request.session['email']
-    if tkey.startswith('#'):
-        request.session['key'] = tkey[1:]
-    else:
-        request.session['key'] = tkey.split("@")[0]  
+   
+    request.session['key'] = switch_key(request.session['email'])
+    
+    
+    
     # 建立個人專輯
     sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,request.session['key'])
-    sql.create_tables() #建立資料表     
-    # 建立個人資料
-    sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-    sql.create_tables() #建立資料表     
+    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+
+    sql.create_tables() #建立資料表 
+    sql_user.create_tables() #建立資料表   
+
     now = timezone.now()
     context = {
         'heading': name ,
         'content': email,
         'now': now
     }
+  
+    sql_user.save_user_profile(
+        id = request.session['key'],
+        email = request.session['email'],
+        username = name
+        )
+    
+    # store session
     request.session.save() 
+
     # 存各資
     save_session(request= request)
     return render(request, 'home123.html', context)
