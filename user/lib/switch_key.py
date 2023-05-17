@@ -1,5 +1,6 @@
-def switch_key(key):
-    if key.startswith('#'):
-        return key[1:]
+def switch_key(tkey):
+    if tkey.startswith('#'):
+        key =  tkey[1:]
     else:
-        return key.split("@")[0]
+        key =  tkey.split("@")[0]
+    return key
