@@ -17,9 +17,9 @@ class SQL:
         sql = f'''
             CREATE TABLE IF NOT EXISTS user_profile (
                 id VARCHAR(255) NOT NULL PRIMARY KEY,
-                email VARCHAR(36) NOT NULL,
-                username VARCHAR(36) NOT NULL,
-                phone VARCHAR(16) NOT NULL,
+                email VARCHAR(36),
+                username VARCHAR(36),
+                phone VARCHAR(16),
                 country CHAR(2),
                 birthday DATE,
                 test TINYINT(2) UNSIGNED DEFAULT 0,
@@ -29,14 +29,12 @@ class SQL:
         self.cursor.execute(sql)
 
     def save_user_profile(self, **user_profile):
-        print("*"*30)
-        print(user_profile)
         id = user_profile.get('id')
         email = user_profile.get('email')
         username = user_profile.get('username')
-        phone = user_profile.get('phone')
-        country = user_profile.get('country')
-        birthday = user_profile.get('birthday')
+        phone = user_profile.get('phone', None)
+        country = user_profile.get('country' , None)
+        birthday = user_profile.get('birthday' , None)
         test = user_profile.get('test', 0)
         level = user_profile.get('level', 0)
         self.cursor.execute(
