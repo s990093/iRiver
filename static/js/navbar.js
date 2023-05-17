@@ -48,7 +48,7 @@ class NvabarContorller {
         console.log(getUserDataResponse);
         this.user_data = getUserDataResponse.user_data;
         this.user_playlists = getUserDataResponse.user_playlists;
-        console.log(this.user_playlists);
+        // console.log(this.user_playlists);
 
         // sessionStorage.setItem("isData", true);
         // sessionStorage.setItem("user_data", JSON.stringify(getUserDataResponse.user_data));
@@ -65,7 +65,7 @@ class NvabarContorller {
         return ` <li>
         <a
           class="dropdown-item"
-          href="/music/my_music_list?music_list=${playlist}"
+          href="${playlist}"
         >
          <i class="${iconClass}"></i>
           <span class="text">${title}</span></a>
@@ -81,10 +81,17 @@ class NvabarContorller {
         // const playlists = JSON.parse(sessionStorage.getItem('user_playlists'));
         // console.log(this.user_playlists);
         $('.navbar .navbar-playlist .navbar-body').html("");
-        $('.navbar .navbar-playlist .navbar-body').append(self.user_playlists.map(function (playlist) {
-            return self._navbar_tmplate(playlist, playlist, "fa-solid fa-record-vinyl");
-        }));
+        console.log((this.user_playlists != null) );
+        if ((this.user_playlists != null) || (this.user_playlists != undefined)) {
+            $('.navbar .navbar-playlist .navbar-body').append(self.user_playlists.map(function (playlist) {
+                return self._navbar_tmplate(`/music/my_music_list?music_list=${playlist}`, playlist, "fa-solid fa-record-vinyl");
+            }));
+        } else {
+            $('.navbar .navbar-playlist .navbar-body').append(
+                self._navbar_tmplate("/music/discover/", "去聽歌!", "")
+            );
 
+        }
         // user
         // const user_data = JSON.parse(sessionStorage.getItem('user_data'));
         // console.log(user_data);

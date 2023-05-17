@@ -106,8 +106,19 @@ class SQL:
         self.cursor.execute(sql, (value, music_id))
         self.db.commit()
 
-    def get_playlists(self , isAll = False):
-        sql = f'SELECT DISTINCT playlist FROM {self.table_name} {"" if isAll else "WHERE playlist != 我的最愛"}'
+    def is_table_empty(self):
+        sql = f'SELECT COUNT(*) FROM {self.table_name}'
+        self.cursor.execute(sql)
+        result = self.cursor.fetchone()
+        count = result[0]
+        return count == 0
+
+    def get_playlists(self, isAll=False):
+        if self.is_table_empty():
+            return None
+
+        sql = "SELECT DISTINCT playlist FROM {}{}".format(self.table_name, " WHERE playlist != '我的最愛'" if not isAll else "")
+
 
         self.cursor.execute(sql)
         res = self.cursor.fetchall()
@@ -115,6 +126,9 @@ class SQL:
             return res[0]
         else:
             return None
+        
+        
+
 
     
     def close(self):
