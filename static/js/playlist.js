@@ -41,32 +41,24 @@ export class PlaylistController {
         // add
         $("#playlistModal .modal-body").on("click", ".add", async function () {
             var playlist = $(this).data("playlist");
-            const params = { method: "delete_playlist", playlist: playlist };
-            const response = await self.fetch.POST(self.target, params);
         });
 
     }
 
-    _playlist_template(playlist) {
+    _playlist_template(playlist, isChecked = false) {
         return `
-        <div class="row playlist" id= "${playlist}">
-            <div class="col-6">
-            <label class="mb-3" data-playlist="${playlist}">
-                ${playlist}
-            </label>
-            </div>
-            <div class="col-4 offset-2">
-                <div class="d-flex justify-content-between">
-                    <a href="javascript:void(0)" class="delete mr-2">
-                        <i class="bi bi-trash-fill"></i>
-                    </a>
-                    <a href="javascript:void(0)" class="edit">
-                        <i class="fa-solid fa-hammer"></i>
-                    </a>
-                    <a href="javascript:void(0)" class="add">
-                        <i class="bi bi-plus-lg"></i>
-                    </a>
-                </div>
+        <div class="row">
+            <div class="col">
+                <label class="playlist mb-3" data-playlist="${playlist}">
+                    <input 
+                        type="radio" 
+                        name="playlist" 
+                        id="${playlist}"
+                        autocomplete="off" 
+                        ${isChecked ? "checked" : ""}
+                    >
+                    ${playlist}
+                </label>
             </div>
         </div>
         `

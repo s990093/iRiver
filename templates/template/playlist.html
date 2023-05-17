@@ -9,7 +9,20 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">專輯</h1>
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">我的專輯</h1>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a href="javascript:void(0)" class="delete mr-2">
+            <i class="bi bi-trash-fill"></i>
+          </a>
+          <a href="javascript:void(0)" class="edit">
+            <i class="fa-solid fa-hammer"></i>
+          </a>
+          <a href="javascript:void(0)" class="add">
+            <i class="bi bi-plus-lg"></i>
+          </a>
+        </div>
+
         <button
           type="button"
           class="btn-close"
@@ -24,7 +37,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="playlist-save">
-          去認
+          確認
         </button>
       </div>
     </div>
