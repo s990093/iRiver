@@ -106,12 +106,13 @@ class SQL:
         self.cursor.execute(sql, (value, music_id))
         self.db.commit()
 
-    def get_playlists(self):
-        sql = f"SELECT DISTINCT playlist FROM {self.table_name} WHERE playlist != '我的最愛'"
+    def get_playlists(self , isAll = False):
+        sql = f'SELECT DISTINCT playlist FROM {self.table_name} {"" if isAll else "WHERE playlist != 我的最愛"}'
+
         self.cursor.execute(sql)
         res = self.cursor.fetchall()
         if res:
-            return res
+            return res[0]
         else:
             return None
 

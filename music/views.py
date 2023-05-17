@@ -35,6 +35,18 @@ from music.lib.web_scutter.music_ID_info import get_music_ID_info
 
 test =  True
 
+def get_navbar_data(request):
+    url = f'http://127.0.0.1:8000/user/get_user_show_data/'
+    csrftoken = request.COOKIES.get('csrftoken')
+    session_id = request.COOKIES.get('sessionid')
+    headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
+    headers['X-CSRFToken'] = csrftoken
+    response = requests.post(url, headers=headers)
+    if response.status_code == 200:
+        return response.content
+    
+
+
 def test(request):
     return render(request, './test_music.html' )
 
@@ -66,7 +78,7 @@ def music_list(request):
                                                          })
 
 def my_music_list(request):
-    music_list = request.GET.get('music_list' , 1)
+    music_list = request.GET.get('music_list' , "我的最愛 ")
     url = 'http://127.0.0.1:8000/user/get_user_music_list/'
     csrftoken = request.COOKIES.get('csrftoken')
     session_id = request.COOKIES.get('sessionid')

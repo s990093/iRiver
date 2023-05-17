@@ -19,27 +19,30 @@ from user.lib.switch_key import switch_key
 
 
 def save_session(request):
+    
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+    
     user_data = sql_user.get_user_data(switch_key(request.session['email']))
     request.session['user_data'] = user_data
 
     sql_user_music_list = SQL_music_list(config= user.lib.sql.config.DB_CONFIG_user_music_list, table_name= switch_key(request.session['email']))
-    user_playlist = sql_user_music_list.get_playlists();
+    sql_user_music_list.create_tables()
+    user_playlist = sql_user_music_list.get_playlists(isAll= True);
     request.session['user_playlist'] = user_playlist
     
     request.session.save() 
+    print("#"*30)
+    print(f"save session {request.session['user_data']} and {request.session['user_playlist']}")
 
     
 def get_user_music_list(request):
     PLAYLIST = "我的最愛"
-    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= switch_key(request.session['email']))
-    # 建立個人表單
-    sql_user_music_list.create_tables()
     if request.method != 'POST':
         return HttpResponse('error')
     # 解析 JSON 数据
     data = json.loads(request.body)
     method = data.get('method')
+    sql_user_music_list = SQL_music_list(config= user.lib.sql.config.DB_CONFIG_user_music_list, table_name= switch_key(request.session['email']))
 
     if method == 'insert':
         return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list= json.dumps([data.get('music_ID')],indent=4) , music_list= data.get('playlist' , PLAYLIST),)}), safe=False)
@@ -52,17 +55,18 @@ def get_user_music_list(request):
     elif method == 'get_playlists':
         return JsonResponse({"success": True, "data": sql_user_music_list.get_playlists()})
     
+
     sql_user_music_list.close()
 
-def get_user_show_data(request):
-        sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-        user_data = sql_user.get_user_data(switch_key(request.session['email']))
-        print("#"*30)
-        print(switch_key(request.session['email']))
-        print(user_data)
+def get_user_show_data(request): 
         if request.method != 'POST':
             return HttpResponse('error')
-        return HttpResponse(json.dumps({"success": True , "user_data": request.session['user_data'], "user_playlist": request.session['user_playlist']}))
+        if request.session['user_data'] is  None:
+            save_session(request.session)
+        return HttpResponse(json.dumps({
+                                        "success": True ,
+                                        "user_data": request.session['user_data'], 
+                                         "user_playlists": request.session['user_playlist']}))
 
 def hello(request):
     tkey = request.session['email']
@@ -80,6 +84,7 @@ def check_login(request):
         return JsonResponse({'isLogin': request.session['isLogin']})
     else:
         return JsonResponse({'isLogin': False})
+
 
 # 首頁
 def data(request):
@@ -102,9 +107,7 @@ def data(request):
     request.session['email'] = email
    
     request.session['key'] = switch_key(request.session['email'])
-    
-    
-    
+     
     # 建立個人專輯
     sql = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,request.session['key'])
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)

@@ -73,7 +73,7 @@ export class FaController {
             if (response.data != null) {
                 this.playlist = [];
                 for (var i = 0; i < response.data.length; i++) {
-                    this.playlist.push(response.data[0][i])
+                    this.playlist.push(response.data[i])
                 }
             } else {
                 this.playlist = [];
@@ -85,7 +85,7 @@ export class FaController {
     }
 
     playlist_template(playlist, isChecked = false) {
-        const row = `
+        return `
         <div class="row">
             <div class="col">
                 <label class="playlist mb-3" data-playlist="${playlist}">
@@ -101,8 +101,6 @@ export class FaController {
             </div>
         </div>
         `;
-
-        return row;
     }
 
     /**
@@ -157,7 +155,7 @@ export class FaController {
     async pushFa() {
         // console.log(this.insert_song_infos);
         const success = await this.fetch.POST(this.target, this.insert_song_infos);
-        console.log(success);
+        if (success) this.fetch.POST("/user/save_session/")
     }
 
     errorFa(title, body) {
