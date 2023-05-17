@@ -69,7 +69,7 @@ def get_user_show_data(request):
                     "user_data": request.session['user_data'], 
                     "user_playlists": request.session['user_playlist']}))
 
-
+#搞好了
 def test(request):
     tkey=  request.session['email']
     if tkey.startswith('#'):
