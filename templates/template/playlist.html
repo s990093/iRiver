@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div
   class="modal fade"
-  id="favoriteModal"
+  id="playlistModal"
   aria-hidden="true"
   aria-labelledby="exampleModalToggleLabel"
   tabindex="-1"
@@ -9,9 +9,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
-          音樂庫管理
-        </h1>
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">專輯</h1>
         <button
           type="button"
           class="btn-close"
@@ -20,21 +18,13 @@
         ></button>
       </div>
       <div class="modal-body">
-        <!-- check box -->
         <div class="btn-group" data-toggle="buttons">
           <div class="fa-body"></div>
         </div>
       </div>
       <div class="modal-footer">
-        <button
-          class="btn btn-primary"
-          data-bs-target="#creatPlaylistModal"
-          data-bs-toggle="modal"
-        >
-          新增專輯
-        </button>
-        <button type="button" class="btn btn-primary" id="fa-insert">
-          加入專輯
+        <button type="button" class="btn btn-primary" id="playlist-save">
+          儲存
         </button>
       </div>
     </div>
@@ -74,14 +64,14 @@
         <div class="modal-footer">
           <button
             class="btn btn-primary"
-            data-bs-target="#favoriteModal"
+            data-bs-target="#playlistModal"
             data-bs-toggle="modal"
           >
             取消
           </button>
           <button
             class="btn btn-primary creat-playlist"
-            data-bs-target="#favoriteModal"
+            data-bs-target="#playlistModal"
             data-bs-toggle="modal"
           >
             確認
@@ -91,5 +81,3 @@
     </div>
   </div>
 </div>
-
-<a href=""></a>

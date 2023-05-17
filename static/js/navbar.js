@@ -1,8 +1,11 @@
 import { Fetch } from "./fetch.js";
+import { PlaylistController } from "./playlist.js";
+
 class NvabarContorller {
     constructor() {
         // 宣告物件
         this.fetch = new Fetch();
+        this.playlistController = new PlaylistController();
         this._register();
 
         this.user_data;
@@ -57,6 +60,8 @@ class NvabarContorller {
 
         // show
         this.show();
+
+        this.playlistController.push_playlist(this.user_playlists);
     }
 
 
@@ -81,7 +86,7 @@ class NvabarContorller {
         // const playlists = JSON.parse(sessionStorage.getItem('user_playlists'));
         // console.log(this.user_playlists);
         $('.navbar .navbar-playlist .navbar-body').html("");
-        console.log((this.user_playlists != null) );
+        console.log((this.user_playlists != null));
         if ((this.user_playlists != null) || (this.user_playlists != undefined)) {
             $('.navbar .navbar-playlist .navbar-body').append(self.user_playlists.map(function (playlist) {
                 return self._navbar_tmplate(`/music/my_music_list?music_list=${playlist}`, playlist, "fa-solid fa-record-vinyl");
