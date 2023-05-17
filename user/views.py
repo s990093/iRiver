@@ -15,6 +15,7 @@ import user.lib.sql.config
 from user.lib.sql.sql_user import SQL as SQL_user
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
 from user.lib.sql.sql_social import SQL as SQL_social
+from user.lib.sql.sql_eq import SQL as SQL_eq
 from user.lib.switch_key import switch_key
 from user.lib.sql.sql_social import get_avatar_url
 
@@ -208,3 +209,10 @@ def profile2(request):
     old_data = sql.get_user_data(uid=request.session['key'])
     
     return render(request, 'edit_profile.html', {'form': old_data})
+
+
+def save_user_eq(request):
+    sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
+    sql.save_user_eq(uid=request.session['key'],eq=request.POST.get('eq'))
+
+    
