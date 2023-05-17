@@ -18,7 +18,6 @@ from user.lib.switch_key import switch_key
 
 
 def save_session(request):
-    
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     
     user_data = sql_user.get_user_data(switch_key(request.session['email']))
@@ -118,16 +117,8 @@ def data(request):
         'content': email,
         'now': now
     }
-  
-    sql_user.save_user_profile(
-        id = request.session['key'],
-        email = request.session['email'],
-        username = name
-        )
-    
     # store session
     request.session.save() 
-
     # 存各資
     save_session(request= request)
     return render(request, 'home123.html', context)
