@@ -60,7 +60,8 @@ def get_user_show_data(request):
         if request.method != 'POST':
             return HttpResponse('error')
         if request.session['user_data'] is  None:
-            save_session(request.session)
+            save_session(request= request)
+
         return HttpResponse(json.dumps({
                     "success": True ,
                     "user_data": request.session['user_data'], 
@@ -118,6 +119,11 @@ def data(request):
     )
     
     now = timezone.now()
+    sql_user.save_user_profile(
+    id = request.session['key'],
+    email = request.session['email'],
+    username = name
+    )
     context = {
         'heading': name ,
         'content': email,

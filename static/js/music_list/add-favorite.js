@@ -117,7 +117,6 @@ export class FaController {
                 return self.playlist_template(playlist);
             }));
 
-
         // 添加到哪個專輯
         $("#favoriteModal").on("click", ".playlist", function () {
             self.insert_song_infos = {
