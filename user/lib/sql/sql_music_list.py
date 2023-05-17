@@ -126,9 +126,6 @@ class SQL:
             return res[0]
         else:
             return None
-        
-        
-
 
     
     def close(self):

@@ -28,7 +28,8 @@ class SQL:
         '''
         self.cursor.execute(sql)
 
-    def save_user_profile(self, **user_profile):
+    def save_user_profile(self, **user_profile): 
+        
         print("*"*30)
         print(user_profile)
         id = user_profile.get('id')
@@ -64,6 +65,24 @@ class SQL:
                 'country': result[4],
                 'birthday': result[5],
                 'test': result[6],
+                'level': result[7],
+            }
+            print("$"*30)
+            print(data)
+            return data
+        else:
+            return None
+    def get_user_show_data(self,uid):
+        self.cursor.execute(
+            'SELECT * FROM user_profile WHERE id=%s',
+            (uid,)
+        )
+        result = self.cursor.fetchone()
+        if result:
+            data = {
+                'id': result[0],
+                'email': result[1],
+                'username': result[2],
                 'level': result[7],
             }
             print("$"*30)

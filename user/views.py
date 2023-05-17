@@ -22,7 +22,7 @@ from user.lib.sql.sql_social import get_avatar_url
 def save_session(request):
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     
-    user_data = sql_user.get_user_data(switch_key(request.session['email']))
+    user_data = sql_user.get_user_show_data(switch_key(request.session['email']))
     request.session['user_data'] = user_data
 
     sql_user_music_list = SQL_music_list(config= user.lib.sql.config.DB_CONFIG_user_music_list, table_name= switch_key(request.session['email']))
@@ -31,6 +31,7 @@ def save_session(request):
     request.session['user_playlist'] = user_playlist
     
     request.session.save() 
+
     print("#"*30)
     print(f"save session {request.session['user_data']} and {request.session['user_playlist']}")
     return JsonResponse({"success": True})
@@ -68,10 +69,12 @@ def get_user_show_data(request):
         return HttpResponse(json.dumps({
                     "success": True ,
                     "user_data": request.session['user_data'], 
-                    "user_playlists": request.session['user_playlist']}))
+                    "user_playlists": request.session['user_playlist'] ,
+                    "user_img": user_img(request= request)
+                    }))
 
 #搞好了
-def test(request):
+def user_img(request):
     tkey=  request.session['email']
     if tkey.startswith('#'):
         flag = 1
@@ -87,7 +90,7 @@ def test(request):
         url = get_avatar_url(access_token)
     else:
         url = parsed_data['picture_url']
-    return HttpResponse(url)
+    return url
 
 
 def check_login(request):
@@ -122,29 +125,21 @@ def data(request):
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
 
     sql.create_tables() #建立資料表 
-    sql_user.create_tables() #建立資料表   
-    sql_user.save_user_profile(
+    
+    if sql_user.get_user_data(uid= request.session['key']) is None:
+        sql_user.save_user_profile(
         id = request.session['key'],
         email = request.session['email'],
         username = name
-    )
-    
-    now = timezone.now()
-    sql_user.save_user_profile(
-    id = request.session['key'],
-    email = request.session['email'],
-    username = name
-    )
-    context = {
-        'heading': name ,
-        'content': email,
-        'now': now
-    }
+        )
+
     # store session
     request.session.save() 
     # 存各資
     save_session(request= request)
-    return render(request, 'home123.html', context)
+    # 重新導向到登入畫面
+    return redirect('/music/discover/')  
+
 
 #註冊
 def sign_up(request):
@@ -204,12 +199,11 @@ def profile2(request):
             'birthday': request.POST.get('birthday'),
             'gender': request.POST.get('gender'),
         }
-        sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-        sql.create_tables() #建立資料表        
+        sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)    
         old_data = sql.get_user_data(request.session['key'])
         sql.save_user_profile(**form_data)
         print("成功修改")
-        return redirect('/user/data/')
+        return redirect('/user/profile2/')
     sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     old_data = sql.get_user_data(uid=request.session['key'])
     
