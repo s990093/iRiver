@@ -3,6 +3,6 @@
     "max_dow_thread": 4,
     "max_retries": 4,
     "test ": false,
-    "directory": "test",
+    "directory": "artist",
     "relative": "media "
 }

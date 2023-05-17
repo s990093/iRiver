@@ -118,12 +118,10 @@ class SQL:
             return None
 
         sql = "SELECT DISTINCT playlist FROM {}{}".format(self.table_name, " WHERE playlist != '我的最愛'" if not isAll else "")
-
-
         self.cursor.execute(sql)
         res = self.cursor.fetchall()
         if res:
-            return res[0]
+            return res
         else:
             return None
 
