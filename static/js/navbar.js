@@ -6,7 +6,7 @@ class NvabarContorller {
         this._register();
 
         this.user_data;
-        this.user_playlists;
+        this.user_playlists = [];
     }
 
     async _register() {
@@ -48,6 +48,7 @@ class NvabarContorller {
         console.log(getUserDataResponse);
         this.user_data = getUserDataResponse.user_data;
         this.user_playlists = getUserDataResponse.user_playlists;
+        console.log(this.user_playlists);
 
         // sessionStorage.setItem("isData", true);
         // sessionStorage.setItem("user_data", JSON.stringify(getUserDataResponse.user_data));
@@ -78,6 +79,7 @@ class NvabarContorller {
 
         // playlist
         // const playlists = JSON.parse(sessionStorage.getItem('user_playlists'));
+        // console.log(this.user_playlists);
         $('.navbar .navbar-playlist .navbar-body').html("");
         $('.navbar .navbar-playlist .navbar-body').append(self.user_playlists.map(function (playlist) {
             return self._navbar_tmplate(playlist, playlist, "fa-solid fa-record-vinyl");
