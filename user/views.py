@@ -14,7 +14,9 @@ import json
 import user.lib.sql.config
 from user.lib.sql.sql_user import SQL as SQL_user
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
+from user.lib.sql.sql_social import SQL as SQL_social
 from user.lib.switch_key import switch_key
+from user.lib.sql.sql_social import get_avatar_url
 
 
 def save_session(request):
@@ -68,15 +70,23 @@ def get_user_show_data(request):
                     "user_playlists": request.session['user_playlist']}))
 
 
-def hello(request):
-    tkey = request.session['email']
+def test(request):
+    tkey=  request.session['email']
     if tkey.startswith('#'):
-        key = key[1:]
+        flag = 1
+        key =  request.session['key']
     else:
-        key = tkey.split("@")[0]    
-    sql_user_music_list = SQL_music_list(user.lib.sql.config.DB_CONFIG_user_music_list,table_name= key)
-    music_ID_list = sql_user_music_list.get_music_list()
-    return HttpResponse(music_ID_list)
+        flag = 0
+        key = tkey
+    sql = SQL_social(user.lib.sql.config.DB_CONFIG_social)
+    data = sql.get_extra_data(uid=key)#json
+    parsed_data = json.loads(data)#字典
+    if(flag==0):
+        access_token = parsed_data['access_token']
+        url = get_avatar_url(access_token)
+    else:
+        url = parsed_data['picture_url']
+    return HttpResponse(url)
 
 
 def check_login(request):
@@ -92,10 +102,10 @@ def data(request):
         print("已登入")
         email = request.user.email
         name = request.user.first_name
+        name2= request.user.username
         request.session['isLogin'] = True
-       
         if(email==''):
-            email = "#" + name
+            email = "#" + name2
             name = None
     else:
         print("未登入")
