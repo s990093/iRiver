@@ -62,9 +62,10 @@ def get_user_show_data(request):
         if request.session['user_data'] is  None:
             save_session(request.session)
         return HttpResponse(json.dumps({
-                                        "success": True ,
-                                        "user_data": request.session['user_data'], 
-                                         "user_playlists": request.session['user_playlist']}))
+                    "success": True ,
+                    "user_data": request.session['user_data'], 
+                    "user_playlists": request.session['user_playlist']}))
+
 
 def hello(request):
     tkey = request.session['email']
@@ -89,7 +90,7 @@ def data(request):
     if request.user.is_authenticated:
         print("已登入")
         email = request.user.email
-        name = request.user.username
+        name = request.user.first_name
         request.session['isLogin'] = True
        
         if(email==''):
@@ -110,7 +111,12 @@ def data(request):
 
     sql.create_tables() #建立資料表 
     sql_user.create_tables() #建立資料表   
-
+    sql_user.save_user_profile(
+        id = request.session['key'],
+        email = request.session['email'],
+        username = name
+    )
+    
     now = timezone.now()
     context = {
         'heading': name ,
