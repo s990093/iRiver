@@ -25,9 +25,9 @@
           <div class="form-group">
             <label for="country">Country:</label>
             <select name="country" id="country" class="form-control">
-              <option value="">Select a country</option>
-              <option value="USA" {% if form.country.value == 'USA' %}selected{% endif %}>USA</option>
-              <option value="Canada" {% if form.country.value == 'Canada' %}selected{% endif %}>Canada</option>
+              <option value="NO">Select a country</option>
+              <option value="US" {% if form.country.value == 'USA' %}selected{% endif %}>USA</option>
+              <option value="CA" {% if form.country.value == 'Canada' %}selected{% endif %}>Canada</option>
               <option value="UK" {% if form.country.value == 'UK' %}selected{% endif %}>UK</option>
               <!-- Add more countries here -->
             </select>

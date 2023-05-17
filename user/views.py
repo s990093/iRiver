@@ -6,8 +6,7 @@ from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from .forms import LoginForm
-from .forms import LoginForm, RegisterForm,UserProfileForm
-from .models import UserProfile
+from .forms import LoginForm, RegisterForm
 from django.contrib.auth.models import User
 from social_django.models import UserSocialAuth
 import json
@@ -98,9 +97,7 @@ def data(request):
         email = None
         del request.session['email']
         request.session['isLogin'] = False
-    
     request.session['email'] = email
-   
     request.session['key'] = switch_key(request.session['email'])
     
     
@@ -178,23 +175,6 @@ def log_out(request):
     return redirect('/user/login') 
 
 #個人資料
-def profile(request):
-    user_profile, created = UserProfile.objects.get_or_create(email=request.session['email'])
-    if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=user_profile)
-        if form.is_valid():
-            form.save()
-            user_data = form.cleaned_data
-            sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-            sql.create_tables() #建立資料表        
-            user_data.update({"id": request.session['key']})
-            sql.save_user_profile(**user_data)
-            print("成功修改")
-            return redirect('/user/data')
-    else:
-        print("修改錯誤")
-        form = UserProfileForm(instance=user_profile)
-    return render(request, 'test456.html', {'form': form})
 
 def profile2(request):
     if request.method == 'POST':
@@ -208,6 +188,7 @@ def profile2(request):
             'gender': request.POST.get('gender'),
         }
         sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+        sql.create_tables() #建立資料表        
         old_data = sql.get_user_data(request.session['key'])
         sql.save_user_profile(**form_data)
         print("成功修改")
