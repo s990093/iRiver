@@ -73,7 +73,7 @@ def get_user_show_data(request):
                     "user_img": user_img(request= request)
                     }))
 
-#搞好了
+
 def user_img(request):
     tkey=  request.session['email']
     if tkey.startswith('#'):
