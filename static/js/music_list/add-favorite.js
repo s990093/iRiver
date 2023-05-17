@@ -1,4 +1,5 @@
 import { Fetch } from "../../js/fetch.js";
+import { error } from "../error.js";
 import { insert_my_music_list } from "../../js/music_list/emement.js";
 /**
  * FaController class for managing Fa functionality.
@@ -118,6 +119,7 @@ export class FaController {
             }));
 
         // 添加到哪個專輯
+
         $("#favoriteModal").on("click", ".playlist", function () {
             self.insert_song_infos = {
                 "playlist": $(this).data('playlist'),
@@ -129,26 +131,28 @@ export class FaController {
         });
 
         // 送出
-        $("#favoriteModal").on("click", ".fa-insert", async function () {
+        $("#favoriteModal").on("click", "#fa-insert", async function () {
             self.pushFa();
         });
 
-        $(".creat-playlist").on("click", function () {
+        $("#creatPlaylistModal").on("click", ".creat-playlist", function () {
             self.createFa($('.new-playlist').val());
         });
     }
 
     createFa(playlist) {
-        console.log(this.playlist)
+        // console.log(this.playlist)
         const isDuplicate = this.playlist.some((existingPlaylist) => existingPlaylist === playlist);
         if (isDuplicate) {
-            this.errorFa("錯誤", "該專輯已經存在!")
+            error("錯誤", "該專輯已經存在!")
             return;
         }
 
         // 将播放列表添加到 this.playlist
+
         this.playlist.push(playlist);
-        $(".fa-body").append(this.playlist_template(playlist));
+        console.log($(".fa-body").append(this.playlist_template(playlist)));
+
     }
 
     async pushFa() {
@@ -157,10 +161,6 @@ export class FaController {
         if (success) this.fetch.GET("/user/save_session/")
     }
 
-    errorFa(title, body) {
-        $("#errorModal").modal("show");
-        $("#errorModal").find(".modal-title").html(title);
-        $("#errorModal").find(".modal-body").html(body);
-    }
+
 }
 

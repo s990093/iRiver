@@ -31,6 +31,7 @@ def save_session(request):
     request.session.save() 
     print("#"*30)
     print(f"save session {request.session['user_data']} and {request.session['user_playlist']}")
+    return JsonResponse({"success": True})
 
     
 def get_user_music_list(request):
