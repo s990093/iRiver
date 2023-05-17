@@ -25,7 +25,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <!-- 發現 -->
 
-        <li class="nav-item">
+        <li class="nav-item navbar-discover">
           <a class="nav-link" aria-current="page" href="/music/discover/"
             ><font style="vertical-align: inherit"
               ><font style="vertical-align: inherit">
@@ -38,7 +38,7 @@
 
         <!-- 音樂庫 -->
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown navbar-playlist">
           <a
             class="nav-link dropdown-toggle login"
             href="#"
@@ -50,38 +50,14 @@
             <span class="text">音樂庫</span>
           </a>
           <ul class="dropdown-menu">
-            <li>
-              <a
-                class="dropdown-item"
-                href="/music/my_music_list?music_list=我的最愛"
-              >
-                <svg class="icon">
-                  <use
-                    href="{% static './svg/icon.svg' %}#icon-record-vinyl-solid"
-                  ></use>
-                </svg>
-                <span class="text">我的最愛</span></a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="/music/my_music_list?music_list=2">
-                <svg class="icon">
-                  <use
-                    href="{% static './svg/icon.svg' %}#icon-record-vinyl-solid"
-                  ></use>
-                </svg>
-                <span class="text">專輯2</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="/music/my_music_list/"
-                >自訂專輯3</a
-              >
-            </li>
+            <!-- body -->
+            <!-- js動態 -->
+            <div class="navbar-body"></div>
+            <!-- 設定 -->
+            <li><hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item" href="/music/my_music_list/">自訂專輯</a>
             </li>
-            <li><hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item" href="/iRiver/setting/">新增專輯</a>
             </li>
@@ -90,7 +66,7 @@
 
         <!-- 登錄 -->
 
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown navbar-user">
           <a
             class="nav-link dropdown-toggle login"
             href="/user/login/"
@@ -99,20 +75,27 @@
             aria-expanded="false"
           >
             <i class="fa-regular fa-user"></i>
-            <span class="text">登錄</span>
+            <span class="text username">登錄</span>
           </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="/user/profile2/"
-                >個人資料
-                <span class="badge text-bg-secondary">4</span>
-              </a>
-            </li>
-            <li><a class="dropdown-item" href="/iRiver/plan/">方案</a></li>
-            <li><a class="dropdown-item" href="/iRiver/setting/">設定</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="/user/logout/">登出</a></li>
-          </ul>
+          <!-- body -->
+          <div class="navbar-body">
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="/user/profile/"
+                  >個人資料
+                  <span class="badge text-bg-secondary">4</span>
+                </a>
+              </li>
+              <li><a class="dropdown-item" href="/iRiver/plan/">方案</a></li>
+              <li><a class="dropdown-item" href="/iRiver/setting/">設定</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="/user/logout/" id="logout"
+                  >登出</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
 
