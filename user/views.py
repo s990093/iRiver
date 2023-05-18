@@ -15,8 +15,9 @@ import user.lib.sql.config
 from user.lib.sql.sql_user import SQL as SQL_user
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
 from user.lib.sql.sql_social import SQL as SQL_social
+from user.lib.sql.sql_eq import SQL as SQL_eq
 from user.lib.switch_key import switch_key
-from user.lib.sql.sql_social import get_avatar_url
+from user.lib.sql.sql_social import get_avatar_url,get_line_data,get_google_data
 
 
 def save_session(request):
@@ -73,7 +74,7 @@ def get_user_show_data(request):
                     "user_img": user_img(request= request)
                     }))
 
-#搞好了
+
 def user_img(request):
     tkey=  request.session['email']
     if tkey.startswith('#'):
@@ -98,7 +99,29 @@ def check_login(request):
         return JsonResponse({'isLogin': request.session['isLogin']})
     else:
         return JsonResponse({'isLogin': False})
+    
 
+
+def test123(request):
+    tkey=  request.session['email']
+    if tkey.startswith('#'):
+        flag = 1
+        key =  request.session['key']
+    else:
+        flag = 0
+        key = tkey
+    sql = SQL_social(user.lib.sql.config.DB_CONFIG_social)
+    data = sql.get_extra_data(uid=key)#json
+    parsed_data = json.loads(data)#字典
+    if(flag==0):
+        access_token = parsed_data['access_token']
+        data = get_google_data(access_token)
+        return JsonResponse(data)
+    else:
+        access_token = parsed_data['access_token']
+        data = get_line_data(access_token)
+        return JsonResponse(data)
+    return HttpResponse("error")
 
 # 首頁
 def data(request):
@@ -187,8 +210,8 @@ def log_out(request):
     return redirect('/user/login') 
 
 #個人資料
-
 def profile2(request):
+    sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     if request.method == 'POST':
         form_data = {
             'id': request.session['key'],
@@ -199,12 +222,17 @@ def profile2(request):
             'birthday': request.POST.get('birthday'),
             'gender': request.POST.get('gender'),
         }
-        sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)    
-        old_data = sql.get_user_data(request.session['key'])
         sql.save_user_profile(**form_data)
         print("成功修改")
         return redirect('/user/profile2/')
-    sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     old_data = sql.get_user_data(uid=request.session['key'])
-    
     return render(request, 'edit_profile.html', {'form': old_data})
+
+
+def save_user_eq(request):
+    sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
+    sql.save_user_eq(uid=request.session['key'],eq=request.POST.get('eq'))
+
+def get_user_eq(request):
+    sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
+    return JsonResponse(sql.get_user_eq(uid=request.session['key']), safe=False)    

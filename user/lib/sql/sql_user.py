@@ -72,6 +72,8 @@ class SQL:
             return data
         else:
             return None
+        
+        
     def get_user_show_data(self,uid):
         self.cursor.execute(
             'SELECT * FROM user_profile WHERE id=%s',

@@ -37,3 +37,7 @@ body {
   margin-top: env(safe-area-inset-top);
   margin-bottom: env(safe-area-inset-bottom);
 }
+/* problem */
+.modal {
+  color: black !important;
+}

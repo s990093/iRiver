@@ -1,16 +1,21 @@
 import { Fetch } from "./fetch.js";
+import { PlaylistController } from "./playlist.js";
+
 class NvabarContorller {
     constructor() {
         // 宣告物件
         this.fetch = new Fetch();
+        this.playlistController = new PlaylistController();
         this._register();
-
-        this.user_data;
-        this.user_playlists = [];
     }
 
     async _register() {
         const self = this;
+        const user_data = JSON.parse(sessionStorage.getItem('user_data'));
+        // console.log(sessionStorage.getItem("user_playlist") != null && sessionStorage.getItem("user_playlist") != undefined)
+        if (user_data != null && user_data != undefined) {
+            self.show();
+        }
         //  check login
         const isLogin = await this.fetch.GET("/user/isLogin/");
         if (isLogin) {
@@ -31,11 +36,11 @@ class NvabarContorller {
         // console.log(urlParams.get('query'))
         $('#query').val(urlParams.get('query'));
 
-        // $('#logout').on("click", function () {
-        //     // sessionStorage.removeItem("user_data");
-        //     // sessionStorage.removeItem("user_playlist");
-        //     // sessionStorage.setItem("isData", false);
-        // });
+        $('#logout').on("click", function () {
+            console.log("remove session")
+            sessionStorage.removeItem("user_data");
+            sessionStorage.removeItem("user_playlist");
+        });
 
         $('.navbar .navbar-playlist').on("click", async function () {
             self._get_show_data();
@@ -45,18 +50,20 @@ class NvabarContorller {
 
     async _get_show_data() {
         const getUserDataResponse = await this.fetch.POST("/user/get_user_show_data/");
-        console.log(getUserDataResponse);
-        this.user_data = getUserDataResponse.user_data;
-        this.user_playlists = getUserDataResponse.user_playlists;
+        // console.log(getUserDataResponse);
+        // this.user_data = getUserDataResponse.user_data;
+        // this.user_playlists = getUserDataResponse.user_playlists;
         // console.log(this.user_playlists);
 
-        // sessionStorage.setItem("isData", true);
-        // sessionStorage.setItem("user_data", JSON.stringify(getUserDataResponse.user_data));
-        // sessionStorage.setItem("user_playlists", JSON.stringify(getUserDataResponse.user_playlists));
+        sessionStorage.setItem("isData", true);
+        sessionStorage.setItem("user_data", JSON.stringify(getUserDataResponse.user_data));
+        sessionStorage.setItem("user_playlists", JSON.stringify(getUserDataResponse.user_playlists));
         // console.log(sessionStorage.getItem('user_data'));
 
         // show
         this.show();
+
+        this.playlistController.push_playlist(getUserDataResponse.user_playlists);
     }
 
 
@@ -78,12 +85,12 @@ class NvabarContorller {
         const self = this;
 
         // playlist
-        // const playlists = JSON.parse(sessionStorage.getItem('user_playlists'));
+        const playlists = JSON.parse(sessionStorage.getItem('user_playlists'));
         // console.log(this.user_playlists);
         $('.navbar .navbar-playlist .navbar-body').html("");
-        console.log((this.user_playlists != null) );
-        if ((this.user_playlists != null) || (this.user_playlists != undefined)) {
-            $('.navbar .navbar-playlist .navbar-body').append(self.user_playlists.map(function (playlist) {
+        // console.log((playlists != null));
+        if ((playlists != null) || (playlists != undefined)) {
+            $('.navbar .navbar-playlist .navbar-body').append(playlists.map(function (playlist) {
                 return self._navbar_tmplate(`/music/my_music_list?music_list=${playlist}`, playlist, "fa-solid fa-record-vinyl");
             }));
         } else {
@@ -92,10 +99,11 @@ class NvabarContorller {
             );
 
         }
+
         // user
-        // const user_data = JSON.parse(sessionStorage.getItem('user_data'));
+        const user_data = JSON.parse(sessionStorage.getItem('user_data'));
         // console.log(user_data);
-        $('.navbar .navbar-user .username').html(self.user_data.username);
+        $('.navbar .navbar-user .username').html(user_data.username);
     }
 
     notLoggedIn = () => {

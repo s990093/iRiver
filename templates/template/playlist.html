@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div
   class="modal fade"
-  id="favoriteModal"
+  id="playlistModal"
   aria-hidden="true"
   aria-labelledby="exampleModalToggleLabel"
   tabindex="-1"
@@ -9,7 +9,9 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">我的專輯</h1>
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+          管理音樂庫
+        </h1>
         <button
           type="button"
           class="btn-close"
@@ -18,32 +20,36 @@
         ></button>
       </div>
       <div class="modal-body">
-        <!-- check box -->
-        <div class="btn-group" data-toggle="buttons">
-          <div class="fa-body"></div>
+        <!-- tool -->
+        <div class="row">
+          <div class="col-9">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">工具</h1>
+          </div>
+          <div class="col-3">
+            <a href="javascript:void(0)" class="delete ms-3">
+              <i class="bi bi-trash-fill"></i>
+            </a>
+            <a href="javascript:void(0)" class="edit ms-3">
+              <i class="fa-solid fa-hammer"></i>
+            </a>
+          </div>
         </div>
+        <!-- body -->
+        <div class="playlist-body"></div>
       </div>
       <div class="modal-footer">
-        <button
-          class="btn btn-primary"
-          data-bs-target="#creatPlaylistModal"
-          data-bs-toggle="modal"
-        >
-          新增專輯
-        </button>
-        <button type="button" class="btn btn-primary" id="fa-insert">
-          加入專輯
+        <button type="button" class="btn btn-primary" id="playlist-save">
+          送出
         </button>
       </div>
     </div>
   </div>
 </div>
 
-
-<!-- creatPlaylistModal -->
+<!-- editplaylistNameModal -->
 <div
   class="modal fade"
-  id="creatPlaylistModal"
+  id="editplaylistNameModal"
   aria-hidden="true"
   aria-labelledby="exampleModalToggleLabel2"
   tabindex="-1"
@@ -51,7 +57,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">加入專輯</h1>
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">更改名稱</h1>
         <button
           type="button"
           class="btn-close"
@@ -72,23 +78,10 @@
           />
         </div>
         <div class="modal-footer">
-          <button
-            class="btn btn-primary"
-            data-bs-target="#favoriteModal"
-            data-bs-toggle="modal"
-          >
-            取消
-          </button>
-          <button
-            class="btn btn-primary creat-playlist"
-            data-bs-target="#favoriteModal"
-            data-bs-toggle="modal"
-          >
-            確認
-          </button>
+          <button class="btn btn-primary">取消</button>
+          <button class="btn btn-primary creat-playlist">確認</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
