@@ -4,6 +4,7 @@ import logging
 import concurrent.futures
 import threading
 from typing import List
+import glob
 # 自製
 import lib.download.img as img
 import lib.download.y2mate as y2mate
@@ -16,6 +17,7 @@ from  lib.download.audio import downloader
 import concurrent.futures
 import threading
 from typing import List
+import os
 
 def download(music_ID_list: List[str], artist: str, img_url: str = None, 
              cover_img_url: str = None, artist_img_url: str = None,  
@@ -45,7 +47,14 @@ def download(music_ID_list: List[str], artist: str, img_url: str = None,
         results = []
         for future in concurrent.futures.as_completed(futures):
             results.append(future.result())
-    
+
+
+    file_pattern = os.path.join(relative, "songs", "*.mp4")
+    file_list = glob.glob(file_pattern)
+
+    for file_path in file_list:
+        os.remove(file_path)
+
     return True
 
 

@@ -4,7 +4,7 @@ import json
 # 自製
 from lib.file import File
 import lib.file as file
-from .lib.control import Controller
+from lib.control import Controller
 import lib.log as log
    
 def run(folder :str , config):
@@ -15,7 +15,7 @@ def run(folder :str , config):
         params  , artsit_list = file.get_csv_data(processed_counters= counters)
         controller = Controller(artist_list= artsit_list , params= params ,  
                                 max_thread= config["max_thread"], max_dow_thread= config["max_dow_thread"],
-                                max_retries= config["max_retries"] , relative= config["relative"])
+                                max_retries= config["max_retries"]  , relative= config["relative"])
         success = controller.run()
         if success: 
             counters +=1
@@ -34,6 +34,6 @@ if __name__ == "__main__":
         if folder in last_process_folders:
             print(f"{folder} has already been processed, skipping...")
             continue
-        log.write(path=f"{folder}", success= run(folder=folder, config=config))
+        log.wrtie(path=f"{folder}", success= run(folder=folder, config=config))
 
     print("DONE!!!")

@@ -15,7 +15,9 @@ while True:
             print('Process terminated by user')
             exit()
         time.sleep(0.1)
-
+    err = process.stderr.read()
+    if err:
+        print(err.decode())
     if process.returncode == 0:
         print('main.py completed successfully')
         break
@@ -23,11 +25,11 @@ while True:
         print(f'main.py failed with exit code {process.returncode}')
 
         # Check downloaded file size
-        downloaded_size = os.path.getsize('C:\Users\s9900\OneDrive\桌面\django\myproject\media')
+        downloaded_size = os.path.getsize('C:\\Users\\user\\Desktop\\django\\myproject\\media')
 
         if downloaded_size >= max_size:
             print('Download size limit exceeded. Stopping download.')
             break
 
-        print('Restarting in 10 seconds...')
-        time.sleep(10)
+        print('Restarting in 5 seconds...')
+        time.sleep(5)

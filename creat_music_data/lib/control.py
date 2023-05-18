@@ -18,7 +18,7 @@ import lib.download.img as img
 
 class Controller: 
     def __init__(self , artist_list: str, params , max_thread: int = 2, 
-                  max_dow_thread: int = 4,  max_retries: int = 2 , relative = str = "media"):
+                  max_dow_thread: int = 4,  max_retries: int = 2 , relative: str = "media"):
         """控制下在 跟上傳資料庫  回傳bool """
         super().__init__()
         self.artist_list = artist_list
@@ -101,11 +101,11 @@ class Controller:
         with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_thread) as executor:
             # 下載artist 小圖
             executor.submit(img.download_img(url= artist_img_url, file_name='artist.jpg',
-                                            file_dir= os.path.join(self.relative_path, artist , img)))
+                                            file_dir= os.path.join(self.relative, artist , "img")))
 
             # 下載 封面
             executor.submit(img.download_img_base64(url= executor.submit(query_artist_iocn_src, artist).result() ,
-                                    file_name='cover.jpg', file_dir= os.path.join(self.relative_path, artist , img)))
+                                    file_name='cover.jpg', file_dir= os.path.join(self.relative, artist , "img")))
             # summary
             self.mysql.save_summary(artist= artist,summary= executor.submit(query_summary , artist).result())
             
@@ -127,14 +127,15 @@ class Controller:
                 'publish_time': music_ID_info['publish_time'],  
             })
         # 分割
-        music_ID_list_chunks = [ download_song_infos[x:x+16] for x in range(0, len(download_song_infos), 10)]
+        music_ID_list_chunks = [ download_song_infos[x:x+self.max_dow_thread*2] for x in range(0, len(download_song_infos), 10)]
 
         for chunk in music_ID_list_chunks:
             success = False
             success = download( music_ID_list=[song['music_ID'] for song in chunk], 
                                 artist=artist , 
-                                only_dow_song=True, max_thread= self.max_dow_thread
-                            )
+                                only_dow_song=True, max_thread= self.max_dow_thread,
+                                relative= self.relative
+                              )
             
             if success:
                 # print(chunk)

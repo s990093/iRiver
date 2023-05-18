@@ -1,8 +1,8 @@
 {
     "max_thread": 2 ,
-    "max_dow_thread": 4,
+    "max_dow_thread":10,
     "max_retries": 4,
     "test ": false,
     "directory": "artist",
-    "relative": "media "
+    "relative": "media"
 }

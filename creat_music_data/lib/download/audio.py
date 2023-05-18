@@ -37,7 +37,7 @@ class downloader:
             file_path = os.path.join(self.path, f"{self.music_ID}.mp4")
             audio_stream.download(filename= file_path)
 
-            self.convert_to_mp3()
+            # self.convert_to_mp3()
          
             return True
         except Exception as e:
@@ -60,10 +60,10 @@ class downloader:
             os.makedirs(self.path, exist_ok=True)
             return False
     
-    def convert_to_mp3(self):
-            audio = AudioSegment.from_file(self.mp4_path)
-            audio.export(self.mp3_path, format="mp3")
-            os.remove(self.mp4_path)
+    # def convert_to_mp3(self):
+    #         audio = AudioSegment.from_file(self.mp4_path)
+    #         audio.export(self.mp3_path, format="mp3")
+    #         os.remove(self.mp4_path)
 
 
 def get_play_list( artist_url):

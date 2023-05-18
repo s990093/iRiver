@@ -86,6 +86,7 @@ def query_youtube(query : str) ->json:
     # }
 
     json_str = json.dumps(statistics, indent=4)
+    driver.close()
     return json_str
 
 # r = json.loads(query_youtube('比悲傷更悲傷'))
