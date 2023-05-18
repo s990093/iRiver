@@ -188,7 +188,6 @@ def log_out(request):
     return redirect('/user/login') 
 
 #個人資料
-
 def profile2(request):
     sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     if request.method == 'POST':
@@ -204,7 +203,6 @@ def profile2(request):
         sql.save_user_profile(**form_data)
         print("成功修改")
         return redirect('/user/profile2/')
-    
     old_data = sql.get_user_data(uid=request.session['key'])
     return render(request, 'edit_profile.html', {'form': old_data})
 
