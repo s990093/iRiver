@@ -64,7 +64,7 @@ class SQL:
             return False
 
 
-    def delete_data(self, music_ID_list, music_list=1):
+    def delete_data(self, music_ID_list, music_list: str):
         try:
             # 解析list
             music_ID_list = json.loads(music_ID_list)
@@ -84,6 +84,15 @@ class SQL:
         except Exception as e:
             print(f"Error deleting data: {e}")
             return False
+    
+    def delete_playlist(self, playlist):
+        sql = f'DELETE FROM {self.table_name} WHERE playlist = %s'
+        self.cursor.execute(sql, (playlist,))
+        self.db.commit()
+
+        return True
+
+
 
 
     def setfavorite(self, music_ID_list):

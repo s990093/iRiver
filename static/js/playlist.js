@@ -21,7 +21,6 @@ export class PlaylistController {
     _listen = () => {
         const self = this;
         $("#playlist-setting").unbind("click").on("click", function () {
-
             self._showPL();
         });
 
@@ -66,10 +65,16 @@ export class PlaylistController {
         $("#playlistModal .modal-body")
             .unbind("click")
             .on("click", ".delete", async function () {
-                if (self.playlist === undefined) return;
-                const params = { method: "delete", playlist: self.playlist };
-                const success = await self.fetch(self.target, params);
-                if (success) self._deletePL(self.playlist);
+                if (self.playlist === undefined) {
+                    error("錯誤", "沒選擇專輯!");
+                    return;
+                }
+                const params = { method: "delete_playlist", playlist: self.playlist };
+                const success = await self.fetch.POST(self.target, params);
+                if (success) {
+                    self.fetch.GET("/user/save_session/")
+                    $("#playlistModal #" + self.playlist).remove();
+                }
             });
     }
 
@@ -77,7 +82,7 @@ export class PlaylistController {
         return `
         <div class="row">
             <div class="col">
-                <label class="playlist mb-3" data-playlist="${playlist}">
+                <label class="playlist mb-3" data-playlist="${playlist}" id = "${playlist}">
                     <input 
                         type="radio" 
                         name="playlist" 
@@ -104,7 +109,6 @@ export class PlaylistController {
             return self._playlist_template(playlist);
         }));
     }
-    _deletePL = (playlist) => { }
 
     refresh(playlist) {
         this.playlists.push(playlist);
