@@ -5,6 +5,7 @@ export class PlaylistController {
     constructor() {
         this.fetch = new Fetch();
         this.playlists = [];
+        this.playlist;
         this.target = "/user/get_user_music_list/";
     }
 
@@ -23,10 +24,20 @@ export class PlaylistController {
             $("#playlistModal").modal("show");
         });
 
+        // get the playlist
+        $("#playlistModal .modal-body  .playlist-body .playlist").on("click", function (event) {
+            self.playlist = $(this).data("playlist");
+            console.log(self.playlist)
+        });
+
         // delete
-        $("#playlistModal .modal-body .playlist").on("click", ".delete", async function () {
-            var playlist = $(this).data("playlist");
-            const params = { method: "delete_playlist", playlist: playlist };
+        $("#playlistModal .modal-body .playlist-body .delete").on("click", async function () {
+            if (self.playlist === undefined) {
+                error("錯誤", "沒有選擇專輯!");
+                return;
+            }
+            
+            const params = { method: "delete_playlist", playlist: self.playlist };
             const success = await self.fetch.POST(self.target, params);
             if (success) {
                 $(`#${playlist}`).removes();
@@ -40,7 +51,6 @@ export class PlaylistController {
 
         // add
         $("#playlistModal .modal-body").on("click", ".add", async function () {
-            var playlist = $(this).data("playlist");
         });
 
     }
@@ -67,8 +77,9 @@ export class PlaylistController {
     _showPL() {
         const self = this;
 
-        $("#playlistModal .modal-body").html("");
-        $("#playlistModal .modal-body").append(self.playlists.map(function (playlist) {
+        $("#playlistModal .modal-body  .playlist-body").html("");
+        // console.log($("#playlistModal .modal-body .playlist-body"))
+        $("#playlistModal .modal-body .playlist-body").append(self.playlists.map(function (playlist) {
             return self._playlist_template(playlist);
         }));
     }

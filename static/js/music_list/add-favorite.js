@@ -142,11 +142,11 @@ export class FaController {
 
     createFa(playlist) {
         // console.log(this.playlist)
-        const isDuplicate = this.playlist.some((existingPlaylist) => existingPlaylist === playlist);
-        if (isDuplicate) {
-            error("錯誤", "該專輯已經存在!")
-            return;
-        }
+        // const isDuplicate = this.playlist.some((existingPlaylist) => existingPlaylist === playlist);
+        // if (isDuplicate) {
+        //     error("錯誤", "該專輯已經存在!")
+        //     return;
+        // }
 
         // 将播放列表添加到 this.playlist
 
