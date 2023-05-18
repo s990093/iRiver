@@ -17,7 +17,7 @@ from user.lib.sql.sql_music_list import SQL as SQL_music_list
 from user.lib.sql.sql_social import SQL as SQL_social
 from user.lib.sql.sql_eq import SQL as SQL_eq
 from user.lib.switch_key import switch_key
-from user.lib.sql.sql_social import get_avatar_url
+from user.lib.sql.sql_social import get_avatar_url,get_line_data,get_google_data
 
 
 def save_session(request):
@@ -99,7 +99,29 @@ def check_login(request):
         return JsonResponse({'isLogin': request.session['isLogin']})
     else:
         return JsonResponse({'isLogin': False})
+    
 
+
+def test123(request):
+    tkey=  request.session['email']
+    if tkey.startswith('#'):
+        flag = 1
+        key =  request.session['key']
+    else:
+        flag = 0
+        key = tkey
+    sql = SQL_social(user.lib.sql.config.DB_CONFIG_social)
+    data = sql.get_extra_data(uid=key)#json
+    parsed_data = json.loads(data)#字典
+    if(flag==0):
+        access_token = parsed_data['access_token']
+        data = get_google_data(access_token)
+        return JsonResponse(data)
+    else:
+        access_token = parsed_data['access_token']
+        data = get_line_data(access_token)
+        return JsonResponse(data)
+    return HttpResponse("error")
 
 # 首頁
 def data(request):
