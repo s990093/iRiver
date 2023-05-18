@@ -215,4 +215,8 @@ def save_user_eq(request):
     sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
     sql.save_user_eq(uid=request.session['key'],eq=request.POST.get('eq'))
 
-    
+def user_setting(request):
+    if request.method == 'POST':
+        return JsonResponse({"success" : False})
+    content = request.body
+    print(content.get("method"))

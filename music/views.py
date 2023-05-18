@@ -32,8 +32,9 @@ import  music.lib.download.img as img
 from music.lib.web_scutter.music_ID_info import get_music_ID_info
 
 # test bool
-
 test =  True
+print("-"*30)
+print(f"view is music statue  test= {test}")
 
 def get_navbar_data(request):
     url = f'http://127.0.0.1:8000/user/get_user_show_data/'
@@ -83,7 +84,7 @@ def my_music_list(request):
     csrftoken = request.COOKIES.get('csrftoken')
     session_id = request.COOKIES.get('sessionid')
     headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
-    data = {'method': 'get' , "music_list": music_list}
+    data = {'method': 'get' , "playlist": music_list}
     headers['X-CSRFToken'] = csrftoken
     response = requests.post(url, headers=headers, data=json.dumps(data))
     if response.status_code == 200:

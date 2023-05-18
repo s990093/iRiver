@@ -2,6 +2,7 @@ import MySQLdb
 import json
 import difflib
 
+
 class SQL:
     def __init__(self, config):
         self.config = config
@@ -38,7 +39,7 @@ class SQL:
         '''
         self.cursor.execute(sql)
 
-    def save_user_eq(self, **user_data): 
+    def save_user_eq(self, **user_data):
         UID = user_data.get('UID')
         ENGANCE_HIGH = user_data.get('ENGANCE_HIGH')
         ENGANCE_MIDDLE = user_data.get('ENGANCE_MIDDLE')
@@ -62,16 +63,17 @@ class SQL:
 
         self.cursor.execute(
             'INSERT IGNORE INTO user_eq (UID, ENGANCE_HIGH, ENGANCE_MIDDLE, ENGANCE_LOW, ENGANCE_HEAVY, STYLE_POP, STYLE_R&R, STYLE_JAZZ, STYLE_ELECTRONIC, STYLE_HIP_HOP, EQ_HIGH, EQ_MIDDLE, EQ_LOW, EQ_HEAVY, EQ_DISTORTION, EQ_ZIP, FRONT_GUITAR, FRONT_VOCAL, FRONT_DRUM, FRONT_BASS) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
-            (UID, ENGANCE_HIGH, ENGANCE_MIDDLE, ENGANCE_LOW, ENGANCE_HEAVY, STYLE_POP, STYLE_RR, STYLE_JAZZ, STYLE_ELECTRONIC, STYLE_HIP_HOP, EQ_HIGH, EQ_MIDDLE, EQ_LOW, EQ_HEAVY, EQ_DISTORTION, EQ_ZIP, FRONT_GUITAR, FRONT_VOCAL, FRONT_DRUM, FRONT_BASS)
+            (UID, ENGANCE_HIGH, ENGANCE_MIDDLE, ENGANCE_LOW, ENGANCE_HEAVY, STYLE_POP, STYLE_RR, STYLE_JAZZ, STYLE_ELECTRONIC,
+             STYLE_HIP_HOP, EQ_HIGH, EQ_MIDDLE, EQ_LOW, EQ_HEAVY, EQ_DISTORTION, EQ_ZIP, FRONT_GUITAR, FRONT_VOCAL, FRONT_DRUM, FRONT_BASS)
         )
 
         self.cursor.execute(
             'UPDATE user_eq SET ENGANCE_HIGH=%s, ENGANCE_MIDDLE=%s, ENGANCE_LOW=%s, ENGANCE_HEAVY=%s, STYLE_POP=%s, STYLE_R&R=%s, STYLE_JAZZ=%s, STYLE_ELECTRONIC=%s, STYLE_HIP_HOP=%s, EQ_HIGH=%s, EQ_MIDDLE=%s, EQ_LOW=%s, EQ_HEAVY=%s, EQ_DISTORTION=%s, EQ_ZIP=%s, FRONT_GUITAR=%s, FRONT_VOCAL=%s, FRONT_DRUM=%s, FRONT_BASS=%s WHERE UID=%s',
-            (ENGANCE_HIGH, ENGANCE_MIDDLE, ENGANCE_LOW, ENGANCE_HEAVY, STYLE_POP, STYLE_RR, STYLE_JAZZ, STYLE_ELECTRONIC, STYLE_HIP_HOP, EQ_HIGH, EQ_MIDDLE, EQ_LOW, EQ_HEAVY, EQ_DISTORTION, EQ_ZIP, FRONT_GUITAR, FRONT_VOCAL, FRONT_DRUM, FRONT_BASS, UID)
+            (ENGANCE_HIGH, ENGANCE_MIDDLE, ENGANCE_LOW, ENGANCE_HEAVY, STYLE_POP, STYLE_RR, STYLE_JAZZ, STYLE_ELECTRONIC, STYLE_HIP_HOP,
+             EQ_HIGH, EQ_MIDDLE, EQ_LOW, EQ_HEAVY, EQ_DISTORTION, EQ_ZIP, FRONT_GUITAR, FRONT_VOCAL, FRONT_DRUM, FRONT_BASS, UID)
         )
 
         self.db.commit()
 
-        
     def close(self):
         self.db.close()

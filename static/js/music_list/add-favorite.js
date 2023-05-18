@@ -160,7 +160,5 @@ export class FaController {
         const success = await this.fetch.POST(this.target, this.insert_song_infos);
         if (success) this.fetch.GET("/user/save_session/")
     }
-
-
 }
 
