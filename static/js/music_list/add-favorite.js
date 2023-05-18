@@ -35,7 +35,7 @@ export class FaController {
         const self = this;
         // 加入個人專輯
 
-        $(".add").on("click", function () {
+        $(".main-content .add").on("click", function () {
             $("#favoriteModal").modal("show");
 
             self.insert_song_infos = {
@@ -120,7 +120,7 @@ export class FaController {
 
         // 添加到哪個專輯
 
-        $("#favoriteModal").on("click", ".playlist", function () {
+        $("#favoriteModal .playlist").on("click", function () {
             self.insert_song_infos = {
                 "playlist": $(this).data('playlist'),
                 "music_ID": self.insert_song_infos.music_ID,
@@ -131,11 +131,13 @@ export class FaController {
         });
 
         // 送出
-        $("#favoriteModal").on("click", "#fa-insert", async function () {
+        $("#favoriteModal #fa-insert").on("click", async function () {
             self.pushFa();
         });
 
-        $("#creatPlaylistModal").on("click", ".creat-playlist", function () {
+        $("#creatPlaylistModal .creat-playlist").on("click", function (event) {
+
+            console.log($("#creatPlaylistModal .creat-playlist"))
             self.createFa($('.new-playlist').val());
         });
     }
@@ -156,11 +158,16 @@ export class FaController {
     }
 
     async pushFa() {
-        console.log(this.insert_song_infos);
+        // console.log(this.insert_song_infos);
         const success = await this.fetch.POST(this.target, this.insert_song_infos);
         if (success) this.fetch.GET("/user/save_session/");
     }
 
-    closeFa = () => { }
+    closeFa = () => {
+        $("#favoriteModal").modal("hide");
+        $("#creatPlaylistModal").modal("hide");
+        $("#favoriteModal").off("click");
+        $("#creatPlaylistModal").off("click");
+    }
 }
 

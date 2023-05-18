@@ -1,11 +1,10 @@
 import { Fetch } from "./fetch.js";
 import { error } from "./error.js";
-import { FaController } from "./music_list/add-favorite.js";
+// import { FaController } from "./music_list/add-favorite.js";
 
 export class PlaylistController {
     constructor() {
         this.fetch = new Fetch();
-        this.faController = new FaController();
         this.playlists = [];
         this.playlist;
         this.target = "/user/get_user_music_list/";
@@ -21,9 +20,9 @@ export class PlaylistController {
 
     _listen = () => {
         const self = this;
-        $("#playlist-setting").on("click", function () {
+        $("#playlist-setting").unbind("click").on("click", function () {
+
             self._showPL();
-            $("#playlistModal").modal("show");
         });
 
         // get the playlist
@@ -47,9 +46,29 @@ export class PlaylistController {
         });
 
         // edit
-        $("#playlistModal .modal-body").on("click", ".edit", async function () {
-            location.href = `/music/my_music_list?music_list=${$(this).data("playlist")}`;
+        $("#playlistModal .modal-body").unbind("click").on("click", ".edit", async function () {
+            $("#editplaylistNameModal").modal("show");
         });
+
+        // add
+        // $("#playlistModal .modal-body").unbind("click").on("click", ".add", async function () {
+        //     $("#creatPlaylistModal-playlist").modal("show");
+        // });
+
+        // refresh playlist
+        $("#creatPlaylistModal-playlist .creat-playlist").unbind("click").on("click", function () {
+            const playlist = $('.new-playlist').val();
+            $("#creatPlaylistModal-playlist").modal("hide");
+            self.refresh(playlist);
+        });
+
+        //delete
+        $("#playlistModal .modal-body")
+            .unbind("click")
+            .on("click", ".delete", async function () {
+                if (self.playlist === undefined) return;
+                // const success = await self.fetch(self.target , );
+            });
     }
 
     _playlist_template(playlist, isChecked = false) {
@@ -72,6 +91,9 @@ export class PlaylistController {
     }
 
     _showPL() {
+        $("#playlistModal").modal("show");
+
+
         const self = this;
 
         $("#playlistModal .modal-body  .playlist-body").html("");
@@ -81,8 +103,11 @@ export class PlaylistController {
         }));
     }
 
-    refresh(playlists) {
-        this.playlists = playlists;
+    refresh(playlist) {
+        this.playlists.push(playlist);
+        console.log(this.playlists);
         this._showPL();
     }
+
+    unregister = () => { }
 }

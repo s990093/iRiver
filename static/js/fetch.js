@@ -44,6 +44,8 @@ export function fetch_dow_all_songs(artist_url, artist) {
  * @class Fetch class for performing HTTP requests.
  */
 export class Fetch {
+    constructor() { }
+
     _get_seesion() {
         return "test";
     }
