@@ -1,9 +1,11 @@
 import { Fetch } from "./fetch.js";
 import { error } from "./error.js";
+import { FaController } from "./music_list/add-favorite.js";
 
 export class PlaylistController {
     constructor() {
         this.fetch = new Fetch();
+        this.faController = new FaController();
         this.playlists = [];
         this.playlist;
         this.target = "/user/get_user_music_list/";
@@ -36,7 +38,7 @@ export class PlaylistController {
                 error("錯誤", "沒有選擇專輯!");
                 return;
             }
-            
+
             const params = { method: "delete_playlist", playlist: self.playlist };
             const success = await self.fetch.POST(self.target, params);
             if (success) {
@@ -48,11 +50,6 @@ export class PlaylistController {
         $("#playlistModal .modal-body").on("click", ".edit", async function () {
             location.href = `/music/my_music_list?music_list=${$(this).data("playlist")}`;
         });
-
-        // add
-        $("#playlistModal .modal-body").on("click", ".add", async function () {
-        });
-
     }
 
     _playlist_template(playlist, isChecked = false) {
@@ -84,4 +81,8 @@ export class PlaylistController {
         }));
     }
 
+    refresh(playlists) {
+        this.playlists = playlists;
+        this._showPL();
+    }
 }

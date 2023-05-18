@@ -158,7 +158,9 @@ export class FaController {
     async pushFa() {
         console.log(this.insert_song_infos);
         const success = await this.fetch.POST(this.target, this.insert_song_infos);
-        if (success) this.fetch.GET("/user/save_session/")
+        if (success) this.fetch.GET("/user/save_session/");
     }
+
+    closeFa = () => { }
 }
 
