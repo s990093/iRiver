@@ -63,12 +63,13 @@ export class PlaylistController {
         });
 
         //delete
-        $("#playlistModal .modal-body")                                                                          
+        $("#playlistModal .modal-body")
             .unbind("click")
             .on("click", ".delete", async function () {
                 if (self.playlist === undefined) return;
                 const params = { method: "delete", playlist: self.playlist };
                 const success = await self.fetch(self.target, params);
+                if (success) self._deletePL(self.playlist);
             });
     }
 
@@ -103,6 +104,7 @@ export class PlaylistController {
             return self._playlist_template(playlist);
         }));
     }
+    _deletePL = (playlist) => { }
 
     refresh(playlist) {
         this.playlists.push(playlist);
