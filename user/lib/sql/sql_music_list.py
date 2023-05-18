@@ -91,8 +91,14 @@ class SQL:
         self.db.commit()
 
         return True
+    
+    def chang_playlist_name(self, new_playlist_name , old_playlist_name):
+        sql = f'UPDATE {self.table_name} SET playlist = %s WHERE playlist = %s'
+        self.cursor.execute(sql, (new_playlist_name, old_playlist_name))
+        self.db.commit()
 
 
+        return True
 
 
     def setfavorite(self, music_ID_list):

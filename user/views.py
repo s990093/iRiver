@@ -60,6 +60,10 @@ def get_user_music_list(request):
         return JsonResponse(json.dumps({'success': sql_user_music_list.setfavorite(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
     elif method == 'get_playlists':
         return JsonResponse({"success": True, "data": sql_user_music_list.get_playlists()})
+    elif method == 'change_playlist':
+        return JsonResponse({"success": sql_user_music_list.chang_playlist_name(
+            old_playlist_name= data.get('old_playlist_name'),
+            new_playlist_name= data.get('new_playlist_name'))})
     
 
     sql_user_music_list.close()

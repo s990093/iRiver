@@ -50,7 +50,7 @@ class NvabarContorller {
 
     async _get_show_data() {
         const getUserDataResponse = await this.fetch.POST("/user/get_user_show_data/");
-        console.log(getUserDataResponse);
+        // console.log(getUserDataResponse);
         // this.user_data = getUserDataResponse.user_data;
         // this.user_playlists = getUserDataResponse.user_playlists;
         // console.log(this.user_playlists);
