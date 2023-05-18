@@ -26,14 +26,11 @@
             <h1 class="modal-title fs-5" id="exampleModalToggleLabel">工具</h1>
           </div>
           <div class="col-3">
-            <a href="javascript:void(0)" class="delete ms-2">
+            <a href="javascript:void(0)" class="delete ms-3">
               <i class="bi bi-trash-fill"></i>
             </a>
-            <a href="javascript:void(0)" class="edit ms-2">
+            <a href="javascript:void(0)" class="edit ms-3">
               <i class="fa-solid fa-hammer"></i>
-            </a>
-            <a href="javascript:void(0)" class="add ms-2">
-              <i class="bi bi-plus-lg"></i>
             </a>
           </div>
         </div>
@@ -42,8 +39,48 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="playlist-save">
-          確認
+          送出
         </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- editplaylistNameModal -->
+<div
+  class="modal fade"
+  id="editplaylistNameModal"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">更改名稱</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- input box -->
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">專輯名稱</span>
+          <input
+            type="text"
+            class="new-playlist"
+            placeholder="專輯名稱"
+            aria-label=""
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">取消</button>
+          <button class="btn btn-primary creat-playlist">確認</button>
+        </div>
       </div>
     </div>
   </div>

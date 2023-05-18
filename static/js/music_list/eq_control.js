@@ -1,4 +1,5 @@
 import { Eq } from "./eq.js";
+import { Fetch } from "../fetch.js";
 
 export class EqController {
     constructor(audioElement, isTest = false) {
