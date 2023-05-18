@@ -27,7 +27,7 @@ export class PlaylistController {
         // get the playlist
         $("#playlistModal .modal-body  .playlist-body .playlist").unbind("click").on("click", function (event) {
             self.playlist = $(this).data("playlist");
-            console.log(self.playlist)
+            // console.log(self.playlist)
         });
 
         // edit
