@@ -44,6 +44,7 @@ def get_user_music_list(request):
         return HttpResponse('error')
     # 解析 JSON 数据
     data = json.loads(request.body)
+    # print(data)
     method = data.get('method')
     sql_user_music_list = SQL_music_list(config= user.lib.sql.config.DB_CONFIG_user_music_list, table_name= switch_key(request.session['email']))
 
@@ -53,6 +54,8 @@ def get_user_music_list(request):
         return JsonResponse(list(sql_user_music_list.get_music_list(music_list= data.get('playlist' , PLAYLIST))), safe=False)
     elif method == 'delete':
         return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list= json.dumps([data.get('music_ID')] , indent=4) , music_list=  data.get('playlist' , PLAYLIST))}), safe=False)
+    elif method == 'delete_playlist':
+        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_playlist(playlist= data.get('playlist' , PLAYLIST) )}), safe=False)
     elif method == 'favorite':
         return JsonResponse(json.dumps({'success': sql_user_music_list.setfavorite(music_ID_list= json.dumps([data.get('music_ID')] , indent=4))}), safe=False)
     elif method == 'get_playlists':
@@ -129,7 +132,7 @@ def data(request):
         print("已登入")
         email = request.user.email
         name = request.user.first_name
-        name2= request.user.username
+        name2= request.user.username                  
         request.session['isLogin'] = True
         if(email==''):
             email = "#" + name2
@@ -229,10 +232,16 @@ def profile2(request):
     return render(request, 'edit_profile.html', {'form': old_data})
 
 
-def save_user_eq(request):
+def user_eq(request):
+    if request.method != 'POST':
+        return JsonResponse({"success": False})
+    
+    data = json.loads(request.body)
+    method = data.get('method')
+    
     sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
     sql.save_user_eq(uid=request.session['key'],eq=request.POST.get('eq'))
-
+   
 def get_user_eq(request):
     sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
     return JsonResponse(sql.get_user_eq(uid=request.session['key']), safe=False)    
