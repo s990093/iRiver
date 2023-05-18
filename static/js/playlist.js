@@ -63,11 +63,12 @@ export class PlaylistController {
         });
 
         //delete
-        $("#playlistModal .modal-body")
+        $("#playlistModal .modal-body")                                                                          
             .unbind("click")
             .on("click", ".delete", async function () {
                 if (self.playlist === undefined) return;
-                // const success = await self.fetch(self.target , );
+                const params = { method: "delete", playlist: self.playlist };
+                const success = await self.fetch(self.target, params);
             });
     }
 
