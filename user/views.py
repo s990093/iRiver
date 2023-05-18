@@ -215,4 +215,6 @@ def save_user_eq(request):
     sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
     sql.save_user_eq(uid=request.session['key'],eq=request.POST.get('eq'))
 
-    
+def get_user_eq(request):
+    sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
+    return JsonResponse(sql.get_user_eq(uid=request.session['key']), safe=False)    

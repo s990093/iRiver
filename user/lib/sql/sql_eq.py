@@ -72,6 +72,20 @@ class SQL:
 
         self.db.commit()
 
+    def get_user_eq(self, uid):
+        self.cursor.execute(
+            'SELECT * FROM user_eq WHERE UID = %s',
+            (uid,)
+        )
+        row = self.cursor.fetchone()
+        
+        if row:
+            columns = [desc[0] for desc in self.cursor.description]
+            user_eq = dict(zip(columns, row))
+            return user_eq
+        else:
+            return None
+
         
     def close(self):
         self.db.close()
