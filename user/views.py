@@ -19,7 +19,7 @@ from user.lib.sql.sql_social import SQL as SQL_social
 from user.lib.sql.sql_eq import SQL as SQL_eq
 from user.lib.sql.sql_user_setting import SQL as SQL_user_setting
 from user.lib.switch_key import switch_key
-from user.lib.sql.sql_social import get_avatar_url,get_line_data,get_google_data
+from user.lib.get_data import get_avatar_url,get_line_data,get_google_data,get_line_user_email,get_id_token
 
 
 def save_session(request):
@@ -164,6 +164,7 @@ def test123(request):
         access_token = parsed_data['access_token']
         data = get_line_data(access_token)
         return JsonResponse(data)
+
 
 # 首頁
 def data(request):

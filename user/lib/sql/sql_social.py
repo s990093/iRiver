@@ -1,41 +1,6 @@
 import MySQLdb
 import json
 import difflib
-import requests
-
-
-def get_avatar_url(access_token):
-    headers = {'Authorization': f'Bearer {access_token}'}
-    params = {'personFields': 'photos'}
-    response = requests.get(
-        'https://people.googleapis.com/v1/people/me', headers=headers, params=params)
-    if response.status_code == 200:
-        data = response.json()
-        photos = data.get('photos', [])
-        if photos:
-            avatar_url = photos[0].get('url')
-            return avatar_url
-    return None
-
-
-def get_line_data(access_token):
-    headers = {
-        'Authorization': f'Bearer {access_token}'
-    }
-    response = requests.get('https://api.line.me/v2/profile', headers=headers)
-    profile_data = response.json()
-    return profile_data
-
-
-def get_google_data(access_token):
-    headers = {'Authorization': f'Bearer {access_token}'}
-    params = {'personFields': 'photos'}
-    response = requests.get(
-        'https://people.googleapis.com/v1/people/me', headers=headers, params=params)
-    if response.status_code == 200:
-        data = response.json()
-        return data
-    return None
 
 
 class SQL:

@@ -1,8 +1,6 @@
 import MySQLdb
 import json
 import difflib
-# 123132
-
 
 class SQL:
     def __init__(self, config):
@@ -22,6 +20,7 @@ class SQL:
                 phone VARCHAR(16) NOT NULL,
                 country CHAR(2),
                 birthday DATE,
+                gender CHAR(1),
                 test TINYINT(2) UNSIGNED DEFAULT 0,
                 level TINYINT(2) UNSIGNED DEFAULT 0
             )
@@ -38,15 +37,16 @@ class SQL:
         phone = user_profile.get('phone')
         country = user_profile.get('country')
         birthday = user_profile.get('birthday')
+        gender = user_profile.get('gender')
         test = user_profile.get('test', 0)
         level = user_profile.get('level', 0)
         self.cursor.execute(
-            'INSERT IGNORE INTO user_profile (id, email, username, phone, country, birthday, test, level) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)',
-            (id, email, username, phone, country, birthday, test, level)
+            'INSERT IGNORE INTO user_profile (id, email, username, phone, country, birthday, gender, test, level) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)',
+            (id, email, username, phone, country, birthday, gender, test, level)
         )
         self.cursor.execute(
-            'UPDATE user_profile SET email=%s, username=%s, phone=%s, country=%s, birthday=%s, test=%s, level=%s WHERE id=%s',
-            (email, username, phone, country, birthday, test, level, id)
+            'UPDATE user_profile SET email=%s, username=%s, phone=%s, country=%s, birthday=%s, gender=%s, test=%s, level=%s WHERE id=%s',
+            (email, username, phone, country, birthday, gender, test, level, id)
         )
         self.db.commit()
 
@@ -64,8 +64,9 @@ class SQL:
                 'phone': result[3],
                 'country': result[4],
                 'birthday': result[5],
-                'test': result[6],
-                'level': result[7],
+                'gender': result[6],
+                'test': result[7],
+                'level': result[8],
             }
             print("$"*30)
             print(data)
