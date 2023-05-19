@@ -12,10 +12,12 @@ from social_django.models import UserSocialAuth
 import json
 # 自製
 import user.lib.sql.config
+import user.lib.sql.config as config
 from user.lib.sql.sql_user import SQL as SQL_user
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
 from user.lib.sql.sql_social import SQL as SQL_social
 from user.lib.sql.sql_eq import SQL as SQL_eq
+from user.lib.sql.sql_user_setting import SQL as SQL_user_setting
 from user.lib.switch_key import switch_key
 from user.lib.sql.sql_social import get_avatar_url,get_line_data,get_google_data
 
@@ -128,7 +130,6 @@ def test123(request):
         access_token = parsed_data['access_token']
         data = get_line_data(access_token)
         return JsonResponse(data)
-    return HttpResponse("error")
 
 # 首頁
 def data(request):
@@ -155,6 +156,11 @@ def data(request):
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
 
     sql.create_tables() #建立資料表 
+
+    # create setting
+    SQL_eq(config= config.DB_CONFIG_user).regsiter(UID_EQ=switch_key(request.session['email']))
+    SQL_user_setting(config= config.DB_CONFIG_user).regsiter(UID_SETTING=switch_key(request.session['email']) )
+
     
     if sql_user.get_user_data(uid= request.session['key']) is None:
         sql_user.save_user_profile(
@@ -238,14 +244,10 @@ def profile2(request):
 
 def user_eq(request):
     if request.method != 'POST':
-        return JsonResponse({"success": False})
+        return JsonResponse({"success": False}) 
     
-    data = json.loads(request.body)
-    method = data.get('method')
-    
-    sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
-    sql.save_user_eq(uid=request.session['key'],eq=request.POST.get('eq'))
-   
-def get_user_eq(request):
-    sql = SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq)
-    return JsonResponse(sql.get_user_eq(uid=request.session['key']), safe=False)    
+    body = json.loads(request.body)
+    kwargs= body.get("kwargs")
+    kwargs["uid"] = switch_key(request.session['key'])
+    return JsonResponse({"data": (SQL_eq(user.lib.sql.config.DB_CONFIG_user_eq))
+                         .commit(method=  body.get("method") , kwargs= kwargs)})
