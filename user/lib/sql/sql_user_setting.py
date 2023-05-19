@@ -30,26 +30,18 @@ class SQL(set_sql_class):
         if method == "insert":
             self.insert(**kwargs)
         elif method == "update":
-            self.updata(**kwargs)
+            self.update(**kwargs)
         elif method == "select":
-            self.updata(**kwargs)
+            self.select(**kwargs)
         else:
             print("-"*30)
             print(f"the method {method} is not supported")
             return False
 
-    # def insert(self, **kwargs):
-    #     sql = f'INSERT IGNORE INTO {self.table_name} (UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD) VALUES (%s, %s, %s, %s, %s, %s)'
-    #     return super().insert(sql=sql, values=self.dict_to_tuple(**kwargs))
-
     def insert(self, **kwargs):
         sql = f'INSERT INTO {self.table_name} (UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD) VALUES (%s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE UID_SETTING = UID_SETTING'
         return super().insert(sql=sql, values=self.dict_to_tuple(**kwargs))
-
-    def select(self, **kwargs):
-        sql = f'SELECT * FROM {self.table_name} WHERE UID_EQ = %s'
-        return super().select(sql=sql, values=(kwargs["UID_EQ"],))
-
+    
     def select(self, **kwargs):
         sql = f'SELECT * FROM {self.table_name} WHERE UID_SETTING = %s'
         return super().select(sql=sql, values=(kwargs["UID_SETTING"],))

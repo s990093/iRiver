@@ -26,6 +26,7 @@ def get_line_data(access_token):
     profile_data = response.json()
     return profile_data
 
+
 def get_google_data(access_token):
     headers = {'Authorization': f'Bearer {access_token}'}
     params = {'personFields': 'photos'}
@@ -35,6 +36,7 @@ def get_google_data(access_token):
         data = response.json()
         return data
     return None
+
 
 class SQL:
     def __init__(self, config):

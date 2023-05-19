@@ -36,9 +36,9 @@ class SQL(set_sql_class):
         if method == "insert":
             self.insert(**kwargs)
         elif method == "update":
-            self.updata(**kwargs)
+            self.update(**kwargs)
         elif method == "select":
-            self.updata(**kwargs)
+            self.select(**kwargs)
         else:
             print("-"*30)
             print(f"the method {method} is not supported")
@@ -53,6 +53,8 @@ class SQL(set_sql_class):
         return super().updata(sql=sql, values=(kwargs["new_value"], uid))
 
     def select(self, **kwargs):
+        # print("-@"*30)
+        # print(**kwargs)
         sql = f'SELECT * FROM {self.table_name} WHERE UID_EQ = %s'
         return super().select(sql=sql, values=(kwargs["UID_EQ"],))
 
@@ -92,16 +94,16 @@ class SQL(set_sql_class):
             kwargs.get('SPATIAL_AUDIO'),
         )
 
-    def get_user_eq(self, UID_EQ):
-        self.cursor.execute(
-            'SELECT * FROM user_eq WHERE UID_EQ = %s',
-            (UID_EQ,)
-        )
-        row = self.cursor.fetchone()
+    # def get_user_eq(self, UID_EQ):
+    #     self.cursor.execute(
+    #         'SELECT * FROM user_eq WHERE UID_EQ = %s',
+    #         (UID_EQ,)
+    #     )
+    #     row = self.cursor.fetchone()
 
-        if row:
-            columns = [desc[0] for desc in self.cursor.description]
-            user_eq = dict(zip(columns, row))
-            return user_eq
-        else:
-            return None
+    #     if row:
+    #         columns = [desc[0] for desc in self.cursor.description]
+    #         user_eq = dict(zip(columns, row))
+    #         return user_eq
+    #     else:
+    #         return None
