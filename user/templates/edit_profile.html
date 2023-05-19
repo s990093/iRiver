@@ -6,46 +6,46 @@
         <form method="post" action="/user/profile2/" class="form">
           {% csrf_token %}
           <input type="hidden" name="id" id="id" value="{{ form.id }}">
-
           <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" required value="{{ form.username }}" class="form-control" />
           </div>
-
           <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required value="{{ form.email }}" class="form-control" />
           </div>
-
           <div class="form-group">
             <label for="phone">Phone:</label>
             <input type="tel" name="phone" id="phone" required value="{{ form.phone }}" class="form-control" />
           </div>
-
           <div class="form-group">
             <label for="country">Country:</label>
             <select name="country" id="country" class="form-control">
               <option value="NO">Select a country</option>
-              <option value="US" {% if form.country.value == 'USA' %}selected{% endif %}>USA</option>
-              <option value="CA" {% if form.country.value == 'Canada' %}selected{% endif %}>Canada</option>
-              <option value="UK" {% if form.country.value == 'UK' %}selected{% endif %}>UK</option>
+              <option value="US" {% if form.country == 'US' %}selected{% endif %}>USA</option>
+              <option value="CA" {% if form.country == 'CA' %}selected{% endif %}>Canada</option>
+              <option value="UK" {% if form.country == 'UK' %}selected{% endif %}>UK</option>
+              <option value="AU" {% if form.country == 'AU' %}selected{% endif %}>Australia</option>
+              <option value="JP" {% if form.country == 'JP' %}selected{% endif %}>Japan</option>
+              <option value="DE" {% if form.country == 'DE' %}selected{% endif %}>Germany</option>
+              <option value="TW" {% if form.country == 'TW' %}selected{% endif %}>Taiwan</option>
+              <option value="KR" {% if form.country == 'KR' %}selected{% endif %}>South Korea</option>
+              <option value="CN" {% if form.country == 'CN' %}selected{% endif %}>China</option>
               <!-- Add more countries here -->
             </select>
-          </div>
-
+          </div>          
           <div class="form-group">
             <label for="birthday">Birthday:</label>
-            <input type="date" name="birthday" id="birthday" required value="{{ form.birthday }}" class="form-control" />
+            <input type="date" name="birthday" id="birthday" required value="{{ form.birthday|date:'Y-m-d' }}" class="form-control" />
           </div>
-
           <div class="form-group">
             <label for="gender">Gender:</label>
             <select name="gender" id="gender" required class="form-control">
-              <option value="male" {% if form.gender.value == 'male' %}selected{% endif %}>Male</option>
-              <option value="female" {% if form.gender.value == 'female' %}selected{% endif %}>Female</option>
+              <option value="M" {% if form.gender == 'M' %}selected{% endif %}>Male</option>
+              <option value="F" {% if form.gender == 'F' %}selected{% endif %}>Female</option>
+              <option value="N" {% if form.gender == 'N' %}selected{% endif %}>Prefer not to disclose</option>
             </select>
-          </div>
-
+          </div>          
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
