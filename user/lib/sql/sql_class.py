@@ -30,15 +30,15 @@ class SQL:
     def insert(self, sql: str, values):
         print(values)
         self.show(sql=sql, kwargs=values)
-        self.execute(sql=sql, values=values)
+        return self.execute(sql=sql, values=values)
 
     def updata(self, sql: str, values):
         self.show(sql=sql, kwargs=values)
-        self.execute(sql=sql, values=values)
+        return self.execute(sql=sql, values=values)
 
     def select(self, sql: str, values):
         self.show(sql=sql, kwargs=values)
-        self.execute(sql=sql, values=values)
+        return self.execute(sql=sql, values=values)
 
     def execute(self, sql, values, isALL=False):
         self.cursor.execute(sql, values)

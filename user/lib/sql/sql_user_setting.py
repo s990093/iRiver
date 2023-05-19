@@ -28,11 +28,11 @@ class SQL(set_sql_class):
 
     def commit(self, method: str, **kwargs):
         if method == "insert":
-            self.insert(**kwargs)
+            return self.tuple_to_dict(data_tuple=self.insert(**kwargs))
         elif method == "update":
-            self.update(**kwargs)
+            return self.tuple_to_dict(data_tuple=self.update(**kwargs))
         elif method == "select":
-            self.select(**kwargs)
+            return self.tuple_to_dict(data_tuple=self.select(**kwargs))
         else:
             print("-"*30)
             print(f"the method {method} is not supported")
@@ -43,7 +43,7 @@ class SQL(set_sql_class):
         return super().insert(sql=sql, values=self.dict_to_tuple(**kwargs))
 
     def select(self, **kwargs):
-        sql = f'SELECT * FROM {self.table_name} WHERE UID_SETTING = %s'
+        sql = f'SELECT UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD FROM {self.table_name} WHERE UID_SETTING = %s'
         return super().select(sql=sql, values=(kwargs["UID_SETTING"],))
 
     def regsiter(self, UID_SETTING: str):
@@ -68,17 +68,13 @@ class SQL(set_sql_class):
             kwargs.get('WIFI_AUTO_DOWNLOAD'),
         )
 
-    def get_user_eq(self, UID_SETTING):
-        self.cursor.execute(
-            'SELECT UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD'
-            ' FROM user_eq WHERE UID_SETTING = %s',
-            (UID_SETTING,)
-        )
-        row = self.cursor.fetchone()
-
-        if row:
-            columns = [desc[0] for desc in self.cursor.description]
-            user_eq = dict(zip(columns, row))
-            return user_eq
-        else:
-            return None
+    def tuple_to_dict(self ,data_tuple):
+        keys = [
+            'UID_SETTING',
+            'LANGUAGE',
+            'SHOW_MODAL',
+            'AUDIO_QUALITY',
+            'AUDIO_AUTO_PLAY',
+            'WIFI_AUTO_DOWNLOAD'
+        ]
+        return dict(zip(keys, data_tuple))

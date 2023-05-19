@@ -34,7 +34,9 @@ export class SessionController {
 
     /**
      * Add an item to the session.
-     * @param {any} item - The item to be added to the session.
+     * @param {object} item - The item to be added to the session
+     * @param {any} title - The session title
+     * .
      */
     add = (title, item) => {
         let session = JSON.parse(sessionStorage.getItem("session"));
@@ -46,7 +48,7 @@ export class SessionController {
         sessionStorage.setItem("session", JSON.stringify(session));
 
         // Store item separately in sessionStorage using its value as the key
-        sessionStorage.setItem(item, JSON.stringify(item));
+        sessionStorage.setItem(title, JSON.stringify(item));
     }
     /**
      * Update the value of a specific item in the session.

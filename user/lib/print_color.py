@@ -25,3 +25,6 @@ def print_color(text, color):
     # 打印带有颜色的文本
     print(f"{color_code}{text}{TerminalColors.ENDC}")
 
+def print_have_line(color= "green" , text = ""):
+    print("-"*30)
+    print_color(color= color, text= text)
