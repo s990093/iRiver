@@ -136,7 +136,11 @@ export class FaController {
         });
 
         $("#creatPlaylistModal .creat-playlist").on("click", function (event) {
-
+            console.log($("#creatPlaylistModal .creat-playlist"))
+            self.createFa($('.new-playlist').val());
+        });
+        // hide
+        $("#creatPlaylistModal .creat-playlist").on("click", function (event) {
             console.log($("#creatPlaylistModal .creat-playlist"))
             self.createFa($('.new-playlist').val());
         });
@@ -153,14 +157,17 @@ export class FaController {
         // 将播放列表添加到 this.playlist
 
         this.playlist.push(playlist);
-        console.log($(".fa-body").append(this.playlist_template(playlist)));
-
+        $(".fa-body").append(this.playlist_template(playlist))
+        console.log(this.playlist)
     }
 
     async pushFa() {
         // console.log(this.insert_song_infos);
         const success = await this.fetch.POST(this.target, this.insert_song_infos);
-        if (success) this.fetch.GET("/user/save_session/");
+        if (success) {
+            $("#favoriteModal").modal("hide");
+            this.fetch.GET("/user/save_session/");
+        }
     }
 
     closeFa = () => {

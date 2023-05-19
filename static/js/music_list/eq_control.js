@@ -6,20 +6,32 @@ export class EqController {
         this.isTest = isTest;
         this.audioElement = audioElement;
 
-        // db
         this.dB = 5;
-
-
-        this._register();
+        this.target = "/user/get_user_eq_setting/";
+        this.config = {};
 
         //宣告物件
+        this.fetch = new Fetch();
         this.eq = new Eq(this.audioElement, this.isTest);
 
         if (this.isTest)
             console.log('eqcontroller');
+
+
+        this._register();
     }
 
-    _register() {
+    async _register() {
+        session = this._session();
+        if (session) {
+
+        } else {
+            const response = await this.fetch.POST(this.target);
+            if (response.status === 200) {
+                this.config = response.config;
+            }
+        }
+
         this._lienter_audio_enhancement();
         this._lienter_audio_style();
     }
@@ -75,4 +87,6 @@ export class EqController {
     }
 
     _lienter_audio_style() { }
+
+    _session = () => { }
 }
