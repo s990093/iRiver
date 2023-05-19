@@ -46,11 +46,12 @@ class SQL(set_sql_class):
         sql = f'INSERT INTO {self.table_name} (UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD) VALUES (%s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE UID_SETTING = UID_SETTING'
         return super().insert(sql=sql, values=self.dict_to_tuple(**kwargs))
 
-    # def update(self, **kwargs):
-    #     super().updata(**kwargs)
+    def select(self, **kwargs):
+        sql = f'SELECT * FROM {self.table_name} WHERE UID_EQ = %s'
+        return super().select(sql=sql, values=(kwargs["UID_EQ"],))
 
     def select(self, **kwargs):
-        sql = 'SELECT * FROM user_eq WHERE UID_SETTING = %s'
+        sql = f'SELECT * FROM {self.table_name} WHERE UID_SETTING = %s'
         return super().select(sql=sql, values=(kwargs["UID_SETTING"],))
 
     def regsiter(self, UID_SETTING: str):

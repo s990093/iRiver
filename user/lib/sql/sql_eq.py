@@ -44,16 +44,16 @@ class SQL(set_sql_class):
             print(f"the method {method} is not supported")
             return False
 
-
     def insert(self, **kwargs):
         sql = sql = f"INSERT IGNORE INTO {self.table_name} (UID_EQ, ENGANCE_HIGH, ENGANCE_MIDDLE, ENGANCE_LOW, ENGANCE_HEAVY, STYLE, EQ_HIGH, EQ_MIDDLE, EQ_LOW, EQ_HEAVY, EQ_DISTORTION, EQ_ZIP, SPATIAL_AUDIO) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         return super().insert(sql=sql, values=self.dict_to_tuple(**kwargs))
 
-    # def update(self, **kwargs):
-    #     super().updata(**kwargs)
+    def update(self, uid, **kwargs):
+        sql = f"UPDATE {self.table_name} SET {kwargs['column']} = %s WHERE UID_EQ = %s"
+        return super().updata(sql=sql, values=(kwargs["new_value"], uid))
 
     def select(self, **kwargs):
-        sql = 'SELECT * FROM user_eq WHERE UID_EQ = %s'
+        sql = f'SELECT * FROM {self.table_name} WHERE UID_EQ = %s'
         return super().select(sql=sql, values=(kwargs["UID_EQ"],))
 
     def regsiter(self, UID_EQ: str):
