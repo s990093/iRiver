@@ -1,5 +1,6 @@
 import { Eq } from "./eq.js";
 import { Fetch } from "../fetch.js";
+import { SessionController } from "../session.js";
 
 export class EqController {
     constructor(audioElement, isTest = false) {
@@ -12,6 +13,7 @@ export class EqController {
 
         //宣告物件
         this.fetch = new Fetch();
+        this.sessionController = new SessionController();
         this.eq = new Eq(this.audioElement, this.isTest);
 
         if (this.isTest)
@@ -22,18 +24,26 @@ export class EqController {
     }
 
     async _register() {
-        session = this._session();
-        if (session) {
-
-        } else {
-            const response = await this.fetch.POST(this.target);
-            if (response.status === 200) {
-                this.config = response.config;
-            }
+        const user_eq = this.sessionController.get('user_eq');
+        if (user_eq !== undefined && user_eq !== null) {
+            this._show();
         }
 
+        this._listener();
+    }
+
+    _listener() {
+        this._lisenter_element();
         this._lienter_audio_enhancement();
         this._lienter_audio_style();
+    }
+
+    _lisenter_element() {
+
+    }
+
+    _show() {
+
     }
 
     _lienter_audio_enhancement() {
@@ -88,5 +98,8 @@ export class EqController {
 
     _lienter_audio_style() { }
 
-    _session = () => { }
+    _push(column, new_value) {
+        const params = { method: "update", kwargs: { column: column, new_value: new_value } };
+        this.fetch.POST(this.push_traget, params);
+    }
 }
