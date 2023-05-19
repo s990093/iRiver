@@ -20,18 +20,19 @@ class User_setting {
         this.traget = "/user/get_user_session/";
     }
 
-    _register = () => {
+    _register = async () => {
         const user_setting = this.sessionController.get('user_setting');
         if (user_setting !== undefined && user_setting !== null) {
             this._show();
         }
 
         const params = { get: "user_setting" };
-        const response = this.fetch.POST(this.traget, params);
+        const response = await this.fetch.POST(this.traget, params);
         if (response.status === 200) {
             sessionStorage.setItem("user_setting", response.data.user_setting);
             this._show();
         }
+
         this._listener();
     }
 

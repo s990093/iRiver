@@ -41,6 +41,11 @@ export class SessionController {
     add = (title, item) => {
         let session = JSON.parse(sessionStorage.getItem("session"));
 
+        // Check if title already exists in session
+        if (session.includes(title)) {
+            return; // Exit the function if title already exists
+        }
+
         // Add item to the session array
         session.push(title);
 
@@ -50,6 +55,7 @@ export class SessionController {
         // Store item separately in sessionStorage using its value as the key
         sessionStorage.setItem(title, JSON.stringify(item));
     }
+
     /**
      * Update the value of a specific item in the session.
      * @param {any} item - The item to be updated in the session.
@@ -127,7 +133,7 @@ export class SessionController {
             this.show();
 
             //  test
-            this.clear();
+            // this.clear();
         }
     }
 
