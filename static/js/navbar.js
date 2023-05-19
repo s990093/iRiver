@@ -1,10 +1,12 @@
 import { Fetch } from "./fetch.js";
 import { PlaylistController } from "./playlist.js";
+import { SessionController } from "./session.js";
 
 class NvabarContorller {
     constructor() {
         // 宣告物件
         this.fetch = new Fetch();
+        this.sessionController = new SessionController();
         this.playlistController = new PlaylistController();
         this._register();
     }
@@ -14,6 +16,7 @@ class NvabarContorller {
         const user_data = JSON.parse(sessionStorage.getItem('user_data'));
         // console.log(sessionStorage.getItem("user_playlist") != null && sessionStorage.getItem("user_playlist") != undefined)
         if (user_data != null && user_data != undefined) {
+            self.sessionController.fetch_all_session(); 
             self.show();
         }
         //  check login

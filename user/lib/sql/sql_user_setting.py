@@ -41,7 +41,7 @@ class SQL(set_sql_class):
     def insert(self, **kwargs):
         sql = f'INSERT INTO {self.table_name} (UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD) VALUES (%s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE UID_SETTING = UID_SETTING'
         return super().insert(sql=sql, values=self.dict_to_tuple(**kwargs))
-    
+
     def select(self, **kwargs):
         sql = f'SELECT * FROM {self.table_name} WHERE UID_SETTING = %s'
         return super().select(sql=sql, values=(kwargs["UID_SETTING"],))
@@ -70,7 +70,8 @@ class SQL(set_sql_class):
 
     def get_user_eq(self, UID_SETTING):
         self.cursor.execute(
-            'SELECT * FROM user_eq WHERE UID_SETTING = %s',
+            'SELECT UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD'
+            ' FROM user_eq WHERE UID_SETTING = %s',
             (UID_SETTING,)
         )
         row = self.cursor.fetchone()

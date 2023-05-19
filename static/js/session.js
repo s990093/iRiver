@@ -1,3 +1,4 @@
+import { Fetch } from "./fetch.js";
 /**
  * SessionController class for managing session data using sessionStorage.
  */
@@ -8,6 +9,9 @@ export class SessionController {
      * @param {Object} options - Optional configuration options.
      */
     constructor(options = null) {
+        // 物件宣告
+        this.fetch = new Fetch();
+
         // Retrieve session data from sessionStorage
         let session = JSON.parse(sessionStorage.getItem("session"));
 
@@ -16,23 +20,48 @@ export class SessionController {
             session = [];
             sessionStorage.setItem("session", JSON.stringify(session));
         }
+
+
+        this._listener();
+    }
+
+    _listener() {
+        const self = this;
+        $('#logout').on("click", function () {
+            // self.clear();
+        });
     }
 
     /**
      * Add an item to the session.
      * @param {any} item - The item to be added to the session.
      */
-    add = (item) => {
+    add = (title, item) => {
         let session = JSON.parse(sessionStorage.getItem("session"));
 
         // Add item to the session array
-        session.push(item);
+        session.push(title);
 
         // Update session data in sessionStorage
         sessionStorage.setItem("session", JSON.stringify(session));
 
         // Store item separately in sessionStorage using its value as the key
         sessionStorage.setItem(item, JSON.stringify(item));
+    }
+    /**
+     * Update the value of a specific item in the session.
+     * @param {any} item - The item to be updated in the session.
+     */
+    update = (item) => {
+        let session = JSON.parse(sessionStorage.getItem("session"));
+
+        // Iterate through each item in the session array
+        session.map((it) => {
+            if (it == item) {
+                // Update the value of the item in sessionStorage
+                sessionStorage.setItem(item, JSON.stringify(item));
+            }
+        });
     }
 
     /**
@@ -53,7 +82,7 @@ export class SessionController {
 
         // Display each item in the session array
         session.map((item) => {
-            console.log(item);
+            console.log(item, this.get(item));
         });
     }
 
@@ -71,4 +100,34 @@ export class SessionController {
         // Clear the session array from sessionStorage
         sessionStorage.removeItem("session");
     }
+
+    /**
+     * Fetches all user sessions from the server and updates the session data.
+     * @async
+     */
+    fetch_all_session = async () => {
+        // Define the target URL for the request
+        const target = "/user/get_user_session/";
+
+        // Define the request parameters
+        const params = { get: "all" };
+
+        // Send a POST request to fetch user data
+        const user_data = await this.fetch.POST(target, params);
+
+        // Check if the request was successful
+        if (user_data.success) {
+            Object.entries(user_data.data).forEach(([name, value]) => {
+                this.add(name, value);
+            });
+
+            // Display the updated session data
+            this.show();
+
+            //  test
+            this.clear();
+        }
+    }
+
 }
+
