@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     last_process_folders = log.get_last_n_process_folders(20)
     folders = file.get_all_folder(directory=  config["directory"])
-    for folder in folders:
+    for folder in folders:..
         if folder in last_process_folders:
             print(f"{folder} has already been processed, skipping...")
             continue
