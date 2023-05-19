@@ -32,7 +32,7 @@ class SQL:
         self.show(sql=sql, kwargs=values)
         return self.execute(sql=sql, values=values)
 
-    def updata(self, sql: str, values):
+    def update(self, sql: str, values):
         self.show(sql=sql, kwargs=values)
         return self.execute(sql=sql, values=values)
 

@@ -60,14 +60,14 @@ export class SessionController {
      * Update the value of a specific item in the session.
      * @param {any} item - The item to be updated in the session.
      */
-    update = (item) => {
+    update = (title, item) => {
         let session = JSON.parse(sessionStorage.getItem("session"));
 
         // Iterate through each item in the session array
         session.map((it) => {
-            if (it == item) {
+            if (it == title) {
                 // Update the value of the item in sessionStorage
-                sessionStorage.setItem(item, JSON.stringify(item));
+                sessionStorage.setItem(title, JSON.stringify(item));
             }
         });
     }

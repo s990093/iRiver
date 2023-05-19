@@ -2,12 +2,12 @@ import MySQLdb
 import json
 import difflib
 from user.lib.sql.sql_class import SQL as set_sql_class
+from user.lib.print_color import print_have_line
 
 
 class SQL(set_sql_class):
     def __init__(self, config):
         super().__init__(config)
-
         self.table_name = "user_setting"
 
     def create_table(self):
@@ -27,10 +27,11 @@ class SQL(set_sql_class):
         super().create_table(table_name=self.table_name)
 
     def commit(self, method: str, **kwargs):
+        kwargs = kwargs.get('kwargs')
         if method == "insert":
             return self.tuple_to_dict(data_tuple=self.insert(**kwargs))
         elif method == "update":
-            return self.tuple_to_dict(data_tuple=self.update(**kwargs))
+            return self.update(**kwargs)
         elif method == "select":
             return self.tuple_to_dict(data_tuple=self.select(**kwargs))
         else:
@@ -46,13 +47,18 @@ class SQL(set_sql_class):
         sql = f'SELECT UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD FROM {self.table_name} WHERE UID_SETTING = %s'
         return super().select(sql=sql, values=(kwargs["UID_SETTING"],))
 
+    def update(self, **kwargs):
+        print_have_line(text=kwargs)
+        sql = f"UPDATE {self.table_name} SET {kwargs['column']} = %s WHERE UID_SETTING = %s"
+        return super().update(sql=sql, values=(kwargs["new_value"], kwargs["UID_SETTING"]))
+
     def regsiter(self, UID_SETTING: str):
         self.insert(UID_SETTING=UID_SETTING,
                     LANGUAGE="ch",
                     SHOW_MODAL="auto",
                     AUDIO_QUALITY="auto",
-                    AUDIO_AUTO_PLAY="auto",
-                    WIFI_AUTO_DOWNLOAD="auto"
+                    AUDIO_AUTO_PLAY=True,
+                    WIFI_AUTO_DOWNLOAD=True
                     )
 
     def execute(self, sql, values, isALL=False):
@@ -68,7 +74,7 @@ class SQL(set_sql_class):
             kwargs.get('WIFI_AUTO_DOWNLOAD'),
         )
 
-    def tuple_to_dict(self ,data_tuple):
+    def tuple_to_dict(self, data_tuple):
         keys = [
             'UID_SETTING',
             'LANGUAGE',

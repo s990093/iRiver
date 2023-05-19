@@ -297,7 +297,7 @@ def user_eq(request):
     
     body = json.loads(request.body)
     kwargs= body.get("kwargs")
-    kwargs["uid"] = switch_key(request.session['key'])
+    kwargs['UID_EQ'] = switch_key(request.session['email'])
     return JsonResponse({"data": (SQL_eq(user.lib.sql.config.DB_CONFIG_user))
                          .commit(method=  body.get("method") , kwargs= kwargs)})
 
@@ -310,6 +310,7 @@ def user_setting(request):
     body = json.loads(request.body)
     method = body.get("method")
     kwargs= body.get("kwargs")
-    kwargs["uid"] = switch_key(request.session['key'])
+    kwargs['UID_SETTING'] = switch_key(request.session['email'])
+
     return JsonResponse({"data": (SQL_user_setting(user.lib.sql.config.DB_CONFIG_user))
                          .commit(method=  method , kwargs= kwargs)})

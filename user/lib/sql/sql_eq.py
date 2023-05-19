@@ -34,10 +34,11 @@ class SQL(set_sql_class):
         super().create_table(table_name=self.table_name)
 
     def commit(self, method: str, **kwargs):
+        kwargs = kwargs.get('kwargs')
         if method == "insert":
             return self.tuple_to_dict(data_tuple=self.insert(**kwargs))
         elif method == "update":
-            return self.tuple_to_dict(data_tuple=self.update(**kwargs))
+            return self.update(**kwargs)
         elif method == "select":
             return self.tuple_to_dict(data_tuple=self.select(**kwargs))
         else:
@@ -51,11 +52,9 @@ class SQL(set_sql_class):
 
     def update(self, uid, **kwargs):
         sql = f"UPDATE {self.table_name} SET {kwargs['column']} = %s WHERE UID_EQ = %s"
-        return super().updata(sql=sql, values=(kwargs["new_value"], uid))
+        return super().update(sql=sql, values=(kwargs["new_value"], uid))
 
     def select(self, **kwargs):
-        # print("-@"*30)
-        # print(**kwargs)
         sql = f'SELECT * FROM {self.table_name} WHERE UID_EQ = %s'
         return super().select(sql=sql, values=(kwargs["UID_EQ"],))
 
