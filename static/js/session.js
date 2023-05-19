@@ -8,12 +8,16 @@ export class SessionController {
      * @constructor
      * @param {Object} options - Optional configuration options.
      */
-    constructor(options = null) {
+    constructor(isTest = false) {
         // 物件宣告
         this.fetch = new Fetch();
 
         // Retrieve session data from sessionStorage
+
         let session = JSON.parse(sessionStorage.getItem("session"));
+        if (isTest) {
+            console.log("Session", session);
+        }
 
         // Initialize session if it's undefined or null
         if (session === undefined || session === null) {
@@ -28,7 +32,7 @@ export class SessionController {
     _listener() {
         const self = this;
         $('#logout').on("click", function () {
-            // self.clear();
+            self.clear();
         });
     }
 

@@ -27,10 +27,10 @@ class SQL(set_sql_class):
         super().create_table(table_name=self.table_name)
 
     def commit(self, method: str, **kwargs):
-        kwargs = kwargs.get('kwargs')
         if method == "insert":
             return self.tuple_to_dict(data_tuple=self.insert(**kwargs))
         elif method == "update":
+            kwargs = kwargs.get('kwargs')
             return self.update(**kwargs)
         elif method == "select":
             return self.tuple_to_dict(data_tuple=self.select(**kwargs))

@@ -6,7 +6,7 @@ class NvabarContorller {
     constructor() {
         // 宣告物件
         this.fetch = new Fetch();
-        this.sessionController = new SessionController();
+        this.sessionController = new SessionController(true);
         this.playlistController = new PlaylistController();
         this._register();
     }
