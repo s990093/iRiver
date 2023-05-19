@@ -29,9 +29,9 @@ export class EqController {
             const response = await this.fetch.POST(this.target);
             if (response.status === 200) {
                 this.config = response.config;
-            } 
+            }
         }
-        
+
         this._lienter_audio_enhancement();
         this._lienter_audio_style();
     }

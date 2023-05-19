@@ -9,6 +9,7 @@ class User_setting {
     }
 
     _register = () => {
+        
         this._listener();
     }
 
