@@ -6,7 +6,7 @@ export class EqController {
     constructor(audioElement, isTest = false) {
         this.isTest = isTest;
         this.audioElement = audioElement;
-
+        
         this.dB = 5;
         this.target = "/user/get_user_eq_setting/";
 
@@ -141,6 +141,10 @@ export class EqController {
     }
 
     _lienter_audio_style() { }
+
+    _update() {
+
+    }
 
     _push(column, new_value) {
         const params = { method: "update", kwargs: { column: column, new_value: new_value } };
