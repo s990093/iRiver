@@ -9,7 +9,6 @@ export class EqController {
 
         this.dB = 5;
         this.target = "/user/get_user_eq_setting/";
-        this.config = {};
 
         //宣告物件
         this.fetch = new Fetch();
@@ -19,12 +18,14 @@ export class EqController {
         if (this.isTest)
             console.log('eqcontroller');
 
-
+        // 變數
+        this.config = this.sessionController.get('user_eq');
         this._register();
     }
 
     async _register() {
         const user_eq = this.sessionController.get('user_eq');
+        console.log(user_eq)
         if (user_eq !== undefined && user_eq !== null) {
             this._show();
         }
@@ -39,10 +40,53 @@ export class EqController {
     }
 
     _lisenter_element() {
+        const self = this;
 
+        // high
+        $("#HighGain").on("click", function () { self._push("ENGANCE_HIGH", $(this).val()); });
+
+        // high
+        $("#MidGain").on("click", function () { self._push("ENGANCE_MEDDIE", $(this).val()); });
+
+        // high
+        $("#LowGain").on("click", function () { self._push("ENGANCE_LOW", $(this).val()); });
+
+        // high
+        $("#HeavyLowGain").on("click", function () { self._push("ENGANCE_HEAVY", $(this).val()); });
     }
 
     _show() {
+        const user_EQ = this.config;
+
+        // high
+        if (user_EQ.ENGANCE_HIGH) {
+            $('#HighGain').prop('checked', true);
+        } else {
+            $('#HighGain').prop('checked', false);
+        }
+
+        // auto play
+        if (self.user_setting.AUDIO_AUTO_PLAY) {
+            $('#audio-quality').prop('checked', true);
+        } else {
+            $('#audio-quality').prop('checked', false);
+        }
+
+
+        // auto play
+        if (self.user_setting.AUDIO_AUTO_PLAY) {
+            $('#audio-quality').prop('checked', true);
+        } else {
+            $('#audio-quality').prop('checked', false);
+        }
+
+
+        // auto play
+        if (self.user_setting.AUDIO_AUTO_PLAY) {
+            $('#audio-quality').prop('checked', true);
+        } else {
+            $('#audio-quality').prop('checked', false);
+        }
 
     }
 
