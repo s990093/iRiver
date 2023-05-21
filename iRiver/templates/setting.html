@@ -35,17 +35,21 @@
 
     <dt class="col-md-9">語言</dt>
     <dd class="col-md-3">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>繁體中文</option>
-        <option value="1">英文</option>
-        <option value="2">日文</option>
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        id="language"
+      >
+        <option selected value="ch">繁體中文</option>
+        <option value="en">englist</option>
+        <option value="ja">日文</option>
       </select>
     </dd>
 
     <!-- 顯示外觀 -->
 
     <dt class="col-md-9">顏色外觀</dt>
-    <dd class="col-md-3 d-flex justify-content-between mr-2">
+    <dd class="col-md-3 d-flex justify-content-between mr-2" id="color-mode">
       <div class="form-check">
         <input
           class="form-check-input"
@@ -91,11 +95,15 @@
   <dl class="row">
     <dt class="col-md-9">音質</dt>
     <dd class="col-md-3">
-      <select class="form-select" aria-label="Default select example">
-        <option selected>320k</option>
-        <option value="1">192k</option>
-        <option value="2">160k</option>
-        <option value="3">32bit</option>
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        id="audio-quality"
+      >
+        <option selected value="320k">320k</option>
+        <option value="192k">192k</option>
+        <option value="160k">160k</option>
+        <option value="32bit">32bit</option>
       </select>
     </dd>
 
@@ -109,7 +117,7 @@
               class="form-check-input"
               type="checkbox"
               role="switch"
-              id="flexSwitchCheckCheckedDisabled"
+              id="auto-play"
               checked
             />
           </div>
@@ -129,6 +137,7 @@
     <hr />
   </div>
 
+  
   <dl class="row">
     <dt class="col-md-9">數據模式</dt>
     <dd class="col-md-3 d-flex justify-content-center">

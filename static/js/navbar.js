@@ -1,23 +1,29 @@
 import { Fetch } from "./fetch.js";
 import { PlaylistController } from "./playlist.js";
+import { SessionController } from "./session.js";
 
 class NvabarContorller {
     constructor() {
         // 宣告物件
         this.fetch = new Fetch();
+        this.sessionController = new SessionController(true);
         this.playlistController = new PlaylistController();
         this._register();
     }
 
     async _register() {
         const self = this;
-        const user_data = JSON.parse(sessionStorage.getItem('user_data'));
+        const user_data = this.sessionController.get("user_data");
+        const isLogin = await this.fetch.GET("/user/isLogin/");
         // console.log(sessionStorage.getItem("user_playlist") != null && sessionStorage.getItem("user_playlist") != undefined)
         if (user_data != null && user_data != undefined) {
             self.show();
+        } else {
+            if (isLogin) {
+                this.sessionController.fetch_all_session();
+            }
         }
         //  check login
-        const isLogin = await this.fetch.GET("/user/isLogin/");
         if (isLogin) {
             $(".navbar .navbar-user").off("click");
             this._get_show_data();

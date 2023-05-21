@@ -16,12 +16,12 @@ import music.lib.download.y2mate as y2mate
 
 
 class downloader:
-    def __init__(self, music_ID :str, artist :str):
+    def __init__(self, music_ID: str, artist: str):
         super().__init__()
-        self.music_ID = music_ID 
+        self.music_ID = music_ID
         self.artist = artist
         self.url = f"https://www.youtube.com/watch?v={self.music_ID}"
-        self.path =  f"media/{self.artist}/songs"
+        self.path = f"media/{self.artist}/songs"
         self.mp4_path = f"media/{self.artist}/songs/{self.music_ID}.mp4"
         self.mp3_path = f"media/{self.artist}/songs/{self.music_ID}.mp3"
 
@@ -29,24 +29,24 @@ class downloader:
         """dow method"""
         if self.check_path():
             return True
-        yt = YouTube(url= self.url , on_progress_callback= on_progress)
+        yt = YouTube(url=self.url, on_progress_callback=on_progress)
         try:
             audio_stream = yt.streams.filter(only_audio=True).first()
             file_path = os.path.join(self.path, f"{self.music_ID}.mp4")
-            audio_stream.download(filename= file_path)
+            audio_stream.download(filename=file_path)
 
             self.convert_to_mp3()
-         
+
             return True
         except Exception as e:
             print(f"download audio {e}")
             try:
                 # change download method
-                return y2mate.download_audio(music_ID= self.music_ID, artist= self.artist)
+                return y2mate.download_audio(music_ID=self.music_ID, artist=self.artist)
             except Exception as e:
-                 print(f' y2mate {e}')
-                 return False
-    
+                print(f' y2mate {e}')
+                return False
+
     def check_path(self):
         # if os.path.isfile(os.path.join(self.path, f"{self.music_ID}.mp4")):
         #        os.remove(os.path.join(self.path,  f"{self.music_ID}.mp4"))
@@ -57,19 +57,19 @@ class downloader:
         else:
             os.makedirs(self.path, exist_ok=True)
             return False
-    
+
     def convert_to_mp3(self):
-            # if os.path.isfile(self.mp4_path):
-            #      print('234')
-            audio = AudioSegment.from_file(self.mp4_path)
-            audio.export(self.mp3_path, format="mp3")
-            os.remove(self.mp4_path)
+        # if os.path.isfile(self.mp4_path):
+        #      print('234')
+        audio = AudioSegment.from_file(self.mp4_path)
+        audio.export(self.mp3_path, format="mp3")
+        os.remove(self.mp4_path)
 
 
-def get_play_list( artist_url):
-        "get list music information"
-        playlist = Playlist(artist_url)
-        return playlist
+def get_play_list(artist_url):
+    "get list music information"
+    playlist = Playlist(artist_url)
+    return playlist
 
 # dow = downloader(music_ID="n5YS6Fo_bZ0", artist='htllo')
 # print(dow.download_audio())

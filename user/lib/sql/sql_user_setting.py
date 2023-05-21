@@ -2,12 +2,12 @@ import MySQLdb
 import json
 import difflib
 from user.lib.sql.sql_class import SQL as set_sql_class
+from user.lib.print_color import print_have_line
 
 
 class SQL(set_sql_class):
     def __init__(self, config):
         super().__init__(config)
-
         self.table_name = "user_setting"
 
     def create_table(self):
@@ -28,11 +28,12 @@ class SQL(set_sql_class):
 
     def commit(self, method: str, **kwargs):
         if method == "insert":
-            self.insert(**kwargs)
+            return self.tuple_to_dict(data_tuple=self.insert(**kwargs))
         elif method == "update":
-            self.update(**kwargs)
+            kwargs = kwargs.get('kwargs')
+            return self.update(**kwargs)
         elif method == "select":
-            self.select(**kwargs)
+            return self.tuple_to_dict(data_tuple=self.select(**kwargs))
         else:
             print("-"*30)
             print(f"the method {method} is not supported")
@@ -41,18 +42,23 @@ class SQL(set_sql_class):
     def insert(self, **kwargs):
         sql = f'INSERT INTO {self.table_name} (UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD) VALUES (%s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE UID_SETTING = UID_SETTING'
         return super().insert(sql=sql, values=self.dict_to_tuple(**kwargs))
-    
+
     def select(self, **kwargs):
-        sql = f'SELECT * FROM {self.table_name} WHERE UID_SETTING = %s'
+        sql = f'SELECT UID_SETTING, LANGUAGE, SHOW_MODAL, AUDIO_QUALITY, AUDIO_AUTO_PLAY, WIFI_AUTO_DOWNLOAD FROM {self.table_name} WHERE UID_SETTING = %s'
         return super().select(sql=sql, values=(kwargs["UID_SETTING"],))
+
+    def update(self, **kwargs):
+        print_have_line(text=kwargs)
+        sql = f"UPDATE {self.table_name} SET {kwargs['column']} = %s WHERE UID_SETTING = %s"
+        return super().update(sql=sql, values=(kwargs["new_value"], kwargs["UID_SETTING"]))
 
     def regsiter(self, UID_SETTING: str):
         self.insert(UID_SETTING=UID_SETTING,
                     LANGUAGE="ch",
                     SHOW_MODAL="auto",
                     AUDIO_QUALITY="auto",
-                    AUDIO_AUTO_PLAY="auto",
-                    WIFI_AUTO_DOWNLOAD="auto"
+                    AUDIO_AUTO_PLAY=True,
+                    WIFI_AUTO_DOWNLOAD=True
                     )
 
     def execute(self, sql, values, isALL=False):
@@ -68,16 +74,13 @@ class SQL(set_sql_class):
             kwargs.get('WIFI_AUTO_DOWNLOAD'),
         )
 
-    def get_user_eq(self, UID_SETTING):
-        self.cursor.execute(
-            'SELECT * FROM user_eq WHERE UID_SETTING = %s',
-            (UID_SETTING,)
-        )
-        row = self.cursor.fetchone()
-
-        if row:
-            columns = [desc[0] for desc in self.cursor.description]
-            user_eq = dict(zip(columns, row))
-            return user_eq
-        else:
-            return None
+    def tuple_to_dict(self, data_tuple):
+        keys = [
+            'UID_SETTING',
+            'LANGUAGE',
+            'SHOW_MODAL',
+            'AUDIO_QUALITY',
+            'AUDIO_AUTO_PLAY',
+            'WIFI_AUTO_DOWNLOAD'
+        ]
+        return dict(zip(keys, data_tuple))

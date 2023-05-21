@@ -17,7 +17,7 @@ from selenium.webdriver.common.by import By
 import base64
 
 
-def download_img(url, file_name, file_dir) ->bool:
+def download_img(url, file_name, file_dir) -> bool:
     if not os.path.exists(file_dir):
         os.makedirs(file_dir)
     file_path = os.path.join(file_dir, file_name)
@@ -31,7 +31,8 @@ def download_img(url, file_name, file_dir) ->bool:
     print(f"圖片已下載並儲存到 {file_path}")
     return True
 
-def download_img_base64(url, file_name, file_dir) ->bool:
+
+def download_img_base64(url, file_name, file_dir) -> bool:
     if not os.path.exists(file_dir):
         os.makedirs(file_dir)
     image_binary = base64.b64decode(url.split(",")[1])
@@ -44,5 +45,3 @@ def download_img_base64(url, file_name, file_dir) ->bool:
 
     print(f"圖片已下載並儲存到 {file_path}")
     return True
-
-

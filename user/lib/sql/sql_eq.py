@@ -2,6 +2,7 @@ import MySQLdb
 import json
 import difflib
 from user.lib.sql.sql_class import SQL as set_sql_class
+from user.lib.print_color import print_have_line
 
 
 class SQL(set_sql_class):
@@ -34,11 +35,12 @@ class SQL(set_sql_class):
 
     def commit(self, method: str, **kwargs):
         if method == "insert":
-            self.insert(**kwargs)
+            return self.tuple_to_dict(data_tuple=self.insert(**kwargs))
         elif method == "update":
-            self.update(**kwargs)
+            kwargs = kwargs.get('kwargs')
+            return self.update(**kwargs)
         elif method == "select":
-            self.select(**kwargs)
+            return self.tuple_to_dict(data_tuple=self.select(**kwargs))
         else:
             print("-"*30)
             print(f"the method {method} is not supported")
@@ -50,11 +52,9 @@ class SQL(set_sql_class):
 
     def update(self, uid, **kwargs):
         sql = f"UPDATE {self.table_name} SET {kwargs['column']} = %s WHERE UID_EQ = %s"
-        return super().updata(sql=sql, values=(kwargs["new_value"], uid))
+        return super().update(sql=sql, values=(kwargs["new_value"], uid))
 
     def select(self, **kwargs):
-        # print("-@"*30)
-        # print(**kwargs)
         sql = f'SELECT * FROM {self.table_name} WHERE UID_EQ = %s'
         return super().select(sql=sql, values=(kwargs["UID_EQ"],))
 
@@ -93,6 +93,24 @@ class SQL(set_sql_class):
             kwargs.get('EQ_ZIP'),
             kwargs.get('SPATIAL_AUDIO'),
         )
+
+    def tuple_to_dict(self, data_tuple):
+        keys = [
+            'UID_EQ',
+            'ENGANCE_HIGH',
+            'ENGANCE_MIDDLE',
+            'ENGANCE_LOW',
+            'ENGANCE_HEAVY',
+            'STYLE',
+            'EQ_HIGH',
+            'EQ_MIDDLE',
+            'EQ_LOW',
+            'EQ_HEAVY',
+            'EQ_DISTORTION',
+            'EQ_ZIP',
+            'SPATIAL_AUDIO'
+        ]
+        return dict(zip(keys, data_tuple))
 
     # def get_user_eq(self, UID_EQ):
     #     self.cursor.execute(

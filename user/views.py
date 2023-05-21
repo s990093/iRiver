@@ -20,6 +20,7 @@ from user.lib.sql.sql_eq import SQL as SQL_eq
 from user.lib.sql.sql_user_setting import SQL as SQL_user_setting
 from user.lib.switch_key import switch_key
 from user.lib.get_data import get_avatar_url,get_line_data,get_google_data,get_line_user_email,get_id_token
+from user.lib.print_color import print_color , print_have_line
 
 
 def save_session(request):
@@ -37,15 +38,19 @@ def save_session(request):
     # eq
     user_eq =  SQL_eq(user.lib.sql.config.DB_CONFIG_user).commit(method= "select" , UID_EQ = UID);
     request.session['user_eq'] = user_eq
-    
+
     # setting
     user_setting =  SQL_user_setting(user.lib.sql.config.DB_CONFIG_user).commit(method= "select" , UID_SETTING = UID);
     request.session['user_setting'] = user_setting
-    
+
+    # user img 
+    # print_have_line(text= user_img(request= request))
+    request.session['user_img'] = {"url": str(user_img(request= request))}
+
     request.session.save() 
 
     print("#"*30)
-    print(f"save session {request.session['user_data']} and {request.session['user_playlist']}")
+    print_color(color= "warning" , text= f"save session {request.session['user_data']} and {request.session['user_playlist']}")
     return JsonResponse({"success": True})
 
     
@@ -107,9 +112,17 @@ def get_user_session(request):
         elif get == "user_show_data":
             body = {"user_data": request.session['user_data'], 
                     "user_playlists": request.session['user_playlist'],
-                    "user_img": user_img(request= request)}
+                    "user_img": request.session['user_img']}
+        elif get == "all":
+            body = {"user_data": request.session['user_data'], 
+                    "user_playlists": request.session['user_playlist'],
+                    "user_img": request.session['user_img'],
+                    "user_eq": request.session['user_eq'],
+                    "user_setting": request.session['user_setting']}
         else:
             return HttpResponse('error')
+        
+        print_have_line(text= body)
         return HttpResponse(json.dumps({
             "success": True,
             "data": body
@@ -134,6 +147,7 @@ def user_img(request):
         url = get_avatar_url(access_token)
     else:
         url = parsed_data['picture_url']
+        
     return url
 
 
@@ -283,7 +297,7 @@ def user_eq(request):
     
     body = json.loads(request.body)
     kwargs= body.get("kwargs")
-    kwargs["uid"] = switch_key(request.session['key'])
+    kwargs['UID_EQ'] = switch_key(request.session['email'])
     return JsonResponse({"data": (SQL_eq(user.lib.sql.config.DB_CONFIG_user))
                          .commit(method=  body.get("method") , kwargs= kwargs)})
 
@@ -296,6 +310,7 @@ def user_setting(request):
     body = json.loads(request.body)
     method = body.get("method")
     kwargs= body.get("kwargs")
-    kwargs["uid"] = switch_key(request.session['key'])
+    kwargs['UID_SETTING'] = switch_key(request.session['email'])
+
     return JsonResponse({"data": (SQL_user_setting(user.lib.sql.config.DB_CONFIG_user))
                          .commit(method=  method , kwargs= kwargs)})
