@@ -60,5 +60,11 @@ class SQL:
     def updata(self, **kwargs):
         print(**kwargs)
 
+    def select(self, **kwargs):
+        print(**kwargs)
+    
+    def delete(self, **kwargs):
+        print(**kwargs)
+
     def close(self):
         self.db.close()

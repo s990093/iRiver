@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'music',
     'user',
     'developer',
-    'social_django'
+     'social_django'
 ]
 
 MIDDLEWARE = [

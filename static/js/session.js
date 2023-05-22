@@ -15,6 +15,7 @@ export class SessionController {
         // Retrieve session data from sessionStorage
 
         let session = JSON.parse(sessionStorage.getItem("session"));
+
         if (isTest) {
             console.log("Session", session);
         }
@@ -111,6 +112,7 @@ export class SessionController {
 
         // Clear the session array from sessionStorage
         sessionStorage.removeItem("session");
+        console.log("remove session done!")
     }
 
     /**

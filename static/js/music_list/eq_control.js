@@ -6,9 +6,10 @@ export class EqController {
     constructor(audioElement, isTest = false) {
         this.isTest = isTest;
         this.audioElement = audioElement;
-        
+
         this.dB = 5;
-        this.target = "/user/get_user_eq_setting/";
+        this.traget = "/user/get_user_session/";
+        this.push_traget = "/user/user_eq/";
 
         //宣告物件
         this.fetch = new Fetch();
@@ -46,7 +47,7 @@ export class EqController {
         $("#HighGain").on("click", function () { self._push("ENGANCE_HIGH", $(this).val()); });
 
         // high
-        $("#MidGain").on("click", function () { self._push("ENGANCE_MEDDIE", $(this).val()); });
+        $("#MidGain").on("click", function () { self._push("ENGANCE_MEDDLE", $(this).val()); });
 
         // high
         $("#LowGain").on("click", function () { self._push("ENGANCE_LOW", $(this).val()); });
@@ -65,75 +66,92 @@ export class EqController {
             $('#HighGain').prop('checked', false);
         }
 
-        // auto play
-        if (self.user_setting.AUDIO_AUTO_PLAY) {
-            $('#audio-quality').prop('checked', true);
+        // middle
+        if (user_EQ.ENGANCE_MEDDLE) {
+            $('#MedGain').prop('checked', true);
         } else {
-            $('#audio-quality').prop('checked', false);
+            $('#MedGain').prop('checked', false);
         }
 
 
-        // auto play
-        if (self.user_setting.AUDIO_AUTO_PLAY) {
-            $('#audio-quality').prop('checked', true);
+        // low
+        if (user_EQ.ENGANCE_LOW) {
+            $('#LowGain').prop('checked', true);
         } else {
-            $('#audio-quality').prop('checked', false);
+            $('#LowGain').prop('checked', false);
         }
 
 
-        // auto play
-        if (self.user_setting.AUDIO_AUTO_PLAY) {
-            $('#audio-quality').prop('checked', true);
+        // heavy
+        if (user_EQ.ENGANCE_HEAVY) {
+            $('#HeavyLowGain').prop('checked', true);
         } else {
-            $('#audio-quality').prop('checked', false);
+            $('#HeavyLowGain').prop('checked', false);
         }
 
     }
 
     _lienter_audio_enhancement() {
-        $('#HighGain').on('change', () => {
-            var highGainStatus = $('#HighGain').prop('checked');
-            if (highGainStatus)
-                this.eq.setHighGain(this.dB);
-            else
-                this.eq.setHighGain(0);
+        const self = this;
+        $('#HighGain').on('change', function (event) {
+            var highGainStatus = $(event.target).prop('checked');
+            console.log(highGainStatus);
+            if (highGainStatus) {
 
-            if (this.isTest)
+                self.eq.setHighGain(self.dB);
+            }
+            else {
+
+                self.eq.setHighGain(0);
+            }
+
+            // push data
+            self._push(self.target, "ENGANCE_HIGH", highGainStatus);
+
+            if (self.isTest)
                 console.log('高音增強：', highGainStatus);
         });
 
-        $('#MidGain').on('change', () => {
-            var midGainStatus = $('#MidGain').prop('checked');
+        $('#MidGain').on('change', function (event) {
+            var midGainStatus = $(event.target).prop('checked');
             if (midGainStatus)
-                this.eq.setMidGain(this.dB);
+                self.eq.setMidGain(self.dB);
             else
-                this.eq.setMidGain(0);
+                self.eq.setMidGain(0);
 
-            if (this.isTest)
+            // push data
+            self._push(self.target, "ENGANCE_MEDDIE", midGainStatus);
+
+            if (self.isTest)
                 console.log('中音增強：', midGainStatus);
         });
 
-        $('#LowGain').on('change', () => {
-            var lowGainStatus = $('#LowGain').prop('checked');
+        $('#LowGain').on('change', function (event) {
+            var lowGainStatus = $(event.traget).prop('checked');
             if (lowGainStatus) {
-                this.eq.setLowGain(this.dB);
+                self.eq.setLowGain(self.dB);
                 // this.eq.setLowStere(this.dB);
             } else {
-                this.eq.setLowGain(0);
+                self.eq.setLowGain(0);
                 // this.eq.setLowStereo(0);
             }
 
+            // push data
+            self._push(self.target, "ENGANCE_LOW", lowGainStatus);
 
             if (this.isTest)
                 console.log('低音增強：', lowGainStatus);
         });
 
-        $('#BoostLowGain').on('change', () => {
-            var boostLowGainStatus = $('#BoostLowGain').prop('checked');
+        $('#HeavyLowGain').on('change', function (event) {
+            var boostLowGainStatus = $(event.traget).prop('checked');
             if (boostLowGainStatus)
                 this.eq.setSuperBass(this.dB);
             else
                 this.eq.setSuperBass(0);
+
+            // push data
+            self._push(self.target, "ENGANCE_HEAVY", boostLowGainStatus);
 
             if (this.isTest)
                 console.log('超低音增強：', boostLowGainStatus);
@@ -141,6 +159,7 @@ export class EqController {
     }
 
     _lienter_audio_style() { }
+
 
     _update() {
 
