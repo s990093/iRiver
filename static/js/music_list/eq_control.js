@@ -26,8 +26,16 @@ export class EqController {
 
     async _register() {
         const user_eq = this.sessionController.get('user_eq');
-        console.log(user_eq)
+        //console.log(user_eq)
         if (user_eq !== undefined && user_eq !== null) {
+            this._show();
+        }
+        const params = { get: "user_eq" };
+        const traget = "/user/get_user_session/";
+        const response = await this.fetch.POST(traget, params);
+        if (response.status === 200) {
+            this.sessionController.update("user_eq", response.data.user_setting)
+            this.sessionController.show();
             this._show();
         }
 
@@ -42,18 +50,6 @@ export class EqController {
 
     _lisenter_element() {
         const self = this;
-
-        // high
-        $("#HighGain").on("click", function () { self._push("ENGANCE_HIGH", $(this).val()); });
-
-        // high
-        $("#MidGain").on("click", function () { self._push("ENGANCE_MEDDLE", $(this).val()); });
-
-        // high
-        $("#LowGain").on("click", function () { self._push("ENGANCE_LOW", $(this).val()); });
-
-        // high
-        $("#HeavyLowGain").on("click", function () { self._push("ENGANCE_HEAVY", $(this).val()); });
     }
 
     _show() {
@@ -93,9 +89,8 @@ export class EqController {
 
     _lienter_audio_enhancement() {
         const self = this;
-        $('#HighGain').on('change', function (event) {
+        $('#HighGain').unbind("click").on('change', function (event) {
             var highGainStatus = $(event.target).prop('checked');
-            console.log(highGainStatus);
             if (highGainStatus) {
 
                 self.eq.setHighGain(self.dB);
@@ -106,13 +101,13 @@ export class EqController {
             }
 
             // push data
-            self._push(self.target, "ENGANCE_HIGH", highGainStatus);
+            self._push("ENGANCE_HIGH", highGainStatus);
 
             if (self.isTest)
                 console.log('高音增強：', highGainStatus);
         });
 
-        $('#MidGain').on('change', function (event) {
+        $('#MidGain').unbind("click").on('change', function (event) {
             var midGainStatus = $(event.target).prop('checked');
             if (midGainStatus)
                 self.eq.setMidGain(self.dB);
@@ -120,7 +115,7 @@ export class EqController {
                 self.eq.setMidGain(0);
 
             // push data
-            self._push(self.target, "ENGANCE_MEDDIE", midGainStatus);
+            self._push("ENGANCE_MIDDLE", midGainStatus);
 
             if (self.isTest)
                 console.log('中音增強：', midGainStatus);
@@ -128,6 +123,7 @@ export class EqController {
 
         $('#LowGain').on('change', function (event) {
             var lowGainStatus = $(event.traget).prop('checked');
+            console.log(lowGainStatus);
             if (lowGainStatus) {
                 self.eq.setLowGain(self.dB);
                 // this.eq.setLowStere(this.dB);
@@ -137,23 +133,23 @@ export class EqController {
             }
 
             // push data
-            self._push(self.target, "ENGANCE_LOW", lowGainStatus);
+            self._push("ENGANCE_LOW", lowGainStatus);
 
-            if (this.isTest)
+            if (self.isTest)
                 console.log('低音增強：', lowGainStatus);
         });
 
         $('#HeavyLowGain').on('change', function (event) {
             var boostLowGainStatus = $(event.traget).prop('checked');
             if (boostLowGainStatus)
-                this.eq.setSuperBass(this.dB);
+                self.eq.setSuperBass(self.dB);
             else
-                this.eq.setSuperBass(0);
+                self.eq.setSuperBass(0);
 
             // push data
-            self._push(self.target, "ENGANCE_HEAVY", boostLowGainStatus);
+            self._push("ENGANCE_HEAVY", boostLowGainStatus);
 
-            if (this.isTest)
+            if (self.isTest)
                 console.log('超低音增強：', boostLowGainStatus);
         });
     }

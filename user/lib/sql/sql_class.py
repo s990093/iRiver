@@ -1,6 +1,7 @@
 import MySQLdb
 import json
 import difflib
+import user.lib.print_color as print_color
 
 
 class SQL:
@@ -48,6 +49,7 @@ class SQL:
         print(f"sql {sql} results is {res}")
 
         if res is not None:
+
             return res
         else:
             return None

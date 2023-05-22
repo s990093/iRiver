@@ -31,7 +31,7 @@ class User_setting {
         const params = { get: "user_setting" };
         const response = await this.fetch.POST(this.traget, params);
         if (response.status === 200) {
-            this.sessionController.update("suer_setting", response.data.user_setting)
+            this.sessionController.update("user_setting", response.data.user_setting)
             this.sessionController.show();
             this._show();
         }

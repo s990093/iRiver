@@ -51,7 +51,6 @@ class SQL(set_sql_class):
         return super().insert(sql=sql, values=self.dict_to_tuple(**kwargs))
 
     def update(self, **kwargs):
-        print_have_line(text=kwargs)
         sql = f"UPDATE {self.table_name} SET {kwargs['column']} = %s WHERE UID_EQ = %s"
         return super().update(sql=sql, values=(kwargs["new_value"], kwargs["UID_EQ"]))
 

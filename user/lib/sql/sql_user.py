@@ -2,6 +2,7 @@ import MySQLdb
 import json
 import difflib
 
+
 class SQL:
     def __init__(self, config):
         self.config = config
@@ -27,8 +28,8 @@ class SQL:
         '''
         self.cursor.execute(sql)
 
-    def save_user_profile(self, **user_profile): 
-        
+    def save_user_profile(self, **user_profile):
+
         print("*"*30)
         print(user_profile)
         id = user_profile.get('id')
@@ -50,7 +51,7 @@ class SQL:
         )
         self.db.commit()
 
-    def get_user_data(self,uid):
+    def get_user_data(self, uid):
         self.cursor.execute(
             'SELECT * FROM user_profile WHERE id=%s',
             (uid,)
@@ -73,9 +74,8 @@ class SQL:
             return data
         else:
             return None
-        
-        
-    def get_user_show_data(self,uid):
+
+    def get_user_show_data(self, uid):
         self.cursor.execute(
             'SELECT * FROM user_profile WHERE id=%s',
             (uid,)
@@ -93,6 +93,6 @@ class SQL:
             return data
         else:
             return None
-        
+
     def close(self):
         self.db.close()
