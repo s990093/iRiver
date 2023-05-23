@@ -1,6 +1,6 @@
 from django.utils import timezone
 from datetime import datetime
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
@@ -24,7 +24,7 @@ from user.lib.print_color import print_color, print_have_line
 
 
 def save_session(request):
-    UID = switch_key(request.session['email'])
+    UID = request.session['key']
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
 
     user_data = sql_user.get_user_show_data(uid=UID)
@@ -163,6 +163,13 @@ def check_login(request):
     else:
         return JsonResponse({'isLogin': False})
 
+# line 登入
+
+
+def linelogin(request):
+    url = line_url(request=request)
+    return HttpResponseRedirect(url)
+
 
 def test123(request):
     tkey = request.session['email']
@@ -233,7 +240,32 @@ def data(request):
     return redirect('/music/discover/')
 
 
+def data(request, data):
+    email = data.get('email')
+    name = data.get('name')
+    request.session['isLogin'] = True
+    # 建立个人专辑
+    sql = SQL_music_list(
+        user.lib.sql.config.DB_CONFIG_user_music_list, request.session['key'])
+    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+    sql.create_tables()  # 建立数据表
+    SQL_eq(config=config.DB_CONFIG_user).register(
+        UID_EQ=(request.session['key']))
+    SQL_user_setting(config=config.DB_CONFIG_user).register(
+        UID_SETTING=request.session['key'])
+    if sql_user.get_user_data(uid=request.session['key']) is None:
+        sql_user.save_user_profile(
+            email=email,
+            username=name
+        )
+    request.session.save()  # 存储会话
+    # 存储其他数据
+    save_session(request=request)
+    return redirect('/music/discover/')
+
 # 註冊
+
+
 def sign_up(request):
     form = RegisterForm()
     if request.method == "POST":
