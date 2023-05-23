@@ -122,7 +122,7 @@ export class EqController {
         });
 
         $('#LowGain').on('change', function (event) {
-            var lowGainStatus = $(event.traget).prop('checked');
+            var lowGainStatus = $(event.target).prop('checked');
             console.log(lowGainStatus);
             if (lowGainStatus) {
                 self.eq.setLowGain(self.dB);
@@ -140,7 +140,7 @@ export class EqController {
         });
 
         $('#HeavyLowGain').on('change', function (event) {
-            var boostLowGainStatus = $(event.traget).prop('checked');
+            var boostLowGainStatus = $(event.target).prop('checked');
             if (boostLowGainStatus)
                 self.eq.setSuperBass(self.dB);
             else
