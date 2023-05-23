@@ -1,7 +1,8 @@
 import { Control } from "../../../static/js/music_list/control.js";
 import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
+import { Fetch } from "../../../static/js/fetch.js";
 
-
+const fetch = new Fetch();
 var isClickEventRegistered = false;
 $('document').ready(function () {
     const audio = document.getElementById('myaudio');
@@ -23,12 +24,14 @@ $('document').ready(function () {
 
 // delete 
 $('.delete').on('click', async function () {
-    var music_ID = $(this).find('a').attr('value');
-    // console.log(music_ID);
-    var music_list = $(this).attr('data-music_list');
-    // console.log(music_list);
     try {
-        await insert_my_music_list(music_ID, music_list, false, 'delete');
+        await fetch.POST("/user/get_user_music_list/",
+            {
+                method: "delete",
+                music_ID: $(this).find('a').attr('value'),
+                playlist: $(this).find('a').data('music-list')
+            }
+        );
         location.reload();
     } catch (error) {
         console.log('操作失敗');

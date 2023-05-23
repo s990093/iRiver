@@ -64,6 +64,7 @@ def get_user_music_list(request):
         return HttpResponse('error')
     # 解析 JSON 数据
     data = json.loads(request.body)
+    # print_have_line(text=data)
     # print(data)
     method = data.get('method')
     sql_user_music_list = SQL_music_list(
@@ -85,6 +86,8 @@ def get_user_music_list(request):
         return JsonResponse({"success": sql_user_music_list.chang_playlist_name(
             old_playlist_name=data.get('old_playlist_name'),
             new_playlist_name=data.get('new_playlist_name'))})
+    else:
+        return HttpResponse('error')
 
     sql_user_music_list.close()
 
@@ -106,12 +109,14 @@ def get_user_show_data(request):
 
 
 def get_user_session(request):
+    print_have_line(text=request)
     if request.method != 'POST':
         return HttpResponse('error')
     if request.session['user_data'] is None:
         save_session(request=request)
         # 解析 JSON 数据
     data = json.loads(request.body)
+    print_have_line(text=data)
     get = data.get('get')
     if get == "user_eq":
         body = {"user_eq": request.session['user_eq']}

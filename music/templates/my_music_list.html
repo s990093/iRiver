@@ -40,16 +40,14 @@
             </a>
           </td>
           <td>
-            <span class="love-icon font" style="text-align: right">
-              <a href="#" value="{{song.music_ID}}"
-                ><i class="far fa-heart"></i
+            <span class="delete font" style="text-align: right">
+              <a
+                href="javascript:void(0)"
+                value="{{song.music_ID}}"
+                data-music-list="{{music_list}}"
+                ><i class="far fa-trash-alt"></i
               ></a>
             </span>
-          </td>
-          <td>
-            <a href="#" class="add" vaule="{{song.music_ID}}"
-              ><i class="bi bi-plus-lg"></i
-            ></a>
           </td>
         </tr>
         {% empty %}

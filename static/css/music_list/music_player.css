@@ -15,11 +15,11 @@
   color: black;
 }
 
-#table-body .font {
+.font {
   display: none;
 }
 
-#table-body tr:hover .font {
+tr:hover .font {
   display: block;
 }
 
