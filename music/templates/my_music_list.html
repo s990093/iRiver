@@ -3,13 +3,27 @@
 <!-- laod -->
 {% load static %}
 
+<!-- import_css -->
+{% block import_css %}
+<link rel="stylesheet" href="{% static './css/myPlaylist.css' %}" />
+{% endblock import_css %}
+
 <!-- body -->
 {% block body %}
+
 <div class="container">
+  <div class="my-playlist-base">
+    <div class="my-playlist-title my-4">{{music_list}}</div>
+    <div class="row">
+      <button class="btn btn-primary btn-lg">
+        <i class="bi bi-play-circle-fill"></i> 播放
+      </button>
+    </div>
+  </div>
+
   <!-- music -->
   <div class="">{% include 'music_player.html' %}</div>
   <div class="main-content">
-    <h1>我的專輯</h1>
     <table class="table table-hover">
       <tbody>
         {% for song in music_list_infos %}

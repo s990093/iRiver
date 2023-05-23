@@ -1,15 +1,14 @@
-* {
+#scoller {
   margin: 0;
 }
 
-*,
-*::before,
-*::after {
+#scoller ::before,
+#scoller ::after {
   box-sizing: border-box;
 }
 
-body {
-  font-family: system-ui;
+#scoller body {
+  /* font-family: system-ui; */
   font-size: 1.25rem;
   color: white;
   background: #121212;

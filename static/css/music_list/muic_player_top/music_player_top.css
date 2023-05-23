@@ -1,9 +1,9 @@
-body {
+/* body {
   background: #dfe7ef;
-  font-family: "Bitter", serif;
-}
+  /font-family: "Bitter", serif; 
+} */
 
-* {
+#app {
   box-sizing: border-box;
 }
 
@@ -21,8 +21,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-size: cover;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 700px), (max-height: 500px) {
   .wrapper {

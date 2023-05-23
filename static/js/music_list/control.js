@@ -3,6 +3,8 @@ import { bgAudio } from './bg-audio.js';
 import { MediaPlayer } from "./emement.js";
 import { EqController } from "./eq_control.js";
 import { FaController } from "./add-favorite.js";
+import { InformationManager } from "./information.js";
+
 
 /**
  * @typedef {Object} ControlParams

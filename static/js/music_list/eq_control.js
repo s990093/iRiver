@@ -123,7 +123,6 @@ export class EqController {
 
         $('#LowGain').on('change', function (event) {
             var lowGainStatus = $(event.target).prop('checked');
-            console.log(lowGainStatus);
             if (lowGainStatus) {
                 self.eq.setLowGain(self.dB);
                 // this.eq.setLowStere(this.dB);
