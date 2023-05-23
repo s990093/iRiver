@@ -52,3 +52,24 @@ def query_music_list(url :str , artist :str) ->json:
     driver.close()
     return result
 
+
+
+def query_music_list_urls(artist_url: str) -> json:
+    service = Service('chromedriver.exe')
+    options = get_chrome_options(port=get_available_port(), is_headLess=True)
+    driver = webdriver.Chrome(service=service, options=options)
+    driver.get(artist_url)
+    wait = WebDriverWait(driver, 10)
+    music_videos = wait.until(
+        EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#title-text > a")))
+
+    hrefs = []  # 儲存所有元素的 href 屬性值
+
+    for music_video in music_videos:
+        href = music_video.get_attribute('href')
+        hrefs.append(href)
+
+    driver.close()
+    return hrefs
+
+
