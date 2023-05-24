@@ -1,3 +1,11 @@
-.my-playlist-title {
-  font-size: 70px !important;
+@media (min-width: 768px) {
+  .song-title {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .song-title {
+    font-size: 15px !important;
+  }
 }
