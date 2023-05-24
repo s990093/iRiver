@@ -21,6 +21,7 @@ from user.lib.sql.sql_user_setting import SQL as SQL_user_setting
 from user.lib.switch_key import switch_key
 from user.lib.get_data import get_avatar_url, get_line_data, get_google_data, get_line_user_email, get_id_token
 from user.lib.print_color import print_color, print_have_line
+from user.lib.login.line import line_url , line_callback
 
 
 def save_session(request):
@@ -64,7 +65,6 @@ def get_user_music_list(request):
         return HttpResponse('error')
     # 解析 JSON 数据
     data = json.loads(request.body)
-    # print_have_line(text=data)
     # print(data)
     method = data.get('method')
     sql_user_music_list = SQL_music_list(
@@ -86,8 +86,6 @@ def get_user_music_list(request):
         return JsonResponse({"success": sql_user_music_list.chang_playlist_name(
             old_playlist_name=data.get('old_playlist_name'),
             new_playlist_name=data.get('new_playlist_name'))})
-    else:
-        return HttpResponse('error')
 
     sql_user_music_list.close()
 
@@ -109,14 +107,12 @@ def get_user_show_data(request):
 
 
 def get_user_session(request):
-    print_have_line(text=request)
     if request.method != 'POST':
         return HttpResponse('error')
     if request.session['user_data'] is None:
         save_session(request=request)
         # 解析 JSON 数据
     data = json.loads(request.body)
-    print_have_line(text=data)
     get = data.get('get')
     if get == "user_eq":
         body = {"user_eq": request.session['user_eq']}
@@ -169,32 +165,37 @@ def check_login(request):
         return JsonResponse({'isLogin': False})
 
 # line 登入
-
-
-def linelogin(request):
-    url = line_url(request=request)
+def lineurl(request):
+    url = line_url(request)
     return HttpResponseRedirect(url)
 
+def linecallback(request):
+    data = line_callback(request)
+    return JsonResponse(data)
 
-def test123(request):
-    tkey = request.session['email']
-    if tkey.startswith('#'):
-        flag = 1
-        key = request.session['key']
-    else:
-        flag = 0
-        key = tkey
-    sql = SQL_social(user.lib.sql.config.DB_CONFIG_social)
-    data = sql.get_extra_data(uid=key)  # json
-    parsed_data = json.loads(data)  # 字典
-    if (flag == 0):
-        access_token = parsed_data['access_token']
-        data = get_google_data(access_token)
-        return JsonResponse(data)
-    else:
-        access_token = parsed_data['access_token']
-        data = get_line_data(access_token)
-        return JsonResponse(data)
+def test123(request,data):
+    name = data['name']
+    email = data['email']
+    picture = data['picture']
+    userid = data['userid']
+    
+    sql = SQL_music_list(
+        user.lib.sql.config.DB_CONFIG_user_music_list, request.session['key'])
+    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+    sql.create_tables()  # 建立資料表
+
+    # create setting
+    SQL_eq(config=config.DB_CONFIG_user).regsiter(
+        UID_EQ=request.session['key'])
+    SQL_user_setting(config=config.DB_CONFIG_user).regsiter(
+        UID_SETTING=request.session['key'])
+
+    if sql_user.get_user_data(uid=request.session['key']) is None:
+        sql_user.save_user_profile(
+            id=request.session['key'],
+            email=request.session['email'],
+            username=name
+        )
 
 
 # 首頁

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from user import views as login_views
+from user import views as login
 from iRiver import views as iRiver_views
 from user import views as user
 from music  import views as music_views
@@ -33,5 +33,8 @@ urlpatterns = [
     path('auth/complete/line/user/data', user.data),
     path('auth/complete/google-oauth2/user/data/', user.data),
     path('admin/', admin.site.urls),        
+    
+    path('user/line/', login.lineurl),
+    path('complete/line/', login.linecallback),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
