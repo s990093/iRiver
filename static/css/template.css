@@ -41,3 +41,7 @@ body {
 .modal {
   color: black !important;
 }
+
+.no-drag {
+  user-select: none;
+}

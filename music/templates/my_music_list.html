@@ -6,6 +6,7 @@
 <!-- import_css -->
 {% block import_css %}
 <link rel="stylesheet" href="{% static './css/myPlaylist.css' %}" />
+<link rel="stylesheet" href="{% static 'css/playlist_base.css' %}" />
 {% endblock import_css %}
 
 <!-- body -->
@@ -13,13 +14,28 @@
 
 <div class="container">
   <div class="my-playlist-base">
-    <div class="my-playlist-title my-4">{{music_list}}</div>
-    <div class="row">
-      <button class="btn btn-primary btn-lg">
+    <div class="row mb-4">
+      <div class="col-6">
+        <img
+          src="{{ title_img_url }}"
+          alt="title-img"
+          class="img-fluid rounded no-drag"
+          style="max-width: 100%"
+        />
+      </div>
+      <div
+        class="col-6 d-flex flex-column justify-content-end align-items-center"
+      >
+        <div class="my-playlist-title my-4">{{music_list}}</div>
+      </div>
+    </div>
+    <div class="row mx-2">
+      <button class="btn btn-primary btn-lg play-music" value="0">
         <i class="bi bi-play-circle-fill"></i> 播放
       </button>
     </div>
   </div>
+  <hr />
 
   <!-- music -->
   <div class="">{% include 'music_player.html' %}</div>
@@ -28,17 +44,20 @@
       <tbody>
         {% for song in music_list_infos %}
         <tr>
-          <td>
-            <a href="#" class="play" value="{{forloop.counter0}}">
+          <td class="d-flex align-items-center">
+            <a href="#" class="play no-underline" value="{{forloop.counter0}}">
               <img
+                class="rounded"
                 src="{{ '/media/'|add:song.artist|add:'/img/'|add:song.music_ID|add:'.jpg' }}"
                 alt="none"
                 width="70"
                 style="margin-right: 20px"
               />
-              <span>{{ song.title }}</span>
+
+              <span class="song-title text-lg">{{ song.title }}</span>
             </a>
           </td>
+
           <td>
             <span class="delete font" style="text-align: right">
               <a

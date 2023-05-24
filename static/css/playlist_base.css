@@ -1,0 +1,15 @@
+.no-underline {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .my-playlist-title {
+    font-size: 50px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .my-playlist-title {
+    font-size: 20px !important;
+  }
+}
