@@ -170,8 +170,11 @@ def lineurl(request):
     return HttpResponseRedirect(url)
 
 def linecallback(request):
-    data = line_callback(request)
-    return JsonResponse(data)
+    success = line_callback(request)
+    if success:
+        return redirect('/music/discover/')
+    else:
+        return redirect('/user/login/')
 
 def test123(request,data):
     name = data['name']

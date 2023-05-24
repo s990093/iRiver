@@ -13,7 +13,7 @@ print("init sql user app")
 
 # 建立個人資料table name
 sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-sql_user.create_tables() #建立資料表   
+sql_user.create_tables()   
 
 SQL_eq(config= config.DB_CONFIG_user).create_table()
 

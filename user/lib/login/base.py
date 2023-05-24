@@ -24,7 +24,7 @@ def base(userid, email, name, picture, request):
     request.session['email'] = email
     request.session['name'] = name
     request.session['picture'] = picture
-    request.session['key'] = uid
+    request.session['key'] = uid 
 
     sql = SQL_music_list(config.DB_CONFIG_user_music_list, request.session['key']).create_tables()
     sql_user = SQL_user(config.DB_CONFIG_user)

@@ -69,6 +69,7 @@ def line_callback(request):
         picture = userdata['picture']
         userid = userdata['userid']
         base(name=name, email=email, picture=picture, userid=userid,request=request)
-        return{'name': name, 'email': email, 'picture': picture, 'userid': userid, 'access_token': access_token}
+        return True
+        # return{'name': name, 'email': email, 'picture': picture, 'userid': userid, 'access_token': access_token}
     print("驗證失敗")
-    return None
+    return False
