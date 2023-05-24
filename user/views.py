@@ -109,7 +109,7 @@ def get_user_show_data(request):
 
 
 def get_user_session(request):
-    print_have_line(text=request)
+    # print_have_line(text=request)
     if request.method != 'POST':
         return HttpResponse('error')
     if request.session['user_data'] is None:

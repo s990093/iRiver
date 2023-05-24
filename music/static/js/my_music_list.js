@@ -11,7 +11,7 @@ $('document').ready(function () {
     });
     control.add_music_list(music_list_infos);
 
-    $('tr .play').on('click', function (e) {
+    $('tr .play, .play-music').on('click', function (e) {
         e.preventDefault();
         var index = $(this).attr('value');
         if (!isClickEventRegistered) {
@@ -20,6 +20,7 @@ $('document').ready(function () {
         }
         control.insert(index);
     });
+
 });
 
 // delete 
@@ -37,3 +38,4 @@ $('.delete').on('click', async function () {
         console.log('操作失敗');
     }
 });
+

@@ -283,8 +283,6 @@ def download_songs(request):
 
     return JsonResponse({'success': True})
 
-# function
-
 
 def is_song_exist(request):
     music_ID = request.get('music_ID', None)
