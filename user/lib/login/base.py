@@ -20,7 +20,7 @@ def base(userid, email, name, user_img_url, request):
         sql_user.save_user_profile(
             id=uid,
             email=email,
-            username=email,
+            username=name,
         )
 
         SQL_music_list(config=config.DB_CONFIG_user_music_list,
