@@ -19,24 +19,21 @@ from django.urls import include, path
 from user import views as login
 from iRiver import views as iRiver_views
 from user import views as user
-from music  import views as music_views
+from music import views as music_views
 from django.conf.urls.static import static
 from django.conf import settings
 
 # rule 放app url 到app再轉要得 function
 urlpatterns = [
     path('', iRiver_views.iRiver, name='home'),
-    path('iRiver/', include('iRiver.urls',namespace='iRiver')),
-    path('music/', include('music.urls',namespace='music')),
-    path('user/', include('user.urls',namespace='user')),
+    path('iRiver/', include('iRiver.urls', namespace='iRiver')),
+    path('music/', include('music.urls', namespace='music')),
+    path('user/', include('user.urls', namespace='user')),
     path('auth/', include('social_django.urls', namespace='auth')),
-    path('auth/complete/line/user/data', user.data),
-    path('auth/complete/google-oauth2/user/data/', user.data),
-    path('admin/', admin.site.urls),        
-    
+    path('admin/', admin.site.urls),
+
     path('user/google/', login.googleurl),
     path('complete/google/', login.googlecallback),
     path('user/line/', login.lineurl),
     path('complete/line/', login.linecallback),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

@@ -34,26 +34,27 @@ import user.tests as tests
 
 
 def save_session(request):
-    session.save_session(request=request, uid=request.session['key'])
+    session.save_session(request=request,
+                         uid=request.session['key'],
+                         user_img_url=request.session['user_img_url'],
+                         name=request.session['name'],
+                         email=request.session['email'],
+                         )
 
 
 def get_user_music_list(request):
-    user_playlist.get_user_music_list(
+    return user_playlist.get_user_music_list(
         request=request, uid=request.session['key'])
 
 
 # 舊款
-
-
 def get_user_show_data(request):
-    get_data.get_user_show_data(
-        request=request, uid=request.session['key'])
-
-# 新款
+    return get_data.get_user_show_data(
+        request=request)
 
 
 def get_user_session(request):
-    session.get_user_session(
+    return session.get_user_session(
         request=request, uid=request.session['key'])
 
 
@@ -73,11 +74,9 @@ def googleurl(request):
 
 def googlecallback(request):
     success = google_callback(request)
-    # request.session['isLogin'] = success
+    request.session['isLogin'] = success
     if success:
         print_have_line(text="登入成功")
-        print(request.session['name'])
-        print(request.session['key'])
         return redirect('/music/discover/')
     else:
         print_have_line(text="登入失敗")
@@ -94,7 +93,7 @@ def lineurl(request):
 
 def linecallback(request):
     success = line_callback(request)
-    # request.session['isLogin'] = success
+    request.session['isLogin'] = success
     if success:
         print_have_line(text="登入成功")
         return redirect('/music/discover/')
@@ -105,7 +104,7 @@ def linecallback(request):
 
 
 def test123(request, data):
-    tests.test123(request=request, data=data)
+    return tests.test123(request=request, data=data)
 
 # 註冊
 

@@ -12,21 +12,20 @@ from user.lib.data.session import save_session
 
 
 def base(userid, email, name, user_img_url, request):
-    print_have_line(text=userid)
     sql = sql_login(config.DB_CONFIG_user)
     sql_user = SQL_user(config.DB_CONFIG_user)
     # 檢查第是否有帳號
     if sql.check_if_userid_exists(userid=userid) is None:
         uid = sql.insert(userid, email)
-
         sql_user.save_user_profile(
             id=uid,
             email=email,
             username=email,
-
         )
+
         sql = SQL_music_list(config=config.DB_CONFIG_user_music_list,
                              table_name=uid).create_tables()
+
         # create setting
         SQL_eq(config=config.DB_CONFIG_user).regsiter(
             UID_EQ=uid)
@@ -34,10 +33,12 @@ def base(userid, email, name, user_img_url, request):
         SQL_user_setting(config=config.DB_CONFIG_user).regsiter(
             UID_SETTING=uid)
 
-        # save session
+    uid = sql.insert(userid, email)
+
+    # save session
     save_session(request=request,
-                 uid=userid,
-                 user_img=user_img_url,
+                 uid=uid,
+                 user_img_url=user_img_url,
                  name=name,
                  email=email,
                  )

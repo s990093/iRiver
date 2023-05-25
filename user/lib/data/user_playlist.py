@@ -14,6 +14,7 @@ def get_user_music_list(request, uid: str):
     data = json.loads(request.body)
     # print(data)
     method = data.get('method')
+    print(method)
     sql_user_music_list = SQL_music_list(
         config=config.DB_CONFIG_user_music_list, table_name=uid)
 

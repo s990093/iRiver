@@ -131,6 +131,7 @@ class SQL:
             self.table_name, " WHERE playlist != '我的最愛'" if not isAll else "")
         self.cursor.execute(sql)
         res = self.cursor.fetchall()
+
         if res:
             return res
         else:

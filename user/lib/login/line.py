@@ -24,11 +24,11 @@ def line_token(code):
         'client_id': client_id,
         'client_secret': client_secret,
     }
-    response = requests.post(url,data)
+    response = requests.post(url, data)
     token_data = response.json()
     id_token = token_data.get('id_token', None)
     access_token = token_data.get('access_token', None)
-    return{'id_token': id_token, 'access_token': access_token}
+    return {'id_token': id_token, 'access_token': access_token}
 
 
 def line_profile2(id_token, client_id):
@@ -45,6 +45,7 @@ def line_profile2(id_token, client_id):
     name = data['name']
     return {'email': email, 'picture': picture, 'userid': userid, 'name': name}
 
+
 def line_profile(access_token):
     headers = {'Authorization': f'Bearer {access_token}'}
     response = requests.get('https://api.line.me/v2/profile', headers=headers)
@@ -57,10 +58,12 @@ def line_profile(access_token):
     return None
 
 # 取得回傳資料
+
+
 def line_callback(request):
     code = request.GET.get('code')
     state = request.GET.get('state')
-    if code and state==request.session.get('oauth_state'):
+    if code and state == request.session.get('oauth_state'):
         token_data = line_token(code)
         id_token = token_data['id_token']
         access_token = token_data['access_token']
@@ -69,7 +72,8 @@ def line_callback(request):
         email = userdata['email']
         picture = userdata['picture']
         userid = userdata['userid']
-        base(name=name, email=email, picture=picture, userid=userid,request=request)
+        base(name=name, email=email, user_img_url=picture,
+             userid=userid, request=request)
         return True
         # return{'name': name, 'email': email, 'picture': picture, 'userid': userid, 'access_token': access_token}
     print("驗證失敗")

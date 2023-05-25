@@ -2,6 +2,7 @@ import MySQLdb
 import json
 import difflib
 import uuid
+import user.lib.print_color as print_color
 
 
 def get_uuid():
@@ -48,7 +49,8 @@ class SQL:
         sql = "SELECT userid FROM user_social WHERE userid = %s"
         self.cursor.execute(sql, (userid,))
         result = self.cursor.fetchone()
-        return result is not None
+
+        return result
 
     def check_if_email_exists(self, email):
         sql = "SELECT uid FROM user_social WHERE email = %s"

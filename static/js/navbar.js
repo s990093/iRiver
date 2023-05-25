@@ -108,7 +108,7 @@ class NvabarContorller {
         // user
         const user_data = JSON.parse(sessionStorage.getItem('user_data'));
         // console.log(user_data);
-        $('.navbar .navbar-user .username').html(user_data.username);
+        $('.navbar .navbar-user .username').html(user_data.name);
     }
 
     notLoggedIn = () => {

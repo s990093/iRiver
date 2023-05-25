@@ -12,10 +12,14 @@ from user.lib.print_color import print_color, print_have_line
 
 
 def save_session(request, **kwargs):
+    print_have_line(text=kwargs)
     UID = kwargs.get('uid')
+    request.session['key'] = UID
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-    request.session['user_data'] = {'name': kwargs.get('name'),
-                                    'user_img_url': kwargs.get('user_img')}
+    request.session['user_data'] = {'name': kwargs.get('name')}
+
+    request.session['user_img_url'] = {
+        'user_img_url': kwargs.get('user_img_url')}
 
     sql_user_music_list = SQL_music_list(
         config=user.lib.sql.config.DB_CONFIG_user_music_list, table_name=UID)
@@ -56,11 +60,11 @@ def get_user_session(request, uid):
     elif get == "user_show_data":
         body = {"user_data": request.session['user_data'],
                 "user_playlists": request.session['user_playlist'],
-                "user_img": request.session['user_img']}
+                "user_img": request.session['user_img_url']}
     elif get == "all":
         body = {"user_data": request.session['user_data'],
                 "user_playlists": request.session['user_playlist'],
-                "user_img": request.session['user_img'],
+                "user_img_url": request.session['user_img_url'],
                 "user_eq": request.session['user_eq'],
                 "user_setting": request.session['user_setting']}
     else:
