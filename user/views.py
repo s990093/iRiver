@@ -22,6 +22,7 @@ from user.lib.switch_key import switch_key
 from user.lib.get_data import get_avatar_url, get_line_data, get_google_data, get_line_user_email, get_id_token
 from user.lib.print_color import print_color, print_have_line
 from user.lib.login.line import line_url , line_callback
+from user.lib.login.google import google_url  , google_callback
 
 
 def save_session(request):
@@ -163,6 +164,18 @@ def check_login(request):
         return JsonResponse({'isLogin': request.session['isLogin']})
     else:
         return JsonResponse({'isLogin': False})
+
+# google 登入
+def googleurl(request):
+    url = google_url(request)
+    return HttpResponseRedirect(url)
+
+def googlecallback(request):
+    success = google_callback(request)
+    if success:
+        return redirect('/music/discover/')
+    else:
+        return redirect('/user/login/')
 
 # line 登入
 def lineurl(request):

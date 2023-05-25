@@ -1,6 +1,7 @@
 import uuid
 import requests
 from user.lib.login.base import base
+
 client_id = '1661190797'
 redirect_uri = 'http://127.0.0.1:8000/complete/line/'
 client_secret = '3fc12add18f596c2597c993f1f858acf'

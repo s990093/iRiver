@@ -34,6 +34,8 @@ urlpatterns = [
     path('auth/complete/google-oauth2/user/data/', user.data),
     path('admin/', admin.site.urls),        
     
+    path('user/google/', login.googleurl),
+    path('complete/google/', login.googlecallback),
     path('user/line/', login.lineurl),
     path('complete/line/', login.linecallback),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
