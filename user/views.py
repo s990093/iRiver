@@ -172,6 +172,7 @@ def googleurl(request):
 
 def googlecallback(request):
     success = google_callback(request)
+    #request.session['isLogin'] = success
     if success:
         print_have_line(text = "登入成功")
         print(request.session['name'])
@@ -189,6 +190,7 @@ def lineurl(request):
 
 def linecallback(request):
     success = line_callback(request)
+    #request.session['isLogin'] = success
     if success:
         print_have_line(text = "登入成功")
         return redirect('/music/discover/')
