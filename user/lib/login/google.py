@@ -10,6 +10,7 @@ access_type = 'offline'
 include_granted_scopes = 'true'
 response_type = 'code'
 
+
 def google_url(request):
     state = str(uuid.uuid4())
     request.session['oauth_state'] = state
@@ -31,7 +32,7 @@ def google_token(code):
     token_data = response.json()
     id_token = token_data.get('id_token', None)
     access_token = token_data.get('access_token', None)
-    return{'id_token': id_token, 'access_token': access_token}
+    return {'id_token': id_token, 'access_token': access_token}
 
 
 def google_profile(id_token):
@@ -52,7 +53,7 @@ def google_profile(id_token):
 def google_callback(request):
     code = request.GET.get('code')
     state = request.GET.get('state')
-    if code and state==request.session.get('oauth_state'):
+    if code and state == request.session.get('oauth_state'):
         token_data = google_token(code)
         id_token = token_data['id_token']
         access_token = token_data['access_token']
@@ -61,7 +62,8 @@ def google_callback(request):
         email = userdata['email']
         picture = userdata['picture']
         userid = userdata['userid']
-        base(name=name, email=email, picture=picture, userid=userid,request=request)
+        base(name=name, email=email, picture=picture,
+             userid=userid, request=request)
         return True
     print("驗證失敗")
     return False

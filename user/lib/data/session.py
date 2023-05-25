@@ -1,4 +1,6 @@
+import json
 from django.http import HttpResponse, HttpResponseRedirect
+from iRiver.user.lib.data.get_data import get_avatar_url
 from user.lib.sql.sql_user import SQL as SQL_user
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
 from user.lib.sql.sql_social import SQL as SQL_social
@@ -11,7 +13,7 @@ from user.lib.print_color import print_color, print_have_line
 
 
 def save_session(request, **kwargs):
-    UID = kwargs.get('UID')
+    UID = kwargs.get('uid')
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
 
     user_data = sql_user.get_user_show_data(uid=UID)
