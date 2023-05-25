@@ -23,7 +23,6 @@ from user.lib.data.get_data import get_avatar_url, get_line_data, get_google_dat
 from user.lib.print_color import print_color, print_have_line
 from user.lib.login.line import line_url, line_callback
 from user.lib.login.google import google_url, google_callback
-# from user.lib.login.base import base
 
 
 def save_session(request):
