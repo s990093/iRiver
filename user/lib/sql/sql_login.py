@@ -33,8 +33,8 @@ class SQL:
         uid = self.check_if_email_exists(email)
         if uid is None:
             uid = get_uuid()
-        else:
-            return uid
+        # else:
+        #     return uid
         if not self.check_if_userid_exists(userid):
             sql = "INSERT INTO user_social (userid, email, uid) VALUES (%s, %s, %s)"
             data = (userid, email, uid)
