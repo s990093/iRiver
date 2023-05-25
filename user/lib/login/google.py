@@ -62,7 +62,7 @@ def google_callback(request):
         email = userdata['email']
         picture = userdata['picture']
         userid = userdata['userid']
-        base(name=name, email=email, picture=picture,
+        base(name=name, email=email, user_img_url=picture,
              userid=userid, request=request)
         return True
     print("驗證失敗")

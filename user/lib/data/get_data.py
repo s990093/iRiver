@@ -2,12 +2,12 @@ import jwt
 import requests
 
 
-
-
 def decode_id_token(id_token, channel_secret):
     id_token_bytes = id_token.encode('utf-8')  # 将 id_token 转换为字节类型
-    decoded = jwt.decode(id_token_bytes, channel_secret, algorithms=['HS256'], options={"verify_signature": False})
+    decoded = jwt.decode(id_token_bytes, channel_secret, algorithms=[
+                         'HS256'], options={"verify_signature": False})
     return decoded
+
 
 def get_line_user_email(access_token, channel_secret):
     id_token = get_id_token(access_token)
@@ -20,7 +20,8 @@ def get_id_token(access_token):
     headers = {
         'Authorization': f'Bearer {access_token}'
     }
-    response = requests.post('https://api.line.me/oauth2/v2.1/verify', headers=headers)
+    response = requests.post(
+        'https://api.line.me/oauth2/v2.1/verify', headers=headers)
     verify_data = response.json()
     print("*"*20)
     print(verify_data)
@@ -29,6 +30,7 @@ def get_id_token(access_token):
 
 # 以上皆為測試中
 
+
 def get_line_data(access_token):
     headers = {
         'Authorization': f'Bearer {access_token}'
@@ -36,6 +38,7 @@ def get_line_data(access_token):
     response = requests.get('https://api.line.me/v2/profile', headers=headers)
     data = response.json()
     return data
+
 
 def get_google_data(access_token):
     headers = {'Authorization': f'Bearer {access_token}'}
@@ -46,6 +49,7 @@ def get_google_data(access_token):
         data = response.json()
         return data
     return None
+
 
 def get_avatar_url(access_token):
     headers = {'Authorization': f'Bearer {access_token}'}

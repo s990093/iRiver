@@ -35,7 +35,7 @@ def base(userid, email, name, user_img_url, request):
 
         # save session
     save_session(request=request,
-                 uid=uid,
+                 uid=userid,
                  user_img=user_img_url,
                  name=name,
                  email=email,
