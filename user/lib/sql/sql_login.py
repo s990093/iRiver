@@ -3,6 +3,7 @@ import json
 import difflib
 import uuid
 
+
 def get_uuid():
     uid = uuid.uuid4()
     uid_str = str(uid).replace('-', '')  # 移除短横线
@@ -35,6 +36,7 @@ class SQL:
             uid = get_uuid()
         else:
             return uid
+
         if not self.check_if_userid_exists(userid):
             sql = "INSERT INTO user_social (userid, email, uid) VALUES (%s, %s, %s)"
             data = (userid, email, uid)
@@ -47,15 +49,12 @@ class SQL:
         self.cursor.execute(sql, (userid,))
         result = self.cursor.fetchone()
         return result is not None
-    
+
     def check_if_email_exists(self, email):
         sql = "SELECT uid FROM user_social WHERE email = %s"
         self.cursor.execute(sql, (email,))
         result = self.cursor.fetchone()
         return result[0] if result else None
 
-
-
     def close(self):
         self.db.close()
-
