@@ -33,16 +33,18 @@ class SQL:
 
     def insert(self, userid, email):
         uid = self.check_if_email_exists(email)
+        # print_color.print_have_line(text=uid)
         if uid is None:
             uid = get_uuid()
-        else:
-            return uid
+        # print_color.print_have_line(text=uid)
 
         if not self.check_if_userid_exists(userid):
             sql = "INSERT INTO user_social (userid, email, uid) VALUES (%s, %s, %s)"
             data = (userid, email, uid)
             self.cursor.execute(sql, data)
             self.db.commit()
+        # print_color.print_have_line(text=uid)
+
         return uid
 
     def check_if_userid_exists(self, userid):

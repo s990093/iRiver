@@ -23,8 +23,8 @@ def base(userid, email, name, user_img_url, request):
             username=email,
         )
 
-        sql = SQL_music_list(config=config.DB_CONFIG_user_music_list,
-                             table_name=uid).create_tables()
+        SQL_music_list(config=config.DB_CONFIG_user_music_list,
+                       table_name=uid).create_tables()
 
         # create setting
         SQL_eq(config=config.DB_CONFIG_user).regsiter(
@@ -32,8 +32,10 @@ def base(userid, email, name, user_img_url, request):
 
         SQL_user_setting(config=config.DB_CONFIG_user).regsiter(
             UID_SETTING=uid)
+    else:
+        uid = sql.insert(userid=userid, email=email)
 
-    uid = sql.insert(userid, email)
+    sql.close()
 
     # save session
     save_session(request=request,
