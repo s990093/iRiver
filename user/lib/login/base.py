@@ -11,8 +11,9 @@ from user.lib.print_color import print_have_line
 from user.lib.data.session import save_session
 
 
-def base(userid, email, name, picture, request):
+def base(userid, email, name, user_img_url, request):
     sql = sql_login(config.DB_CONFIG_user)
+    sql_user = SQL_user(config.DB_CONFIG_user)
     # 檢查第是否有帳號
     if sql.check_if_userid_exists(userid=userid) is None:
         uid = sql.insert(userid, email)
@@ -21,32 +22,21 @@ def base(userid, email, name, picture, request):
             id=uid,
             email=request.session['email'],
             username=request.session['name'],
+
         )
+        sql = SQL_music_list(config.DB_CONFIG_user_music_list,
+                             uid).create_tables()
+        # create setting
+        SQL_eq(config=config.DB_CONFIG_user).regsiter(
+            UID_EQ=uid)
 
-    # check
-    check = sql.check_if_userid_exists(userid=userid)
-
-    sql = SQL_music_list(config.DB_CONFIG_user_music_list,
-                         uid).create_tables()
-    sql_user = SQL_user(config.DB_CONFIG_user)
-
-    # create setting
-    SQL_eq(config=config.DB_CONFIG_user).regsiter(
-        UID_EQ=uid)
-    SQL_user_setting(config=config.DB_CONFIG_user).regsiter(
-        UID_SETTING=uid)
-
-    if sql_user.get_user_data(uid=uid) is None:
-        sql_user.save_user_profile(
-            id=uid,
-            email=request.session['email'],
-            username=request.session['name'],
-        )
+        SQL_user_setting(config=config.DB_CONFIG_user).regsiter(
+            UID_SETTING=uid)
 
         # save session
     save_session(request=request,
                  uid=uid,
-                 user_img=request.session['picture'],
-                 name=request.session['name'],
-                 email=request.session['email']
+                 user_img=user_img_url',
+                 name=name,
+                 email=email,
                  )

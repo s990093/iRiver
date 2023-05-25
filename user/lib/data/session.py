@@ -13,7 +13,7 @@ from user.lib.print_color import print_color, print_have_line
 
 
 def save_session(request, **kwargs):
-    UID = kwargs.get('UID')
+    UID = kwargs.get('uid')
     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
 
     user_data = sql_user.get_user_show_data(uid=UID)
