@@ -1,4 +1,6 @@
+import json
 from django.http import HttpResponse, HttpResponseRedirect
+from iRiver.user.lib.data.get_data import get_avatar_url
 from user.lib.sql.sql_user import SQL as SQL_user
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
 from user.lib.sql.sql_social import SQL as SQL_social
