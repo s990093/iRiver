@@ -1,6 +1,8 @@
 import uuid
+# 自製
 import requests
 from user.lib.login.base import base
+from user.lib.print_color import print_have_line
 
 client_id = '1026795084542-4faa7ard63anna4utjtmavuvbe4t4mf4.apps.googleusercontent.com'
 redirect_uri = 'http://127.0.0.1:8000/complete/google/'
@@ -42,6 +44,7 @@ def google_profile(id_token):
     }
     response = requests.get(url, params=data)
     data = response.json()
+    print_have_line(text=data)
     email = data['email']
     picture = data['picture']
     userid = data['sub']
@@ -58,12 +61,12 @@ def google_callback(request):
         id_token = token_data['id_token']
         access_token = token_data['access_token']
         userdata = google_profile(id_token)
-        name = userdata['name']
-        email = userdata['email']
-        picture = userdata['picture']
-        userid = userdata['userid']
-        base(name=name, email=email, user_img_url=picture,
-             userid=userid, request=request)
+        # base in user proifle
+        base(userid=userdata['userid'],
+             email=userdata['email'],
+             name=userdata['name'],
+             user_img_url=userdata['picture'],
+             request=request)
         return True
     print("驗證失敗")
     return False

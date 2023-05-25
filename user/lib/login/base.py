@@ -12,6 +12,7 @@ from user.lib.data.session import save_session
 
 
 def base(userid, email, name, user_img_url, request):
+    print_have_line(text=userid)
     sql = sql_login(config.DB_CONFIG_user)
     sql_user = SQL_user(config.DB_CONFIG_user)
     # 檢查第是否有帳號
@@ -20,12 +21,12 @@ def base(userid, email, name, user_img_url, request):
 
         sql_user.save_user_profile(
             id=uid,
-            email=request.session['email'],
-            username=request.session['name'],
+            email=email,
+            username=email,
 
         )
-        sql = SQL_music_list(config.DB_CONFIG_user_music_list,
-                             uid).create_tables()
+        sql = SQL_music_list(config=config.DB_CONFIG_user_music_list,
+                             table_name=uid).create_tables()
         # create setting
         SQL_eq(config=config.DB_CONFIG_user).regsiter(
             UID_EQ=uid)

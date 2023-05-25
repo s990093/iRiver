@@ -23,41 +23,12 @@ from user.lib.data.get_data import get_avatar_url, get_line_data, get_google_dat
 from user.lib.print_color import print_color, print_have_line
 from user.lib.login.line import line_url, line_callback
 from user.lib.login.google import google_url, google_callback
+# data
+import user.lib.data.session as session
 
 
 def save_session(request):
-    UID = request.session['key']
-    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-
-    user_data = sql_user.get_user_show_data(uid=UID)
-    request.session['user_data'] = user_data
-
-    sql_user_music_list = SQL_music_list(
-        config=user.lib.sql.config.DB_CONFIG_user_music_list, table_name=switch_key(request.session['email']))
-    sql_user_music_list.create_tables()
-    user_playlist = sql_user_music_list.get_playlists(isAll=True)
-    request.session['user_playlist'] = user_playlist
-
-    # eq
-    user_eq = SQL_eq(user.lib.sql.config.DB_CONFIG_user).commit(
-        method="select", UID_EQ=UID)
-    request.session['user_eq'] = user_eq
-
-    # setting
-    user_setting = SQL_user_setting(user.lib.sql.config.DB_CONFIG_user).commit(
-        method="select", UID_SETTING=UID)
-    request.session['user_setting'] = user_setting
-
-    # user img
-    # print_have_line(text= user_img(request= request))
-    request.session['user_img'] = {"url": str(user_img(request=request))}
-
-    request.session.save()
-
-    print("#"*30)
-    print_color(color="warning",
-                text=f"save session {request.session['user_data']} and {request.session['user_playlist']}")
-    return JsonResponse({"success": True})
+    session.save_session(request=request, uid=request.session['key'])
 
 
 def get_user_music_list(request):
@@ -175,7 +146,7 @@ def googleurl(request):
 
 def googlecallback(request):
     success = google_callback(request)
-    #request.session['isLogin'] = success
+    # request.session['isLogin'] = success
     if success:
         print_have_line(text="登入成功")
         print(request.session['name'])
@@ -196,7 +167,7 @@ def lineurl(request):
 
 def linecallback(request):
     success = line_callback(request)
-    #request.session['isLogin'] = success
+    # request.session['isLogin'] = success
     if success:
         print_have_line(text="登入成功")
         return redirect('/music/discover/')

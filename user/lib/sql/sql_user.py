@@ -22,6 +22,7 @@ class SQL:
                 country CHAR(2),
                 birthday DATE,
                 gender CHAR(1),
+                user_img_url VARCHAR(255),
                 test TINYINT(2) UNSIGNED DEFAULT 0,
                 level TINYINT(2) UNSIGNED DEFAULT 0
             )
@@ -39,15 +40,18 @@ class SQL:
         country = user_profile.get('country')
         birthday = user_profile.get('birthday')
         gender = user_profile.get('gender')
+        user_img_url = user_profile.get('user_img_url')
         test = user_profile.get('test', 0)
         level = user_profile.get('level', 0)
         self.cursor.execute(
-            'INSERT IGNORE INTO user_profile (id, email, username, phone, country, birthday, gender, test, level) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)',
-            (id, email, username, phone, country, birthday, gender, test, level)
+            'INSERT IGNORE INTO user_profile (id, email, username, phone, country, birthday, gender, user_img_url, test, level) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s, %s)',
+            (id, email, username, phone, country,
+             birthday, gender, user_img_url, test, level)
         )
         self.cursor.execute(
-            'UPDATE user_profile SET email=%s, username=%s, phone=%s, country=%s, birthday=%s, gender=%s, test=%s, level=%s WHERE id=%s',
-            (email, username, phone, country, birthday, gender, test, level, id)
+            'UPDATE user_profile SET email=%s, username=%s, phone=%s, country=%s, birthday=%s, gender=%s, user_img_url = %s, test=%s, level=%s WHERE id=%s',
+            (email, username, phone, country, birthday,
+             gender, user_img_url, test, level, id)
         )
         self.db.commit()
 
@@ -66,8 +70,9 @@ class SQL:
                 'country': result[4],
                 'birthday': result[5],
                 'gender': result[6],
-                'test': result[7],
-                'level': result[8],
+                'user_img_url': result[7],
+                'test': result[8],
+                'level': result[9],
             }
             print("$"*30)
             print(data)

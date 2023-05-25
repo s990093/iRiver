@@ -26,7 +26,7 @@ class SQL:
         '''
         self.cursor.execute(sql)
 
-    def get_music_list(self, music_list=1):
+    def get_music_list(self, music_list):
         sql = f'SELECT music_ID FROM {self.table_name} WHERE playlist = %s ORDER BY created_at  DESC'
         self.cursor.execute(sql, (music_list, ))
         return self.cursor.fetchall()
