@@ -1,3 +1,5 @@
+import json
+from django.http import HttpResponse
 import jwt
 import requests
 
@@ -63,3 +65,18 @@ def get_avatar_url(access_token):
             avatar_url = photos[0].get('url')
             return avatar_url
     return None
+
+
+def get_user_show_data(request):
+    if request.method != 'POST':
+        return HttpResponse('error')
+    # if request.session['user_data'] is None:
+    #     session.save_session(request=request , uid= )
+    return HttpResponse(json.dumps({
+        "success": True,
+        "user_data": request.session['user_data'],
+        "user_playlists": request.session['user_playlist'],
+    }))
+
+
+

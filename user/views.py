@@ -25,6 +25,13 @@ from user.lib.login.line import line_url, line_callback
 from user.lib.login.google import google_url, google_callback
 # data
 import user.lib.data.session as session
+import user.lib.data.user_playlist as user_playlist
+import user.lib.data.get_data as get_data
+
+# test
+import user.tests as tests
+
+# 舊款
 
 
 def save_session(request):
@@ -32,102 +39,23 @@ def save_session(request):
 
 
 def get_user_music_list(request):
-    PLAYLIST = "我的最愛"
-    if request.method != 'POST':
-        return HttpResponse('error')
-    # 解析 JSON 数据
-    data = json.loads(request.body)
-    # print(data)
-    method = data.get('method')
-    sql_user_music_list = SQL_music_list(
-        config=user.lib.sql.config.DB_CONFIG_user_music_list, table_name=switch_key(request.session['email']))
+    user_playlist.get_user_music_list(
+        request=request, uid=request.session['key'])
 
-    if method == 'insert':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.save_data(music_ID_list=json.dumps([data.get('music_ID')], indent=4), music_list=data.get('playlist', PLAYLIST),)}), safe=False)
-    elif method == 'get':
-        return JsonResponse(list(sql_user_music_list.get_music_list(music_list=data.get('playlist', PLAYLIST))), safe=False)
-    elif method == 'delete':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_data(music_ID_list=json.dumps([data.get('music_ID')], indent=4), music_list=data.get('playlist', PLAYLIST))}), safe=False)
-    elif method == 'delete_playlist':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.delete_playlist(playlist=data.get('playlist', PLAYLIST))}), safe=False)
-    elif method == 'favorite':
-        return JsonResponse(json.dumps({'success': sql_user_music_list.setfavorite(music_ID_list=json.dumps([data.get('music_ID')], indent=4))}), safe=False)
-    elif method == 'get_playlists':
-        return JsonResponse({"success": True, "data": sql_user_music_list.get_playlists()})
-    elif method == 'change_playlist':
-        return JsonResponse({"success": sql_user_music_list.chang_playlist_name(
-            old_playlist_name=data.get('old_playlist_name'),
-            new_playlist_name=data.get('new_playlist_name'))})
-
-    sql_user_music_list.close()
 
 # 舊款
 
 
 def get_user_show_data(request):
-    if request.method != 'POST':
-        return HttpResponse('error')
-    if request.session['user_data'] is None:
-        save_session(request=request)
-    return HttpResponse(json.dumps({
-        "success": True,
-        "user_data": request.session['user_data'],
-        "user_playlists": request.session['user_playlist'],
-        "user_img": user_img(request=request)
-    }))
+    get_data.get_user_show_data(
+        request=request, uid=request.session['key'])
+
 # 新款
 
 
 def get_user_session(request):
-    if request.method != 'POST':
-        return HttpResponse('error')
-    if request.session['user_data'] is None:
-        save_session(request=request)
-        # 解析 JSON 数据
-    data = json.loads(request.body)
-    get = data.get('get')
-    if get == "user_eq":
-        body = {"user_eq": request.session['user_eq']}
-    elif get == "user_setting":
-        body = {"user_setting": request.session['user_setting']}
-    elif get == "user_show_data":
-        body = {"user_data": request.session['user_data'],
-                "user_playlists": request.session['user_playlist'],
-                "user_img": request.session['user_img']}
-    elif get == "all":
-        body = {"user_data": request.session['user_data'],
-                "user_playlists": request.session['user_playlist'],
-                "user_img": request.session['user_img'],
-                "user_eq": request.session['user_eq'],
-                "user_setting": request.session['user_setting']}
-    else:
-        return HttpResponse('error')
-
-    print_have_line(text=body)
-    return HttpResponse(json.dumps({
-        "success": True,
-        "data": body
-    }))
-
-
-def user_img(request):
-    tkey = request.session['email']
-    if tkey.startswith('#'):
-        flag = 1
-        key = request.session['key']
-    else:
-        flag = 0
-        key = tkey
-    sql = SQL_social(user.lib.sql.config.DB_CONFIG_social)
-    data = sql.get_extra_data(uid=key)  # json
-    parsed_data = json.loads(data)  # 字典
-    if (flag == 0):
-        access_token = parsed_data['access_token']
-        url = get_avatar_url(access_token)
-    else:
-        url = parsed_data['picture_url']
-
-    return url
+    session.get_user_session(
+        request=request, uid=request.session['key'])
 
 
 def check_login(request):
@@ -178,102 +106,11 @@ def linecallback(request):
 
 
 def test123(request, data):
-    name = data['name']
-    email = data['email']
-    picture = data['picture']
-    userid = data['userid']
-
-    sql = SQL_music_list(
-        user.lib.sql.config.DB_CONFIG_user_music_list, request.session['key'])
-    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-    sql.create_tables()  # 建立資料表
-
-    # create setting
-    SQL_eq(config=config.DB_CONFIG_user).regsiter(
-        UID_EQ=request.session['key'])
-    SQL_user_setting(config=config.DB_CONFIG_user).regsiter(
-        UID_SETTING=request.session['key'])
-
-    if sql_user.get_user_data(uid=request.session['key']) is None:
-        sql_user.save_user_profile(
-            id=request.session['key'],
-            email=request.session['email'],
-            username=name
-        )
-
-
-# 首頁
-def data(request):
-    if request.user.is_authenticated:
-        print("已登入")
-        email = request.user.email
-        name = request.user.first_name
-        name2 = request.user.username
-        request.session['isLogin'] = True
-        if (email == ''):
-            email = "#" + name2
-            name = None
-    else:
-        print("未登入")
-        name = None
-        email = None
-        del request.session['email']
-        request.session['isLogin'] = False
-    request.session['email'] = email
-    request.session['key'] = switch_key(request.session['email'])
-
-    # 建立個人專輯
-    sql = SQL_music_list(
-        user.lib.sql.config.DB_CONFIG_user_music_list, request.session['key'])
-    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-
-    sql.create_tables()  # 建立資料表
-
-    # create setting
-    SQL_eq(config=config.DB_CONFIG_user).regsiter(
-        UID_EQ=switch_key(request.session['email']))
-    SQL_user_setting(config=config.DB_CONFIG_user).regsiter(
-        UID_SETTING=switch_key(request.session['email']))
-
-    if sql_user.get_user_data(uid=request.session['key']) is None:
-        sql_user.save_user_profile(
-            id=request.session['key'],
-            email=request.session['email'],
-            username=name
-        )
-
-    # store session
-    request.session.save()
-    # 存各資
-    save_session(request=request)
-    # 重新導向到登入畫面
-    return redirect('/music/discover/')
-
-
-# def data(request, data):
-#     email = data.get('email')
-#     name = data.get('name')
-#     request.session['isLogin'] = True
-#     # 建立个人专辑
-#     sql = SQL_music_list(
-#         user.lib.sql.config.DB_CONFIG_user_music_list, request.session['key'])
-#     sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-#     sql.create_tables()  # 建立数据表
-#     SQL_eq(config=config.DB_CONFIG_user).register(
-#         UID_EQ=(request.session['key']))
-#     SQL_user_setting(config=config.DB_CONFIG_user).register(
-#         UID_SETTING=request.session['key'])
-#     if sql_user.get_user_data(uid=request.session['key']) is None:
-#         sql_user.save_user_profile(
-#             email=email,
-#             username=name
-#         )
-#     request.session.save()  # 存储会话
-#     # 存储其他数据
-#     save_session(request=request)
-#     return redirect('/music/discover/')
+    tests.test123(request=request, data=data)
 
 # 註冊
+
+
 def sign_up(request):
     form = RegisterForm()
     if request.method == "POST":

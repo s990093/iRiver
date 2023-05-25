@@ -39,3 +39,35 @@ def save_session(request, **kwargs):
     print_color(color="warning",
                 text=f"save session {request.session['user_data']} and {request.session['user_playlist']}")
     return JsonResponse({"success": True})
+
+
+def get_user_session(request, uid):
+    if request.method != 'POST':
+        return HttpResponse('error')
+    if request.session['user_data'] is None:
+        save_session(request=request, uid=uid)
+        # 解析 JSON 数据
+    data = json.loads(request.body)
+    get = data.get('get')
+    if get == "user_eq":
+        body = {"user_eq": request.session['user_eq']}
+    elif get == "user_setting":
+        body = {"user_setting": request.session['user_setting']}
+    elif get == "user_show_data":
+        body = {"user_data": request.session['user_data'],
+                "user_playlists": request.session['user_playlist'],
+                "user_img": request.session['user_img']}
+    elif get == "all":
+        body = {"user_data": request.session['user_data'],
+                "user_playlists": request.session['user_playlist'],
+                "user_img": request.session['user_img'],
+                "user_eq": request.session['user_eq'],
+                "user_setting": request.session['user_setting']}
+    else:
+        return HttpResponse('error')
+
+    print_have_line(text=body)
+    return HttpResponse(json.dumps({
+        "success": True,
+        "data": body
+    }))
