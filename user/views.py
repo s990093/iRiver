@@ -5,7 +5,6 @@ from django.shortcuts import redirect, render
 from httplib2 import Authentication
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
-from .forms import LoginForm
 from .forms import LoginForm, RegisterForm
 from django.contrib.auth.models import User
 from social_django.models import UserSocialAuth
