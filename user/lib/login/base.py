@@ -1,4 +1,5 @@
 from aiohttp import request
+from django.shortcuts import redirect
 import user.lib.sql.config as config
 from user.lib.sql.sql_login import SQL as sql_login
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
@@ -42,4 +43,13 @@ def base(userid, email, name, picture, request):
             username=request.session['name'],
         )
     
- 
+
+def check(request,success):
+    if success:
+        print_have_line(text = "登入成功")
+        print(request.session['name'])
+        print(request.session['key'])
+        return redirect('/music/discover/')
+    else:
+        print_have_line(text = "登入失敗")
+        return redirect('/user/login/')
