@@ -43,7 +43,6 @@ export class MediaPlayer {
     }
 }
 
-
 export function insert_my_music_list({ music_ID, playlist = "我的最愛", favorite = true, method }) {
     return new Promise((resolve, reject) => {
         fetch(`/user/isLogin/`)

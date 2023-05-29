@@ -1,6 +1,4 @@
 import { Control } from "../../../static/js/music_list/control.js";
-// import { initial } from '../../../static/js/music_list/drive.js';
-
 var isClickEventRegistered = false;
 
 // Add click event listener to each row

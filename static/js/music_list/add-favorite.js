@@ -54,14 +54,15 @@ export class FaController {
         $('.love-icon a').on('click', async function () {
             $(this).find('i').toggleClass('far fas');
             var music_ID = $(this).attr('value');
-            // 送出
-            self.pushFa();
-            insert_my_music_list({
+
+            self.insert_song_infos = {
                 music_ID: music_ID,
                 playlist: "我的最愛",
                 favorite: true,
                 method: "insert"
-            });
+            }
+            // 送出
+            self.pushFa();
         });
     }
 
@@ -131,7 +132,7 @@ export class FaController {
         });
 
         // 送出
-        $("#favoriteModal #fa-insert").on("click", async function () {
+        $("#favoriteModal #fa-insert").on("click", function () {
             self.pushFa();
         });
 

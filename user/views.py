@@ -34,12 +34,12 @@ import user.tests as tests
 
 
 def save_session(request):
-    session.save_session(request=request,
-                         uid=request.session['key'],
-                         user_img_url=request.session['user_img_url'],
-                         name=request.session['name'],
-                         email=request.session['email'],
-                         )
+    return session.save_session(request=request,
+                                uid=request.session['key'],
+                                user_img_url=request.session['user_img_url'],
+                                name=request.session['name'],
+                                email=request.session['email'],
+                                )
 
 
 def get_user_music_list(request):
@@ -174,6 +174,7 @@ def profile2(request):
         print("成功修改")
         return redirect('/user/profile2/')
     old_data = sql.get_user_data(uid=request.session['key'])
+
     return render(request, 'edit_profile.html', {'form': old_data})
 
 
@@ -184,7 +185,8 @@ def user_eq(request):
     body = json.loads(request.body)
     kwargs = body.get("kwargs")
     print_have_line(text=kwargs)
-    kwargs['UID_EQ'] = switch_key(request.session['email'])
+    kwargs['UID_EQ'] = request.session['key']
+
     return JsonResponse({"data": (SQL_eq(user.lib.sql.config.DB_CONFIG_user))
                          .commit(method=body.get("method"), kwargs=kwargs)})
 
@@ -196,7 +198,8 @@ def user_setting(request):
     body = json.loads(request.body)
     method = body.get("method")
     kwargs = body.get("kwargs")
-    kwargs['UID_SETTING'] = switch_key(request.session['email'])
+    kwargs['UID_SETTING'] = request.session['key']
+    data = (SQL_user_setting(user.lib.sql.config.DB_CONFIG_user)
+            ).commit(method=method, kwargs=kwargs)
 
-    return JsonResponse({"data": (SQL_user_setting(user.lib.sql.config.DB_CONFIG_user))
-                         .commit(method=method, kwargs=kwargs)})
+    return JsonResponse({"data": data})

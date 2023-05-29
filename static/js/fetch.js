@@ -107,7 +107,7 @@ export class Fetch {
                 const data = await response.json();
                 resolve(data);
             } catch (error) {
-                reject(new Error(error.message));
+                reject(false);
             }
         });
     }

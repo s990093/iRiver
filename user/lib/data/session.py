@@ -12,14 +12,18 @@ from user.lib.print_color import print_color, print_have_line
 
 
 def save_session(request, **kwargs):
-    print_have_line(text=kwargs)
+    # print_have_line(text=kwargs)
     UID = kwargs.get('uid')
     request.session['key'] = UID
-    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
-    request.session['user_data'] = {'name': kwargs.get('name')}
+    # 基本資料
+    request.session['name'] = kwargs.get('name')
+    request.session['email'] = kwargs.get('email')
+    request.session['email'] = kwargs.get('UID')
+    request.session['user_img_url'] = kwargs.get('user_img_url')
 
-    request.session['user_img_url'] = {
-        'user_img_url': kwargs.get('user_img_url')}
+    sql_user = SQL_user(user.lib.sql.config.DB_CONFIG_user)
+    # 舊版
+    request.session['user_data'] = {'name': kwargs.get('name')}
 
     sql_user_music_list = SQL_music_list(
         config=user.lib.sql.config.DB_CONFIG_user_music_list, table_name=UID)
@@ -48,8 +52,9 @@ def save_session(request, **kwargs):
 def get_user_session(request, uid):
     if request.method != 'POST':
         return HttpResponse('error')
-    if request.session['user_data'] is None:
-        save_session(request=request, uid=uid)
+
+    # if request.session['user_data'] is None:
+        # save_session(request=request, uid=uid)
         # 解析 JSON 数据
     data = json.loads(request.body)
     get = data.get('get')
