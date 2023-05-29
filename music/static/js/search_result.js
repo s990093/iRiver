@@ -2,42 +2,46 @@ import { Control } from "../../../static/js/music_list/control.js";
 import { table_template } from "../../../static/js/table.js";
 import { fetch_dow_all_songs, fetch_dow_song } from "../../../static/js/fetch.js";
 import { insert_my_music_list } from "../../../static/js/music_list/emement.js";
-import { FaController } from "../../../static/js/music_list/add-favorite.js";
+//import { FaController } from "../../../static/js/music_list/add-favorite.js";
 // import { fetch_dow_all_songs, fetch_dow_song, fetch_is_song_exit } from "../../../static/ts/fetch.ts";
 
 
 const audio = document.getElementById('myaudio');
 var isClickEventRegistered = false;
-const control = new Control({
-  audio: audio,
-  isPlayerShow: false,
-});
+var control;
 var length = 0;
 
-if (query) {
-  loading(true);
-  fetch(`/music/query_web_song?query=${query}`)
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        console.log('search data', data.music_list)
-        paush_web_data(data.music_list);
-      } else {
-        alert('web search error', data.music_list);
-      }
-    });
-  fetch(`/music/query_db_song?query=${query}`)
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        console.log('db_data', data.music_list);
-        paush_db_data(data.music_list);
-        length = data.music_list.length;
-      }
-    });
-  query = null
-  const fa = new FaController();
-}
+
+$(async function () {
+  control = new Control({
+    audio: audio,
+    isPlayerShow: false,
+  });
+  if (query) {
+    loading(true);
+    fetch(`/music/query_web_song?query=${query}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          console.log('search data', data.music_list)
+          paush_web_data(data.music_list);
+        } else {
+          alert('web search error', data.music_list);
+        }
+      });
+    fetch(`/music/query_db_song?query=${query}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          console.log('db_data', data.music_list);
+          paush_db_data(data.music_list);
+          length = data.music_list.length;
+        }
+      });
+
+    query = null
+  }
+});
 
 
 

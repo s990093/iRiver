@@ -35,7 +35,7 @@ export class FaController {
         const self = this;
         // 加入個人專輯
 
-        $(".main-content .add").on("click", function () {
+        $(".main-content ").on("click", ".add", function () {
             $("#favoriteModal").modal("show");
 
             self.insert_song_infos = {
@@ -49,9 +49,8 @@ export class FaController {
             self.showFa()
         });
 
-
         // 我的最愛
-        $('.love-icon a').on('click', async function () {
+        $('.main-content').on('click', ".love-icon a", async function () {
             $(this).find('i').toggleClass('far fas');
             var music_ID = $(this).attr('value');
 
@@ -80,7 +79,7 @@ export class FaController {
             } else {
                 this.playlist = [];
             }
-            // console.log(this.playlist)
+            console.log(this.playlist)
         } else {
             location.href = "/user/login/";
         }
@@ -121,27 +120,34 @@ export class FaController {
 
         // 添加到哪個專輯
 
-        $("#favoriteModal .playlist").on("click", function () {
+        $("#favoriteModal").on('change', '.playlist input[type="radio"]', function () {
+            // 获取所选单选按钮的值
+            var playlist = $(this).closest('.playlist').data('playlist');
+            //console.log('选择的播放列表：', playlist);
+
             self.insert_song_infos = {
-                "playlist": $(this).data('playlist'),
+                "playlist": playlist,
                 "music_ID": self.insert_song_infos.music_ID,
                 "favorite": self.insert_song_infos.favorite,
                 method: "insert"
             }
-            // console.log(self.insert_song_infos);
+
+            //console.log(self.insert_song_infos)
         });
 
         // 送出
-        $("#favoriteModal #fa-insert").on("click", function () {
+        $("#favoriteModal #fa-insert").unbind("click").on("click", function () {
             self.pushFa();
+            self._get_playlist();
         });
 
-        $("#creatPlaylistModal .creat-playlist").on("click", function (event) {
+        $("#creatPlaylistModal .creat-playlist").unbind("click").on("click", function (event) {
             console.log($("#creatPlaylistModal .creat-playlist"))
             self.createFa($('.new-playlist').val());
         });
+
         // hide
-        $("#creatPlaylistModal .creat-playlist").on("click", function (event) {
+        $("#creatPlaylistModal .creat-playlist").unbind("click").on("click", function (event) {
             console.log($("#creatPlaylistModal .creat-playlist"))
             self.createFa($('.new-playlist').val());
         });
@@ -152,14 +158,14 @@ export class FaController {
         // const isDuplicate = this.playlist.some((existingPlaylist) => existingPlaylist === playlist);
         // if (isDuplicate) {
         //     error("錯誤", "該專輯已經存在!")
-        //     return;
+        //     return; 
         // }
 
         // 将播放列表添加到 this.playlist
 
         this.playlist.push(playlist);
         $(".fa-body").append(this.playlist_template(playlist))
-        console.log(this.playlist)
+        //console.log(this.playlist)
     }
 
     async pushFa() {
