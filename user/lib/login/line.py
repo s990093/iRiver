@@ -14,6 +14,7 @@ def line_url(request):
     return auth_url
 
 
+
 # 取得存取令牌
 def line_token(code):
     url = 'https://api.line.me/oauth2/v2.1/token'
@@ -56,7 +57,6 @@ def line_profile(access_token):
         return {'username': username, 'userId': userId}
     print("獲取用戶資料失敗")
     return None
-
 # 取得回傳資料
 
 
