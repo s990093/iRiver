@@ -115,6 +115,10 @@ export class SessionController {
         console.log("remove session done!")
     }
 
+    refresh = () => {
+        fetch.GET("/user/save_session/");
+    }
+
     /**
      * Fetches all user sessions from the server and updates the session data.
      * @async
