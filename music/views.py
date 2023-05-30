@@ -95,10 +95,15 @@ def my_music_list(request):
         music_list_infos = mysql.get_music_list_infos(
             music_ID_list=[item[0] for item in json.loads(response.content)])
         music_list_infos_json = json.dumps(music_list_infos)
+        try:
+            title_img_url = f"/media/{music_list_infos[0]['artist']}/img/{music_list_infos[0]['music_ID']}.jpg"
+        except:
+            title_img_url = "/static/img/music_img.jpg"
+
         return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
                                                         'music_list_infos_json': music_list_infos_json,
                                                         'music_list': music_list,
-                                                        'title_img_url': f"/media/{music_list_infos[0]['artist']}/img/{music_list_infos[0]['music_ID']}.jpg"
+                                                        'title_img_url': title_img_url,
                                                         })
 
 

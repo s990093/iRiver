@@ -45,10 +45,24 @@ export function table_template({
   var row = `
     <tr>
       <td>
-        <a href="#" class="${className}" value = ${i} data-list = "${list}" >
-          <img src="${song.img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}" alt="none" width="70" style="margin-right: 20px" />
-          <span>${song.title}</span>
+      <div>
+        <a href="#" class="${className}" value="${i}" data-list="${list}">
+          <div class="row">
+            <div class="col-3">
+              <img
+                src="${song.img_url || 'https://via.placeholder.com/720x405.png?text=No+Image'}"
+                alt="none"
+                width="70"
+                style="margin-right: 20px"
+                class="img-fluid rounded"
+              />
+            </div>
+            <div class="col-3">
+              <span class="d-block">${song.title}</span>
+            </div>
+          </div>
         </a>
+      </div>
       </td>
       <td>
         <span class="love-icon font" style="text-align: right">
@@ -66,7 +80,7 @@ export function table_template({
       <td style="text-align: right">
         <a href="/music/music_list/?artist=${song.artist}&index=${i}" class="icon" style="margin-right: 20px">
           <span class="artist-text" style="margin-left: 20px; margin-right: 20px">${song.artist}</span>
-          <img src="${song.artist_img_url || "https://via.placeholder.com/720x405.png?text=No+Image"}" alt="none" width="30" />
+       
         </a>
         <span class="material-symbols-outlined">${icon}</span>
       </td>
