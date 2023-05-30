@@ -4,11 +4,11 @@ import difflib
 import uuid
 import user.lib.print_color as print_color
 
-
+# 自製uid
 def get_uuid():
     uid = uuid.uuid4()
-    uid_str = str(uid).replace('-', '')  # 移除短横线
-    short_uid = uid_str[:12]  # 取UUID的前12个字符
+    uid_str = str(uid).replace('-', '')  
+    short_uid = uid_str[:12] 
     return short_uid
 
 
@@ -31,29 +31,29 @@ class SQL:
         '''
         self.cursor.execute(sql)
 
+    # 新增使用者並回傳uid
     def insert(self, userid, email):
+
         uid = self.check_if_email_exists(email)
-        # print_color.print_have_line(text=uid)
         if uid is None:
             uid = get_uuid()
-        # print_color.print_have_line(text=uid)
 
         if not self.check_if_userid_exists(userid):
             sql = "INSERT INTO user_social (userid, email, uid) VALUES (%s, %s, %s)"
             data = (userid, email, uid)
             self.cursor.execute(sql, data)
             self.db.commit()
-        # print_color.print_have_line(text=uid)
 
         return uid
 
+    # 檢查是否有此userid
     def check_if_userid_exists(self, userid):
         sql = "SELECT userid FROM user_social WHERE userid = %s"
         self.cursor.execute(sql, (userid,))
         result = self.cursor.fetchone()
-
         return result
-
+    
+    # 檢查是否有此email 回傳uid
     def check_if_email_exists(self, email):
         sql = "SELECT uid FROM user_social WHERE email = %s"
         self.cursor.execute(sql, (email,))

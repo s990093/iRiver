@@ -12,7 +12,7 @@ scopes = ["profile", "openid", "email"]
 
 encoded_scopes = urllib.parse.quote(" ".join(scopes))
 
-
+#生成登入連結
 def line_url(request):
     state = str(uuid.uuid4())
     request.session['oauth_state'] = state
@@ -38,21 +38,7 @@ def line_token(code):
     return {'id_token': id_token, 'access_token': access_token}
 
 
-def line_profile2(id_token, client_id):
-    url = 'https://api.line.me/oauth2/v2.1/verify'
-    data = {
-        'id_token': id_token,
-        'client_id': client_id,
-    }
-    response = requests.post(url, data=data)
-    data = response.json()
-    email = data['email']
-    picture = data['picture']
-    userid = data['sub']
-    name = data['name']
-    return {'email': email, 'picture': picture, 'userid': userid, 'name': name}
-
-
+# 取得用戶資料
 def line_profile(access_token):
     headers = {'Authorization': f'Bearer {access_token}'}
     response = requests.get('https://api.line.me/v2/profile', headers=headers)
@@ -63,9 +49,9 @@ def line_profile(access_token):
         return {'username': username, 'userId': userId}
     print("獲取用戶資料失敗")
     return None
-# 取得回傳資料
 
 
+# 回傳資料處理
 def line_callback(request):
     code = request.GET.get('code')
     state = request.GET.get('state')
@@ -73,14 +59,17 @@ def line_callback(request):
         token_data = line_token(code)
         id_token = token_data['id_token']
         access_token = token_data['access_token']
-        userdata = line_profile2(id_token, client_id)
+        userdata = line_profile(id_token, client_id)
         name = userdata['name']
         email = userdata['email']
         picture = userdata['picture']
         userid = userdata['userid']
-        base(name=name, email=email, user_img_url=picture,
-             userid=userid, request=request)
+        base(
+            name=name, 
+            email=email, 
+            user_img_url=picture,
+            userid=userid, 
+            request=request)
         return True
-        # return{'name': name, 'email': email, 'picture': picture, 'userid': userid, 'access_token': access_token}
     print("驗證失敗")
     return False

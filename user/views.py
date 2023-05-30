@@ -31,8 +31,6 @@ import user.lib.data.get_data as get_data
 import user.tests as tests
 
 # 舊款
-
-
 def save_session(request):
     return session.save_session(request=request,
                                 uid=request.session['key'],
@@ -65,8 +63,6 @@ def check_login(request):
         return JsonResponse({'isLogin': False})
 
 # google 登入
-
-
 def googleurl(request):
     url = google_url(request)
     return HttpResponseRedirect(url)
@@ -81,11 +77,8 @@ def googlecallback(request):
     else:
         print_have_line(text="登入失敗")
         return redirect('/user/login/')
-    # check(request=request,success=success)
 
 # line 登入
-
-
 def lineurl(request):
     url = line_url(request)
     return HttpResponseRedirect(url)
@@ -100,15 +93,12 @@ def linecallback(request):
     else:
         print_have_line(text="登入失敗")
         return redirect('/user/login/')
-    # check(request=request,success=success)
 
 
 def test123(request, data):
     return tests.test123(request=request, data=data)
 
-# 註冊
-
-
+# 註冊(無用)
 def sign_up(request):
     form = RegisterForm()
     if request.method == "POST":
@@ -125,7 +115,7 @@ def sign_up(request):
     return render(request, 'registration/register.html', context)
 
 
-# 登入
+# 登入(無用)
 def sign_in(request):
     form = LoginForm()
     print(form)
@@ -145,8 +135,6 @@ def sign_in(request):
     return render(request, 'registration/login.html', context)
 
 # 登出
-
-
 def log_out(request):
     logout(request)
     request.session['isLogin'] = False
@@ -155,9 +143,8 @@ def log_out(request):
     print("已登出")
     return redirect('/user/login')
 
+
 # 個人資料
-
-
 def profile2(request):
     sql = SQL_user(user.lib.sql.config.DB_CONFIG_user)
     if request.method == 'POST':
