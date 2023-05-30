@@ -1,16 +1,22 @@
 import uuid
 import requests
 from user.lib.login.base import base
+import urllib.parse
+
 
 client_id = '1661190797'
 redirect_uri = 'http://127.0.0.1:8000/complete/line/'
 client_secret = '3fc12add18f596c2597c993f1f858acf'
+response_type = 'code'
+scopes = ["profile", "openid", "email"]
+
+encoded_scopes = urllib.parse.quote(" ".join(scopes))
 
 
 def line_url(request):
     state = str(uuid.uuid4())
     request.session['oauth_state'] = state
-    auth_url = f'https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id={client_id}&redirect_uri={redirect_uri}&state={state}&scope=profile%20openid%20email'
+    auth_url = f'https://access.line.me/oauth2/v2.1/authorize?response_type={response_type}&client_id={client_id}&redirect_uri={redirect_uri}&state={state}&scope=‘{encoded_scopes}'
     return auth_url
 
 
