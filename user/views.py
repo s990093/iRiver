@@ -133,10 +133,9 @@ def sign_in(request):
 
 # 登出
 def log_out(request):
-    logout(request)
+    #logout(request)
     request.session['isLogin'] = False
     request.session.save()
-    print(request.session.get('isLogin'))
     print("已登出")
     return redirect('/user/login')
 
