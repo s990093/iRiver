@@ -5,7 +5,11 @@ import urllib.parse
 
 
 client_id = '1661190797'
-redirect_uri = 'http://127.0.0.1:8000/complete/line/'
+redirect_uri = [
+    'http://127.0.0.1:8000/complete/line/',
+    'http://server0000.ddns.net:8000/complete/line/',
+    'http://iriver.ddns.net/complete/line/'
+]
 client_secret = '3fc12add18f596c2597c993f1f858acf'
 response_type = 'code'
 scopes = ["profile", "openid", "email"]

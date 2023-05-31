@@ -5,7 +5,12 @@ from user.lib.login.base import base
 from user.lib.print_color import print_have_line
 
 client_id = '1026795084542-4faa7ard63anna4utjtmavuvbe4t4mf4.apps.googleusercontent.com'
-redirect_uri = 'http://127.0.0.1:8000/complete/google/'
+redirect_uri = [
+    'http://127.0.0.1:8000/complete/google/',
+    'http://server0000.ddns.net:8000/complete/google/',
+    'http://iriver.ddns.net/complete/google/'
+]
+
 client_secret = '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'
 scope = 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email'
 access_type = 'offline'
