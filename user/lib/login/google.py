@@ -12,7 +12,7 @@ access_type = 'offline'
 include_granted_scopes = 'true'
 response_type = 'code'
 
-
+#生成登入連結
 def google_url(request):
     state = str(uuid.uuid4())
     request.session['oauth_state'] = state
@@ -36,7 +36,7 @@ def google_token(code):
     access_token = token_data.get('access_token', None)
     return {'id_token': id_token, 'access_token': access_token}
 
-
+# 取得使用者資料
 def google_profile(id_token):
     url = 'https://oauth2.googleapis.com/tokeninfo'
     data = {
@@ -52,7 +52,7 @@ def google_profile(id_token):
     return {'email': email, 'picture': picture, 'userid': userid, 'name': name}
 
 
-# 取得回傳資料
+# 回傳資料處理
 def google_callback(request):
     code = request.GET.get('code')
     state = request.GET.get('state')
@@ -62,11 +62,12 @@ def google_callback(request):
         access_token = token_data['access_token']
         userdata = google_profile(id_token)
         # base in user proifle
-        base(userid=userdata['userid'],
-             email=userdata['email'],
-             name=userdata['name'],
-             user_img_url=userdata['picture'],
-             request=request)
+        base(
+            userid=userdata['userid'],
+            email=userdata['email'],
+            name=userdata['name'],
+            user_img_url=userdata['picture'],
+            request=request)
         return True
     print("驗證失敗")
     return False

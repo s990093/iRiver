@@ -29,9 +29,7 @@ urlpatterns = [
     path('iRiver/', include('iRiver.urls', namespace='iRiver')),
     path('music/', include('music.urls', namespace='music')),
     path('user/', include('user.urls', namespace='user')),
-    path('auth/', include('social_django.urls', namespace='auth')),
     path('admin/', admin.site.urls),
-
     path('user/google/', login.googleurl),
     path('complete/google/', login.googlecallback),
     path('user/line/', login.lineurl),

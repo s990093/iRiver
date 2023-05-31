@@ -26,7 +26,6 @@ def base(userid, email, name, user_img_url, request):
         SQL_music_list(config=config.DB_CONFIG_user_music_list,
                        table_name=uid).create_tables()
 
-        # create setting
         SQL_eq(config=config.DB_CONFIG_user).regsiter(
             UID_EQ=uid)
 
@@ -38,9 +37,10 @@ def base(userid, email, name, user_img_url, request):
     sql.close()
 
     # save session
-    save_session(request=request,
-                 uid=uid,
-                 user_img_url=user_img_url,
-                 name=name,
-                 email=email,
-                 )
+    save_session(
+        request=request,
+        uid=uid,
+        user_img_url=user_img_url,
+        name=name,
+        email=email,
+    )
