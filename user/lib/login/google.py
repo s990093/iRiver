@@ -3,27 +3,24 @@ import uuid
 import requests
 from user.lib.login.base import base
 from user.lib.print_color import print_have_line
+import urllib.parse
 
 client_id = '1026795084542-4faa7ard63anna4utjtmavuvbe4t4mf4.apps.googleusercontent.com'
-redirect_uri = [
-    'http://127.0.0.1:8000/complete/google/',
-    'http://server0000.ddns.net:8000/complete/google/',
-    'http://iriver.ddns.net/complete/google/'
-]
-
+redirect_uri = 'http://server0000.ddns.net:8000/complete/google/'
 client_secret = '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'
 scope = 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email'
 access_type = 'offline'
 include_granted_scopes = 'true'
 response_type = 'code'
 
+
 #生成登入連結
 def google_url(request):
     state = str(uuid.uuid4())
     request.session['oauth_state'] = state
     auth_url = f'https://accounts.google.com/o/oauth2/v2/auth?scope={scope}&access_type={access_type}&include_granted_scopes={include_granted_scopes}&response_type={response_type}&state={state}&redirect_uri={redirect_uri}&client_id={client_id}'
+    print(auth_url)
     return auth_url
-
 
 # 取得存取令牌
 def google_token(code):
