@@ -13,12 +13,9 @@ import json
 import user.lib.sql.config
 import user.lib.sql.config as config
 from user.lib.sql.sql_user import SQL as SQL_user
-from user.lib.sql.sql_music_list import SQL as SQL_music_list
-from user.lib.sql.sql_social import SQL as SQL_social
+
 from user.lib.sql.sql_eq import SQL as SQL_eq
 from user.lib.sql.sql_user_setting import SQL as SQL_user_setting
-from user.lib.switch_key import switch_key
-from user.lib.data.get_data import get_avatar_url, get_line_data, get_google_data, get_line_user_email, get_id_token
 from user.lib.print_color import print_color, print_have_line
 from user.lib.login.line import line_url, line_callback
 from user.lib.login.google import google_url, google_callback
