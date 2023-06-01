@@ -17,6 +17,7 @@ $(async function () {
     audio: audio,
     isPlayerShow: false,
   });
+
   if (query) {
     loading(true);
     fetch(`/music/query_web_song?query=${query}`)
