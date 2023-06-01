@@ -6,7 +6,7 @@ import urllib.parse
 import requests
 from user.lib.login.base import base
 from user.lib.print_color import print_have_line
-test = True
+test = False
 client_id = '1026795084542-4faa7ard63anna4utjtmavuvbe4t4mf4.apps.googleusercontent.com'
 client_secret = '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'
 scope = 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email'
@@ -16,7 +16,7 @@ response_type = 'code'
 if (test==True):
     redirect_uri = 'http://127.0.0.1:8000/complete/google/'
 else:
-    redirect_uri = 'http://server0000.ddns.net:8000/complete/google/'
+    redirect_uri = 'https://iriver.ddns.net/complete/google/'
 
 #生成登入連結
 def google_url(request):

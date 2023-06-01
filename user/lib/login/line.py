@@ -3,7 +3,7 @@ import requests
 from user.lib.login.base import base
 import urllib.parse
 
-test = True
+test = False
 client_id = '1661190797'
 client_secret = '3fc12add18f596c2597c993f1f858acf'
 response_type = 'code'
@@ -11,7 +11,7 @@ scopes = ["profile", "openid", "email"]
 if (test==True):
     redirect_uri = 'http://127.0.0.1:8000/complete/line/'
 else:
-    redirect_uri = 'http://server0000.ddns.net:8000/complete/line/'
+    redirect_uri = 'https://iriver.ddns.net/complete/line/'
 
 
 #生成登入連結
