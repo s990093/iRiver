@@ -2,16 +2,17 @@ import uuid
 import requests
 from user.lib.login.base import base
 import urllib.parse
+from user.lib.login.base import login_test , formal_url , local_url
 
-test = False
+test = login_test
 client_id = '1661190797'
 client_secret = '3fc12add18f596c2597c993f1f858acf'
 response_type = 'code'
 scopes = ["profile", "openid", "email"]
 if (test==True):
-    redirect_uri = 'http://127.0.0.1:8000/complete/line/'
+    redirect_uri = local_url + '/complete/line/'
 else:
-    redirect_uri = 'https://iriver.ddns.net/complete/line/'
+    redirect_uri = formal_url + '/complete/line/'
 
 
 #生成登入連結

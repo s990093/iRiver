@@ -10,6 +10,10 @@ from user.lib.print_color import print_have_line
 # 自製
 from user.lib.data.session import save_session
 
+login_test = True
+formal_url = "https://iriver.ddns.net"
+local_url = "http://127.0.0.1:8000"
+
 
 def base(userid, email, name, user_img_url, request):
     sql = sql_login(config.DB_CONFIG_user)
