@@ -25,7 +25,8 @@ while True:
         print(f'main.py failed with exit code {process.returncode}')
 
         # Check downloaded file size
-        downloaded_size = os.path.getsize('C:\\Users\\user\\Desktop\\django\\myproject\\media')
+        downloaded_size = os.path.getsize(
+            'C:\\Users\\user\\Desktop\\django\\myproject\\media')
 
         if downloaded_size >= max_size:
             print('Download size limit exceeded. Stopping download.')
