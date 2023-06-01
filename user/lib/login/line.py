@@ -3,22 +3,24 @@ import requests
 from user.lib.login.base import base
 import urllib.parse
 
-
+test = True
 client_id = '1661190797'
-redirect_uri = 'http://127.0.0.1:8000/complete/line/'
 client_secret = '3fc12add18f596c2597c993f1f858acf'
 response_type = 'code'
 scopes = ["profile", "openid", "email"]
+if (test==True):
+    redirect_uri = 'http://127.0.0.1:8000/complete/line/'
+else:
+    redirect_uri = 'http://server0000.ddns.net:8000/complete/line/'
 
-encoded_scopes = urllib.parse.quote(" ".join(scopes))
 
 #生成登入連結
 def line_url(request):
     state = str(uuid.uuid4())
     request.session['oauth_state'] = state
-    auth_url = f'https://access.line.me/oauth2/v2.1/authorize?response_type={response_type}&client_id={client_id}&redirect_uri={redirect_uri}&state={state}&scope=‘{encoded_scopes}'
+    encoded_scopes = urllib.parse.quote(" ".join(scopes))
+    auth_url = f'https://access.line.me/oauth2/v2.1/authorize?response_type={response_type}&client_id={client_id}&redirect_uri={redirect_uri}&state={state}&scope={encoded_scopes}'
     return auth_url
-
 
 
 # 取得存取令牌
@@ -39,17 +41,19 @@ def line_token(code):
 
 
 # 取得用戶資料
-def line_profile(access_token):
-    headers = {'Authorization': f'Bearer {access_token}'}
-    response = requests.get('https://api.line.me/v2/profile', headers=headers)
-    if response.status_code == 200:
-        data = response.json()
-        username = data['displayName']
-        userId = data['userId']
-        return {'username': username, 'userId': userId}
-    print("獲取用戶資料失敗")
-    return None
-
+def line_profile(id_token, client_id):
+    url = 'https://api.line.me/oauth2/v2.1/verify'
+    data = {
+        'id_token': id_token,
+        'client_id': client_id,
+    }
+    response = requests.post(url, data=data)
+    data = response.json()
+    email = data['email']
+    picture = data['picture']
+    userid = data['sub']
+    name = data['name']
+    return {'email': email, 'picture': picture, 'userid': userid, 'name': name}
 
 # 回傳資料處理
 def line_callback(request):
