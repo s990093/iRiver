@@ -32,7 +32,6 @@ def get_id_token(access_token):
 
 # 以上皆為測試中
 
-
 def get_line_data(access_token):
     headers = {
         'Authorization': f'Bearer {access_token}'
