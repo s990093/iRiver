@@ -10,6 +10,7 @@ from user.lib.print_color import print_have_line
 # 自製
 from user.lib.data.session import save_session
 
+# 全局設定
 login_test = False
 formal_url = "https://iriver.ddns.net"
 local_url = "http://127.0.0.1:8000"
