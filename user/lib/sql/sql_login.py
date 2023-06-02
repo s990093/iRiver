@@ -8,7 +8,7 @@ import user.lib.print_color as print_color
 def get_uuid():
     uid = uuid.uuid4()
     uid_str = str(uid).replace('-', '')  
-    short_uid = uid_str[:12] 
+    short_uid = "a" + uid_str[:12] 
     return short_uid
 
 
