@@ -31,6 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = ['https://iriver.ddns.net','http://127.0.0.1:8000']
+
 
 # Application definition
 
