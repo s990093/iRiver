@@ -24,6 +24,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 # rule 放app url 到app再轉要得 function
+
 urlpatterns = [
     path('', iRiver_views.iRiver, name='home'),
     path('iRiver/', include('iRiver.urls', namespace='iRiver')),
