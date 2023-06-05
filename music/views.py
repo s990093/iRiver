@@ -31,6 +31,9 @@ from music.lib.dow import download
 import music.lib.download.img as img
 from music.lib.web_scutter.music_ID_info import get_music_ID_info
 
+# app
+import user.views as user_views
+
 # test bool
 test = True
 print("-"*30)
@@ -38,14 +41,7 @@ print(f"view is music statue  test= {test}")
 
 
 def get_navbar_data(request):
-    url = f'http://127.0.0.1:8000/user/get_user_show_data/'
-    csrftoken = request.COOKIES.get('csrftoken')
-    session_id = request.COOKIES.get('sessionid')
-    headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
-    headers['X-CSRFToken'] = csrftoken
-    response = requests.post(url, headers=headers)
-    if response.status_code == 200:
-        return response.content
+    return user_views.get_user_show_data(request=requests)
 
 
 def test(request):
@@ -83,14 +79,18 @@ def music_list(request):
 
 def my_music_list(request):
     music_list = request.GET.get('music_list', "我的最愛 ")
-    url = 'http://127.0.0.1:8000/user/get_user_music_list/'
-    csrftoken = request.COOKIES.get('csrftoken')
-    session_id = request.COOKIES.get('sessionid')
-    headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
-    data = {'method': 'get', "playlist": music_list}
-    headers['X-CSRFToken'] = csrftoken
-    response = requests.post(url, headers=headers, data=json.dumps(data))
-    if response.status_code == 200:
+    request.data = {'method': 'get', "playlist": music_list}
+    response = user_views.get_user_music_list(request=request)
+
+    # url = 'http://127.0.0.1:8000/user/get_user_music_list/'
+    # csrftoken = request.COOKIES.get('csrftoken')
+    # session_id = request.COOKIES.get('sessionid')
+    # headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
+    # data = {'method': 'get', "playlist": music_list}
+    # headers['X-CSRFToken'] = csrftoken
+    # response = requests.post(url, headers=headers, data=json.dumps(data))
+
+    if response:
         mysql = SQL(music.lib.sql.config.DB_CONFIG)
         music_list_infos = mysql.get_music_list_infos(
             music_ID_list=[item[0] for item in json.loads(response.content)])
