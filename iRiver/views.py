@@ -28,7 +28,6 @@ def iRiver(request):
     return render(request, 'index.html')
 
 
-
 def setting(requset):
     return render(requset, 'setting.html')
 
@@ -39,3 +38,7 @@ def problem(requset):
 
 def plan(request):
     return render(request, 'plan.html')
+
+
+def test(requset):
+    return JsonResponse({"success": True})

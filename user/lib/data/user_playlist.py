@@ -4,15 +4,17 @@ from django.http import HttpResponse, JsonResponse
 from user.lib.sql.sql_music_list import SQL as SQL_music_list
 import user.lib.data.session as session
 import user.lib.sql.config as config
+import user.lib.print_color as print_color
 
 
 def get_user_music_list(request, uid: str):
     PLAYLIST = "我的最愛"
-    if request.method != 'POST':
-        return HttpResponse('error')
+    print_color.print_have_line(request.body)
     # 解析 JSON 数据
     data = json.loads(request.body)
     # print(data)
+    print_color.print_have_line(data)
+
     method = data.get('method')
     sql_user_music_list = SQL_music_list(
         config=config.DB_CONFIG_user_music_list, table_name=uid)

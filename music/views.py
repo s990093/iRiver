@@ -30,7 +30,7 @@ from music.lib.web_scutter.music_list import query_music_list
 from music.lib.dow import download
 import music.lib.download.img as img
 from music.lib.web_scutter.music_ID_info import get_music_ID_info
-
+# tool
 # app
 import user.views as user_views
 
@@ -41,7 +41,7 @@ print(f"view is music statue  test= {test}")
 
 
 def get_navbar_data(request):
-    return user_views.get_user_show_data(request=requests)
+    return user_views.get_user_show_data(request=request)
 
 
 def test(request):
@@ -79,10 +79,26 @@ def music_list(request):
 
 def my_music_list(request):
     music_list = request.GET.get('music_list', "我的最愛 ")
-    request.data = {'method': 'get', "playlist": music_list}
+    # 解析请求体数据为字典
+    try:
+        request_body = json.loads(request.body.decode('utf-8'))
+    except json.JSONDecodeError:
+        request_body = {}
+
+    # 添加两个键值对到请求体的字典中
+    request_body['method'] = 'get'
+    request_body['music_list'] = music_list
+
+    # 将更新后的字典重新编码为JSON字符串
+    updated_body = json.dumps(request_body)
+
+    # 将更新后的请求体数据重新设置回请求对象
+    request._body = updated_body.encode('utf-8')
+
+    # 调用目标视图函数并传递请求对象及其他参数
     response = user_views.get_user_music_list(request=request)
 
-    # url = 'http://127.0.0.1:8000/user/get_user_music_list/'
+    # url = 'http://127.0.0.1:8000/u ser/get_user_music_list/'
     # csrftoken = request.COOKIES.get('csrftoken')
     # session_id = request.COOKIES.get('sessionid')
     # headers = {'Cookie': f'csrftoken={csrftoken}; sessionid={session_id};'}
@@ -90,21 +106,20 @@ def my_music_list(request):
     # headers['X-CSRFToken'] = csrftoken
     # response = requests.post(url, headers=headers, data=json.dumps(data))
 
-    if response:
-        mysql = SQL(music.lib.sql.config.DB_CONFIG)
-        music_list_infos = mysql.get_music_list_infos(
-            music_ID_list=[item[0] for item in json.loads(response.content)])
-        music_list_infos_json = json.dumps(music_list_infos)
-        try:
-            title_img_url = f"/media/{music_list_infos[0]['artist']}/img/{music_list_infos[0]['music_ID']}.jpg"
-        except:
-            title_img_url = "/static/img/music_img.jpg"
+    mysql = SQL(music.lib.sql.config.DB_CONFIG)
+    music_list_infos = mysql.get_music_list_infos(
+        music_ID_list=[item[0] for item in json.loads(response.content)])
+    music_list_infos_json = json.dumps(music_list_infos)
+    try:
+        title_img_url = f"/media/{music_list_infos[0]['artist']}/img/{music_list_infos[0]['music_ID']}.jpg"
+    except:
+        title_img_url = "/static/img/music_img.jpg"
 
-        return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
-                                                        'music_list_infos_json': music_list_infos_json,
-                                                        'music_list': music_list,
-                                                        'title_img_url': title_img_url,
-                                                        })
+    return render(request, './my_music_list.html', {'music_list_infos': music_list_infos,
+                                                    'music_list_infos_json': music_list_infos_json,
+                                                    'music_list': music_list,
+                                                    'title_img_url': title_img_url,
+                                                    })
 
 
 def get_music_list(request):

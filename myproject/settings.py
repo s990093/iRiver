@@ -16,7 +16,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
-#專案名稱
+# 專案名稱
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 #  TODO: id:s990  psw:1234
@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://iriver.ddns.net','http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = ['https://iriver.ddns.net', 'http://127.0.0.1:8000']
 
 
 # Application definition
@@ -48,7 +48,12 @@ INSTALLED_APPS = [
     'music',
     'user',
     'developer',
+    # 允許同域名訪問
+    'corsheaders',
 ]
+# 允許同域名訪問
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,6 +63,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 允許同域名訪問
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'myproject.urls'
@@ -90,7 +97,6 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 
 
 DATABASES = {
@@ -149,7 +155,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-
 # STATICFILES_DIRS = [    BASE_DIR / "myapp/static",]
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'myapp', 'media')
@@ -161,12 +166,11 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#login
+# login
 SITE_ID = 1
-LOGIN_REDIRECT_URL = 'user/data' 
+LOGIN_REDIRECT_URL = 'user/data'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
-
