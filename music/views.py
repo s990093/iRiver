@@ -146,7 +146,6 @@ def get_music_list(request):
 
 def query_db_song(request):
     query = request.GET.get('query', '')
-
     if test:
         print('='*50)
         print(f'get db {query} !!')
