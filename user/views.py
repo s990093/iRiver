@@ -140,8 +140,6 @@ def sign_in(request):
     return render(request, 'registration/login.html', context)
 
 # 登出
-
-
 def log_out(request):
     # logout(request)
     request.session['isLogin'] = False
