@@ -53,7 +53,13 @@ INSTALLED_APPS = [
 ]
 # 允許同域名訪問
 CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    # 其他允許的來源
+]
 CORS_ALLOW_CREDENTIALS = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
