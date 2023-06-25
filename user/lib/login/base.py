@@ -27,14 +27,13 @@ def base(userid, email, name, user_img_url, request):
             email=email,
             username=name,
         )
-
         SQL_music_list(config=config.DB_CONFIG_user_music_list,
                        table_name=uid).create_tables()
 
-        SQL_eq(config=config.DB_CONFIG_user).insert(
+        SQL_eq(config=config.DB_CONFIG_user).regsiter(
             UID_EQ=uid)
 
-        SQL_user_setting(config=config.DB_CONFIG_user).insert(
+        SQL_user_setting(config=config.DB_CONFIG_user).regsiter(
             UID_SETTING=uid)
     else:
         uid = sql.insert(userid=userid, email=email)
