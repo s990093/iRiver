@@ -78,6 +78,7 @@ def music_list(request):
 
 
 def my_music_list(request):
+
     music_list = request.GET.get('music_list', "我的最愛 ")
     # 解析请求体数据为字典
     try:

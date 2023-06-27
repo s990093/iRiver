@@ -89,6 +89,7 @@ export class Fetch {
     }
 
     async POST(target, params = null) {
+
         return new Promise(async (resolve, reject) => {
             try {
                 const csrftoken = this._get_cookie('csrftoken');

@@ -109,6 +109,7 @@ function paush_db_data(music_list) {
     }
     control.insert(index, list);
   });
+
   loading(false)
 }
 

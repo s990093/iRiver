@@ -6,6 +6,7 @@ import { SessionController } from "../../../static/js/session.js";
 const sessionController = new SessionController();
 const fetch = new Fetch();
 var isClickEventRegistered = false;
+
 $('document').ready(function () {
     const audio = document.getElementById('myaudio');
     const control = new Control({

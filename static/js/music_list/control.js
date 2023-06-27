@@ -20,6 +20,7 @@ export class Control {
   * Constructor for Control class
   * @param {ControlParams} params - The parameters object
   */
+
   constructor({
     audio,
     isPlaying = false,
@@ -52,13 +53,16 @@ export class Control {
 
     //宣告物件
     this.webAudio = new WebAudio();
+
     this.mediaPlayer = new MediaPlayer(this.audio);
+
     this.faController = new FaController({ isTest: false });
   }
 
   register() {
     //宣告物件
     this.bgAudio = new bgAudio(this.test);
+
     this.mediaPlayer.register();
     this.eqController = new EqController(this.audio, this.test);
     this.webAudio.changePlayer(this.isPlayerShow);
