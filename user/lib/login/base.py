@@ -27,7 +27,6 @@ def base(userid, email, name, user_img_url, request):
             email=email,
             username=name,
         )
-
         SQL_music_list(config=config.DB_CONFIG_user_music_list,
                        table_name=uid).create_tables()
 
